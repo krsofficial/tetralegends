@@ -7,7 +7,7 @@
     "unfavored": "standardUnfavored",
     "randomizer": "tetrax",
     "rotationSystem": "tetrax",
-    "skin": "standard",
+    "skin": "tetrax",
     "soundbank": "standard",
     "music": "../marathon/marathon",
     "hasDangerBgm": true,
