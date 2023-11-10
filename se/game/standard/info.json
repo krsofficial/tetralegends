@@ -9,7 +9,6 @@
     "erase3",
     "erase4",
     "excellent",
-    "gameover",
     "garbage",
     "garbagefly",
     "garbagereceive",
@@ -25,13 +24,12 @@
     "land",
     "levelup",
     "lockforce",
-    "locknohd",
+    "lock",
     "move",
     "offpace",
     "onpace",
     "pause",
     "prespin",
-    "prespinmini",
     "ready",
     "rotate",
     "skip",
@@ -45,8 +43,7 @@
     "tspin2",
     "tspin2mini",
     "tspin3",
-    "tspin3mini",
-    "wallkick"
+    "tspin3mini"
   ],
   "ren": [
     1,
@@ -61,14 +58,7 @@
     10,
     11,
     12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20
+    13
   ],
   "cutItself": [
     "initialuse"
