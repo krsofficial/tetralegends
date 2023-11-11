@@ -1,21 +1,13 @@
 {
   "files": [
-    "b2b",
-    "drought",
-    "droughtintense",
     "erase4",
     "erasenot4",
     "excellent",
-    "fireball",
-    "garbage",
-    "harddrop",
-    "hold",
-    "initialhold",
-    "initialrotate",
     "ko",
     "levelup",
-    "locknohd",
+    "lock",
     "move",
+    "pause",
     "rotate"
   ],
   "ren": []
