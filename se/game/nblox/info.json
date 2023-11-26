@@ -1,11 +1,28 @@
 {
   "files": [
-    "erase",
-    "gameover",
+    "alarm",
+    "b2b",
+    "bravo",
+    "erase1",
+    "erase2",
+    "erase3",
+    "erase4",
+    "excellent",
+    "garbage",
     "harddrop",
+    "hold",
+    "ko",
+    "levelup",
     "lock",
+    "move",
     "pause",
-    "rotate"
+    "ready",
+    "rotate",
+    "start",
+    "tspin0",
+    "tspin1",
+    "tspin2",
+    "tspin3"
   ],
   "ren": []
 }
