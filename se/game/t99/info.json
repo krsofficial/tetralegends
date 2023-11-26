@@ -1,4 +1,5 @@
 {
+  "usesReadyGoVoices": true,
   "files": [
     "alarm",
     "bravo",
@@ -8,6 +9,7 @@
     "erase3",
     "erase4",
     "excellent",
+    "gameover",
     "garbagereceive",
     "go",
     "harddrop",
