@@ -54,7 +54,7 @@
           "langOverride": "menu_general"
         },
         {
-          "string": "tetraOnlineLabel",
+          "label": "Tetra Online",
           "fixedText": true,
           "value": "srsx"
         },
@@ -64,7 +64,7 @@
           "value": "standard"
         },
         {
-          "string": "SRS-X",
+          "label": "SRS-X",
           "langOverride": "menu_daspresets",
           "value": "tonline"
         },
