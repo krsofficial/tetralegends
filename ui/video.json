@@ -64,8 +64,8 @@
           "value": "standard"
         },
         {
-          "label": "  SRS-X  ",
-          "langOverride": "menu_daspresets",
+          "label": "SRS-X",
+          "fixedText": true,
           "value": "tonline"
         },
         {
