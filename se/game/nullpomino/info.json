@@ -1,5 +1,6 @@
 {
   "files": [
+    "alarm",
     "b2b",
     "bravo",
     "collapse",
@@ -9,24 +10,43 @@
     "erase4",
     "excellent",
     "gameover",
+    "garbage",
+    "garbagefly",
+    "garbagereceive",
+    "garbagesend",
+    "go",
+    "harddrop",
     "hold",
+    "hurryup",
     "initialhold",
     "initialrotate",
+    "initialskip",
     "ko",
     "land",
     "levelup",
-    "lock",
+    "lockforce",
+    "locknohd",
     "move",
+    "offpace",
+    "onpace",
     "pause",
+    "prespin",
+    "prespinmini",
     "ready",
     "rotate",
+    "skip",
     "start",
     "step",
     "topoutwarning",
     "tspin0",
+    "tspin0mini",
     "tspin1",
+    "tspin1mini",
     "tspin2",
-    "tspin3"
+    "tspin2mini",
+    "tspin3",
+    "tspin3mini",
+    "wallkick"
   ],
   "ren": [
     1,
@@ -50,5 +70,7 @@
     19,
     20
   ],
-  "nextSoundbank": "nullpomino"
+  "cutItself": [
+    "initialuse"
+  ]
 }

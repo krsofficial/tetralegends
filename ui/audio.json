@@ -55,7 +55,7 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "Tetra-X",
+          "label": "Tetra Online",
           "fixedText": true,
           "value": "standard"
         },
@@ -100,7 +100,7 @@
           "value": "tetrio"
         },
         {
-          "label": "NullpoMino",
+          "label": "Tetra-X",
           "fixedText": true,
           "value": "nullpomino"
         },
