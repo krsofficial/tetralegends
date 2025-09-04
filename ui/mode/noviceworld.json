@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcade",
+    "langOverride": "mode-options",
+    "game": "noviceworld",
+    "pgmusic": "pg-arcade"
+  },
+  "data": [
+    {
+      "label": "Novice (World)",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

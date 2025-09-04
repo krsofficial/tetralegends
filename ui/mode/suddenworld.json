@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcade",
+    "langOverride": "mode-options",
+    "game": "suddenworld",
+    "pgmusic": "pg-arcade"
+  },
+  "data": [
+    {
+      "label": "Sudden (World)",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "settings": {
+    "width": 10,
+    "height": 20,
+    "hiddenHeight": 4,
+    "pieces": "standard",
+    "unfavored": null,
+    "randomizer": "bag",
+    "rotationSystem": "srs",
+    "skin": "arika",
+    "soundbank": "tgm3",
+    "music": "../arcade/arcade1",
+    "hasDangerBgm": true,
+    "scoreTable": "blank",
+    "background": "marathon.jpg"
+  },
+  "piece": {
+    "areLimit": 432,
+    "areLineLimit": 640,
+    "dasLimit": 272,
+    "arrLimit": 17,
+    "lockDelayLimit": 500
+  },
+  "next": {
+    "nextLimit": 3
+  },
+  "hold": {
+    "isDisabled": false
+  },
+  "stats": ["score", "level", "fallspeed", "line"]
+}
