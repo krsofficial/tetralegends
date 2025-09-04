@@ -7,7 +7,7 @@
     "unfavored": null,
     "randomizer": "bag",
     "rotationSystem": "srs",
-    "skin": "srsx",
+    "skin": "battle",
     "soundbank": "battle",
     "music": "../battle/battle",
     "hasDangerBgm": true,
