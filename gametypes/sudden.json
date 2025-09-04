@@ -8,8 +8,9 @@
     "randomizer": "history6rolls",
     "rotationSystem": "ars",
     "skin": "arika",
-    "soundbank": "standard",
-    "music": "../marathon/marathon-2",
+    "soundbank": "tgm3",
+    "music": ["master", "master-last"],
+    "musicLinePoints": [250],
     "hasDangerBgm": true,
     "scoreTable": "blank",
     "background": "marathon.jpg",
@@ -19,10 +20,10 @@
     "arrLimit": 17
   },
   "next": {
-    "nextLimit": 1
+    "nextLimit": 3
   },
   "hold": {
-    "isDisabled": true
+    "isDisabled": false
   },
   "stats": ["grade", "score", "level", "line"]
 }

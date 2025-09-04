@@ -8,8 +8,8 @@
     "randomizer": "history6rolls",
     "rotationSystem": "ars",
     "skin": "arika",
-    "soundbank": "standard",
-    "music": "../marathon/marathon",
+    "soundbank": "tgm3",
+    "music": "../survival/survival",
     "hasDangerBgm": true,
     "scoreTable": "blank",
     "background": "marathon.jpg"
@@ -22,10 +22,10 @@
     "lockDelayLimit": 500
   },
   "next": {
-    "nextLimit": 1
+    "nextLimit": 3
   },
   "hold": {
-    "isDisabled": true
+    "isDisabled": false
   },
   "stats": ["score", "level", "fallspeed", "line"]
 }
