@@ -81,7 +81,7 @@
         },
         {
           "string": "PPT",
-          "langOverride": true,
+		  "fixedText": true,
           "value": "ppt"
         },
         {
@@ -106,7 +106,7 @@
         },
         {
           "string": "CONSOLE",
-          "langOverride": true,
+          "fixedText": true,
           "value": "nes"
         },
 		 {
@@ -125,7 +125,7 @@
           "value": "tetrio"
         },
         {
-          "label": "NullpoMino",
+          "label": "NULLPOMINO",
           "fixedText": true,
           "value": "nullpomino"
         },
