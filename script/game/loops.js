@@ -709,8 +709,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg, 1, true)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -923,8 +922,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg, 1, true)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1154,7 +1152,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg)
       firmDrop(arg)
-      classicLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
