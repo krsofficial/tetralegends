@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "arcade",
+    "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "suddenworld",
     "pgmusic": "pg-arcade"

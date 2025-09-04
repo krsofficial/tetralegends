@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "arcade",
+    "parent": "arcadears",
     "langOverride": "mode-options",
     "game": "sudden",
     "pgmusic": "pg-arcade"

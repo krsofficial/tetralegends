@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "arcade",
+    "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "maniaworld",
     "pgmusic": "pg-arcade"

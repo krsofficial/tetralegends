@@ -1,6 +1,7 @@
 {
   "properties": {
-    "parent": "root",
+    "parent": "arcade",
+	"pgmusic": "pg-arcade"
   },
   "data": [
     {
