@@ -6,7 +6,7 @@
     "pieces": "standard",
     "unfavored": null,
     "randomizer": "bag",
-    "rotationSystem": "srs",
+    "rotationSystem": "world",
     "skin": "arika",
     "soundbank": "tgm3",
     "music": "../arcade/arcade1",

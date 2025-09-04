@@ -707,8 +707,8 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      softDrop(arg, 70)
+      hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -920,8 +920,8 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      softDrop(arg, 70)
+      hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -1150,8 +1150,8 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg)
-      firmDrop(arg)
+      softDrop(arg, 70)
+      hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
