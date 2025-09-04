@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcade",
+    "langOverride": "mode-options",
+    "game": "mania",
+    "pgmusic": "pg-survival"
+  },
+  "data": [
+    {
+      "label": "Mania",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}
