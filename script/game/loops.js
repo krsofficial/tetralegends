@@ -491,12 +491,12 @@ export const loops = {
           switch (entry) {
             case 1:
             case 3:
-              if (!torikanPassed) {
+              if (!game.torikanPassed) {
 				  sound.killBgm()
 			  }
               break
 			case 5:
-              if (torikanPassed) {
+              if (game.torikanPassed) {
 				  sound.killBgm()
 			  }
               break
@@ -506,14 +506,14 @@ export const loops = {
               sound.playBgm(["arcade2"], "arcade")
               break
             case 4:
-              if (!torikanPassed) {
+              if (!game.torikanPassed) {
 				sound.loadBgm(["arcade3"], "arcade")
 				sound.killBgm()
 				sound.playBgm(["arcade3"], "arcade")
 			  }
 			  break
 			case 6:
-			  if (torikanPassed) {
+			  if (game.torikanPassed) {
 				sound.loadBgm(["arcade3"], "arcade")
 				sound.killBgm()
 				sound.playBgm(["arcade3"], "arcade")
@@ -523,7 +523,7 @@ export const loops = {
       }
 	  }
 	  
-      if (game.stat.level >= 350 && game.rta <= 150000)
+      if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
@@ -1079,12 +1079,12 @@ export const loops = {
           switch (entry) {
             case 1:
             case 3:
-              if (!torikanPassed) {
+              if (!game.torikanPassed) {
 				  sound.killBgm()
 			  }
               break
 			case 5:
-              if (torikanPassed) {
+              if (game.torikanPassed) {
 				  sound.killBgm()
 			  }
               break
@@ -1094,14 +1094,14 @@ export const loops = {
               sound.playBgm(["arcade2"], "arcade")
               break
             case 4:
-              if (!torikanPassed) {
+              if (!game.torikanPassed) {
 				sound.loadBgm(["arcade3"], "arcade")
 				sound.killBgm()
 				sound.playBgm(["arcade3"], "arcade")
 			  }
 			  break
 			case 6:
-			  if (torikanPassed) {
+			  if (game.torikanPassed) {
 				sound.loadBgm(["arcade3"], "arcade")
 				sound.killBgm()
 				sound.playBgm(["arcade3"], "arcade")
@@ -1111,7 +1111,7 @@ export const loops = {
       }
 	  }
 	  
-      if (game.stat.level >= 350 && game.rta <= 150000)
+      if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
