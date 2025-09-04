@@ -10,8 +10,8 @@
     "skin": "srsx",
     "soundbank": "standard",
     "music": "../ultra/ultra",
-    "hasDangerBgm": true,
-    "hasPaceBgm": true,
+    "hasDangerBgm": false,
+    "hasPaceBgm": false,
     "scoreTable": "guideline",
     "background": "marathon.jpg"
   },

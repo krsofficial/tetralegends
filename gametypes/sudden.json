@@ -9,7 +9,7 @@
     "rotationSystem": "ars",
     "skin": "arika",
     "soundbank": "tgm3",
-    "music": ["master", "master-last"],
+    "music": ["../master/master", "../master/master-last"],
     "musicLinePoints": [250],
     "hasDangerBgm": true,
     "scoreTable": "blank",
