@@ -260,18 +260,8 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-      if (game.stat.level >= 1299 && game.rta <= 600000)
+      if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
-      else if (
-        (game.stat.level >= 1299 && !game.torikanPassed) ||
-        game.stat.level === 1299
-      ) {
-        if (game.stat.level < 1299) game.stat.level = 1299
-        $("#kill-message").textContent = locale.getString("ui", "excellent")
-        sound.killVox()
-        sound.add("voxexcellent")
-        game.end(true)
-      }
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
