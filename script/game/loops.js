@@ -87,14 +87,32 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       if (game.stat.level >= 1299) game.stat.grade = "S13"
-      else if (game.stat.level >= 900)
-        game.stat.grade = "S9"
-	  else if (game.stat.level >= 1000)
-        game.stat.grade = "S10"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "S11"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
+	  else if (game.stat.level >= 1100)
+        game.stat.grade = "S11"
+	  else if (game.stat.level >= 1000)
+        game.stat.grade = "S10"
+      else if (game.stat.level >= 900)
+        game.stat.grade = "S9"
+	  else if (game.stat.level >= 800)
+        game.stat.grade = "S8"
+	  else if (game.stat.level >= 700)
+        game.stat.grade = "S7"
+	  else if (game.stat.level >= 600)
+        game.stat.grade = "S6"
+	  else if (game.stat.level >= 500)
+        game.stat.grade = "S5"
+	  else if (game.stat.level >= 400)
+        game.stat.grade = "S4"
+	  else if (game.stat.level >= 300)
+        game.stat.grade = "S3"
+	  else if (game.stat.level >= 200)
+        game.stat.grade = "S2"
+	  else if (game.stat.level >= 100)
+        game.stat.grade = "S1"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = "1"
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -154,7 +172,7 @@ export const loops = {
         [300, 11],
         [400, 10],
         [1000, 8],
-		[1200, 6],
+		[1200, 7],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -162,7 +180,7 @@ export const loops = {
         [301, 22],
         [401, 18],
         [1000, 15],
-		[1200, 8],
+		[1200, 10],
       ]
       const musicProgressionTable = [
         [279, 1],
@@ -281,8 +299,44 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       if (game.stat.level >= 999) game.stat.grade = "GM"
-      else if (game.stat.level >= 500 && game.torikanPassed)
+      else if (game.stat.level >= 945 && game.torikanPassed)
         game.stat.grade = "M"
+      else if (game.stat.level >= 900)
+        game.stat.grade = "S9"
+	  else if (game.stat.level >= 855)
+        game.stat.grade = "S8"
+	  else if (game.stat.level >= 790)
+        game.stat.grade = "S7"
+	  else if (game.stat.level >= 725)
+        game.stat.grade = "S6"
+	  else if (game.stat.level >= 660)
+        game.stat.grade = "S5"
+	  else if (game.stat.level >= 595)
+        game.stat.grade = "S4"
+	  else if (game.stat.level >= 535)
+        game.stat.grade = "S3"
+	  else if (game.stat.level >= 470)
+        game.stat.grade = "S2"
+	  else if (game.stat.level >= 405)
+        game.stat.grade = "S1"
+	  else if (game.stat.level >= 340)
+        game.stat.grade = "1"
+	  else if (game.stat.level >= 280)
+        game.stat.grade = "2"
+	  else if (game.stat.level >= 225)
+        game.stat.grade = "3"
+	  else if (game.stat.level >= 175)
+        game.stat.grade = "4"
+	  else if (game.stat.level >= 130)
+        game.stat.grade = "5"
+	  else if (game.stat.level >= 90)
+        game.stat.grade = "6"
+	  else if (game.stat.level >= 55)
+        game.stat.grade = "7"
+	  else if (game.stat.level >= 25)
+        game.stat.grade = "8"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = "9"
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
