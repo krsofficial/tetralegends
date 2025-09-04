@@ -85,11 +85,6 @@
           "value": "ppt"
         },
         {
-          "label": "ONLINE JAPAN",
-          "fixedText": true,
-          "value": "toj"
-        },
-        {
           "label": "FRIENDS",
           "fixedText": true,
           "value": "friends"

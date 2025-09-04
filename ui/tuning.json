@@ -197,6 +197,26 @@
         {
           "string": "originalOption",
           "value": "original"
+        },
+		{
+          "label": "ACE",
+          "fixedText": true,
+          "value": "ace"
+        },
+		{
+          "label": "ACE-WORLD",
+          "fixedText": true,
+          "value": "aceworld"
+        },
+		{
+          "label": "FRIENDS",
+          "fixedText": true,
+          "value": "friends"
+        },
+		{
+          "label": "BATTLE",
+          "fixedText": true,
+          "value": "battle"
         }
       ],
       "setting": "rotationSystem",

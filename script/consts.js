@@ -1086,6 +1086,8 @@ SPAWN_OFFSETS.arsx = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.original = SPAWN_OFFSETS.retro
 SPAWN_OFFSETS.ace = SPAWN_OFFSETS.arsti
 SPAWN_OFFSETS.aceworld = SPAWN_OFFSETS.world
+SPAWN_OFFSETS.battle = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.friends = SPAWN_OFFSETS.srs
 
 export const INITIAL_ORIENTATION = {
   srs: {
@@ -1120,6 +1122,8 @@ INITIAL_ORIENTATION.arsti = INITIAL_ORIENTATION.ars
 INITIAL_ORIENTATION.arsx = INITIAL_ORIENTATION.ars
 INITIAL_ORIENTATION.ace = INITIAL_ORIENTATION.arsti
 INITIAL_ORIENTATION.aceworld = INITIAL_ORIENTATION.world
+INITIAL_ORIENTATION.battle = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.friends = INITIAL_ORIENTATION.srs
 
 const KICK_TEMPLATES = {
   o: {
@@ -3022,6 +3026,8 @@ KICK_TEMPLATES.world = {
 
 KICK_TEMPLATES.ace = KICK_TEMPLATES.arsti
 KICK_TEMPLATES.aceworld = KICK_TEMPLATES.world
+KICK_TEMPLATES.battle = KICK_TEMPLATES.srs
+KICK_TEMPLATES.friends = KICK_TEMPLATES.srs
 
 export const KICK_TABLES = {
   asc: {
@@ -3212,9 +3218,10 @@ KICK_TABLES.arsx = {
 }
 KICK_TABLES.handheld = KICK_TABLES.retro
 KICK_TABLES.original = KICK_TABLES.retro
-
 KICK_TABLES.ace = KICK_TABLES.arsti
 KICK_TABLES.aceworld = KICK_TABLES.world
+KICK_TABLES.battle = KICK_TABLES.srs
+KICK_TABLES.friends = KICK_TABLES.srs
 
 export const PIECE_COLORS = {
   srs: {
@@ -3307,6 +3314,8 @@ PIECE_COLORS.arsti = PIECE_COLORS.ars
 PIECE_COLORS.arsx = PIECE_COLORS.ars
 PIECE_COLORS.ace = PIECE_COLORS.world
 PIECE_COLORS.aceworld = PIECE_COLORS.world
+PIECE_COLORS.battle = PIECE_COLORS.srs
+PIECE_COLORS.friends = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
   monomino: {
@@ -3349,7 +3358,9 @@ NEXT_OFFSETS.arsti = NEXT_OFFSETS.ars
 NEXT_OFFSETS.arsx = NEXT_OFFSETS.ars
 NEXT_OFFSETS.original = NEXT_OFFSETS.retro
 NEXT_OFFSETS.ace = NEXT_OFFSETS.arsti
-NEXT_OFFSETS.aceworld = EXT_OFFSETS.world
+NEXT_OFFSETS.aceworld = NEXT_OFFSETS.world
+NEXT_OFFSETS.battle = NEXT_OFFSETS.srs
+NEXT_OFFSETS.friends = NEXT_OFFSETS.srs
 
 export const PIECE_OFFSETS = {
   asc: {
@@ -3667,6 +3678,8 @@ PIECE_OFFSETS.deluxe = PIECE_OFFSETS.srs
 PIECE_OFFSETS.arsti = PIECE_OFFSETS.ars
 PIECE_OFFSETS.ace = PIECE_OFFSETS.arsti
 PIECE_OFFSETS.aceworld = PIECE_OFFSETS.world
+PIECE_OFFSETS.battle = PIECE_OFFSETS.srs
+PIECE_OFFSETS.friends = PIECE_OFFSETS.srs
 
 PIECE_OFFSETS.arsx = {
   ...PIECE_OFFSETS.ars,
@@ -4147,6 +4160,8 @@ export const SKIN_SETS = {
   original: "bone",
   ace: "arika",
   aceworld: "glossy",
+  battle: "battle",
+  friends: "battle",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -4164,4 +4179,6 @@ export const SOUND_SETS = {
   original: "standard",
   ace: "ace",
   aceworld: "ace",
+  battle: "battle",
+  friends: "friends",
 }
