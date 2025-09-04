@@ -10,48 +10,19 @@
       "type": "header"
     },
     {
-      "label": "NOVICE",
-      "description": "A slow game for beginners. (WIP)",
+      "label": "CLASSIC RULE",
+      "description": "The ruleset used in the arcade games.",
       "fixedText": true,
       "default": true,
       "action": "submenu",
-      "submenu": "mode/novice"
+      "submenu": "arcadears"
     },
 	{
-      "label": "MANIA",
-      "description": "Earn points to earn better grade. (WIP)",
+      "label": "WORLD RULE",
+      "description": "The ruleset used in the guideline games.",
       "fixedText": true,
       "action": "submenu",
-      "submenu": "mode/mania"
-    },
-    {
-      "label": "SUDDEN",
-      "description": "The pieces spawn on the ground and only get faster! (WIP)",
-      "fixedText": true,
-      "action": "submenu",
-      "submenu": "mode/sudden"
-    },
-    {
-      "label": "NOVICE (WORLD)",
-      "description": "A slow game for beginners. (WIP)",
-      "fixedText": true,
-      "default": true,
-      "action": "submenu",
-      "submenu": "mode/noviceworld"
-    },
-	{
-      "label": "MANIA (WORLD)",
-      "description": "Earn points to earn better grade. (WIP)",
-      "fixedText": true,
-      "action": "submenu",
-      "submenu": "mode/maniaworld"
-    },
-    {
-      "label": "SUDDEN (WORLD)",
-      "description": "The pieces spawn on the ground and only get faster! (WIP)",
-      "fixedText": true,
-      "action": "submenu",
-      "submenu": "mode/suddenworld"
+      "submenu": "arcadeworld"
     }
   ]
 }

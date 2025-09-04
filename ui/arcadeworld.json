@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "parent": "root",
+  },
+  "data": [
+    {
+      "string": "World Rule",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "NOVICE",
+      "description": "A slow game for beginners. (WIP)",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "mode/noviceworld"
+    },
+	{
+      "label": "MANIA",
+      "description": "Earn points to earn better grade. (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/maniaworld"
+    },
+    {
+      "label": "SUDDEN",
+      "description": "The pieces spawn on the ground and only get faster! (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/suddenworld"
+    }
+  ]
+}
