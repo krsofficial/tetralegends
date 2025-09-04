@@ -82,8 +82,8 @@ export const loops = {
       arcadeScore(arg)
       linesToLevel(arg, 1299, 100)
       game.endSectionLevel =
-        game.stat.level >= 900
-          ? 999
+        game.stat.level >= 1200
+          ? 1299
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       if (game.stat.level >= 1299) game.stat.grade = "S13"
@@ -469,6 +469,8 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  }
+	  
       if (game.stat.level >= 350 && game.rta <= 150000)
         game.torikanPassed = true
       if (
@@ -499,7 +501,7 @@ export const loops = {
       }
       updateFallSpeed(game)
     },
-  },},
+   },
   novice: {
     update: (arg) => {
       gameHandler.game.b2b = 0
