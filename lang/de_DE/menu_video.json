@@ -67,11 +67,11 @@
     "message": "Nachrichten anzeigen, wenn Sie Linien löschen und Tricks ausführen, wie z. B. 'Doppel' und 'T-Drehung'. Zeigt auch den Kettenzähler an"
   },
   "skinLabel": {
-    "message": "Teilgrafik Überschreibung",
+    "message": "Teilegrafik Überschreibung",
     "description": "'Skin' as in the sprites used by the pieces"
   },
   "skinDescription": {
-    "message": "Wähle einen Teilgrafik aus, der anstatt des Standards zu verwenden ist"
+    "message": "Wähle einen Teilegrafik aus, der anstatt des Standards zu verwenden ist"
   },
   "glossyOption": {
     "message": "Glänzend"
@@ -126,7 +126,7 @@
     "description": "Allows the user to override pieces colors with their own desired chices"
   },
   "colorOverrideDescription": {
-    "message": "Überschreibt die Farbenteilzuordnung"
+    "message": "Überschreibt die Farbenteilezuordnung"
   },
   "redOption": {
     "message": "Rot",

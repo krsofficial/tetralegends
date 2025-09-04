@@ -35,8 +35,23 @@
     {
       "string": "retroLabel",
       "stringDesc": "retroDescription",
+      "width": "half",
       "action": "submenu",
       "submenu": "retro"
+    },
+    {
+      "string": "arcadeLabel",
+      "stringDesc": "arcadeDescription",
+      "width": "half",
+      "action": "submenu",
+      "submenu": "arcade"
+    },
+    {
+      "fixedText": true,
+      "label": "Zen",
+      "description": "Relax, there are no restrictions!",
+      "action": "submenu",
+      "submenu": "mode/zen"
     },
     {
       "string": "settingsOverline",
@@ -69,15 +84,34 @@
       "submenu": "video"
     },
     {
+      "fixedText": true,
+      "label": "Data Management",
+      "type": "overline"
+    },
+    {
+      "fixedText": true,
+      "label": "Settings",
+      "description": "Import and export your settings here",
+      "action": "submenu",
+      "submenu": "settings"
+    },
+    {
+      "fixedText": true,
+      "label": "Highscores",
+      "description": "Look at your highscores for each mode here",
+      "action": "submenu",
+      "submenu": "highscores"
+    },
+    {
       "string": "miscOverline",
       "label": "Misc",
       "type": "overline"
     },
     {
-      "string": "translateLabel",
-      "stringDesc": "translateDescription",
+      "string": "discordLabel",
+      "stringDesc": "discordDescription",
       "action": "link",
-      "url": "https://crowdin.com/project/tetra-legends"
+      "url": "https://discordapp.com/invite/7hMx5r2"
     },
     {
       "string": "soundtrackLabel",
@@ -85,7 +119,30 @@
       "label": "Soundtrack",
       "description": "Listen to the original soundtrack (coming soon!)",
       "action": "link",
-      "url": "https://soundcloud.com/tetra-developer-studio/sets/tetra-legends-soundtrack"
+      "url": "https://www.youtube.com/playlist?list=OLAK5uy_ka56F4BS_XXfxY3YZGN5mfBGSoSIrPvj0",
+      "oldUrl": "https://soundcloud.com/tetra-developer-studio/sets/tetra-legends-soundtrack"
+    },
+    {
+      "fixedText": true,
+      "label": "Changelog",
+      "description": "See the changelog for this game",
+      "action": "link",
+      "url": "./changelog.html",
+      "openHere": true
+    },
+    {
+      "fixedText": true,
+      "label": "GitHub Repository",
+      "description": "Go to the GitHub Repository of Tetra Legends Ultimate",
+      "action": "link",
+      "url": "https://github.com/Talon125/talon125.github.io"
+    },
+    {
+      "fixedText": true,
+      "label": "Edited by: Talon",
+      "description": "Find a problem? Have a suggestion? Just wanna talk to me? Message me on Discord: Talon#7854",
+      "action": "link",
+      "url": "https://oktalon-szoradi.github.io/"
     }
   ]
 }

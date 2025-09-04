@@ -68,11 +68,11 @@
     "message": "Wählt aus, wie lange das Spiel dauern wird"
   },
   "useRtaLabel": {
-    "message": "EZA verwenden",
+    "message": "Echzeit verwenden",
     "description": "Used in modes like 'Ultra' to have the time limit run down from RTA instead of IGT; for example, this will make it so that the timer used for the time limit does not freeze during delays"
   },
   "useRtaDescription": {
-    "message": "Verwendet eine Stoppuhr, der während des Eintrags- oder Zeilenverzögerungen nicht einfriert, um das Zeitgrenze zu bestimmen"
+    "message": "Verwendet eine Stoppuhr, der während des Eintritts- oder Linienlöschungverzögerungen nicht einfriert, um die Zeitgrenze zu bestimmen"
   },
   "startingLevelLabel": {
     "message": "Anfangsstufe",
@@ -100,7 +100,7 @@
     "description": "This option allows the user to select from the ways that the game will lock the piece down, including Infinity, Extended and Classic"
   },
   "lockdownModeDescription": {
-    "message": "Wählt ein Modus aus, dass kontrolliert, wie der Teil sperren wird"
+    "message": "Wählt ein Modus aus, der steuert, wie der Teil sperren wird"
   },
   "infinityLdOption": {
     "message": "Versöhnig",
@@ -153,7 +153,7 @@
     "description": "Used to describe 'mechanics'"
   },
   "accurateOption": {
-    "message": "Genau",
+    "message": "Akkurat",
     "description": "As in 'accurate to the original'; this is used in the Retro modes to select mechanics that intend to match those of the original game"
   },
   "modernOption": {

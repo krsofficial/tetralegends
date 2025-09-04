@@ -13,7 +13,7 @@
       "string": "presetsLabel",
       "stringDesc": "presetDescription",
       "action": "submenu",
-      "submenu": "daspresets"
+      "submenu": "tuning/daspresets"
     },
     {
       "string": "dasLabel",
@@ -36,6 +36,33 @@
       "min": 0,
       "discrete": 5,
       "setting": "ARR",
+      "settingType": "setting"
+    },
+    {
+      "label": "Entry Delay",
+      "description": "Also known as ARE, produce a delay every time a new piece spawns (may be enforced in some modes)",
+      "fixedText": true,
+      "type": "toggle",
+      "action": "toggle",
+      "setting": "useAre",
+      "settingType": "setting"
+    },
+    {
+      "label": "Line Clear Delay",
+      "description": "Also known as Line Clear ARE, produce a delay every time a line is cleared (may be enforced in some modes)",
+      "fixedText": true,
+      "type": "toggle",
+      "action": "toggle",
+      "setting": "useLineClearAre",
+      "settingType": "setting"
+    },
+    {
+      "label": "Lock Out",
+      "description": "End the game when a piece is placed completely above the Skyline",
+      "fixedText": true,
+      "type": "toggle",
+      "action": "toggle",
+      "setting": "useLockOut",
       "settingType": "setting"
     },
     {
@@ -118,6 +145,16 @@
           "value": "tetrax"
         },
         {
+          "label": "ASC",
+          "fixedText": true,
+          "value": "asc"
+        },
+        {
+          "label": "ASC-X",
+          "fixedText": true,
+          "value": "ascx"
+        },
+        {
           "label": "ARS",
           "fixedText": true,
           "value": "ars"
@@ -153,7 +190,7 @@
           "value": "deluxe"
         },
         {
-          "label": "Oshisaure",
+          "label": "VRS (Oshisaure)",
           "fixedText": true,
           "value": "oshisaure"
         },
@@ -163,6 +200,55 @@
         }
       ],
       "setting": "rotationSystem",
+      "settingType": "setting"
+    },
+    {
+      "label": "Spin Detection Override",
+      "description": "Specify which spins are detected and how",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "tuning/spindetectionoverride"
+    },
+    {
+      "label": "Piece Shape Override",
+      "description": "Select which type of shapes the pieces will be",
+      "fixedText": true,
+      "secretA": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "Tetromino",
+          "description": "Tetrominoes are made up of 4 smaller blocks. This is the default",
+          "fixedText": true,
+          "value": "tetro"
+        },
+        {
+          "label": "Pentomino",
+          "description": "Pentominoes are made up of 5 smaller blocks. This makes the game significantly more difficult<br>Note: piece set is the same as in PPT",
+          "fixedText": true,
+          "value": "pento"
+        },
+        {
+          "label": "Monomino",
+          "description": "Monominoes are 1 single block",
+          "fixedText": true,
+          "value": "mono"
+        },
+        {
+          "label": "Domino",
+          "description": "Dominoes are 2 smaller blocks",
+          "fixedText": true,
+          "value": "do"
+        },
+        {
+          "label": "Tromino",
+          "description": "Trominoes are made up of 3 smaller blocks. This makes the game significantly easier",
+          "fixedText": true,
+          "value": "tro"
+        }
+      ],
+      "setting": "shapeOverride",
       "settingType": "setting"
     }
   ]

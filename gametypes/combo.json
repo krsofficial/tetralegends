@@ -7,9 +7,9 @@
     "unfavored": null,
     "randomizer": "bag",
     "rotationSystem": "srs",
-    "skin": "tonline",
-    "soundbank": "standard",
-    "music": "../sprint/sprint",
+    "skin": "srsx",
+    "soundbank": "battle",
+    "music": "../battle/battle",
     "hasDangerBgm": true,
     "hasPaceBgm": true,
     "scoreTable": "guideline",
@@ -22,8 +22,5 @@
     "spinDetectionType": "3corner",
     "xSpawnOffset": -3
   },
-  "stats": [
-    "score",
-    "maxcombo"
-  ]
+  "stats": ["score", "maxcombo"]
 }

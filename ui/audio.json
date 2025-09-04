@@ -55,9 +55,14 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "Tetra Online",
+          "label": "TETRA ONLINE",
           "fixedText": true,
           "value": "standard"
+        },
+		{
+          "label": "TETRA-X",
+          "fixedText": true,
+          "value": "tetrax"
         },
         {
           "label": "TGM3",
@@ -65,32 +70,52 @@
           "value": "tgm3"
         },
         {
+          "label": "TGM ACE",
+          "fixedText": true,
+          "value": "ace"
+        },
+        {
           "label": "T99",
           "fixedText": true,
           "value": "t99"
         },
         {
-          "string": "pptLabel",
-          "langOverride": "menu_daspresets",
+          "string": "PPT",
+          "langOverride": true,
           "value": "ppt"
         },
         {
-          "label": "Party DX",
+          "label": "ONLINE JAPAN",
           "fixedText": true,
-          "value": "party"
+          "value": "toj"
         },
         {
-          "string": "retroLabel",
-          "langOverride": "menu_root",
+          "label": "FRIENDS",
+          "fixedText": true,
+          "value": "friends"
+        },
+        {
+          "label": "BATTLE (LO-FI)",
+          "fixedText": true,
+          "value": "battle"
+        },
+        {
+          "label": "BATTLE (HI-FI)",
+          "fixedText": true,
+          "value": "battleplus"
+        },
+        {
+          "string": "CONSOLE",
+          "langOverride": true,
           "value": "nes"
         },
-        {
-          "string": "handheldLabel",
-          "langOverride": "menu_retro",
+		 {
+          "label": "HANDHELD",
+          "fixedText": true,
           "value": "handheld"
         },
         {
-          "label": "DX",
+          "label": "HANDHELD DX",
           "fixedText": true,
           "value": "deluxe"
         },
@@ -100,12 +125,12 @@
           "value": "tetrio"
         },
         {
-          "label": "Tetra-X",
+          "label": "NullpoMino",
           "fixedText": true,
           "value": "nullpomino"
         },
         {
-          "label": "Dualshock 3",
+          "label": "DUALSHOCK",
           "fixedText": true,
           "value": "nblox"
         }
@@ -155,9 +180,9 @@
       "action": "select",
       "selectOptions": [
         {
-          "label": "[EN] Sora",
+          "label": "[DE] Talon",
           "fixedText": true,
-          "value": "soraen"
+          "value": "talonde"
         },
         {
           "label": "[EN] Ariahivo",
@@ -165,14 +190,24 @@
           "value": "ariahivo"
         },
         {
-          "label": "[JA] Sora",
+          "label": "[EN] Sora",
           "fixedText": true,
-          "value": "soraja"
+          "value": "soraen"
+        },
+        {
+          "label": "[EN] Talon",
+          "fixedText": true,
+          "value": "talonen"
         },
         {
           "label": "[JA] Nina",
           "fixedText": true,
           "value": "nina"
+        },
+        {
+          "label": "[JA] Sora",
+          "fixedText": true,
+          "value": "soraja"
         },
         {
           "string": "offOption",

@@ -13,13 +13,13 @@
       "string": "particleSettingsLabel",
       "stringDesc": "particleSettingsDescription",
       "action": "submenu",
-      "submenu": "particles"
+      "submenu": "video/particles"
     },
     {
       "string": "colorOverrideLabel",
       "stringDesc": "colorOverrideDescription",
       "action": "submenu",
-      "submenu": "coloroverride"
+      "submenu": "video/coloroverride"
     },
     {
       "string": "themeLabel",
@@ -54,18 +54,23 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "Tetra Online",
+          "label": "TETRA ONLINE",
           "fixedText": true,
           "value": "srsx"
         },
         {
-          "label": "Tetra-X",
+          "label": "TETRA-X",
           "fixedText": true,
           "value": "standard"
         },
-        {
-          "label": "SRS-X",
+		{
+          "label": "FRIENDS",
           "fixedText": true,
+          "value": "battle"
+        },
+        {
+          "string": "tetraOnlineLabel",
+          "langOverride": "menu_daspresets",
           "value": "tonline"
         },
         {

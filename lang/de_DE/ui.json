@@ -24,7 +24,7 @@
     "description": "The speed of the piece's descent, commonly referred to as 'gravity'"
   },
   "entrydelay": {
-    "message": "Einstiegsverzögerung",
+    "message": "Eintrittsverzögerung",
     "description": "The amount of time in between piece placements, also known as 'ARE'"
   },
   "maxcombo": {
@@ -47,8 +47,12 @@
     "message": "%1 Sekunden/Zeile",
     "description": "The unit label for 'seconds per row'. %1 is the amount of seconds"
   },
+  "sec": {
+    "message": "Sekunde",
+    "description": "The unit label for something 'per second'"
+  },
   "pause": {
-    "message": "Pause",
+    "message": "Pausiert",
     "description": "Displays on screen when the game is paused"
   },
   "ready": {
@@ -67,20 +71,24 @@
     "message": "Spiel vorbei",
     "description": "Displays when the game is finished. It does not connotate winning or losing, just that the game has completed"
   },
+  "pleasetryagain": {
+    "message": "Bitte versuche es noch einmal",
+    "description": "Displays when the game is finished. Encourages the player to try again"
+  },
   "blockOut": {
-    "message": "Geblockt",
+    "message": "Blockierung",
     "description": "Displays as a failure message when the piece cannot spawn due to one already being in the way"
   },
   "lockOut": {
-    "message": "Ausgesperrt",
+    "message": "Aussperrung",
     "description": "Displays as a failure message when the piece was locked above the skyline/ceiling"
   },
   "topOut": {
-    "message": "Ausgefüllt",
+    "message": "Ausfüllung",
     "description": "Displays as a failure message when the stack is pushed above the maximum limit on the board; for example, a stack higher than 40 lines in guideline results in a top out. Also known as 'garbage out'"
   },
   "timeOut": {
-    "message": "Zeit abgelaufen",
+    "message": "Zeit vorbei",
     "description": "Displays when the time runs out"
   },
   "excellent": {
@@ -100,11 +108,11 @@
     "description": "Displays under 'READY' while the game loads the assets"
   },
   "realTimeAttack": {
-    "message": "EZA: %1",
+    "message": "Echtzeit: %1",
     "description": "This label is used to describe the 'real time', as in a timer that does NOT freeze during Entry/Line Delay. %1 is the actual time (i.e. 00:02:41)"
   },
   "inGameTime": {
-    "message": "ISZ: %1",
+    "message": "Spielzeit: %1",
     "description": "This label is used to describe the 'in game time', as in a timer that FREEZES during Entry/Line Delay. %1 is the actual time (i.e. 00:02:41)"
   },
   "blockOutWarning": {
@@ -124,7 +132,7 @@
     "description": "Flashes at the top of the screen when locking the current piece will cause a failure due to the incoming garbage pushing the stack above the highest row"
   },
   "watchOutWarning": {
-    "message": "Pass auf!!",
+    "message": "Achtung!!",
     "description": "Used as text to draw the player's attention to something; doesn't have to be a direct translation"
   },
   "coolPace": {
@@ -140,23 +148,23 @@
     "description": "Used to show the user that they are playing too slowly in certain arcade modes. Known as 'REGRET!' in Japanese"
   },
   "pressKeyboardKey": {
-    "message": "Drück auf %1",
+    "message": "Drücke %1",
     "description": "As in to press the button on the keyboard"
   },
   "pressControllerButton": {
-    "message": "Drück auf %1",
+    "message": "Drücke %1",
     "description": "As in to press the button on the controller"
   },
   "clickAnywhere": {
-    "message": "Irgendwo klicken",
+    "message": "Klicke irgendwo",
     "description": "Indicating to click the mouse anywhere on the screen"
   },
   "tapAnywhere": {
-    "message": "Irgendwo tippen",
+    "message": "Tippe irgendwo",
     "description": "Indicating to tap on the touchscreen anywhere"
   },
   "flashingLights": {
-    "message": "Flashing Lights",
+    "message": "blinkende Lichter",
     "description": "Used to warn the player of flashing lights"
   }
 }

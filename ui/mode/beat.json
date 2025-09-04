@@ -1,0 +1,46 @@
+{
+  "properties": {
+    "parent": "guideline",
+    "parentSecret": true,
+    "langOverride": "mode-options",
+    "game": "beat"
+  },
+  "data": [
+    {
+      "label": "Beat Mode",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "Song",
+      "description": "Choose which song plays during the game",
+      "fixedText": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "Night Of Nights",
+          "description": "COOL&CREATE<br>180 BPM",
+          "fixedText": true,
+          "value": "non"
+        },
+        {
+          "label": "Ludicrous Speed",
+          "description": "F-777<br>166 BPM",
+          "fixedText": true,
+          "value": "beat"
+        },
+        {
+          "label": "Running In The 90's",
+          "description": "Initial D<br>158.5 BPM",
+          "fixedText": true,
+          "value": "ritn"
+        }
+      ],
+      "setting": "song",
+      "gameName": "beat",
+      "settingType": "game"
+    }
+  ]
+}

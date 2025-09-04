@@ -7,7 +7,7 @@
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
     "rotationSystem": "srs",
-    "skin": "tonline",
+    "skin": "srsx",
     "soundbank": "standard",
     "music": "sprint",
     "hasDangerBgm": true,
@@ -21,9 +21,5 @@
     "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner"
   },
-  "stats": [
-    "score",
-    "line",
-    "piece"
-  ]
+  "stats": ["score", "line", "piece"]
 }

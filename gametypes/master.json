@@ -7,7 +7,7 @@
     "unfavored": null,
     "randomizer": "bag",
     "rotationSystem": "srs",
-    "skin": "tetrax",
+    "skin": "srsx",
     "soundbank": "standard",
     "music": ["master", "master-last"],
     "musicLinePoints": [250],
@@ -22,11 +22,5 @@
     "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner"
   },
-  "stats": [
-    "score",
-    "level",
-    "entrydelay",
-    "line",
-    "piece"
-  ]
+  "stats": ["score", "level", "entrydelay", "line", "piece"]
 }

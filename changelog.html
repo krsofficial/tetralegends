@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/changelog.css">
-  <title>Tetra Legends Changelog</title>
+  <title>Tetra Legends Ultimate Changelog</title>
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -16,41 +16,207 @@
 </head>
 
 <body>
-<h1>Alpha v10.2.0 - 2022-03-09</h1>
-<ul>
-  <li>
-    Changes
-    <ul>
-      <li>The menu now has a new transition animation</li>
-      <li>The root menu categories are now shown at the top of the submenus</li>
-      <li>Night of Nights X now has its own pregame music</li>
-    </ul>
-  </li>
-  <li>
-    Fixes
-    <ul>
-      <li>"The Control Menu Bug" is now <b>gone.</b></li>
-      <li>The menu now properly backtracks the selection when you are more than one submenu deep</li>
-      <li>The menu now autoscrolls to the back button when pressing backspace on the keyboard</li>
-      <li>Opening a selected setting's submenu with the mouse now functions correctly</li>
-    </ul>
-  </li>
-  <li>Updated localization</li>
-</ul>
+  <a class="tetra-link" href="index.html" target="_self">&larr; Back to Tetra Legends Ultimate</a>
+  <br>
+  <!-- <h1>Changes I (Talon) have made - 2021-12-04</h1> -->
+  <!-- <h1>Changes I (Talon) have made - 2022-03-06</h1> -->
+  <h1>Changes I (Talon) have made - since 2021-12-04</h1>
+  <!-- <br>btw I've been using Microsoft Edge to test my changes. -->
+  <ul>
+    <li>
+      Additions
+      <ul>
+        <li>Arcade modes and extra soundbanks from Tetra Legends Plus</li>
+        <li>Zen mode
+          <ul>
+            <li>In this mode there's no gravity</li>
+            <li>You can hold/skip as many times as you want</li>
+            <li>New lockdown mode: Zen
+              <ul>
+                <li>It's like infinite/forgiving, but the lockdown bar only depletes when softdropping</li>
+              </ul>
+            </li>
+            <li>Pausing doesn't hide your stack/next/hold</li>
+            <li>There is no goal or end, so play to your heart's content!</li>
+            <li>You can also send garbage to yourself by pressing Enter</li>
+          </ul>
+        </li>
+        <li>Ability to disable delays (ARE)</li>
+        <li>Ability to disable Lock Out</li>
+        <li>4-Point All-Spin
+          <ul>
+            <li>Dr Ocelot started but didn't finish the code. So, I finished it</li>
+            <!-- <li>This is on by default and cannot be changed (yet)</li> -->
+            <li>I piece has its own special code now (because the I piece is weird in 4-Point All-Spin)</li>
+          </ul>
+        </li>
+        <li>EZ-Immobile
+          <ul>
+            <li>Functions the same way as it does in NullpoMino (if a piece is kicked, it's a mini spin)</li>
+            <!-- <li>This only applies in Tetra-X modes You can't choose between spin detections yet</li> -->
+          </ul>
+        </li>
+        <li>O-Spin Detection
+          <ul>
+            <li>Hybrid detection type that uses Immobile rules to decide if it's a spin, and some 4-Point-style rules to decide whether it's mini or not</li>
+            <li>Detection is used in all spin-enabled modes (both Immobile and 4-Point)</li>
+          </ul>
+        </li>
+        <li>Ability to control spin detection (which system, which pieces)</li>
+        <li>My voice
+          <ul>
+            <li>Both in English and in German</li>
+            <!-- <li>You might (not) have it, depending on who you are  ;)</li> -->
+            <!-- <li>You might (not) have it, depending on if I want you to know my voice</li> -->
+            <!-- <li>I plan on updating the voices in the future, like adding more clips for all the other spins/spin types</li>
+            <li>German was removed due to its low quality</li> -->
+          </ul>
+        </li>
+        <li>ASC (Ascension) Rotation System
+          <ul>
+            <li>You can use this under Tuning > Rotation System Override</li>
+            <!-- <li>It uses the Tetra-X skin (might be changed in the future  -> more piece skins?)</li> -->
+            <li>It uses the "Glossy" skin (might be changed in the future --> more piece skins?)</li>
+            <li>If you don't know what this is:<a href="https://asc.winternebs.com/assets/home/kicktablesq.gif" target="_blank">Click Me!</a></li>
+          </ul>
+        </li>
+        <li>ASC-X Rotation System
+          <ul>
+            <li>Same as ASC but with SRS-X 180° kicks</li>
+          </ul>
+        </li>
+        <li>Ability to import, export, and reset your settings</li>
+      </ul>
+    </li>
+    <li>
+      Changes
+      <ul>
+        <li>Clutch clears are now allowed
+          <ul>
+            <li>
+              i.e. placing a piece that would clear a line, but is placed fully above the Skyline (should be a Lock Out)<br>
+              will no longer Lock Out. The line will clear, and a clutch effect is played
+            </li>
+          </ul>
+        </li>
+        <li>Hidden modes are no longer hidden</li>
+        <li>Night of Nights mode is now called Beat Mode
+          <ul>
+            <li>While in this mode, uses the unused Disco Lights background</li>
+            <li>You can choose which song to play</li>
+            <!-- <li>Song is now Ludicrous Speed (F777). Using your own song might be added in the future</li>
+            <li>BPM is 166 instead of 180, so it might be a slight bit easier</li> -->
+          </ul>
+        </li>
+        <li>Some German translations have been updated</li>
+        <li>Some default settings may have been changed to suit me</li>
+        <li>Music no longer mutes when the game gets unfocused. It instead gets quieter</li>
+        <li>Made the Top/Lock/Block Out warning sounds not fade quieter after 2 seconds</li>
+        <li>Gave the Top/Lock/Block Out warnings more urgent-looking effect</li>
+        <li>The collapse sound no longer plays if your stack doesn't fall</li>
+        <li>Survival mode additions:
+          <ul>
+            <li>You may now choose a Matrix width between 4 and 10</li>
+          </ul>
+        </li>
+        <li>Survival and Zen modes:
+          <ul>
+            <li>You may now set a garbage cap</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>
+      Known Bugs
+      <ul>
+        <!-- <li>Some S-Spin Minis are not detected for some reason. This exact bug is also in Tetr.JS Enhanced (another game from Dr Ocelot)</li> -->
+        <!-- <li>When the board flips upside-down in Night Of Nights X, the animation is too slow</li> -->
+        <li>Sometimes (perhaps with right timing), the gameover UI will appear when the game has restarted</li>
+        <li>In Survival mode, there's a chance one garbage particle may stay on your Matrix
+          <ul>
+            <li>The following error notification may show in the bottom right (also in the developer tools' console of the browser)
+              <ul>
+                <li>/script/sound.js @ 300</li>
+                <li>Uncaught TypeError: Cannot read properties of undefined (reading 'hasDangerBgm')</li>
+              </ul>
+            </li>
+            <li>Restarting this mode may trigger this bug</li>
+            <li>The garbage particle will only go away upon refreshing the page</li>
+          </ul>
+        </li>
+        <li>Beat Mode (former Night of Nights mode):
+          <ul>
+            <li>Under some circumstances, Lock Out and Block Out will occur at the same time
+              <ul>
+                <li>Both voice clips are played at the same time</li>
+                <li>Also, sometimes the Game Over voice clip will be played twice (also at (around) the same time)</li>
+              </ul>
+            </li>
+            <li>Music takes a little while to load</li>
+            <li>Holding at the right time may cause piece duplication</li>
+            <li>Rotating, then hard-dropping an O-Piece (so that it turns gray) rewards a Mini O-Spin</li>
+          </ul>
+        </li>
+        <li>Sometimes errors can occur during IRS before the game starts</li>
+        <!-- <li>The collapse sound still plays even when your stack doesn't fall</li> -->
+        <li>Even if IRS/IHS avoids a Block Out, the Block Out still occurs</li>
+        <!-- <li>Doing an I-Spin Tetra will always be Back-To-Back, even if the previous line clear was not Back-To-Back
+          <ul>
+            <li>Also occurs if this is your first line clear</li>
+          </ul>
+        </li> -->
+        <li>Hold Block Out warning may not be completeley accurate when using skip instead of hold
+          <ul>
+            <li>If you are using pentominoes in combo challenge with skip, if the next piece is too big for the Matrix, and you initially skip it, the Hold Block Out warning will keep playing</li>
+          </ul>
+        </li>
+        <li>In rare cases, the Matrix will be shifted a bit downwards. The borders are fine, but inside is shifted downwards. This is fixed after restarting the current game</li>
+        <li>In vary rare cases, hard-dropping(?) pieces may make them fractured (lose (a) mino(es)) or disappear</li>
+        <li>Sometimes sounds are not played in the correct order when loading a new game for the first time</li>
+        <li>Sometimes sounds are cut off when loading a new game for the first time</li>
+        <li>Both "ready" voices/sounds will play when loading an arcade game mode for the first time</li>
+        <li>In rare cases, the game looks scrunched when resized at a certain time</li>
+        <li>Upon resetting settings, updated audio volumes don't immediately take effect</li>
+        <li>Importing settings: Doesn't work by pressing Enter. Gamepad behavior is unknown</li>
+      </ul>
+    </li>
+    </li>
+  </ul>
 
-<h1>Alpha v10.1.0 - 2022-03-07</h1>
-<ul>
-  <li>
+  <h1>Alpha v10.2.0 - 2022-03-09</h1>
+  <ul>
+    <li>
+      Changes
+      <ul>
+        <li>The menu now has a new transition animation</li>
+        <li>The root menu categories are now shown at the top of the submenus</li>
+        <li>Night of Nights X now has its own pregame music</li>
+      </ul>
+    </li>
+    <li>
+      Fixes
+      <ul>
+        <li>"The Control Menu Bug" is now <b>gone.</b></li>
+        <li>The menu now properly backtracks the selection when you are more than one submenu deep</li>
+        <li>The menu now autoscrolls to the back button when pressing backspace on the keyboard</li>
+        <li>Opening a selected setting's submenu with the mouse now functions correctly</li>
+      </ul>
+    </li>
+    <li>Updated localization</li>
+  </ul>
+
+  <h1>Alpha v10.1.0 - 2022-03-07</h1>
+  <ul>
+    <li>
       Changes
       <ul>
         <li>The Night of Nights modes are now translatable</li>
         <li>The Night of Nights modes are no longer hidden</li>
-
       </ul>
     </li>
-  <li>
+    <li>
       Fixes
-    <ul>
+      <ul>
         <li>Night of Nights X
           <ul>
             <li>The animation where the board flips upside-down is no longer busted</li>
@@ -76,7 +242,7 @@
       </ul>
     </li>
   </ul>
-
+  
   <h1>Alpha v9.1.0 - 2021-08-28</h1>
   <ul>
     <li>Changes

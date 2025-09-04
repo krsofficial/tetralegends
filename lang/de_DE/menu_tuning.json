@@ -1,10 +1,10 @@
 {
   "presetsLabel": {
-    "message": "Voreinstellungen Verzögerung/Rate",
+    "message": "Voreinstellungen Autoshift-Verzögerung/-Rate",
     "description": "Could also be referred to as 'Autoshift Presets' or 'DAS Presets'"
   },
   "presetDescription": {
-    "message": "Wählen Sie aus einer Vielzahl verschiedener Voreinstellungen für Autoshift aus"
+    "message": "Wählen aus einer Vielzahl verschiedener Voreinstellungen für Autoshift aus"
   },
   "dasLabel": {
     "message": "Autoshift-Verzögerung",

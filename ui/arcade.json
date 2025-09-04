@@ -1,0 +1,28 @@
+{
+  "properties": {
+    "parent": "root",
+    "vox": "menuarcade"
+  },
+  "data": [
+    {
+      "string": "arcadeLabel",
+      "langOverride": "menu_root",
+      "type": "header"
+    },
+    {
+      "label": "NOVICE",
+      "description": "A slow game for beginners.",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "mode/novice"
+    },
+    {
+      "label": "SUDDEN",
+      "description": "The pieces spawn on the ground and only get faster!",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/sudden"
+    }
+  ]
+}

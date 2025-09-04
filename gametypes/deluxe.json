@@ -7,7 +7,7 @@
     "unfavored": null,
     "randomizer": "deluxe",
     "rotationSystem": "deluxe",
-    "skin": "deluxe",
+    "skin": "retro",
     "soundbank": "deluxe",
     "music": "korobeiniki",
     "scoreTable": "retro",
@@ -35,9 +35,5 @@
   "hold": {
     "isDisabled": true
   },
-  "stats": [
-    "score",
-    "level",
-    "line"
-  ]
+  "stats": ["score", "level", "line"]
 }

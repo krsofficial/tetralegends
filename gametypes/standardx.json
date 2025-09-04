@@ -7,7 +7,7 @@
     "unfavored": "standardUnfavored",
     "randomizer": "tetrax",
     "rotationSystem": "tetrax",
-    "skin": "tetrax",
+    "skin": "standard",
     "soundbank": "standard",
     "music": "../marathon/marathon",
     "hasDangerBgm": true,
@@ -20,11 +20,5 @@
     "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "immobile"
   },
-  "stats": [
-    "score",
-    "level",
-    "fallspeed",
-    "line",
-    "piece"
-  ]
+  "stats": ["score", "level", "fallspeed", "line", "piece"]
 }
