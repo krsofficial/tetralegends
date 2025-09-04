@@ -344,7 +344,7 @@
       }
       let enableVideo = () => {
         document.documentElement.innerHTML =
-          `<video autoplay muted loop id="myVideo">
+          `<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;" autoplay muted loop id="myVideo">
     <source src="vid/DiscoLightsVidevo.mov" type="video/mp4">
   </video>` + document.documentElement.innerHTML
         enableVideo = () => {}

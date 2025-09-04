@@ -23,5 +23,9 @@
     "spinDetectionType": "3corner",
     "xSpawnOffset": -3
   },
+  "stack": {
+    "useMinoSkin": true,
+    "flashOnTetris": true
+  },
   "stats": ["score", "maxcombo"]
 }
