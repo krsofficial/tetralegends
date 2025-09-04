@@ -7,13 +7,12 @@
     "unfavored": null,
     "randomizer": "bag",
     "rotationSystem": "srs",
-    "skin": "battle",
-    "soundbank": "battle",
-    "music": "../battle/battle",
+    "skin": "srsx",
+    "soundbank": "standard",
+    "music": "../ultra/ultra",
     "hasDangerBgm": true,
     "hasPaceBgm": true,
     "scoreTable": "guideline",
-	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"
   },
   "piece": {
@@ -22,10 +21,6 @@
     "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner",
     "xSpawnOffset": -3
-  },
-  "stack": {
-    "useMinoSkin": true,
-    "flashOnTetris": true
   },
   "stats": ["score", "maxcombo"]
 }
