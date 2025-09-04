@@ -3,7 +3,7 @@
     "parent": "arcade",
     "langOverride": "mode-options",
     "game": "novice",
-    "pgmusic": "pg-survival"
+    "pgmusic": "pg-arcade"
   },
   "data": [
     {

@@ -499,7 +499,7 @@ export const loops = {
       }
       updateFallSpeed(game)
     },
-  },
+  },},
   novice: {
     update: (arg) => {
       gameHandler.game.b2b = 0
