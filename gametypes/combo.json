@@ -13,6 +13,7 @@
     "hasDangerBgm": true,
     "hasPaceBgm": true,
     "scoreTable": "guideline",
+	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"
   },
   "piece": {
