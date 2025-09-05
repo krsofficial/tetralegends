@@ -110,8 +110,6 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (game.stat.level >= 1299) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
-		game.settings.rotationSystem = "sudden"
-		game.rotationSystem = "sudden"
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
         game.stat.grade = "S11"
@@ -285,6 +283,10 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  if (game.stat.level >= 1200) {
+		  game.settings.rotationSystem = "sudden"
+		  game.rotationSystem = "sudden"
+	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
@@ -760,8 +762,6 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (game.stat.level >= 1299) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
-		game.settings.rotationSystem = "suddenworld"
-		game.rotationSystem = "suddenworld"
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
         game.stat.grade = "S11"
@@ -934,6 +934,10 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  if (game.stat.level >= 1200) {
+		  game.settings.rotationSystem = "suddenworld"
+		  game.rotationSystem = "suddenworld"
+	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
