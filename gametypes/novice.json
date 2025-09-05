@@ -10,7 +10,7 @@
     "skin": "arika",
     "soundbank": "tgm3",
     "music": "../arcade/arcade1",
-    "hasDangerBgm": true,
+    "hasDangerBgm": false,
     "scoreTable": "blank",
     "background": "marathon.jpg"
   },
