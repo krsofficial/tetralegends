@@ -115,12 +115,12 @@ class Settings {
       moveRight: ["ArrowRight"],
       hardDrop: ["Space"],
       softDrop: ["ArrowDown"],
-      rotateLeft: ["KeyZ", "KeyY"],
-      rotateRight: ["ArrowUp", "KeyC"],
-      rotate180: ["KeyX"],
-      hold: ["ShiftRight"],
+      rotateLeft: ["KeyZ"],
+      rotateRight: ["KeyX", "ArrowUp"],
+      rotate180: ["KeyA", "KeyS", "KeyD"],
+      hold: ["KeyC"],
       retry: ["KeyR"],
-      pause: ["Escape", "KeyP"],
+      pause: ["Escape"],
     }
     this.defaultGame = {
       marathon: {
