@@ -36,7 +36,13 @@
           "description": "Initial D<br>158.5 BPM",
           "fixedText": true,
           "value": "ritn"
-        }
+        },
+		{
+          "label": "Katsuya",
+          "description": "TGM ACE<br>85 BPM",
+          "fixedText": true,
+          "value": "kachusha"
+        ,
       ],
       "setting": "song",
       "gameName": "beat",

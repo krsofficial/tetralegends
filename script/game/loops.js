@@ -335,9 +335,9 @@ export const loops = {
       if (game.stat.level >= 999) game.stat.grade = "GM"
       else if (game.stat.level >= 999 && game.torikanPassed)
         game.stat.grade = "M"
-      else if (game.stat.score >= 12000)
+      else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
-	  else if (game.stat.score >= 10000)
+	  else if (game.stat.score >= 100000)
         game.stat.grade = "S8"
 	  else if (game.stat.score >= 82000)
         game.stat.grade = "S7"
@@ -981,9 +981,9 @@ export const loops = {
       if (game.stat.level >= 999) game.stat.grade = "GM"
       else if (game.stat.level >= 999 && game.torikanPassed)
         game.stat.grade = "M"
-      else if (game.stat.score >= 12000)
+      else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
-	  else if (game.stat.score >= 10000)
+	  else if (game.stat.score >= 100000)
         game.stat.grade = "S8"
 	  else if (game.stat.score >= 82000)
         game.stat.grade = "S7"
@@ -1554,6 +1554,9 @@ export const loops = {
         case "ritn":
           bpm = 158.5
           break
+		case "kachusha":
+		  bpm = 85
+		  break
       }
       /* game.isRaceMode = true; */
       game.beatTime = bpmToMs(bpm)
