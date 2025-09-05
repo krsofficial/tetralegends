@@ -126,7 +126,7 @@
     <video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%" autoplay muted loop id="myVideo">
       <source src="vid/DiscoLightsVidevo.mov" type="video/mp4" />
     </video>
-	<div style="opacity:1,position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;" id="arcadeBackground"/>
+	<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;opacity:1" autoplay muted loop id="arcadeBackground"/>
     <div id="lights-warning" class="hidden">
       <img src="img/tetrion/warning.svg" alt="" />
       Flashing Lights
@@ -349,7 +349,7 @@
         enableVideo = () => {}
       }
 	  let enableArcadeBackgrounds() => {
-		document.documentElement.innerHTML = `<div style="opacity:1,position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;" id="arcadeBackground"/>`
+		document.documentElement.innerHTML = `<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;opacity:1" autoplay muted loop id="arcadeBackground"/>`
 		+ document.documentElement.innerHTML
 		enableArcadeBackgrounds = () => {}
 	  }
