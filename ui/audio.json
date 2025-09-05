@@ -80,8 +80,8 @@
           "value": "t99"
         },
         {
-          "string": "PPT",
-		  "fixedText": true,
+          "string": "pptLabel",
+          "langOverride": "menu_daspresets",
           "value": "ppt"
         },
         {
@@ -100,8 +100,8 @@
           "value": "battleplus"
         },
         {
-          "string": "CONSOLE",
-          "fixedText": true,
+          "string": "retroLabel",
+          "langOverride": "menu_root",
           "value": "nes"
         },
 		 {
