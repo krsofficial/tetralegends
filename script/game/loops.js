@@ -287,6 +287,10 @@ export const loops = {
 		  game.settings.rotationSystem = "sudden"
 		  game.rotationSystem = "sudden"
 	  }
+	  else {
+		  game.settings.rotationSystem = "arsti"
+		  game.rotationSystem = "arsti"
+	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
@@ -938,6 +942,10 @@ export const loops = {
 		  game.settings.rotationSystem = "suddenworld"
 		  game.rotationSystem = "suddenworld"
 	  }
+	  else {
+		  game.settings.rotationSystem = "world"
+		  game.rotationSystem = "world"
+	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
@@ -1568,10 +1576,6 @@ export const loops = {
 		  bpm = 85
 		  break
       }
-	  if (settings.game.beat.song === "kachusha") {
-		  game.settings.rotationSystem = "aceworld"
-		  game.rotationSystem = "aceworld"
-	  }
       /* game.isRaceMode = true; */
       game.beatTime = bpmToMs(bpm)
       game.updateStats()
