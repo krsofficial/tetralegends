@@ -42,7 +42,7 @@
           "description": "TGM ACE<br>85 BPM",
           "fixedText": true,
           "value": "kachusha"
-        },
+        }
       ],
       "setting": "song",
       "gameName": "beat",
