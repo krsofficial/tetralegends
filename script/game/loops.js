@@ -289,43 +289,43 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       if (game.stat.level >= 999) game.stat.grade = "GM"
-      else if (game.stat.level >= 945 && game.torikanPassed)
+      else if (game.stat.level >= 999 && game.torikanPassed)
         game.stat.grade = "M"
-      else if (game.stat.level >= 900)
+      else if (game.stat.level >= 12000)
         game.stat.grade = "S9"
-	  else if (game.stat.level >= 855)
+	  else if (game.stat.level >= 10000)
         game.stat.grade = "S8"
-	  else if (game.stat.level >= 790)
+	  else if (game.stat.level >= 82000)
         game.stat.grade = "S7"
-	  else if (game.stat.level >= 725)
+	  else if (game.stat.level >= 66000)
         game.stat.grade = "S6"
-	  else if (game.stat.level >= 660)
+	  else if (game.stat.level >= 52000)
         game.stat.grade = "S5"
-	  else if (game.stat.level >= 595)
+	  else if (game.stat.level >= 40000)
         game.stat.grade = "S4"
-	  else if (game.stat.level >= 535)
+	  else if (game.stat.level >= 30000)
         game.stat.grade = "S3"
-	  else if (game.stat.level >= 470)
+	  else if (game.stat.level >= 22000)
         game.stat.grade = "S2"
-	  else if (game.stat.level >= 405)
+	  else if (game.stat.level >= 16000)
         game.stat.grade = "S1"
-	  else if (game.stat.level >= 340)
+	  else if (game.stat.level >= 12000)
         game.stat.grade = "1"
-	  else if (game.stat.level >= 280)
+	  else if (game.stat.level >= 8000)
         game.stat.grade = "2"
-	  else if (game.stat.level >= 225)
+	  else if (game.stat.level >= 5500)
         game.stat.grade = "3"
-	  else if (game.stat.level >= 175)
+	  else if (game.stat.score >= 3500)
         game.stat.grade = "4"
-	  else if (game.stat.level >= 130)
+	  else if (game.stat.score >= 2000)
         game.stat.grade = "5"
-	  else if (game.stat.level >= 90)
+	  else if (game.stat.score >= 1400)
         game.stat.grade = "6"
-	  else if (game.stat.level >= 55)
+	  else if (game.stat.score >= 800)
         game.stat.grade = "7"
-	  else if (game.stat.level >= 25)
+	  else if (game.stat.score >= 400)
         game.stat.grade = "8"
-	  else if (game.stat.level >= 0)
+	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
       collapse(arg)
       if (arg.piece.inAre) {
@@ -439,10 +439,8 @@ export const loops = {
       const musicProgressionTable = [
         [279, 1],
         [300, 2],
-        [479, 3],
-        [500, 4],
-		[379, 5],
-		[400, 6],
+        [379, 3],
+        [400, 4],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -491,14 +489,7 @@ export const loops = {
           switch (entry) {
             case 1:
             case 3:
-              if (!game.torikanPassed) {
-				  sound.killBgm()
-			  }
-              break
-			case 5:
-              if (game.torikanPassed) {
-				  sound.killBgm()
-			  }
+              sound.killBgm()
               break
             case 2:
               sound.loadBgm(["arcade2"], "arcade")
@@ -506,22 +497,14 @@ export const loops = {
               sound.playBgm(["arcade2"], "arcade")
               break
             case 4:
-              if (!game.torikanPassed) {
-				sound.loadBgm(["arcade3"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["arcade3"], "arcade")
-			  }
-			  break
-			case 6:
-			  if (game.torikanPassed) {
-				sound.loadBgm(["arcade3"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["arcade3"], "arcade")
+              sound.loadBgm(["arcade3"], "arcade")
+			  sound.killBgm()
+			  sound.playBgm(["arcade3"], "arcade")
              }
           game.musicProgression = entry
         }
       }
-	  }
+	}
 	  
       if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
@@ -878,43 +861,43 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       if (game.stat.level >= 999) game.stat.grade = "GM"
-      else if (game.stat.level >= 945 && game.torikanPassed)
+      else if (game.stat.level >= 999 && game.torikanPassed)
         game.stat.grade = "M"
-      else if (game.stat.level >= 900)
+      else if (game.stat.level >= 12000)
         game.stat.grade = "S9"
-	  else if (game.stat.level >= 855)
+	  else if (game.stat.level >= 10000)
         game.stat.grade = "S8"
-	  else if (game.stat.level >= 790)
+	  else if (game.stat.level >= 82000)
         game.stat.grade = "S7"
-	  else if (game.stat.level >= 725)
+	  else if (game.stat.level >= 66000)
         game.stat.grade = "S6"
-	  else if (game.stat.level >= 660)
+	  else if (game.stat.level >= 52000)
         game.stat.grade = "S5"
-	  else if (game.stat.level >= 595)
+	  else if (game.stat.level >= 40000)
         game.stat.grade = "S4"
-	  else if (game.stat.level >= 535)
+	  else if (game.stat.level >= 30000)
         game.stat.grade = "S3"
-	  else if (game.stat.level >= 470)
+	  else if (game.stat.level >= 22000)
         game.stat.grade = "S2"
-	  else if (game.stat.level >= 405)
+	  else if (game.stat.level >= 16000)
         game.stat.grade = "S1"
-	  else if (game.stat.level >= 340)
+	  else if (game.stat.level >= 12000)
         game.stat.grade = "1"
-	  else if (game.stat.level >= 280)
+	  else if (game.stat.level >= 8000)
         game.stat.grade = "2"
-	  else if (game.stat.level >= 225)
+	  else if (game.stat.level >= 5500)
         game.stat.grade = "3"
-	  else if (game.stat.level >= 175)
+	  else if (game.stat.score >= 3500)
         game.stat.grade = "4"
-	  else if (game.stat.level >= 130)
+	  else if (game.stat.score >= 2000)
         game.stat.grade = "5"
-	  else if (game.stat.level >= 90)
+	  else if (game.stat.score >= 1400)
         game.stat.grade = "6"
-	  else if (game.stat.level >= 55)
+	  else if (game.stat.score >= 800)
         game.stat.grade = "7"
-	  else if (game.stat.level >= 25)
+	  else if (game.stat.score >= 400)
         game.stat.grade = "8"
-	  else if (game.stat.level >= 0)
+	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
       collapse(arg)
       if (arg.piece.inAre) {
@@ -1027,10 +1010,8 @@ export const loops = {
       const musicProgressionTable = [
         [279, 1],
         [300, 2],
-        [479, 3],
-        [500, 4],
-		[379, 5],
-		[400, 6],
+        [379, 3],
+        [400, 4],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -1079,14 +1060,7 @@ export const loops = {
           switch (entry) {
             case 1:
             case 3:
-              if (!game.torikanPassed) {
-				  sound.killBgm()
-			  }
-              break
-			case 5:
-              if (game.torikanPassed) {
-				  sound.killBgm()
-			  }
+              sound.killBgm()
               break
             case 2:
               sound.loadBgm(["arcade2"], "arcade")
@@ -1094,22 +1068,14 @@ export const loops = {
               sound.playBgm(["arcade2"], "arcade")
               break
             case 4:
-              if (!game.torikanPassed) {
-				sound.loadBgm(["arcade3"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["arcade3"], "arcade")
-			  }
-			  break
-			case 6:
-			  if (game.torikanPassed) {
-				sound.loadBgm(["arcade3"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["arcade3"], "arcade")
+              sound.loadBgm(["arcade3"], "arcade")
+			  sound.killBgm()
+			  sound.playBgm(["arcade3"], "arcade")
              }
           game.musicProgression = entry
         }
       }
-	  }
+	 }
 	  
       if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
