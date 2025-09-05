@@ -1552,6 +1552,10 @@ export const loops = {
     onPieceSpawn: (game) => {
       game.piece.gravity = framesToMs(1 / 20)
       game.piece.lockDelayLimit = roundBpmToMs(bpm)
+	  if (settings.game.beat.song === "kachusha") {
+		  game.settings.rotationSystem = "aceworld"
+		  game.rotationSystem = "aceworld"
+	  }
     },
     onInit: (game) => {
       switch (settings.game.beat.song) {
