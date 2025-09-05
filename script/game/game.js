@@ -25,23 +25,36 @@ export default class Game {
   constructor(gametype) {
     if (gametype === "beat") {
       document.getElementById("myVideo").style.opacity = 1
-    } else {
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 0
+    } else if (gametype === "mania") {
       document.getElementById("myVideo").style.opacity = 0
-    }
-	if (gametype === "mania") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
     } else if (gametype === "maniaworld") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
     } else if (gametype === "sudden") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
     } else if (gametype === "suddenworld") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
     } else if (gametype === "novice") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
     } else if (gametype === "noviceworld") {
-      document.getElementById("arcadeBackground").style.opacity = 1
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
 	} else {
-      document.getElementById("arcadeBackground").style.opacity = 0
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 1
+	  document.getElementById("arcadeBackground").style.opacity = 0
     }
     this.userSettings = { ...settings.settings }
     this.type = gametype
