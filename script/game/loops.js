@@ -504,7 +504,6 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	}
 	  
       if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
@@ -1075,7 +1074,6 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	 }
 	  
       if (game.stat.level >= 350 && game.rta <= 300000)
         game.torikanPassed = true
