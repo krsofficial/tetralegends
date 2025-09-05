@@ -28,6 +28,21 @@ export default class Game {
     } else {
       document.getElementById("myVideo").style.opacity = 0
     }
+	if (gametype === "mania") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+    } else if (gametype === "maniaworld") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+    } else if (gametype === "sudden") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+    } else if (gametype === "suddenworld") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+    } else if (gametype === "novice") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+    } else if (gametype === "noviceworld") {
+      document.getElementById("arcadeBackground").style.opacity = 1
+	} else {
+      document.getElementById("arcadeBackground").style.opacity = 0
+    }
     this.userSettings = { ...settings.settings }
     this.type = gametype
     this.pieceCanvas = $("#piece")
@@ -58,6 +73,7 @@ export default class Game {
     this.stat = {
       b2b: 0,
       pcCount: 0,
+      skipCount: 0,
       skipCount: 0,
       level: 0,
       score: 0,

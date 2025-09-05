@@ -123,9 +123,10 @@
 	<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;" autoplay muted loop id="fireWorks">
 		<source src="vid/default.webm" type="video/mp4" />
 	</video>
-    <video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;" autoplay muted loop id="myVideo">
+    <video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%" autoplay muted loop id="myVideo">
       <source src="vid/DiscoLightsVidevo.mov" type="video/mp4" />
     </video>
+	<div style="opacity:1,position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;" id="arcadeBackground"/>
     <div id="lights-warning" class="hidden">
       <img src="img/tetrion/warning.svg" alt="" />
       Flashing Lights
@@ -343,12 +344,15 @@
         document.getElementById("dev").style.setProperty("display", "none")
       }
       let enableVideo = () => {
-        document.documentElement.innerHTML =
-          `<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;" autoplay muted loop id="myVideo">
-    <source src="vid/DiscoLightsVidevo.mov" type="video/mp4">
-  </video>` + document.documentElement.innerHTML
+        document.documentElement.innerHTML = `<video style="position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;" autoplay muted loop id="myVideo"><source src="DiscoLightsVidevo.mov" type="video/mp4"/></video>` 
+		  + document.documentElement.innerHTML
         enableVideo = () => {}
       }
+	  let enableArcadeBackgrounds() => {
+		document.documentElement.innerHTML = `<div style="opacity:1,position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;background-image:url('bgs/bg0000.jpg');background-repeat:no-repeat;background-size:100% 100%;" id="arcadeBackground"/>`
+		+ document.documentElement.innerHTML
+		enableArcadeBackgrounds = () => {}
+	  }
     </script>
   </body>
 </html>
