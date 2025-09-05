@@ -110,6 +110,8 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (game.stat.level >= 1299) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
+		game.settings.rotationSystem = "sudden"
+		game.rotationSystem = "sudden"
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
         game.stat.grade = "S11"
@@ -166,6 +168,7 @@ export const loops = {
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
+	  game.redrawOnLevelUp = true
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
@@ -757,6 +760,8 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (game.stat.level >= 1299) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
+		game.settings.rotationSystem = "suddenworld"
+		game.rotationSystem = "suddenworld"
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
         game.stat.grade = "S11"
@@ -812,6 +817,7 @@ export const loops = {
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
+	  game.redrawOnLevelUp = true
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
