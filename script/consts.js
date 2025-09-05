@@ -4168,7 +4168,7 @@ export const SOUND_SETS = {
   ascx: "standard",
   srs: "standard",
   world: "tgm3",
-  tetrax: "standard",
+  tetrax: "tetrax",
   retro: "nes",
   handheld: "handheld",
   deluxe: "deluxe",
