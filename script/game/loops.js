@@ -283,7 +283,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 1199) {
+	  if (game.stat.level >= 999) {
 		  game.settings.rotationSystem = "sudden"
 		  game.rotationSystem = "sudden"
 	  }
@@ -938,7 +938,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 1199) {
+	  if (game.stat.level >= 999) {
 		  game.settings.rotationSystem = "suddenworld"
 		  game.rotationSystem = "suddenworld"
 	  }
