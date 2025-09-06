@@ -292,16 +292,15 @@ export default class Piece extends GameModule {
     const yPos = y * cellSize + cellSize * buffer
     // spriteCtx.drawImage(img, 0, 0, cellSize * 9, cellSize);
     let img
+	let suffix = ""
     switch (type) {
       case "ghost":
-	    let suffix = ""
 		if (this.useBoneBlocks) {
 		  suffix = "bone"
 		}
         img = document.getElementById(`ghost-${color}${suffix}`)
         break
       case "piece":
-        let suffix = ""
         if (this.useSpecialI && this.name === "I") {
           suffix = number
         }
