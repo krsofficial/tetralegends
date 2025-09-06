@@ -320,7 +320,7 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
 	  if (game.stat.level >= 1000)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 800)
@@ -602,7 +602,7 @@ export const loops = {
   novice: {
     update: (arg) => {
 	  if (game.stat.level >= 1000)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 800)
@@ -829,7 +829,7 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
-	  if (game.stat.level >= 50) {
+	  if (game.stat.level >= 1000) {
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
@@ -976,7 +976,7 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
 	  if (game.stat.level >= 1000)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 800)
@@ -1257,7 +1257,7 @@ export const loops = {
   noviceworld: {
     update: (arg) => {
 	  if (game.stat.level >= 1000)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 800)
