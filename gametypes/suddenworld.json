@@ -13,7 +13,6 @@
     "hasDangerBgm": false,
     "scoreTable": "blank",
     "background": "marathon.jpg",
-	"disableDefaultSkinLoad": true,
     "isHardMode": true
   },
   "piece": {

@@ -79,6 +79,7 @@ export default class Piece extends GameModule {
     this.resetHoldingTime = false
     this.killLockDelayOnRotate = false
     this.lastSpinDirection = null
+	this.useBoneBlocks = false
   }
   new(name = this.parent.next.next()) {
     this.isFrozen = false
@@ -303,6 +304,9 @@ export default class Piece extends GameModule {
         if (this.useRetroColors) {
           suffix = `-${this.parent.stat.level % 10}`
         }
+		if (this.useBoneBlocks) {
+		  suffix = "bone"
+		}
         img = document.getElementById(`mino-${color}${suffix}`)
       default:
         break

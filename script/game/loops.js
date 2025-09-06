@@ -283,13 +283,11 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 999) {
-		  game.settings.rotationSystem = "sudden"
-		  game.rotationSystem = "sudden"
+	  if (game.stat.level >= 1000) {
+		  game.piece.useBoneBlocks = true
 	  }
 	  else {
-		  game.settings.rotationSystem = "arsti"
-		  game.rotationSystem = "arsti"
+		  game.piece.useBoneBlocks = false
 	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
@@ -938,13 +936,11 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 999) {
-		  game.settings.rotationSystem = "suddenworld"
-		  game.rotationSystem = "suddenworld"
+	  if (game.stat.level >= 1000) {
+		  game.piece.useBoneBlocks = true
 	  }
 	  else {
-		  game.settings.rotationSystem = "world"
-		  game.rotationSystem = "world"
+		  game.piece.useBoneBlocks = false
 	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true

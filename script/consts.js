@@ -4179,8 +4179,8 @@ export const SKIN_SETS = {
   aceworld: "glossy",
   battle: "battle",
   friends: "battle",
-  sudden: "bone",
-  suddenworld: "bone",
+  sudden: "arika",
+  suddenworld: "glossy",
 }
 export const SOUND_SETS = {
   asc: "standard",
