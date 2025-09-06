@@ -8,7 +8,6 @@
     "erasenot4",
     "excellent",
     "gameover",
-    "harddrop",
     "initialhold",
     "initialrotate",
     "land",
@@ -20,6 +19,9 @@
     "tspin",
     "tspin0"
   ],
-  "ren": [],
+  "ren": [
+    1,
+    2
+  ],
   "nextSoundbank": "tgm3"
 }
