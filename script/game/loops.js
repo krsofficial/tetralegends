@@ -172,6 +172,12 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
+	  if (game.stat.level >= 1000) {
+		 game.piece.useBoneBlocks = true
+	  }
+	  else {
+		 game.piece.useBoneBlocks = false
+	  }
       const areTable = [
         [101, 18],
         [301, 14],
@@ -283,12 +289,6 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 1000) {
-		  game.piece.useBoneBlocks = true
-	  }
-	  else {
-		  game.piece.useBoneBlocks = false
-	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
@@ -825,6 +825,12 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
+	  if (game.stat.level >= 1000) {
+		 game.piece.useBoneBlocks = true
+	  }
+	  else {
+		 game.piece.useBoneBlocks = false
+	  }
       const areTable = [
         [101, 18],
         [301, 14],
@@ -936,12 +942,6 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  if (game.stat.level >= 1000) {
-		  game.piece.useBoneBlocks = true
-	  }
-	  else {
-		  game.piece.useBoneBlocks = false
-	  }
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
