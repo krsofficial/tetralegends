@@ -120,7 +120,7 @@ export default class Next extends GameModule {
         if (this.parent.piece.useRetroColors) {
           suffix = `-${this.parent.stat.level % 10}`
         }
-		if (this.parent.piece.useBoneBlocks = {
+		if (this.parent.piece.useBoneBlocks) = {
 		  suffix = "bone"
 		}
         const img = document.getElementById(`mino-${color}${suffix}`)
