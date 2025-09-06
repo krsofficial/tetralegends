@@ -294,7 +294,11 @@ export default class Piece extends GameModule {
     let img
     switch (type) {
       case "ghost":
-        img = document.getElementById(`ghost-${color}`)
+	    let suffix = ""
+		if (this.useBoneBlocks) {
+		  suffix = "bone"
+		}
+        img = document.getElementById(`ghost-${color}${suffix}`)
         break
       case "piece":
         let suffix = ""

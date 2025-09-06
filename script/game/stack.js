@@ -747,6 +747,9 @@ export default class Stack extends GameModule {
           }
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
+		if (this.parent.piece.useBoneBlocks) {
+			suffix = "bone"
+		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
         const yPos =

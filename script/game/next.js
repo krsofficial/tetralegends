@@ -176,7 +176,11 @@ export default class Next extends GameModule {
       for (let y = 0; y < shape.length; y++) {
         for (let x = 0; x < shape[y].length; x++) {
           const color = this.parent.colors[piece]
-          const img = document.getElementById(`mino-${color}`)
+		  let suffix = ""
+		  if (this.useBoneBlocks) {
+			suffix = "bone"
+		  }
+          const img = document.getElementById(`mino-${color}${suffix}`)
           const isFilled = shape[y][x]
           if (isFilled) {
             const xPos = x * cellSize + offset[0] * cellSize
