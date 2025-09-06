@@ -173,7 +173,7 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
-	  if (game.stat.level >= 100) {
+	  if (game.stat.level >= 1000) {
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
@@ -828,7 +828,7 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
-	  if (game.stat.level >= 1000) {
+	  if (game.stat.level >= 100) {
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
