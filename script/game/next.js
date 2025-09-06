@@ -177,7 +177,7 @@ export default class Next extends GameModule {
         for (let x = 0; x < shape[y].length; x++) {
           const color = this.parent.colors[piece]
 		  let suffix = ""
-		  if (this.useBoneBlocks) {
+		  if (this.parent.piece.useBoneBlocks) {
 			suffix = "bone"
 		  }
           const img = document.getElementById(`mino-${color}${suffix}`)

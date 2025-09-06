@@ -290,6 +290,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  game.piece.ghostIsVisible = false
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (
@@ -828,7 +829,7 @@ export const loops = {
       game.updateStats()
     },
     onPieceSpawn: (game) => {
-	  if (game.stat.level >= 100) {
+	  if (game.stat.level >= 50) {
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
@@ -945,6 +946,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  game.piece.ghostIsVisible = false
       if (game.stat.level >= 1200 && game.rta <= 600000)
         game.torikanPassed = true
       if (

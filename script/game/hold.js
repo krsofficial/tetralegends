@@ -151,7 +151,7 @@ export default class Hold extends GameModule {
       for (let x = 0; x < shape[y].length; x++) {
         const color = this.parent.colors[this.pieceName]
 		let suffix = ""
-		if (this.useBoneBlocks) {
+		if (this.parent.piece.useBoneBlocks) {
 		  suffix = "bone"
 		}
         const img = document.getElementById(`mino-${color}${suffix}`)
