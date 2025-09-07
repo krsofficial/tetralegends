@@ -1551,21 +1551,21 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-	  const difficulty = parseFromString(settings.game.ace.difficulty)
+	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch(difficulty) {
-		  case "normal": {
+		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
-		  case "hispeed1": {
+		  case 2: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
-		  case "hispeed2": {
+		  case 3: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another": {
+		  case 4: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another2": {
+		  case 5: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
 	  }
@@ -1580,7 +1580,7 @@ export const loops = {
 	  }
 	  let timeLimit = 120000
 	  switch(difficulty) {
-		case "normal": {
+		case 1: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -1589,7 +1589,7 @@ export const loops = {
 			}
 		    break
 		}
-		case "hispeed1": {
+		case 2: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -1598,7 +1598,7 @@ export const loops = {
 			}
 		    break
 		}
-		case "hispeed2": {
+		case 3: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -1607,11 +1607,11 @@ export const loops = {
 			}
 		    break
 		}
-		case "another": {
+		case 4: {
 			timeLimit = 60000
 		    break
 		}
-		case "another2": {
+		case 5: {
 			timeLimit = 60000
 		    break
 		}
@@ -1692,31 +1692,31 @@ export const loops = {
 			  break
 			case 1: {
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
 						sound.playBgm(["ace"], "katsyuha-easy")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade1")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade1")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -1727,31 +1727,31 @@ export const loops = {
 			}
             case 3:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade2")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -1761,31 +1761,31 @@ export const loops = {
 				break
             case 5:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
@@ -1795,31 +1795,31 @@ export const loops = {
 				break
 			case 7:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
@@ -1834,7 +1834,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty !== "another" && settings.game.ace.difficulty !== "another2") {
+        if (game.stat.level <= level && difficulty <= 3) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1842,7 +1842,7 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty !== "another" && settings.game.ace.difficulty !== "another2") {
+        if (game.stat.level <= level && difficulty <= 3) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1968,21 +1968,21 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-	  const difficulty = parseFromString(settings.game.aceworld.difficulty)
+	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch(difficulty) {
-		  case "normal": {
+		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
-		  case "hispeed1": {
+		  case 2: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
-		  case "hispeed2": {
+		  case 3: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another": {
+		  case 4: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another2": {
+		  case 5: {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
 	  }
@@ -1997,7 +1997,7 @@ export const loops = {
 	  }
 	  let timeLimit = 120000
 	  switch(difficulty) {
-		case "normal": {
+		case 1: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -2006,7 +2006,7 @@ export const loops = {
 			}
 		    break
 		}
-		case "hispeed1": {
+		case 2: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -2015,7 +2015,7 @@ export const loops = {
 			}
 		    break
 		}
-		case "hispeed2": {
+		case 3: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
 			}
@@ -2024,11 +2024,11 @@ export const loops = {
 			}
 		    break
 		}
-		case "another": {
+		case 4: {
 			timeLimit = 60000
 		    break
 		}
-		case "another2": {
+		case 5: {
 			timeLimit = 60000
 		    break
 		}
@@ -2109,31 +2109,31 @@ export const loops = {
 			  break
 			case 1: {
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
 						sound.playBgm(["ace"], "katsyuha-easy")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade1")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade1")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -2144,31 +2144,31 @@ export const loops = {
 			}
             case 3:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade2")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -2178,31 +2178,31 @@ export const loops = {
 				break
             case 5:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
@@ -2212,31 +2212,31 @@ export const loops = {
 				break
 			case 7:
 				switch(difficulty) {
-					case "normal": {
+					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed1": {
+					case 2: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed2": {
+					case 3: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "another": {
+					case 4: {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
 						break
 					}
-					case "another2": {
+					case 5: {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
@@ -2251,7 +2251,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty !== "another" && settings.game.aceworld.difficulty !== "another2") {
+        if (game.stat.level <= level && difficulty <= 3) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2259,7 +2259,7 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty !== "another" && settings.game.aceworld.difficulty !== "another2") {
+        if (game.stat.level <= level && difficulty <= 3) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }

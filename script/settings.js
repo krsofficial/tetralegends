@@ -170,12 +170,12 @@ class Settings {
       },
 	  ace: {
         lineGoal: 150,
-        difficulty: "normal",
+        difficulty: 1,
 		arstype: "acears",
       },
 	  aceworld: {
         lineGoal: 150,
-        difficulty: "normal",
+        difficulty: 1,
       },
     }
     this.settings = {}

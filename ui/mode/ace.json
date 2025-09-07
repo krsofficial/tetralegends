@@ -42,27 +42,27 @@
         {
           "label": "NORMAL",
           "fixedText": true,
-          "value": "normal"
+          "value": "1"
         },
         {
           "label": "HIGH SPEED",
           "fixedText": true,
-          "value": "hispeed1"
+          "value": "2"
         },
 		{
           "label": "HIGH SPEED 2",
           "fixedText": true,
-          "value": "hispeed2"
+          "value": "3"
         },
         {
           "label": "ANOTHER",
           "fixedText": true,
-          "value": "another"
+          "value": "4"
         },
 		{
           "label": "ANOTHER 2",
           "fixedText": true,
-          "value": "another2"
+          "value": "5"
         }
       ],
       "setting": "difficulty",
