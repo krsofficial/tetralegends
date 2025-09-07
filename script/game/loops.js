@@ -1553,10 +1553,10 @@ export const loops = {
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.ace.difficulty) {
 		  case "normal": {
-			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20))
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1": {
-			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
 		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
@@ -1969,10 +1969,10 @@ export const loops = {
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.aceworld.difficulty) {
 		  case "normal": {
-			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20))
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1": {
-			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
 		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
