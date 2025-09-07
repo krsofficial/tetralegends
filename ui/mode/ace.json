@@ -41,26 +41,31 @@
       "selectOptions": [
         {
           "label": "NORMAL",
+		  "description": "",
           "fixedText": true,
           "value": 1
         },
         {
           "label": "HIGH SPEED",
+		  "description": "",
           "fixedText": true,
           "value": 2
         },
 		{
           "label": "HIGH SPEED 2",
+		  "description": "",
           "fixedText": true,
           "value": 3
         },
         {
           "label": "ANOTHER",
+		  "description": "",
           "fixedText": true,
           "value": 4
         },
 		{
           "label": "ANOTHER 2",
+		  "description": "",
           "fixedText": true,
           "value": 5
         }
