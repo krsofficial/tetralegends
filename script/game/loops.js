@@ -1548,10 +1548,7 @@ export const loops = {
       */
     },
     onPieceSpawn: (game) => {
-      game.stat.level = Math.max(
-        settings.game.ace.startingLevel,
-        Math.floor(game.stat.line / 10 + 1)
-      )
+      game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.ace.difficulty) {
@@ -1967,10 +1964,7 @@ export const loops = {
       */
     },
     onPieceSpawn: (game) => {
-      game.stat.level = Math.max(
-        settings.game.ace.startingLevel,
-        Math.floor(game.stat.line / 10 + 1)
-      )
+      game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.aceworld.difficulty) {
