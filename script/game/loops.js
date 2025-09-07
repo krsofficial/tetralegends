@@ -1850,7 +1850,7 @@ export const loops = {
 	  for (const pair of areTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty === "another") {
+        if (game.stat.level <= level && difficulty === 4) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1858,7 +1858,7 @@ export const loops = {
       for (const pair of areLineTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty === "another") {
+        if (game.stat.level <= level && difficulty === 4) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1866,7 +1866,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty === "another2") {
+        if (game.stat.level <= level && difficulty === 5) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1874,7 +1874,7 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.ace.difficulty === "another2") {
+        if (game.stat.level <= level && difficulty === 5) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -2267,7 +2267,7 @@ export const loops = {
 	  for (const pair of areTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another") {
+        if (game.stat.level <= level && difficulty === 4) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2275,7 +2275,7 @@ export const loops = {
       for (const pair of areLineTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another") {
+        if (game.stat.level <= level && difficulty === 4) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -2283,7 +2283,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another2") {
+        if (game.stat.level <= level && difficulty === 5) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2291,7 +2291,7 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another2") {
+        if (game.stat.level <= level && difficulty === 5) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
