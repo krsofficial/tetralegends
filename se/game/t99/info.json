@@ -8,7 +8,7 @@
     "erase2",
     "erase3",
     "erase4",
-    "gameover",
+    "excellent",
     "garbagereceive",
     "go",
     "harddrop",
@@ -22,6 +22,7 @@
     "ready",
     "rotate",
     "start",
+    "topoutwarning",
     "land",
     "tspinbonus",
     "victory"
