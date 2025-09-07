@@ -622,6 +622,7 @@ export const loops = {
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 300, 300)
       collapse(arg)
+	  const game = gameHandler.game
 	  if (game.stat.level >= 1000)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
@@ -1287,6 +1288,7 @@ export const loops = {
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 300, 300)
       collapse(arg)
+	  const game = gameHandler.game
 	  if (game.stat.level >= 1000)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
@@ -1473,6 +1475,7 @@ export const loops = {
   ace: {
     update: (arg) => {
       collapse(arg)
+	  const game = gameHandler.game
 	  if (game.stat.level >= 14)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
       else if (game.stat.level >= 13)
@@ -1903,6 +1906,7 @@ export const loops = {
   aceworld: {
     update: (arg) => {
       collapse(arg)
+	  const game = gameHandler.game
 	  if (game.stat.level >= 14)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
       else if (game.stat.level >= 13)
