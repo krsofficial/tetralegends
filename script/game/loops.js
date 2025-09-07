@@ -4797,6 +4797,7 @@ export const loops = {
         hardDrop(arg)
         //retroLockdown(arg, true);
 		classicLockdown(arg)
+		const game = gameHandler.game
 		game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
       }
       if (!arg.piece.inAre) {
