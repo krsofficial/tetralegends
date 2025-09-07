@@ -1,0 +1,95 @@
+{
+  "properties": {
+    "parent": "arcadeworld",
+    "langOverride": "mode-options",
+    "game": "ace",
+    "pgmusic": "pg-arcade"
+  },
+  "data": [
+    {
+      "string": "Ace",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "string": "lineGoalLabel",
+      "stringDesc": "lineGoalDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "string": "linesUnit",
+          "replace": ["150"],
+          "value": 150
+        },
+        {
+          "string": "linesUnit",
+          "replace": ["200"],
+          "value": 200
+        }
+      ],
+      "setting": "lineGoal",
+      "gameName": "ace",
+      "settingType": "game"
+    },
+    {
+      "label": "Difficulty",
+      "description": "Choose the difficulty of the game.",
+      "fixedText": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "NORMAL",
+          "fixedText": true,
+          "value": "normal"
+        },
+        {
+          "label": "HIGH SPEED",
+          "fixedText": true,
+          "value": "hispeed"
+        },
+		{
+          "label": "HIGH SPEED 2",
+          "fixedText": true,
+          "value": "hispeed2"
+        },
+        {
+          "label": "ANOTHER",
+          "fixedText": true,
+          "value": "another"
+        },
+		{
+          "label": "ANOTHER 2",
+          "fixedText": true,
+          "value": "another2"
+        }
+      ],
+      "setting": "difficulty",
+      "gameName": "ace",
+      "settingType": "game"
+    }
+	{
+      "label": "ARS Type",
+      "description": "Choose the ARS type of the game.",
+      "fixedText": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "ACE-ARS",
+          "fixedText": true,
+          "value": "acears"
+        },
+        {
+          "label": "ACE-ARS2",
+          "fixedText": true,
+          "value": "acears2"
+        },
+      ],
+      "setting": "arstype",
+      "gameName": "ace",
+      "settingType": "game"
+    }
+  ]
+}

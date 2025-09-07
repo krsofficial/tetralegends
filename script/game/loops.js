@@ -1469,6 +1469,802 @@ export const loops = {
       updateFallSpeed(game)
       game.updateStats()
     },
+  ace: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      if (arstype === "acears") {
+		softDrop(arg)
+		hardDrop(arg)
+	  }
+	  else if (arstype === "acears2") {
+		sonicDrop(arg, true)
+        firmDrop(arg, 1, true)
+	  }
+      extendedLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+	  if (game.timePassed >= game.timeGoal - 10000) {
+        if (!game.playedHurryUp) {
+          sound.add("hurryup")
+          $("#timer").classList.add("hurry-up")
+          game.playedHurryUp = true
+        }
+      } else {
+        game.playedHurryUp = false
+      }
+      /* Might use this code later
+      $('#das').max = arg.piece.dasLimit;
+      $('#das').value = arg.piece.das;
+      $('#das').style.setProperty('--opacity', ((arg.piece.arr >= arg.piece.arrLimit) || arg.piece.inAre) ? 1 : 0);
+      */
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.max(
+        settings.game.ace.startingLevel,
+        Math.floor(game.stat.line / 10 + 1)
+      )
+      if (settings.game.ace.levelCap >= 0) {
+        game.stat.level = Math.min(
+          game.stat.level,
+          settings.game.ace.levelCap
+        )
+      }
+      const x = game.stat.level
+      const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
+      switch(difficulty) {
+		  case "normal": {
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+		  }
+		  case "hispeed1" {
+			  game.piece.gravity = (Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4
+		  }
+		  case "hispeed2" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+		  case "another" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+		  case "another2" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+	  }
+      if (game.stat.level >= 20) {
+        game.piece.lockDelayLimit = 500
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+      updateFallSpeed(game)
+      if (levelUpdate(game)) {
+		game.timePassed = 0
+	  }
+	  let timeLimit = 120000
+	  switch(difficulty) {
+		case "normal": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "hispeed1": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "hispeed2": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "another": {
+			timeLimit = 60000
+		    break
+		}
+		case "another2": {
+			timeLimit = 60000
+		    break
+		}
+	  }
+	  game.timeGoal = timeLimit
+	  const areTable = [
+		[1, 24],
+		[2, 22],
+		[3, 20],
+        [4, 18],
+        [5, 16],
+        [6, 14],
+        [8, 12],
+        [10, 10],
+      ]
+      const areLineTable = [
+		[1, 24],
+		[2, 22],
+		[3, 20],
+		[4, 18],
+        [5, 16],
+        [6, 14],
+        [8, 12],
+        [10, 10],
+      ]
+	  const areTableAnother = [
+        [1, 18],
+        [3, 14],
+        [4, 8],
+        [5, 7],
+        [10, 6],
+      ]
+      const areLineTableAnother = [
+        [1, 12],
+        [4, 6],
+        [5, 5],
+        [10, 4],
+      ]
+	  const areTableAnother2 = [
+        [1, 8],
+        [3, 7],
+        [4, 6],
+        [5, 6],
+        [10, 6],
+      ]
+      const areLineTableAnother2 = [
+        [1, 6],
+        [4, 5],
+        [5, 4],
+        [10, 4],
+      ]
+	  const musicProgressionTable = [
+		[0, 0],
+        [47, 1],
+        [50, 2],
+        [97, 3],
+        [100, 4],
+		[147, 5],
+        [150, 6],
+		[197, 7],
+      ]
+	  for (const pair of musicProgressionTable) {
+        const line = pair[0]
+        const entry = pair[1]
+        if (game.stat.line >= line && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+			  break
+            case 3:
+              sound.killBgm()
+              break
+			case 5:
+			  sound.killBgm()
+			  break
+			case 7:
+			  sound.killBgm()
+			  break
+			case 0: {
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "katsyuha-easy")
+						sound.killBgm()
+						sound.playBgm(["ace"], "katsyuha-easy")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade1")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade1")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+				}
+				break
+			}
+            case 2:
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "arcade2")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade2")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade4")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade4")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+				}
+				break
+            case 4:
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade4")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade4")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade5")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade5")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade5")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade5")
+						break
+					}
+				}
+				break
+			case 6:
+			  switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kachusha-hard")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kachusha-hard")
+						break
+					}
+				}
+				break
+          }
+          game.musicProgression = entry
+        }
+      }
+	  for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableAnother) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableAnother) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableAnother2) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another2") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableAnother2) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another2") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+    },
+    onInit: (game) => {
+      if (settings.game.ace.lineGoal >= 0) {
+        game.lineGoal = settings.game.ace.lineGoal
+      }
+      game.stat.level = 1
+      lastLevel = 1
+      game.piece.gravity = 1000
+      updateFallSpeed(game)
+      game.updateStats()
+	  game.isRaceMode = true
+	  game.timePassed = 0
+	  game.timeGoal = 120000
+	  game.musicProgression = 0
+	  difficulty = settings.game.ace.difficulty
+	  arstype = settings.game.ace.arstype
+    },
+  },
+  aceworld: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDrop(arg)
+	  hardDrop(arg)
+      extendedLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+	  if (game.timePassed >= game.timeGoal - 10000) {
+        if (!game.playedHurryUp) {
+          sound.add("hurryup")
+          $("#timer").classList.add("hurry-up")
+          game.playedHurryUp = true
+        }
+      } else {
+        game.playedHurryUp = false
+      }
+      /* Might use this code later
+      $('#das').max = arg.piece.dasLimit;
+      $('#das').value = arg.piece.das;
+      $('#das').style.setProperty('--opacity', ((arg.piece.arr >= arg.piece.arrLimit) || arg.piece.inAre) ? 1 : 0);
+      */
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.max(
+        settings.game.ace.startingLevel,
+        Math.floor(game.stat.line / 10 + 1)
+      )
+      if (settings.game.ace.levelCap >= 0) {
+        game.stat.level = Math.min(
+          game.stat.level,
+          settings.game.ace.levelCap
+        )
+      }
+      const x = game.stat.level
+      const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
+      switch(difficulty) {
+		  case "normal": {
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+		  }
+		  case "hispeed1" {
+			  game.piece.gravity = (Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4
+		  }
+		  case "hispeed2" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+		  case "another" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+		  case "another2" {
+			  game.piece.gravity = framesToMs(1 / 20)
+		  }
+	  }
+      if (game.stat.level >= 20) {
+        game.piece.lockDelayLimit = 500
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+      updateFallSpeed(game)
+      if (levelUpdate(game)) {
+		game.timePassed = 0
+	  }
+	  let timeLimit = 120000
+	  switch(difficulty) {
+		case "normal": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "hispeed1": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "hispeed2": {
+			if (game.stat.level <= 2) {
+				timeLimit = 120000
+			}
+			else {
+				timeLimit = 90000
+			}
+		    break
+		}
+		case "another": {
+			timeLimit = 60000
+		    break
+		}
+		case "another2": {
+			timeLimit = 60000
+		    break
+		}
+	  }
+	  game.timeGoal = timeLimit
+	  const areTable = [
+		[1, 24],
+		[2, 22],
+		[3, 20],
+        [4, 18],
+        [5, 16],
+        [6, 14],
+        [8, 12],
+        [10, 10],
+      ]
+      const areLineTable = [
+		[1, 24],
+		[2, 22],
+		[3, 20],
+		[4, 18],
+        [5, 16],
+        [6, 14],
+        [8, 12],
+        [10, 10],
+      ]
+	  const areTableAnother = [
+        [1, 18],
+        [3, 14],
+        [4, 8],
+        [5, 7],
+        [10, 6],
+      ]
+      const areLineTableAnother = [
+        [1, 12],
+        [4, 6],
+        [5, 5],
+        [10, 4],
+      ]
+	  const areTableAnother2 = [
+        [1, 8],
+        [3, 7],
+        [4, 6],
+        [5, 6],
+        [10, 6],
+      ]
+      const areLineTableAnother2 = [
+        [1, 6],
+        [4, 5],
+        [5, 4],
+        [10, 4],
+      ]
+	  const musicProgressionTable = [
+		[0, 0],
+        [47, 1],
+        [50, 2],
+        [97, 3],
+        [100, 4],
+		[147, 5],
+        [150, 6],
+		[197, 7],
+      ]
+	  for (const pair of musicProgressionTable) {
+        const line = pair[0]
+        const entry = pair[1]
+        if (game.stat.line >= line && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+			  break
+            case 3:
+              sound.killBgm()
+              break
+			case 5:
+			  sound.killBgm()
+			  break
+			case 7:
+			  sound.killBgm()
+			  break
+			case 0: {
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "katsyuha-easy")
+						sound.killBgm()
+						sound.playBgm(["ace"], "katsyuha-easy")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade1")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade1")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+				}
+				break
+			}
+            case 2:
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "arcade2")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade2")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade4")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade4")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+				}
+				break
+            case 4:
+				switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "arcade3")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade3")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "arcade6")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade6")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "arcade4")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade4")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "arcade5")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade5")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "arcade5")
+						sound.killBgm()
+						sound.playBgm(["ace"], "arcade5")
+						break
+					}
+				}
+				break
+			case 6:
+			  switch(difficulty) {
+					case "normal": {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "hispeed1" {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "hispeed2" {
+						sound.loadBgm(["ace"], "kalinka")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kalinka")
+						break
+					}
+					case "another" {
+						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kachusha-hard")
+						break
+					}
+					case "another2" {
+						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.killBgm()
+						sound.playBgm(["ace"], "kachusha-hard")
+						break
+					}
+				}
+				break
+          }
+          game.musicProgression = entry
+        }
+      }
+	  for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableAnother) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableAnother) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableAnother2) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another2") {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableAnother2) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === "another2") {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+    },
+    onInit: (game) => {
+      if (settings.game.aceworld.lineGoal >= 0) {
+        game.lineGoal = settings.game.aceworld.lineGoal
+      }
+      game.stat.level = 1
+      lastLevel = 1
+      game.piece.gravity = 1000
+      updateFallSpeed(game)
+      game.updateStats()
+	  game.isRaceMode = true
+	  game.timePassed = 0
+	  game.timeGoal = 120000
+	  game.musicProgression = 0
+	  difficulty = settings.game.aceworld.difficulty
+    },
   },
   zen: {
     update: (arg) => {
@@ -1594,9 +2390,6 @@ export const loops = {
         case "ritn":
           bpm = 158.5
           break
-		case "kachusha":
-		  bpm = 85
-		  break
       }
       /* game.isRaceMode = true; */
       game.beatTime = bpmToMs(bpm)

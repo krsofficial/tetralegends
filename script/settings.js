@@ -168,6 +168,15 @@ class Settings {
         lockdownMode: "zen",
         holdType: "hold",
       },
+	  ace: {
+        lineGoal: 150,
+        difficulty: "normal",
+		arstype: "acears",
+      },
+	  aceworld: {
+        lineGoal: 150,
+        difficulty: "normal",
+      },
     }
     this.settings = {}
     this.controls = {}
