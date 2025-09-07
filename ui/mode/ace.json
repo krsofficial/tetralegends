@@ -68,7 +68,7 @@
       "setting": "difficulty",
       "gameName": "ace",
       "settingType": "game"
-    }
+    },
 	{
       "label": "ARS Type",
       "description": "Choose the ARS type of the game.",

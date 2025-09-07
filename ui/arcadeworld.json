@@ -25,6 +25,13 @@
       "submenu": "mode/maniaworld"
     },
 	{
+      "label": "SUDDEN",
+      "description": "The pieces spawn on the ground and only get faster! (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/suddenworld"
+    },
+	{
       "label": "ACE",
       "description": "Make sure not to reach the time limit! (WIP)",
       "fixedText": true,
