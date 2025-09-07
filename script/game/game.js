@@ -51,6 +51,14 @@ export default class Game {
       document.getElementById("myVideo").style.opacity = 0
 	  document.getElementById("fireWorks").style.opacity = 0
 	  document.getElementById("arcadeBackground").style.opacity = 1
+	} else if (gametype === "ace") {
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
+	} else if (gametype === "aceworld") {
+      document.getElementById("myVideo").style.opacity = 0
+	  document.getElementById("fireWorks").style.opacity = 0
+	  document.getElementById("arcadeBackground").style.opacity = 1
 	} else {
       document.getElementById("myVideo").style.opacity = 0
 	  document.getElementById("fireWorks").style.opacity = 1
