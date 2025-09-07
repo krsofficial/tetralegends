@@ -4795,7 +4795,7 @@ export const loops = {
         classicGravity(arg)
         softDropNes(arg, false)
         hardDrop(arg)
-        retroLockdown(arg, true)
+		classicLockdown(arg)
       }
       if (!arg.piece.inAre) {
         arg.piece.holdingTime += arg.ms
