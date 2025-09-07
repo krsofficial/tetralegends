@@ -2074,63 +2074,63 @@ export const loops = {
 		[1, 28],
 		[4, 24],
 		[7, 20],
-        [10, 18],
-        [11, 16],
-        [12, 14],
-        [13, 12],
-        [14, 10],
+        [9, 18],
+        [10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
       ]
 	  const areLineModifierTable = [
-        [10, -4],
-        [12, -6],
+        [9, -4],
+        [11, -6],
         [13, 0],
       ]
       const areLineTable = [
 		[1, 28],
 		[4, 24],
 		[7, 20],
-		[10, 18],
-        [11, 16],
-        [12, 14],
-        [13, 12],
-        [14, 10],
+		[9, 18],
+        [10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
       ]
 	  const areTableAnother = [
         [1, 18],
         [4, 14],
         [7, 8],
-        [10, 7],
+        [9, 7],
         [13, 6],
       ]
 	  const areLineModifierTableAnother = [
 	    [1, -4],
         [4, -4],
-        [10, -6],
+        [9, -6],
         [13, 0],
       ]
       const areLineTableAnother = [
         [1, 12],
         [4, 6],
-        [10, 5],
+        [9, 5],
         [13, 4],
       ]
 	  const areTableAnother2 = [
         [1, 8],
         [4, 7],
         [7, 6],
-        [10, 6],
+        [9, 6],
         [13, 6],
       ]
 	  const areLineModifierTableAnother2 = [
 		[1, -4],
         [4, -6],
-        [10, -6],
+        [9, -6],
         [13, 0],
       ]
       const areLineTableAnother2 = [
         [1, 6],
         [4, 5],
-        [10, 4],
+        [9, 4],
         [13, 4],
       ]
 	  const musicProgressionTable = [
