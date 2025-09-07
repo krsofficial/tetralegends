@@ -467,14 +467,7 @@ export default class Game {
     if (victory) {
       sound.add("excellent")
     } else {
-      if (
-        !(
-          settings.settings.soundbank === "t99" &&
-          settings.settings.voicebank !== "off"
-        )
-      ) {
-        sound.add("ko")
-      }
+      sound.add("ko")
     }
     sound.killBgm()
     sound.killAllLoops()
