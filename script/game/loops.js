@@ -2259,7 +2259,7 @@ export const loops = {
       }
     },
     onInit: (game) => {
-	  const difficulty = parseInt(settings.game.ace.difficulty)
+	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
 			  game.settings.music = ["../ace/katsyuha-easy"]

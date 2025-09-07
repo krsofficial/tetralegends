@@ -83,11 +83,13 @@
       "selectOptions": [
         {
           "label": "ACE-ARS",
+		  "description": "",
           "fixedText": true,
           "value": "acears"
         },
         {
           "label": "ACE-ARS2",
+		  "description": "",
           "fixedText": true,
           "value": "acears2"
         }
