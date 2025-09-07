@@ -1712,33 +1712,33 @@ export const loops = {
             case 2:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "arcade2")
+						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade2")
+						sound.playBgm(["arcade2"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "arcade3")
+						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
+						sound.playBgm(["arcade3"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "arcade4")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade4")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 				}
@@ -1746,33 +1746,33 @@ export const loops = {
             case 4:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "arcade3")
+						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
+						sound.playBgm(["arcade3"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "arcade4")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade4")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "arcade5")
+						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade5")
+						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "arcade5")
+						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade5")
+						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 				}
@@ -1780,33 +1780,33 @@ export const loops = {
 			case 6:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kachusha-hard")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kachusha-hard")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 				}
@@ -2162,33 +2162,33 @@ export const loops = {
             case 2:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "arcade2")
+						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade2")
+						sound.playBgm(["arcade2"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "arcade3")
+						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
+						sound.playBgm(["arcade3"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "arcade4")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade4")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 				}
@@ -2196,33 +2196,33 @@ export const loops = {
             case 4:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "arcade3")
+						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
+						sound.playBgm(["arcade3"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "arcade6")
+						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
+						sound.playBgm(["arcade6"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "arcade4")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade4")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "arcade5")
+						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade5")
+						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "arcade5")
+						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "arcade5")
+						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 				}
@@ -2230,33 +2230,33 @@ export const loops = {
 			case 6:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 2: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 3: {
-						sound.loadBgm(["ace"], "kalinka")
+						sound.loadBgm(["kalinka"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kalinka")
+						sound.playBgm(["kalinka"], "ace")
 						break
 					}
 					case 4: {
-						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kachusha-hard")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 					case 5: {
-						sound.loadBgm(["ace"], "kachusha-hard")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["ace"], "kachusha-hard")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 				}
