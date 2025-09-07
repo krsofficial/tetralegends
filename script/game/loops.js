@@ -4795,10 +4795,7 @@ export const loops = {
         classicGravity(arg)
         softDropNes(arg, false)
         hardDrop(arg)
-        //retroLockdown(arg, true);
-		classicLockdown(arg)
-		const game = gameHandler.game
-		game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
+        retroLockdown(arg, true)
       }
       if (!arg.piece.inAre) {
         arg.piece.holdingTime += arg.ms
