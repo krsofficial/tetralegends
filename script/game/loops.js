@@ -156,6 +156,13 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+        garbageTimer += arg.ms
+        if (garbageTimer > 1024) {
+          garbageTimer -= 1024
+          arg.stack.addGarbageToCounter(1)
+        }
+      }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -171,6 +178,7 @@ export const loops = {
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
+	  garbageTimer = 0
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
@@ -812,6 +820,13 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+        garbageTimer += arg.ms
+        if (garbageTimer > 1024) {
+          garbageTimer -= 1024
+          arg.stack.addGarbageToCounter(1)
+        }
+      }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -827,6 +842,7 @@ export const loops = {
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
+	  garbageTimer = 0
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
