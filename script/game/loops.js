@@ -1561,7 +1561,7 @@ export const loops = {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1" {
-			  game.piece.gravity = (Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4)
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4
 		  }
 		  case "hispeed2" {
 			  game.piece.gravity = framesToMs(1 / 20)
@@ -1987,7 +1987,7 @@ export const loops = {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1" {
-			  game.piece.gravity = (Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4)
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))) * 4
 		  }
 		  case "hispeed2" {
 			  game.piece.gravity = framesToMs(1 / 20)
