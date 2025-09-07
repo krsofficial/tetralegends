@@ -158,9 +158,11 @@ export const loops = {
       updateLasts(arg)
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
-        if (garbageTimer > 1024) {
-          garbageTimer -= 1024
-          arg.stack.addGarbageToCounter(1)
+        if (garbageTimer > 10240) {
+          garbageTimer -= 10240
+          if (game.stat.level >= 400 && (game.stat.level <= 1000) {
+			  arg.stack.addGarbageToCounter(1)
+		  }
         }
       }
     },
@@ -822,9 +824,11 @@ export const loops = {
       updateLasts(arg)
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
-        if (garbageTimer > 1024) {
-          garbageTimer -= 1024
-          arg.stack.addGarbageToCounter(1)
+        if (garbageTimer > 10240) {
+          garbageTimer -= 10240
+          if (game.stat.level >= 400 && (game.stat.level <= 1000) {
+			  arg.stack.addGarbageToCounter(1)
+		  }
         }
       }
     },
