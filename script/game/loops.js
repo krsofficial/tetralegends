@@ -1552,12 +1552,6 @@ export const loops = {
         settings.game.ace.startingLevel,
         Math.floor(game.stat.line / 10 + 1)
       )
-      if (settings.game.ace.levelCap >= 0) {
-        game.stat.level = Math.min(
-          game.stat.level,
-          settings.game.ace.levelCap
-        )
-      }
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.ace.difficulty) {
@@ -1977,12 +1971,6 @@ export const loops = {
         settings.game.ace.startingLevel,
         Math.floor(game.stat.line / 10 + 1)
       )
-      if (settings.game.ace.levelCap >= 0) {
-        game.stat.level = Math.min(
-          game.stat.level,
-          settings.game.ace.levelCap
-        )
-      }
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.aceworld.difficulty) {

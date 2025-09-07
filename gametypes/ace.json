@@ -9,7 +9,7 @@
     "rotationSystem": "ace",
     "skin": "arika",
     "soundbank": "ace",
-    "music": ["../ace/katsyuha-easy"],
+    "music": ["../ace/loading"],
     "hasDangerBgm": false,
     "scoreTable": "guideline",
     "background": "marathon.jpg"
