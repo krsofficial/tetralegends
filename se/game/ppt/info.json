@@ -1,7 +1,7 @@
 {
   "files": [
     "b2b_erase4",
-    "b2b_tspin",
+	"b2b_tspin",
     "bravo",
     "erase4",
     "erasenot4",
@@ -10,8 +10,7 @@
     "harddrop",
     "hold",
     "ko",
-    "levelupmajor",
-    "levelupminor",
+    "levelup",
     "locknohd",
     "move",
     "pause",
@@ -21,8 +20,5 @@
     "start",
     "tspin"
   ],
-  "ren": [
-    1,
-    8
-  ]
+  "ren": [1, 5, 10, 15]
 }
