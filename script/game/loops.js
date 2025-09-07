@@ -1552,7 +1552,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  if (game.stat.level <= 8) {
+			  if (game.stat.level <= 9) {
 				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 2.5
 			  }
 			  else {
@@ -1561,7 +1561,7 @@ export const loops = {
 			  break
 		  }
 		  case 2: {
-			  if (game.stat.level <= 8) {
+			  if (game.stat.level <= 4) {
 				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 10
 			  }
 			  else {
@@ -2012,7 +2012,7 @@ export const loops = {
 	  let difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  if (game.stat.level <= 8) {
+			  if (game.stat.level <= 9) {
 				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 2.5
 			  }
 			  else {
@@ -2021,7 +2021,7 @@ export const loops = {
 			  break
 		  }
 		  case 2: {
-			  if (game.stat.level <= 8) {
+			  if (game.stat.level <= 4) {
 				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 10
 			  }
 			  else {
