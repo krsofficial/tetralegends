@@ -1552,7 +1552,7 @@ export const loops = {
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
 	  const difficulty = parseInt(settings.game.ace.difficulty)
-      switch(difficulty) {
+      switch (difficulty) {
 		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -1579,7 +1579,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(difficulty) {
+	  switch (difficulty) {
 		case 1: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -1691,7 +1691,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 1: {
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -1726,7 +1726,7 @@ export const loops = {
 				break
 			}
             case 3:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -1760,7 +1760,7 @@ export const loops = {
 				}
 				break
             case 5:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -1794,7 +1794,7 @@ export const loops = {
 				}
 				break
 			case 7:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
@@ -1969,7 +1969,7 @@ export const loops = {
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
 	  let difficulty = parseInt(settings.game.aceworld.difficulty)
-      switch(difficulty) {
+      switch (difficulty) {
 		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -1996,7 +1996,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(difficulty) {
+	  switch (difficulty) {
 		case 1: {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -2108,7 +2108,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 1: {
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -2143,7 +2143,7 @@ export const loops = {
 				break
 			}
             case 3:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -2177,7 +2177,7 @@ export const loops = {
 				}
 				break
             case 5:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -2211,7 +2211,7 @@ export const loops = {
 				}
 				break
 			case 7:
-				switch(difficulty) {
+				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
