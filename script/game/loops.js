@@ -1555,18 +1555,23 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+			  break
 		  }
 		  case 2: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  break
 		  }
 		  case 3: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 		  case 4: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 		  case 5: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 	  }
       if (game.stat.level >= 20) {
@@ -1972,18 +1977,23 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+			  break
 		  }
 		  case 2: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  break
 		  }
 		  case 3: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 		  case 4: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 		  case 5: {
 			  game.piece.gravity = framesToMs(1 / 20)
+			  break
 		  }
 	  }
       if (game.stat.level >= 20) {
