@@ -1746,9 +1746,9 @@ export const loops = {
 						break
 					}
 					case 5: {
-						sound.loadBgm(["arcade6"], "ace")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["arcade6"], "ace")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 				}
@@ -2206,9 +2206,9 @@ export const loops = {
 						break
 					}
 					case 5: {
-						sound.loadBgm(["arcade6"], "ace")
+						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
-						sound.playBgm(["arcade6"], "ace")
+						sound.playBgm(["arcade4"], "ace")
 						break
 					}
 				}
