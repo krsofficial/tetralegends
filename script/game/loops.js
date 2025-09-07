@@ -1558,7 +1558,7 @@ export const loops = {
 			  break
 		  }
 		  case 2: {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 4
 			  break
 		  }
 		  case 3: {
@@ -1967,7 +1967,7 @@ export const loops = {
 			  break
 		  }
 		  case 2: {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 4
 			  break
 		  }
 		  case 3: {
