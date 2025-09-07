@@ -611,6 +611,17 @@ export const loops = {
    },
   novice: {
     update: (arg) => {
+      gameHandler.game.b2b = 0
+      gameHandler.game.rta += arg.ms
+      if (input.getGameDown("softDrop")) {
+        gameHandler.game.drop += arg.ms
+      }
+      if (input.getGamePress("hardDrop")) {
+        gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
+      }
+      arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
+      linesToLevel(arg, 300, 300)
+      collapse(arg)
 	  if (game.stat.level >= 1000)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
@@ -633,17 +644,6 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 0)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
-      gameHandler.game.b2b = 0
-      gameHandler.game.rta += arg.ms
-      if (input.getGameDown("softDrop")) {
-        gameHandler.game.drop += arg.ms
-      }
-      if (input.getGamePress("hardDrop")) {
-        gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
-      }
-      arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
-      linesToLevel(arg, 300, 300)
-      collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
         initialRotation(arg)
@@ -1276,6 +1276,17 @@ export const loops = {
    },
   noviceworld: {
     update: (arg) => {
+      gameHandler.game.b2b = 0
+      gameHandler.game.rta += arg.ms
+      if (input.getGameDown("softDrop")) {
+        gameHandler.game.drop += arg.ms
+      }
+      if (input.getGamePress("hardDrop")) {
+        gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
+      }
+      arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
+      linesToLevel(arg, 300, 300)
+      collapse(arg)
 	  if (game.stat.level >= 1000)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
       else if (game.stat.level >= 900)
@@ -1298,17 +1309,6 @@ export const loops = {
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 0)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
-      gameHandler.game.b2b = 0
-      gameHandler.game.rta += arg.ms
-      if (input.getGameDown("softDrop")) {
-        gameHandler.game.drop += arg.ms
-      }
-      if (input.getGamePress("hardDrop")) {
-        gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
-      }
-      arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
-      linesToLevel(arg, 300, 300)
-      collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
         initialRotation(arg)
@@ -1898,8 +1898,8 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  difficulty = settings.game.ace.difficulty
-	  arstype = settings.game.ace.arstype
+	  let difficulty = settings.game.ace.difficulty
+	  let arstype = settings.game.ace.arstype
     },
   },
   aceworld: {
@@ -2225,7 +2225,7 @@ export const loops = {
 				}
 				break
 			case 6:
-			  switch(difficulty) {
+			    switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
@@ -2324,7 +2324,7 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  difficulty = settings.game.aceworld.difficulty
+	  let difficulty = settings.game.aceworld.difficulty
     },
   },
   zen: {
@@ -4369,7 +4369,7 @@ export const loops = {
           game.resize()
           break
       }
-      const difficulty = settings.game.survival.difficulty
+      let difficulty = settings.game.survival.difficulty
       game.garbageRateExponent = [1.91, 1.95, 1.97, 2, 2.03, 2.07, 2.1][
         difficulty
       ]

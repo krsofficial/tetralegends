@@ -2,7 +2,7 @@
   "properties": {
     "parent": "arcadeworld",
     "langOverride": "mode-options",
-    "game": "ace",
+    "game": "aceworld",
     "pgmusic": "pg-arcade"
   },
   "data": [
@@ -29,7 +29,7 @@
         }
       ],
       "setting": "lineGoal",
-      "gameName": "ace",
+      "gameName": "aceworld",
       "settingType": "game"
     },
     {
@@ -66,29 +66,7 @@
         }
       ],
       "setting": "difficulty",
-      "gameName": "ace",
-      "settingType": "game"
-    },
-	{
-      "label": "ARS Type",
-      "description": "Choose the ARS type of the game.",
-      "fixedText": true,
-      "type": "select",
-      "action": "select",
-      "selectOptions": [
-        {
-          "label": "ACE-ARS",
-          "fixedText": true,
-          "value": "acears"
-        },
-        {
-          "label": "ACE-ARS2",
-          "fixedText": true,
-          "value": "acears2"
-        }
-      ],
-      "setting": "arstype",
-      "gameName": "ace",
+      "gameName": "aceworld",
       "settingType": "game"
     }
   ]
