@@ -58,6 +58,8 @@ let shownHoldWarning = false
 let lastSeenI = 0
 let nonEvents = []
 let bpm
+let difficulty = "normal"
+let arstype = "acears"
 const levelUpdate = (game) => {
   let returnValue = false
   if (game.stat.level !== lastLevel) {
@@ -1898,8 +1900,8 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  let difficulty = settings.game.ace.difficulty
-	  let arstype = settings.game.ace.arstype
+	  difficulty = settings.game.ace.difficulty
+	  arstype = settings.game.ace.arstype
     },
   },
   aceworld: {
@@ -2324,7 +2326,7 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  let difficulty = settings.game.aceworld.difficulty
+	  difficulty = settings.game.aceworld.difficulty
     },
   },
   zen: {
@@ -4369,7 +4371,7 @@ export const loops = {
           game.resize()
           break
       }
-      let difficulty = settings.game.survival.difficulty
+      const difficulty = settings.game.survival.difficulty
       game.garbageRateExponent = [1.91, 1.95, 1.97, 2, 2.03, 2.07, 2.1][
         difficulty
       ]
