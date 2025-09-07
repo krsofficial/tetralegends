@@ -2082,8 +2082,8 @@ export const loops = {
       ]
 	  const areLineModifierTable = [
         [10, -4],
-        [13, -6],
-        [15, 0],
+        [12, -6],
+        [13, 0],
       ]
       const areLineTable = [
 		[1, 28],
