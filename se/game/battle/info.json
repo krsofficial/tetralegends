@@ -1,15 +1,17 @@
 {
   "files": [
+    "alarm",
     "erase1",
     "erase2",
     "erase3",
     "erase4",
     "excellent",
+    "gameover",
+    "go",
     "harddrop",
     "hold",
-    "hurryup",
     "ko",
-	"gameover",
+    "land",
     "levelup",
     "locknohd",
     "move",
@@ -17,7 +19,18 @@
     "rotate",
     "start",
     "step",
-    "tspinbonus"
+    "tspin0",
+    "tspin1",
+    "tspin2",
+    "tspin3"
   ],
-  "ren": [1, 2, 3, 4, 5, 6, 7]
+  "ren": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ]
 }
