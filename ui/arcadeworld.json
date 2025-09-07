@@ -32,7 +32,7 @@
       "submenu": "mode/suddenworld"
     },
 	{
-      "label": "ACE",
+      "label": "TIME ATTACK",
       "description": "Make sure not to reach the time limit! (WIP)",
       "fixedText": true,
       "action": "submenu",
