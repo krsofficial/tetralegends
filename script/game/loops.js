@@ -1968,7 +1968,7 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-	  const difficulty = parseInt(settings.game.aceworld.difficulty)
+	  let difficulty = parseInt(settings.game.aceworld.difficulty)
       switch(difficulty) {
 		  case 1: {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
@@ -4354,7 +4354,7 @@ export const loops = {
           game.resize()
           break
       }
-      const difficulty = settings.game.survival.difficulty
+      let difficulty = settings.game.survival.difficulty
       game.garbageRateExponent = [1.91, 1.95, 1.97, 2, 2.03, 2.07, 2.1][
         difficulty
       ]
