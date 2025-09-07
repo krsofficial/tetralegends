@@ -1551,7 +1551,8 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      switch(settings.game.ace.difficulty) {
+	  const difficulty = parseFromString(settings.game.ace.difficulty)
+      switch(difficulty) {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -1578,7 +1579,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(settings.game.ace.difficulty) {
+	  switch(difficulty) {
 		case "normal": {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -1690,7 +1691,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 1: {
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -1725,7 +1726,7 @@ export const loops = {
 				break
 			}
             case 3:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -1759,7 +1760,7 @@ export const loops = {
 				}
 				break
             case 5:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -1793,7 +1794,7 @@ export const loops = {
 				}
 				break
 			case 7:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
@@ -1967,7 +1968,8 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 10 + 1)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      switch(settings.game.aceworld.difficulty) {
+	  const difficulty = parseFromString(settings.game.aceworld.difficulty)
+      switch(difficulty) {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -1994,7 +1996,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(settings.game.aceworld.difficulty) {
+	  switch(difficulty) {
 		case "normal": {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -2106,7 +2108,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 1: {
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -2141,7 +2143,7 @@ export const loops = {
 				break
 			}
             case 3:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -2175,7 +2177,7 @@ export const loops = {
 				}
 				break
             case 5:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -2209,7 +2211,7 @@ export const loops = {
 				}
 				break
 			case 7:
-				switch(settings.game.ace.difficulty) {
+				switch(difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
