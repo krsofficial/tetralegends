@@ -85,7 +85,7 @@
           "label": "ACE-ARS2",
           "fixedText": true,
           "value": "acears2"
-        },
+        }
       ],
       "setting": "arstype",
       "gameName": "ace",
