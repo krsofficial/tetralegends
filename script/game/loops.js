@@ -1560,16 +1560,16 @@ export const loops = {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
-		  case "hispeed1" {
+		  case "hispeed1": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
-		  case "hispeed2" {
+		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another" {
+		  case "another": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another2" {
+		  case "another2": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
 	  }
@@ -1702,25 +1702,25 @@ export const loops = {
 						sound.playBgm(["ace"], "katsyuha-easy")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade1")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade1")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -1737,25 +1737,25 @@ export const loops = {
 						sound.playBgm(["ace"], "arcade2")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -1771,25 +1771,25 @@ export const loops = {
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
@@ -1805,25 +1805,25 @@ export const loops = {
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
@@ -1986,16 +1986,16 @@ export const loops = {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
-		  case "hispeed1" {
+		  case "hispeed1": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
-		  case "hispeed2" {
+		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another" {
+		  case "another": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
-		  case "another2" {
+		  case "another2": {
 			  game.piece.gravity = framesToMs(1 / 20)
 		  }
 	  }
@@ -2128,25 +2128,25 @@ export const loops = {
 						sound.playBgm(["ace"], "katsyuha-easy")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade1")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade1")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -2163,25 +2163,25 @@ export const loops = {
 						sound.playBgm(["ace"], "arcade2")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
@@ -2197,25 +2197,25 @@ export const loops = {
 						sound.playBgm(["ace"], "arcade3")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "arcade6")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade6")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "arcade4")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade4")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "arcade5")
 						sound.killBgm()
 						sound.playBgm(["ace"], "arcade5")
@@ -2231,25 +2231,25 @@ export const loops = {
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed1" {
+					case "hispeed1": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "hispeed2" {
+					case "hispeed2": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kalinka")
 						break
 					}
-					case "another" {
+					case "another": {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
 						break
 					}
-					case "another2" {
+					case "another2": {
 						sound.loadBgm(["ace"], "kachusha-hard")
 						sound.killBgm()
 						sound.playBgm(["ace"], "kachusha-hard")
