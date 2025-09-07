@@ -4779,7 +4779,7 @@ export const loops = {
           rotate(arg)
           classicGravity(arg)
           softDropNes(arg)
-          retroLockdown(arg, true)
+		  retroLockdown(arg, true)
         }
       } else {
         if (arg.piece.inAre) {
@@ -4795,7 +4795,9 @@ export const loops = {
         classicGravity(arg)
         softDropNes(arg, false)
         hardDrop(arg)
-        retroLockdown(arg, true)
+        //retroLockdown(arg, true);
+		classicLockdown(arg)
+		game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
       }
       if (!arg.piece.inAre) {
         arg.piece.holdingTime += arg.ms
