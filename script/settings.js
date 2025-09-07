@@ -101,13 +101,13 @@ class Settings {
     switch (this.defaultSettings.language) {
       case "en_GB":
       case "en_US":
-        this.defaultSettings.voicebank = "soraen"
+        this.defaultSettings.voicebank = "off"
         break
       case "de_DE":
-        this.defaultSettings.voicebank = "talonde"
+        this.defaultSettings.voicebank = "off"
         break
       case "ja_JP":
-        this.defaultSettings.voicebank = "soraja"
+        this.defaultSettings.voicebank = "off"
         break
     }
     this.defaultControls = {

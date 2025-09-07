@@ -4,8 +4,8 @@ Play here: https://sub2ninah.github.io/tetralegends/
 
 # Additions
 - Total UI Overhaul
-- TGM3 based Arcade modes [Novice (Easy), Mania (Master), Sudden (Shirase)]
+- TGM3 based Arcade modes [Novice (Easy), Special (Master), Sudden (Shirase)]
 - TGM ACE based Time Attack modes
-  
+
 # Notes
-If it says 404 site not found, the site is not down, just updating :3
+- If it says 404 site not found, the site is not down, just updating.

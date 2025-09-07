@@ -55,12 +55,12 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "TETRA ONLINE",
+          "label": "Tetra Online",
           "fixedText": true,
           "value": "standard"
         },
 		{
-          "label": "TETRA-X",
+          "label": "Tetra-X",
           "fixedText": true,
           "value": "tetrax"
         },
@@ -85,17 +85,17 @@
           "value": "ppt"
         },
         {
-          "label": "FRIENDS",
+          "label": "Friends",
           "fixedText": true,
           "value": "friends"
         },
         {
-          "label": "BATTLE (LO-FI)",
+          "label": "Battle (LO-FI)",
           "fixedText": true,
           "value": "battle"
         },
         {
-          "label": "BATTLE (HI-FI)",
+          "label": "Battle (HI-FI)",
           "fixedText": true,
           "value": "battleplus"
         },
@@ -105,12 +105,12 @@
           "value": "nes"
         },
 		 {
-          "label": "HANDHELD",
+          "label": "Handheld",
           "fixedText": true,
           "value": "handheld"
         },
         {
-          "label": "HANDHELD DX",
+          "label": "Handheld DX",
           "fixedText": true,
           "value": "deluxe"
         },
@@ -120,12 +120,12 @@
           "value": "tetrio"
         },
         {
-          "label": "NULLPOMINO",
+          "label": "Nullpomino",
           "fixedText": true,
           "value": "nullpomino"
         },
         {
-          "label": "DUALSHOCK",
+          "label": "Dualshock 3",
           "fixedText": true,
           "value": "nblox"
         }
