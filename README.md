@@ -1,6 +1,10 @@
-# Tetra Legends: Unblocked
+# Tetra Legends Ace
+Tetra Legends Ace is a Tetra Legends fork based on Tetra Legends Ultimate by Talon125.
+Play here: https://sub2ninah.github.io/tetralegends/
 
-Tetra Legends is blocked in my school, but GitHub isnt, so I created this fork and made a GitHub pages site to access Tetra Legends in school. :3
-Play is here :3 - https://sub2ninah.github.io/tetralegends/
+# Additions
+- Total UI Overhaul
+- TGM3 based Arcade modes [Novice (Easy), Mania (Master), Sudden (Shirase)]
+- TGM ACE based Time Attack modes
 
 If it says 404 site not found, the site is not down, just updating :3
