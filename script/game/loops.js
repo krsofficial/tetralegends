@@ -1523,8 +1523,8 @@ export const loops = {
 		hardDrop(arg)
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
-		sonicDrop(arg, true)
-        firmDrop(arg, 1, true)
+		sonicDrop(arg)
+        firmDrop(arg)
 	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1669,68 +1669,32 @@ export const loops = {
         [10, 4],
       ]
 	  const musicProgressionTable = [
-		[0, 1],
-        [47, 2],
-        [50, 3],
-        [97, 4],
-        [100, 5],
-		[147, 6],
-        [150, 7],
-		[197, 8],
+        [47, 1],
+        [50, 2],
+        [97, 3],
+        [100, 4],
+		[147, 5],
+        [150, 6],
+		[197, 7],
       ]
 	  for (const pair of musicProgressionTable) {
         const line = pair[0]
         const entry = pair[1]
         if (game.stat.line >= line && game.musicProgression < entry) {
           switch (entry) {
-            case 2:
+            case 1:
 			  sound.killBgm()
 			  break
-            case 4:
+            case 3:
               sound.killBgm()
               break
-			case 6:
+			case 5:
 			  sound.killBgm()
 			  break
-			case 8:
+			case 7:
 			  sound.killBgm()
 			  break
-			case 1: {
-				switch (difficulty) {
-					case 1: {
-						sound.loadBgm(["ace"], "katsyuha-easy")
-						sound.killBgm()
-						sound.playBgm(["ace"], "katsyuha-easy")
-						break
-					}
-					case 2: {
-						sound.loadBgm(["ace"], "arcade1")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade1")
-						break
-					}
-					case 3: {
-						sound.loadBgm(["ace"], "arcade3")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
-						break
-					}
-					case 4: {
-						sound.loadBgm(["ace"], "arcade6")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
-						break
-					}
-					case 5: {
-						sound.loadBgm(["ace"], "arcade6")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
-						break
-					}
-				}
-				break
-			}
-            case 3:
+            case 2:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
@@ -1764,7 +1728,7 @@ export const loops = {
 					}
 				}
 				break
-            case 5:
+            case 4:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
@@ -1798,7 +1762,7 @@ export const loops = {
 					}
 				}
 				break
-			case 7:
+			case 6:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
@@ -1889,6 +1853,29 @@ export const loops = {
       if (settings.game.ace.lineGoal >= 0) {
         game.lineGoal = settings.game.ace.lineGoal
       }
+	  const difficulty = parseInt(settings.game.ace.difficulty)
+      switch (difficulty) {
+		  case 1: {
+			  game.settings.music = ["../ace/katsyuha-easy"]
+			  break
+		  }
+		  case 2: {
+			  game.settings.music = ["../ace/arcade1"]
+			  break
+		  }
+		  case 3: {
+			  game.settings.music = ["../ace/arcade3"]
+			  break
+		  }
+		  case 4: {
+			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+		  case 5: {
+			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+	  }
       game.stat.level = 1
       lastLevel = 1
       game.piece.gravity = 1000
@@ -2091,68 +2078,32 @@ export const loops = {
         [11, 4],
       ]
 	  const musicProgressionTable = [
-		[0, 1],
-        [47, 2],
-        [50, 3],
-        [97, 4],
-        [100, 5],
-		[147, 6],
-        [150, 7],
-		[197, 8],
+        [47, 1],
+        [50, 2],
+        [97, 3],
+        [100, 4],
+		[147, 5],
+        [150, 6],
+		[197, 7],
       ]
 	  for (const pair of musicProgressionTable) {
         const line = pair[0]
         const entry = pair[1]
         if (game.stat.line >= line && game.musicProgression < entry) {
           switch (entry) {
-            case 2:
+            case 1:
 			  sound.killBgm()
 			  break
-            case 4:
+            case 3:
               sound.killBgm()
               break
-			case 6:
+			case 5:
 			  sound.killBgm()
 			  break
-			case 8:
+			case 7:
 			  sound.killBgm()
 			  break
-			case 1: {
-				switch (difficulty) {
-					case 1: {
-						sound.loadBgm(["ace"], "katsyuha-easy")
-						sound.killBgm()
-						sound.playBgm(["ace"], "katsyuha-easy")
-						break
-					}
-					case 2: {
-						sound.loadBgm(["ace"], "arcade1")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade1")
-						break
-					}
-					case 3: {
-						sound.loadBgm(["ace"], "arcade3")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade3")
-						break
-					}
-					case 4: {
-						sound.loadBgm(["ace"], "arcade6")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
-						break
-					}
-					case 5: {
-						sound.loadBgm(["ace"], "arcade6")
-						sound.killBgm()
-						sound.playBgm(["ace"], "arcade6")
-						break
-					}
-				}
-				break
-			}
-            case 3:
+            case 2:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade2")
@@ -2186,7 +2137,7 @@ export const loops = {
 					}
 				}
 				break
-            case 5:
+            case 4:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "arcade3")
@@ -2220,7 +2171,7 @@ export const loops = {
 					}
 				}
 				break
-			case 7:
+			case 6:
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["ace"], "kalinka")
@@ -2308,6 +2259,29 @@ export const loops = {
       }
     },
     onInit: (game) => {
+	  const difficulty = parseInt(settings.game.ace.difficulty)
+      switch (difficulty) {
+		  case 1: {
+			  game.settings.music = ["../ace/katsyuha-easy"]
+			  break
+		  }
+		  case 2: {
+			  game.settings.music = ["../ace/arcade1"]
+			  break
+		  }
+		  case 3: {
+			  game.settings.music = ["../ace/arcade3"]
+			  break
+		  }
+		  case 4: {
+			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+		  case 5: {
+			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+	  }
       if (settings.game.aceworld.lineGoal >= 0) {
         game.lineGoal = settings.game.aceworld.lineGoal
       }
