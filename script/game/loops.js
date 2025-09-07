@@ -1469,6 +1469,7 @@ export const loops = {
       updateFallSpeed(game)
       game.updateStats()
     },
+  },
   ace: {
     update: (arg) => {
       collapse(arg)
