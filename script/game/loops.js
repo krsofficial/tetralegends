@@ -1476,35 +1476,35 @@ export const loops = {
     update: (arg) => {
       collapse(arg)
 	  const game = gameHandler.game
-	  if (game.stat.level >= 14)
+	  if (game.stat.level >= 15)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
-      else if (game.stat.level >= 13)
+      else if (game.stat.level >= 14)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1300.jpg')`)}
-      else if (game.stat.level >= 12)
+      else if (game.stat.level >= 13)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1200.jpg')`)}
-      else if (game.stat.level >= 11)
+      else if (game.stat.level >= 12)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1100.jpg')`)}
-      else if (game.stat.level >= 10)
+      else if (game.stat.level >= 11)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1000.jpg')`)}
-      else if (game.stat.level >= 9)
+      else if (game.stat.level >= 10)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0900.jpg')`)}
-	  else if (game.stat.level >= 8)
+	  else if (game.stat.level >= 9)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0800.jpg')`)}
-	  else if (game.stat.level >= 7)
+	  else if (game.stat.level >= 8)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0700.jpg')`)}
-	  else if (game.stat.level >= 6)
+	  else if (game.stat.level >= 7)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0600.jpg')`)}
-	  else if (game.stat.level >= 5)
+	  else if (game.stat.level >= 6)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0500.jpg')`)}
-	  else if (game.stat.level >= 4)
+	  else if (game.stat.level >= 5)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0400.jpg')`)}
-	  else if (game.stat.level >= 3)
+	  else if (game.stat.level >= 4)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0300.jpg')`)}
-	  else if (game.stat.level >= 2)
+	  else if (game.stat.level >= 3)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0200.jpg')`)}
-	  else if (game.stat.level >= 1)
+	  else if (game.stat.level >= 2)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0100.jpg')`)}
-	  else if (game.stat.level >= 0)
+	  else if (game.stat.level >= 1)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0000.jpg')`)}
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1553,10 +1553,10 @@ export const loops = {
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.ace.difficulty) {
 		  case "normal": {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1": {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
 		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
@@ -1663,33 +1663,33 @@ export const loops = {
         [10, 4],
       ]
 	  const musicProgressionTable = [
-		[0, 0],
-        [47, 1],
-        [50, 2],
-        [97, 3],
-        [100, 4],
-		[147, 5],
-        [150, 6],
-		[197, 7],
+		[0, 1],
+        [47, 2],
+        [50, 3],
+        [97, 4],
+        [100, 5],
+		[147, 6],
+        [150, 7],
+		[197, 8],
       ]
 	  for (const pair of musicProgressionTable) {
         const line = pair[0]
         const entry = pair[1]
         if (game.stat.line >= line && game.musicProgression < entry) {
           switch (entry) {
-            case 1:
+            case 2:
 			  sound.killBgm()
 			  break
-            case 3:
+            case 4:
               sound.killBgm()
               break
-			case 5:
+			case 6:
 			  sound.killBgm()
 			  break
-			case 7:
+			case 8:
 			  sound.killBgm()
 			  break
-			case 0: {
+			case 1: {
 				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
@@ -1724,7 +1724,7 @@ export const loops = {
 				}
 				break
 			}
-            case 2:
+            case 3:
 				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
@@ -1758,7 +1758,7 @@ export const loops = {
 					}
 				}
 				break
-            case 4:
+            case 5:
 				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
@@ -1792,7 +1792,7 @@ export const loops = {
 					}
 				}
 				break
-			case 6:
+			case 7:
 				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
@@ -1898,35 +1898,35 @@ export const loops = {
     update: (arg) => {
       collapse(arg)
 	  const game = gameHandler.game
-	  if (game.stat.level >= 14)
+	  if (game.stat.level >= 15)
 	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
-      else if (game.stat.level >= 13)
+      else if (game.stat.level >= 14)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1300.jpg')`)}
-      else if (game.stat.level >= 12)
+      else if (game.stat.level >= 13)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1200.jpg')`)}
-      else if (game.stat.level >= 11)
+      else if (game.stat.level >= 12)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1100.jpg')`)}
-      else if (game.stat.level >= 10)
+      else if (game.stat.level >= 11)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1000.jpg')`)}
-      else if (game.stat.level >= 9)
+      else if (game.stat.level >= 10)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0900.jpg')`)}
-	  else if (game.stat.level >= 8)
+	  else if (game.stat.level >= 9)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0800.jpg')`)}
-	  else if (game.stat.level >= 7)
+	  else if (game.stat.level >= 8)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0700.jpg')`)}
-	  else if (game.stat.level >= 6)
+	  else if (game.stat.level >= 7)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0600.jpg')`)}
-	  else if (game.stat.level >= 5)
+	  else if (game.stat.level >= 6)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0500.jpg')`)}
-	  else if (game.stat.level >= 4)
+	  else if (game.stat.level >= 5)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0400.jpg')`)}
-	  else if (game.stat.level >= 3)
+	  else if (game.stat.level >= 4)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0300.jpg')`)}
-	  else if (game.stat.level >= 2)
+	  else if (game.stat.level >= 3)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0200.jpg')`)}
-	  else if (game.stat.level >= 1)
+	  else if (game.stat.level >= 2)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0100.jpg')`)}
-	  else if (game.stat.level >= 0)
+	  else if (game.stat.level >= 1)
         {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0000.jpg')`)}
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1969,10 +1969,10 @@ export const loops = {
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       switch(settings.game.aceworld.difficulty) {
 		  case "normal": {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
 		  case "hispeed1": {
-			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) * 4
+			  game.piece.gravity = Math.min(gravityEquation * 1000, framesToMs(1 / 20)) * 4
 		  }
 		  case "hispeed2": {
 			  game.piece.gravity = framesToMs(1 / 20)
@@ -2054,59 +2054,59 @@ export const loops = {
       ]
 	  const areTableAnother = [
         [1, 18],
-        [3, 14],
-        [4, 8],
-        [5, 7],
-        [10, 6],
+        [4, 14],
+        [5, 8],
+        [6, 7],
+        [11, 6],
       ]
       const areLineTableAnother = [
         [1, 12],
         [4, 6],
-        [5, 5],
-        [10, 4],
+        [6, 5],
+        [11, 4],
       ]
 	  const areTableAnother2 = [
         [1, 8],
-        [3, 7],
-        [4, 6],
+        [4, 7],
         [5, 6],
-        [10, 6],
+        [6, 6],
+        [11, 6],
       ]
       const areLineTableAnother2 = [
         [1, 6],
         [4, 5],
-        [5, 4],
-        [10, 4],
+        [6, 4],
+        [11, 4],
       ]
 	  const musicProgressionTable = [
-		[0, 0],
-        [47, 1],
-        [50, 2],
-        [97, 3],
-        [100, 4],
-		[147, 5],
-        [150, 6],
-		[197, 7],
+		[0, 1],
+        [47, 2],
+        [50, 3],
+        [97, 4],
+        [100, 5],
+		[147, 6],
+        [150, 7],
+		[197, 8],
       ]
 	  for (const pair of musicProgressionTable) {
         const line = pair[0]
         const entry = pair[1]
         if (game.stat.line >= line && game.musicProgression < entry) {
           switch (entry) {
-            case 1:
+            case 2:
 			  sound.killBgm()
 			  break
-            case 3:
+            case 4:
               sound.killBgm()
               break
-			case 5:
+			case 6:
 			  sound.killBgm()
 			  break
-			case 7:
+			case 8:
 			  sound.killBgm()
 			  break
-			case 0: {
-				switch(settings.game.aceworld.difficulty) {
+			case 1: {
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -2140,8 +2140,8 @@ export const loops = {
 				}
 				break
 			}
-            case 2:
-				switch(settings.game.aceworld.difficulty) {
+            case 3:
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -2174,8 +2174,8 @@ export const loops = {
 					}
 				}
 				break
-            case 4:
-				switch(settings.game.aceworld.difficulty) {
+            case 5:
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -2208,8 +2208,8 @@ export const loops = {
 					}
 				}
 				break
-			case 6:
-			    switch(settings.game.aceworld.difficulty) {
+			case 7:
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
