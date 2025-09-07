@@ -58,8 +58,6 @@ let shownHoldWarning = false
 let lastSeenI = 0
 let nonEvents = []
 let bpm
-let difficulty = "normal"
-let arstype = "acears"
 const levelUpdate = (game) => {
   let returnValue = false
   if (game.stat.level !== lastLevel) {
@@ -1517,11 +1515,11 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      if (arstype === "acears") {
+      if (settings.game.ace.arstype === "acears") {
 		softDrop(arg)
 		hardDrop(arg)
 	  }
-	  else if (arstype === "acears2") {
+	  else if (settings.game.ace.arstype === "acears2") {
 		sonicDrop(arg, true)
         firmDrop(arg, 1, true)
 	  }
@@ -1559,7 +1557,7 @@ export const loops = {
       }
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      switch(difficulty) {
+      switch(settings.game.ace.difficulty) {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -1586,7 +1584,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(difficulty) {
+	  switch(settings.game.ace.difficulty) {
 		case "normal": {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -1698,7 +1696,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 0: {
-				switch(difficulty) {
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -1733,7 +1731,7 @@ export const loops = {
 				break
 			}
             case 2:
-				switch(difficulty) {
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -1767,7 +1765,7 @@ export const loops = {
 				}
 				break
             case 4:
-				switch(difficulty) {
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -1801,7 +1799,7 @@ export const loops = {
 				}
 				break
 			case 6:
-			  switch(difficulty) {
+				switch(settings.game.ace.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
@@ -1841,7 +1839,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+        if (game.stat.level <= level && settings.game.ace.difficulty !== "another" && settings.game.ace.difficulty !== "another2") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1849,7 +1847,7 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+        if (game.stat.level <= level && settings.game.ace.difficulty !== "another" && settings.game.ace.difficulty !== "another2") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1857,7 +1855,7 @@ export const loops = {
 	  for (const pair of areTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another") {
+        if (game.stat.level <= level && settings.game.ace.difficulty === "another") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1865,7 +1863,7 @@ export const loops = {
       for (const pair of areLineTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another") {
+        if (game.stat.level <= level && settings.game.ace.difficulty === "another") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1873,7 +1871,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another2") {
+        if (game.stat.level <= level && settings.game.ace.difficulty === "another2") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -1881,7 +1879,7 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another2") {
+        if (game.stat.level <= level && settings.game.ace.difficulty === "another2") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1900,8 +1898,6 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  difficulty = settings.game.ace.difficulty
-	  arstype = settings.game.ace.arstype
     },
   },
   aceworld: {
@@ -1985,7 +1981,7 @@ export const loops = {
       }
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      switch(difficulty) {
+      switch(settings.game.aceworld.difficulty) {
 		  case "normal": {
 			  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
 		  }
@@ -2012,7 +2008,7 @@ export const loops = {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
-	  switch(difficulty) {
+	  switch(settings.game.aceworld.difficulty) {
 		case "normal": {
 			if (game.stat.level <= 2) {
 				timeLimit = 120000
@@ -2124,7 +2120,7 @@ export const loops = {
 			  sound.killBgm()
 			  break
 			case 0: {
-				switch(difficulty) {
+				switch(settings.game.aceworld.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "katsyuha-easy")
 						sound.killBgm()
@@ -2159,7 +2155,7 @@ export const loops = {
 				break
 			}
             case 2:
-				switch(difficulty) {
+				switch(settings.game.aceworld.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade2")
 						sound.killBgm()
@@ -2193,7 +2189,7 @@ export const loops = {
 				}
 				break
             case 4:
-				switch(difficulty) {
+				switch(settings.game.aceworld.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "arcade3")
 						sound.killBgm()
@@ -2227,7 +2223,7 @@ export const loops = {
 				}
 				break
 			case 6:
-			    switch(difficulty) {
+			    switch(settings.game.aceworld.difficulty) {
 					case "normal": {
 						sound.loadBgm(["ace"], "kalinka")
 						sound.killBgm()
@@ -2267,7 +2263,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty !== "another" && settings.game.aceworld.difficulty !== "another2") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2275,7 +2271,7 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty !== "another" && difficulty !== "another2") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty !== "another" && settings.game.aceworld.difficulty !== "another2") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -2283,7 +2279,7 @@ export const loops = {
 	  for (const pair of areTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2291,7 +2287,7 @@ export const loops = {
       for (const pair of areLineTableAnother) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -2299,7 +2295,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another2") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another2") {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -2307,7 +2303,7 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === "another2") {
+        if (game.stat.level <= level && settings.game.aceworld.difficulty === "another2") {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -2326,7 +2322,6 @@ export const loops = {
 	  game.timePassed = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
-	  difficulty = settings.game.aceworld.difficulty
     },
   },
   zen: {
