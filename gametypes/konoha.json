@@ -11,7 +11,7 @@
     "soundbank": "tgm4",
     "music": "../konoha/konoha-easy",
     "hasDangerBgm": false,
-    "scoreTable": "blank",
+    "scoreTable": "guideline",
     "background": "marathon.jpg",
     "isHardMode": false
   },
