@@ -2390,23 +2390,23 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../katsyuha-easy"]
+			  game.settings.music = ["../ace/katsyuha-easy"]
 			  break
 		  }
 		  case 2: {
-			  game.settings.music = ["../arcade1"]
+			  game.settings.music = ["../ace/arcade1"]
 			  break
 		  }
 		  case 3: {
-			  game.settings.music = ["../arcade3"]
+			  game.settings.music = ["../ace/arcade3"]
 			  break
 		  }
 		  case 4: {
-			  game.settings.music = ["../arcade6"]
+			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 		  case 5: {
-			  game.settings.music = ["../arcade6"]
+			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 	  }
@@ -2847,23 +2847,23 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../katsyuha-easy"]
+			  game.settings.music = ["../ace/katsyuha-easy"]
 			  break
 		  }
 		  case 2: {
-			  game.settings.music = ["../arcade1"]
+			  game.settings.music = ["../ace/arcade1"]
 			  break
 		  }
 		  case 3: {
-			  game.settings.music = ["../arcade3"]
+			  game.settings.music = ["../ace/arcade3"]
 			  break
 		  }
 		  case 4: {
-			  game.settings.music = ["../arcade6"]
+			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 		  case 5: {
-			  game.settings.music = ["../arcade6"]
+			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 	  }
