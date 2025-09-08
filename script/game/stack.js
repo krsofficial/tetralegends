@@ -48,10 +48,9 @@ export default class Stack extends GameModule {
     const newGrid = JSON.parse(JSON.stringify(this.grid))
     for (const finalBlock of finalBlocks) {
       if (
-        (this.parent.settings.width !== 5) &&
-		(finalBlock[0] < 0 ||
+        finalBlock[0] < 0 ||
         finalBlock[0] >= this.parent.settings.width ||
-        finalBlock[1] >= this.parent.settings.height)
+        finalBlock[1] >= this.parent.settings.height
       ) {
         console.log("Piece is too big for Matrix!!")
       } else newGrid[finalBlock[0]][finalBlock[1] + this.hiddenHeight] = "test"
