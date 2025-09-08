@@ -217,6 +217,11 @@
           "label": "BATTLE",
           "fixedText": true,
           "value": "battle"
+        },
+		{
+          "label": "Mashup (KRS)",
+          "fixedText": true,
+          "value": "krs"
         }
       ],
       "setting": "rotationSystem",

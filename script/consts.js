@@ -1090,6 +1090,8 @@ SPAWN_OFFSETS.battle = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.friends = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.sudden = SPAWN_OFFSETS.arsti
 SPAWN_OFFSETS.suddenworld = SPAWN_OFFSETS.world
+SPAWN_OFFSETS.dshock = SPAWN_OFFSETS.dshock
+SPAWN_OFFSETS.krs = SPAWN_OFFSETS.ars
 
 export const INITIAL_ORIENTATION = {
   srs: {
@@ -1128,6 +1130,8 @@ INITIAL_ORIENTATION.battle = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.friends = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.sudden = INITIAL_ORIENTATION.arsti
 INITIAL_ORIENTATION.suddenworld = INITIAL_ORIENTATION.world
+INITIAL_ORIENTATION.dshock = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.krs = INITIAL_ORIENTATION.ars
 
 const KICK_TEMPLATES = {
   o: {
@@ -3034,6 +3038,31 @@ KICK_TEMPLATES.battle = KICK_TEMPLATES.srs
 KICK_TEMPLATES.friends = KICK_TEMPLATES.srs
 KICK_TEMPLATES.sudden = KICK_TEMPLATES.arsti
 KICK_TEMPLATES.suddenworld = KICK_TEMPLATES.world
+KICK_TEMPLATES.dshock = KICK_TEMPLATES.srs
+KICK_TEMPLATES.krs = {
+  x: {
+    ...KICK_TEMPLATES.srs.x,
+    ...KICK_TEMPLATES.arsx.x,
+	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.oshisaure.x,
+  },
+  I: {
+    ...KICK_TEMPLATES.srs.I,
+    ...KICK_TEMPLATES.arsx.I,
+	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.oshisaure.I,
+  },
+  T: {
+    ...KICK_TEMPLATES.srs.x,
+    ...KICK_TEMPLATES.arsx.T,
+	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.oshisaure.x,
+  },
+  O: {
+	...KICK_TEMPLATES.o,
+    ...KICK_TEMPLATES.asc.x,
+  },
+}
 
 export const KICK_TABLES = {
   asc: {
@@ -3230,6 +3259,16 @@ KICK_TABLES.battle = KICK_TABLES.srs
 KICK_TABLES.friends = KICK_TABLES.srs
 KICK_TABLES.sudden = KICK_TABLES.arsti
 KICK_TABLES.suddenworld = KICK_TABLES.world
+KICK_TABLES.dshock = KICK_TABLES.srs
+KICK_TEMPLATES.krs = {
+  I: KICK_TEMPLATES.krs.I,
+  L: KICK_TEMPLATES.krs.x,
+  O: KICK_TEMPLATES.krs.O,
+  Z: KICK_TEMPLATES.krs.x,
+  T: KICK_TEMPLATES.krs.T,
+  J: KICK_TEMPLATES.krs.x,
+  S: KICK_TEMPLATES.krs.x,
+}
 
 export const PIECE_COLORS = {
   srs: {
@@ -3313,6 +3352,15 @@ export const PIECE_COLORS = {
     J: "green",
     S: "green",
   },
+  krs: {
+    I: "orange",
+    L: "red",
+    O: "yellow",
+    Z: "lightBlue",
+    T: "green",
+    J: "blue",
+    S: "purple",
+  },
 }
 PIECE_COLORS.asc = PIECE_COLORS.srs
 PIECE_COLORS.ascx = PIECE_COLORS.srs
@@ -3326,6 +3374,7 @@ PIECE_COLORS.battle = PIECE_COLORS.srs
 PIECE_COLORS.friends = PIECE_COLORS.srs
 PIECE_COLORS.sudden = PIECE_COLORS.arsti
 PIECE_COLORS.suddenworld = PIECE_COLORS.world
+PIECE_COLORS.dshock = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
   monomino: {
@@ -3373,6 +3422,8 @@ NEXT_OFFSETS.battle = NEXT_OFFSETS.srs
 NEXT_OFFSETS.friends = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sudden = NEXT_OFFSETS.arsti
 NEXT_OFFSETS.suddenworld = NEXT_OFFSETS.world
+NEXT_OFFSETS.dshock = NEXT_OFFSETS.srs
+NEXT_OFFSETS.krs = NEXT_OFFSETS.krs
 
 export const PIECE_OFFSETS = {
   asc: {
@@ -3715,6 +3766,13 @@ PIECE_OFFSETS.friends = PIECE_OFFSETS.srs
 PIECE_OFFSETS.sudden = PIECE_OFFSETS.arsti
 PIECE_OFFSETS.suddenworld = PIECE_OFFSETS.world
 PIECE_OFFSETS.ace = PIECE_OFFSETS.arsx
+PIECE_OFFSETS.dshock = PIECE_OFFSETS.srs
+PIECE_OFFSETS.krs = {
+  ...PIECE_OFFSETS.srs,
+  ...PIECE_OFFSETS.arsx,
+  ...PIECE_OFFSETS.oshisaure,
+  ...PIECE_OFFSETS.asc,
+}
 
 export const PIECE_BINARIES = {
   L: 0b000,
@@ -4181,6 +4239,8 @@ export const SKIN_SETS = {
   friends: "battle",
   sudden: "arika",
   suddenworld: "glossy",
+  dshock: "dshock",
+  krs: "oshisaure",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -4202,4 +4262,6 @@ export const SOUND_SETS = {
   friends: "friends",
   sudden: "tgm3",
   suddenworld: "tgm3",
+  dshock: "nblox",
+  krs: "krs",
 }

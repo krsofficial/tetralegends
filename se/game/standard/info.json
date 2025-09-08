@@ -21,6 +21,7 @@
     "initialrotate",
     "initialskip",
     "ko",
+	"gameover",
     "land",
     "levelup",
     "lockforce",
