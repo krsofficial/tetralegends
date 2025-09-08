@@ -1531,7 +1531,6 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  game.stat.bravos = game.stat.pcCount
 	  if (game.stat.pcCount > lastBravos) {
 		  lastBravos = game.stat.pcCount
 		  game.timeGoal += 10000
@@ -1550,7 +1549,6 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
 	  game.timeGoal = 120000
-	  game.stat.bravos = 0
       game.stat.pcCount = 0
 	  game.arcadeCombo = 1
       game.rta = 0
@@ -1775,7 +1773,6 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  game.stat.bravos = game.stat.pcCount
 	  if (game.stat.pcCount > lastBravos) {
 		  lastBravos = game.stat.pcCount
 		  game.timeGoal += 10000
@@ -1794,7 +1791,6 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
 	  game.timeGoal = 120000
-	  game.stat.bravos = 0
       game.stat.pcCount = 0
 	  game.arcadeCombo = 1
       game.rta = 0

@@ -23,47 +23,47 @@ import locale from "../lang.js"
 let endScreenTimeout = null
 export default class Game {
   constructor(gametype) {
-    if (gametype === "beat") {
-      document.getElementById("myVideo").style.opacity = 1
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 0
-    } else if (gametype === "mania") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-    } else if (gametype === "maniaworld") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-    } else if (gametype === "sudden") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-    } else if (gametype === "suddenworld") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-    } else if (gametype === "novice") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-    } else if (gametype === "noviceworld") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-	} else if (gametype === "ace") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-	} else if (gametype === "aceworld") {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 0
-	  document.getElementById("arcadeBackground").style.opacity = 1
-	} else {
-      document.getElementById("myVideo").style.opacity = 0
-	  document.getElementById("fireWorks").style.opacity = 1
-	  document.getElementById("arcadeBackground").style.opacity = 0
-    }
+//    if (gametype === "beat") {
+//      document.getElementById("myVideo").style.opacity = 1
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 0
+//    } else if (gametype === "mania") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//    } else if (gametype === "maniaworld") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//    } else if (gametype === "sudden") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//    } else if (gametype === "suddenworld") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//    } else if (gametype === "novice") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//    } else if (gametype === "noviceworld") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//	} else if (gametype === "ace") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//	} else if (gametype === "aceworld") {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 0
+//	  document.getElementById("arcadeBackground").style.opacity = 1
+//	} else {
+//      document.getElementById("myVideo").style.opacity = 0
+//	  document.getElementById("fireWorks").style.opacity = 1
+//	  document.getElementById("arcadeBackground").style.opacity = 0
+//    }
     this.userSettings = { ...settings.settings }
     this.type = gametype
     this.pieceCanvas = $("#piece")
