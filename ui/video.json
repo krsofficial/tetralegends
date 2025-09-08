@@ -64,9 +64,19 @@
           "value": "standard"
         },
 		{
+          "label": "T99",
+          "fixedText": true,
+          "value": "t99"
+        },
+		{
+          "label": "PPT",
+          "fixedText": true,
+          "value": "ppt"
+        },
+		{
           "label": "Friends",
           "fixedText": true,
-          "value": "battle"
+          "value": "friends"
         },
         {
           "string": "tetraOnlineLabel",
@@ -95,6 +105,16 @@
           "label": "Dualshock 3",
           "fixedText": true,
           "value": "dshock"
+        },
+		{
+          "label": "T99",
+          "fixedText": true,
+          "value": "t99"
+        },
+		{
+          "label": "PPT",
+          "fixedText": true,
+          "value": "ppt"
         },
         {
           "string": "retroLabel",

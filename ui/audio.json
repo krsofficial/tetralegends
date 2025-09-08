@@ -90,14 +90,9 @@
           "value": "friends"
         },
         {
-          "label": "Battle (LO-FI)",
+          "label": "Battle",
           "fixedText": true,
           "value": "battle"
-        },
-        {
-          "label": "Battle (HI-FI)",
-          "fixedText": true,
-          "value": "battleplus"
         },
         {
           "string": "retroLabel",

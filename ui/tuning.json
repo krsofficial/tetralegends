@@ -194,10 +194,6 @@
           "fixedText": true,
           "value": "oshisaure"
         },
-        {
-          "string": "originalOption",
-          "value": "original"
-        },
 		{
           "label": "ARS-ACE",
           "fixedText": true,
@@ -209,17 +205,27 @@
           "value": "aceworld"
         },
 		{
-          "label": "Friends",
+          "label": "SRS-T99",
+          "fixedText": true,
+          "value": "t99"
+        },
+		{
+          "label": "SRS-PPT",
+          "fixedText": true,
+          "value": "ppt"
+        },
+		{
+          "label": "SRS-Friends",
           "fixedText": true,
           "value": "friends"
         },
 		{
-          "label": "Battle",
+          "label": "SRS-Battle",
           "fixedText": true,
           "value": "battle"
         },
 		{
-          "label": "Dualshock 3",
+          "label": "SRS-Dualshock",
           "fixedText": true,
           "value": "dshock"
         },
@@ -227,6 +233,10 @@
           "label": "KRS (Mashup)",
           "fixedText": true,
           "value": "krs"
+        },
+        {
+          "string": "originalOption",
+          "value": "original"
         }
       ],
       "setting": "rotationSystem",
