@@ -3260,7 +3260,7 @@ KICK_TABLES.friends = KICK_TABLES.srs
 KICK_TABLES.sudden = KICK_TABLES.arsti
 KICK_TABLES.suddenworld = KICK_TABLES.world
 KICK_TABLES.dshock = KICK_TABLES.srs
-KICK_TEMPLATES.krs = {
+KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
   L: KICK_TEMPLATES.krs.x,
   O: KICK_TEMPLATES.krs.O,
@@ -4240,7 +4240,7 @@ export const SKIN_SETS = {
   sudden: "arika",
   suddenworld: "glossy",
   dshock: "dshock",
-  krs: "oshisaure",
+  krs: "arika",
 }
 export const SOUND_SETS = {
   asc: "standard",
