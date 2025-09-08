@@ -170,22 +170,22 @@
           "value": "arsx"
         },
         {
-          "label": "World",
+          "label": "World-TI",
           "fixedText": true,
           "value": "world"
         },
         {
-          "label": "Nintendo-R",
+          "label": "Console",
           "fixedText": true,
           "value": "retro"
         },
         {
-          "label": "Nintendo-L",
+          "label": "Handheld",
           "fixedText": true,
           "value": "handheld"
         },
         {
-          "label": "DX",
+          "label": "Handheld DX",
           "fixedText": true,
           "value": "deluxe"
         },
@@ -199,27 +199,32 @@
           "value": "original"
         },
 		{
-          "label": "ACE",
+          "label": "ARS-ACE",
           "fixedText": true,
           "value": "ace"
         },
 		{
-          "label": "ACE-WORLD",
+          "label": "World-ACE",
           "fixedText": true,
           "value": "aceworld"
         },
 		{
-          "label": "FRIENDS",
+          "label": "Friends",
           "fixedText": true,
           "value": "friends"
         },
 		{
-          "label": "BATTLE",
+          "label": "Battle",
           "fixedText": true,
           "value": "battle"
         },
 		{
-          "label": "Mashup (KRS)",
+          "label": "Dualshock 3",
+          "fixedText": true,
+          "value": "dshock"
+        },
+		{
+          "label": "KRS (Mashup)",
           "fixedText": true,
           "value": "krs"
         }

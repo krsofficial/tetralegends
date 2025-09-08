@@ -3423,7 +3423,7 @@ NEXT_OFFSETS.friends = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sudden = NEXT_OFFSETS.arsti
 NEXT_OFFSETS.suddenworld = NEXT_OFFSETS.world
 NEXT_OFFSETS.dshock = NEXT_OFFSETS.srs
-NEXT_OFFSETS.krs = NEXT_OFFSETS.krs
+NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
 
 export const PIECE_OFFSETS = {
   asc: {
