@@ -128,6 +128,11 @@
           "label": "Dualshock 3",
           "fixedText": true,
           "value": "nblox"
+        },
+		{
+          "label": "KRS",
+          "fixedText": true,
+          "value": "krs"
         }
       ],
       "setting": "soundbank",
@@ -158,11 +163,6 @@
           "label": "NullpoMino",
           "fixedText": true,
           "value": "nullpomino"
-        },
-		{
-          "label": "KRS",
-          "fixedText": true,
-          "value": "krs"
         },
         {
           "string": "offOption",
