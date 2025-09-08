@@ -815,7 +815,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 70)
+      softDrop(arg, 40)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1069,7 +1069,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 70)
+      softDrop(arg, 40)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1321,7 +1321,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 70)
+      softDrop(arg, 40)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1484,31 +1484,31 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
 	  if ((game.stat.level >= 1200) || (game.stat.level >= 2400))
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1200.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1200.jpg')`)}
 	  else if ((game.stat.level >= 1100) || (game.stat.level >= 2300))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1100.jpg')`)}
 	  else if ((game.stat.level >= 1000) || (game.stat.level >= 2200))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
       else if ((game.stat.level >= 900) || (game.stat.level >= 2100))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0900.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if ((game.stat.level >= 800) || (game.stat.level >= 2000))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0800.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0800.jpg')`)}
 	  else if ((game.stat.level >= 700) || (game.stat.level >= 1900))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0700.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0700.jpg')`)}
 	  else if ((game.stat.level >= 600) || (game.stat.level >= 1800))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0600.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0600.jpg')`)}
 	  else if ((game.stat.level >= 500) || (game.stat.level >= 1700))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0500.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0500.jpg')`)}
 	  else if ((game.stat.level >= 400) || (game.stat.level >= 1600))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0400.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0400.jpg')`)}
 	  else if ((game.stat.level >= 300) || (game.stat.level >= 1500))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0300.jpg')`)}
 	  else if ((game.stat.level >= 200) || (game.stat.level >= 1400))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0200.jpg')`)}
 	  else if (((game.stat.level >= 100) || (game.stat.level >= 1300)) || (game.stat.level >= 2500))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 0)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1728,31 +1728,31 @@ export const loops = {
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
 	  if ((game.stat.level >= 1200) || (game.stat.level >= 2400))
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1200.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1200.jpg')`)}
 	  else if ((game.stat.level >= 1100) || (game.stat.level >= 2300))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1100.jpg')`)}
 	  else if ((game.stat.level >= 1000) || (game.stat.level >= 2200))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
       else if ((game.stat.level >= 900) || (game.stat.level >= 2100))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0900.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if ((game.stat.level >= 800) || (game.stat.level >= 2000))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0800.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0800.jpg')`)}
 	  else if ((game.stat.level >= 700) || (game.stat.level >= 1900))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0700.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0700.jpg')`)}
 	  else if ((game.stat.level >= 600) || (game.stat.level >= 1800))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0600.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0600.jpg')`)}
 	  else if ((game.stat.level >= 500) || (game.stat.level >= 1700))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0500.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0500.jpg')`)}
 	  else if ((game.stat.level >= 400) || (game.stat.level >= 1600))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0400.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0400.jpg')`)}
 	  else if ((game.stat.level >= 300) || (game.stat.level >= 1500))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0300.jpg')`)}
 	  else if ((game.stat.level >= 200) || (game.stat.level >= 1400))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0200.jpg')`)}
 	  else if (((game.stat.level >= 100) || (game.stat.level >= 1300)) || (game.stat.level >= 2500))
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 0)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1766,7 +1766,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 70)
+      softDrop(arg, 40)
       hardDrop(arg)
       extendedLockdown(arg);
       //classicLockdown(arg);
@@ -1964,35 +1964,35 @@ export const loops = {
       collapse(arg)
 	  const game = gameHandler.game
 	  if (game.stat.level >= 15)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1400.jpg')`)}
       else if (game.stat.level >= 14)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1300.jpg')`)}
       else if (game.stat.level >= 13)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1200.jpg')`)}
       else if (game.stat.level >= 12)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1100.jpg')`)}
       else if (game.stat.level >= 11)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
       else if (game.stat.level >= 10)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0900.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 9)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0800.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0800.jpg')`)}
 	  else if (game.stat.level >= 8)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0700.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0700.jpg')`)}
 	  else if (game.stat.level >= 7)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0600.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0600.jpg')`)}
 	  else if (game.stat.level >= 6)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0500.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0500.jpg')`)}
 	  else if (game.stat.level >= 5)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0400.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0400.jpg')`)}
 	  else if (game.stat.level >= 4)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0300.jpg')`)}
 	  else if (game.stat.level >= 3)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0200.jpg')`)}
 	  else if (game.stat.level >= 2)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 1)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (arg.piece.inAre) {
         initialDas(arg)
         initialRotation(arg)
@@ -2006,7 +2006,7 @@ export const loops = {
       }
       gravity(arg)
       if (settings.game.ace.arstype === "acears") {
-		softDrop(arg, 70)
+		softDrop(arg, 40)
 		hardDrop(arg)
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
@@ -2394,23 +2394,23 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/katsyuha-easy"]
+			  game.settings.music = ["../katsyuha-easy"]
 			  break
 		  }
 		  case 2: {
-			  game.settings.music = ["../ace/arcade1"]
+			  game.settings.music = ["../arcade1"]
 			  break
 		  }
 		  case 3: {
-			  game.settings.music = ["../ace/arcade3"]
+			  game.settings.music = ["../arcade3"]
 			  break
 		  }
 		  case 4: {
-			  game.settings.music = ["../ace/arcade6"]
+			  game.settings.music = ["../arcade6"]
 			  break
 		  }
 		  case 5: {
-			  game.settings.music = ["../ace/arcade6"]
+			  game.settings.music = ["../arcade6"]
 			  break
 		  }
 	  }
@@ -2430,35 +2430,35 @@ export const loops = {
       collapse(arg)
 	  const game = gameHandler.game
 	  if (game.stat.level >= 15)
-	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1400.jpg')`)}
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1400.jpg')`)}
       else if (game.stat.level >= 14)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1300.jpg')`)}
       else if (game.stat.level >= 13)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1200.jpg')`)}
       else if (game.stat.level >= 12)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1100.jpg')`)}
       else if (game.stat.level >= 11)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg1000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg1000.jpg')`)}
       else if (game.stat.level >= 10)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0900.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0900.jpg')`)}
 	  else if (game.stat.level >= 9)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0800.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0800.jpg')`)}
 	  else if (game.stat.level >= 8)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0700.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0700.jpg')`)}
 	  else if (game.stat.level >= 7)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0600.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0600.jpg')`)}
 	  else if (game.stat.level >= 6)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0500.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0500.jpg')`)}
 	  else if (game.stat.level >= 5)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0400.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0400.jpg')`)}
 	  else if (game.stat.level >= 4)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0300.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0300.jpg')`)}
 	  else if (game.stat.level >= 3)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0200.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0200.jpg')`)}
 	  else if (game.stat.level >= 2)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0100.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0100.jpg')`)}
 	  else if (game.stat.level >= 1)
-        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/ace/bg0000.jpg')`)}
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/bg0000.jpg')`)}
       if (arg.piece.inAre) {
         initialDas(arg)
         initialRotation(arg)
@@ -2471,7 +2471,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 70)
+      softDrop(arg, 40)
 	  hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -2851,23 +2851,23 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/katsyuha-easy"]
+			  game.settings.music = ["../katsyuha-easy"]
 			  break
 		  }
 		  case 2: {
-			  game.settings.music = ["../ace/arcade1"]
+			  game.settings.music = ["../arcade1"]
 			  break
 		  }
 		  case 3: {
-			  game.settings.music = ["../ace/arcade3"]
+			  game.settings.music = ["../arcade3"]
 			  break
 		  }
 		  case 4: {
-			  game.settings.music = ["../ace/arcade6"]
+			  game.settings.music = ["../arcade6"]
 			  break
 		  }
 		  case 5: {
-			  game.settings.music = ["../ace/arcade6"]
+			  game.settings.music = ["../arcade6"]
 			  break
 		  }
 	  }

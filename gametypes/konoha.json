@@ -13,7 +13,7 @@
     "hasDangerBgm": false,
     "scoreTable": "guideline",
     "background": "marathon.jpg",
-    "isHardMode": false,
+    "isHardMode": false
   },
   "piece": {
     "arrLimit": 17
