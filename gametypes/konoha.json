@@ -9,7 +9,7 @@
     "rotationSystem": "arsae",
     "skin": "arika",
     "soundbank": "tgm4",
-    "music": "../ace/konoha-easy",
+    "music": "../konoha/konoha-easy",
     "hasDangerBgm": false,
     "scoreTable": "guideline",
     "background": "marathon.jpg",
