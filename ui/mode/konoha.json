@@ -3,7 +3,7 @@
     "parent": "arcadears",
     "langOverride": "mode-options",
     "game": "konoha",
-    "pgmusic": "pg-konoha"
+    "pgmusic": "pg-ae"
   },
   "data": [
     {

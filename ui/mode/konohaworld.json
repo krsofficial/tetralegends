@@ -3,7 +3,7 @@
     "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "konohaworld",
-    "pgmusic": "pg-konoha"
+    "pgmusic": "pg-ae"
   },
   "data": [
     {
