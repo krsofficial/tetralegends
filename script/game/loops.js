@@ -1393,7 +1393,6 @@ export const loops = {
     update: (arg) => {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
-      game.rta += arg.ms
       game.b2b = 1
       arcadeScore(arg)
       linesToLevel(arg, 1999, 100)
@@ -1444,7 +1443,6 @@ export const loops = {
 	  game.timeGoal = 120000
       game.stat.pcCount = 0
 	  game.arcadeCombo = 1
-      game.rta = 0
 	  game.timePassed = 0
       game.stat.initPieces = 2
       game.musicProgression = 0
@@ -1609,7 +1607,6 @@ export const loops = {
     update: (arg) => {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
-      game.rta += arg.ms
       game.b2b = 1
       arcadeScore(arg)
       linesToLevel(arg, 1999, 100)
@@ -1660,7 +1657,6 @@ export const loops = {
 	  game.timeGoal = 120000
       game.stat.pcCount = 0
 	  game.arcadeCombo = 1
-      game.rta = 0
 	  game.timePassed = 0
       game.stat.initPieces = 2
       game.musicProgression = 0
