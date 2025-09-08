@@ -74,7 +74,7 @@ const levelUpdate = (game) => {
   lastLevel = game.stat.level
   return returnValue
 }
-const updateArcadeBg = (level) = {
+const updateArcadeBg = (level) => {
 	if (level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.jpg')`)}
 	else if (level >= 1800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.jpg')`)}
 	else if (level >= 1700) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.jpg')`)}
@@ -96,7 +96,7 @@ const updateArcadeBg = (level) = {
 	else if (level >= 100) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.jpg')`)}
 	else if (level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.jpg')`)}
 }
-const updateAceBg = (level) = {
+const updateAceBg = (level) => {
 	if (level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.jpg')`)}
 	else if (level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.jpg')`)}
 	else if (level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.jpg')`)}
