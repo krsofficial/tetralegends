@@ -159,6 +159,11 @@
           "fixedText": true,
           "value": "nullpomino"
         },
+		{
+          "label": "KRS",
+          "fixedText": true,
+          "value": "krs"
+        },
         {
           "string": "offOption",
           "value": "off",
