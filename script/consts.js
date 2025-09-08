@@ -1092,6 +1092,8 @@ SPAWN_OFFSETS.dshock = SPAWN_OFFSETS.dshock
 SPAWN_OFFSETS.krs = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.t99 = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ppt = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.arsae = SPAWN_OFFSETS.arsx
+SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.world
 
 export const INITIAL_ORIENTATION = {
   srs: {
@@ -1132,6 +1134,8 @@ INITIAL_ORIENTATION.dshock = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.krs = INITIAL_ORIENTATION.ars
 INITIAL_ORIENTATION.t99 = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.ppt = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.arsae = INITIAL_ORIENTATION.arsx
+INITIAL_ORIENTATION.worldae = INITIAL_ORIENTATION.world
 
 const KICK_TEMPLATES = {
   o: {
@@ -3039,6 +3043,8 @@ KICK_TEMPLATES.friends = KICK_TEMPLATES.srs
 KICK_TEMPLATES.dshock = KICK_TEMPLATES.srs
 KICK_TEMPLATES.t99 = KICK_TEMPLATES.srs
 KICK_TEMPLATES.ppt = KICK_TEMPLATES.srs
+KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
+KICK_TEMPLATES.worldae = KICK_TEMPLATES.world
 KICK_TEMPLATES.krs = {
   x: {
     ...KICK_TEMPLATES.srs.x,
@@ -3260,6 +3266,8 @@ KICK_TABLES.friends = KICK_TABLES.srs
 KICK_TABLES.dshock = KICK_TABLES.srs
 KICK_TABLES.t99 = KICK_TABLES.srs
 KICK_TABLES.ppt = KICK_TABLES.srs
+KICK_TABLES.arsae = KICK_TABLES.arsx
+KICK_TABLES.worldae = KICK_TABLES.world
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
   L: KICK_TEMPLATES.krs.x,
@@ -3375,6 +3383,8 @@ PIECE_COLORS.friends = PIECE_COLORS.srs
 PIECE_COLORS.dshock = PIECE_COLORS.srs
 PIECE_COLORS.t99 = PIECE_COLORS.srs
 PIECE_COLORS.ppt = PIECE_COLORS.srs
+PIECE_COLORS.arsae = PIECE_COLORS.arsx
+PIECE_COLORS.worldae = PIECE_COLORS.world
 
 export const NEXT_OFFSETS = {
   monomino: {
@@ -3424,6 +3434,8 @@ NEXT_OFFSETS.dshock = NEXT_OFFSETS.srs
 NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.t99 = NEXT_OFFSETS.srs
 NEXT_OFFSETS.ppt = NEXT_OFFSETS.srs
+NEXT_OFFSETS.arsae = NEXT_OFFSETS.arsx
+NEXT_OFFSETS.worldae = NEXT_OFFSETS.world
 
 export const PIECE_OFFSETS = {
   asc: {
@@ -3767,6 +3779,8 @@ PIECE_OFFSETS.ace = PIECE_OFFSETS.arsx
 PIECE_OFFSETS.dshock = PIECE_OFFSETS.srs
 PIECE_OFFSETS.t99 = PIECE_OFFSETS.srs
 PIECE_OFFSETS.ppt = PIECE_OFFSETS.srs
+PIECE_OFFSETS.ace = PIECE_OFFSETS.arsae
+PIECE_OFFSETS.dshock = PIECE_OFFSETS.worldae
 PIECE_OFFSETS.krs = {
   ...PIECE_OFFSETS.srs,
   ...PIECE_OFFSETS.arsx,
@@ -4238,6 +4252,8 @@ export const SKIN_SETS = {
   battle: "friends",
   friends: "friends",
   dshock: "dshock",
+  arsae: "arika",
+  worldae: "pyramidal",
   t99: "t99",
   ppt: "ppt",
   krs: "oshisaure",
@@ -4261,6 +4277,8 @@ export const SOUND_SETS = {
   battle: "battle",
   friends: "friends",
   dshock: "nblox",
+  arsae: "tgm4",
+  worldae: "tgm4",
   t99: "t99",
   ppt: "ppt",
   krs: "nullpomino",

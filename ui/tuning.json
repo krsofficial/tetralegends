@@ -195,16 +195,6 @@
           "value": "oshisaure"
         },
 		{
-          "label": "ARS-ACE",
-          "fixedText": true,
-          "value": "ace"
-        },
-		{
-          "label": "World-ACE",
-          "fixedText": true,
-          "value": "aceworld"
-        },
-		{
           "label": "SRS-T99",
           "fixedText": true,
           "value": "t99"
@@ -228,6 +218,26 @@
           "label": "SRS-Dualshock",
           "fixedText": true,
           "value": "dshock"
+        },
+		{
+          "label": "ARS-ACE",
+          "fixedText": true,
+          "value": "ace"
+        },
+		{
+          "label": "World-ACE",
+          "fixedText": true,
+          "value": "aceworld"
+        },
+		{
+          "label": "ARS-AE",
+          "fixedText": true,
+          "value": "arsae"
+        },
+		{
+          "label": "World-AE",
+          "fixedText": true,
+          "value": "worldae"
         },
 		{
           "label": "KRS (Mashup)",

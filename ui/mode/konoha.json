@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadears",
+    "langOverride": "mode-options",
+    "game": "konoha",
+    "pgmusic": "pg-konoha"
+  },
+  "data": [
+    {
+      "label": "Rally",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

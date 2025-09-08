@@ -1,7 +1,6 @@
 {
   "properties": {
     "parent": "arcade",
-	"pgmusic": "pg-arcade"
   },
   "data": [
     {
@@ -37,6 +36,13 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/ace"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting all clears extends the time limit! (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konoha"
     }
   ]
 }

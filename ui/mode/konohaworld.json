@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadeworld",
+    "langOverride": "mode-options",
+    "game": "konohaworld",
+    "pgmusic": "pg-konoha"
+  },
+  "data": [
+    {
+      "label": "Rally",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

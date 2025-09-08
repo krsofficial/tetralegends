@@ -56,6 +56,7 @@ let garbageTimer = 0
 let shown20GMessage = false
 let shownHoldWarning = false
 let lastSeenI = 0
+let lastBravos = 0
 let nonEvents = []
 let bpm
 const levelUpdate = (game) => {
@@ -306,7 +307,7 @@ export const loops = {
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
-        game.stat.level !== 998
+        game.stat.level !== 1298
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -972,7 +973,7 @@ export const loops = {
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
-        game.stat.level !== 998
+        game.stat.level !== 1298
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -1470,6 +1471,494 @@ export const loops = {
       game.updateStats()
     },
   },
+  konoha: {
+    update: (arg) => {
+      const game = gameHandler.game
+      game.rta += arg.ms
+      game.b2b = 1
+      arcadeScore(arg)
+      linesToLevel(arg, 1999, 100)
+      game.endSectionLevel =
+        game.stat.level >= 1800
+          ? 1999
+          : Math.floor(game.stat.level / 100 + 1) * 100
+      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
+	  if ((game.stat.level >= 1200) || (game.stat.level >= 2400))
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1200.jpg')`)}
+	  else if ((game.stat.level >= 1100) || (game.stat.level >= 2300))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1100.jpg')`)}
+	  else if ((game.stat.level >= 1000) || (game.stat.level >= 2200))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1000.jpg')`)}
+      else if ((game.stat.level >= 900) || (game.stat.level >= 2100))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0900.jpg')`)}
+	  else if ((game.stat.level >= 800) || (game.stat.level >= 2000))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0800.jpg')`)}
+	  else if ((game.stat.level >= 700) || (game.stat.level >= 1900))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0700.jpg')`)}
+	  else if ((game.stat.level >= 600) || (game.stat.level >= 1800))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0600.jpg')`)}
+	  else if ((game.stat.level >= 500) || (game.stat.level >= 1700))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0500.jpg')`)}
+	  else if ((game.stat.level >= 400) || (game.stat.level >= 1600))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0400.jpg')`)}
+	  else if ((game.stat.level >= 300) || (game.stat.level >= 1500))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0300.jpg')`)}
+	  else if ((game.stat.level >= 200) || (game.stat.level >= 1400))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0200.jpg')`)}
+	  else if (((game.stat.level >= 100) || (game.stat.level >= 1300)) || (game.stat.level >= 2500))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0100.jpg')`)}
+	  else if (game.stat.level >= 0)
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0000.jpg')`)}
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+		rotate180(arg)
+        rotate(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      sonicDrop(arg, true)
+      firmDrop(arg, 1, true)
+      //extendedLockdown(arg);
+      classicLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+	  game.stat.bravos = game.stat.pcCount
+	  if (game.stat.pcCount > lastBravos) {
+		  lastBravos = game.stat.pcCount
+		  game.timeGoal += 10000
+	  }
+	  if (game.timePassed >= game.timeGoal - 10000) {
+        if (!game.playedHurryUp) {
+          sound.add("hurryup")
+          $("#timer").classList.add("hurry-up")
+          game.playedHurryUp = true
+        }
+      } else {
+        game.playedHurryUp = false
+      }
+    },
+    onInit: (game) => {
+      game.stat.level = 0
+      game.isRaceMode = true
+	  game.timeGoal = 120000
+	  game.stat.bravos = 0
+      game.stat.pcCount = 0
+	  game.arcadeCombo = 1
+      game.rta = 0
+	  game.timePassed = 0
+      game.stat.initPieces = 2
+      game.endingStats.grade = true
+      game.musicProgression = 0
+      game.drop = 0
+	  lastBravos = 0
+      game.updateStats()
+	  updateFallSpeed(game)
+    },
+    onPieceSpawn: (game) => {
+      const areTable = [
+		[0, 30],
+      ]
+      const areLineModifierTable = [
+      ]
+      const areLineTable = [
+		[0, 30],
+      ]
+      const dasTable = [
+      ]
+	  let gravityDenominator = 1
+      const gravityTable = [
+        [10, 4],
+        [20, 5],
+        [30, 6],
+        [40, 8],
+        [50, 10],
+        [60, 12],
+        [70, 16],
+        [80, 24],
+        [90, 28],
+        [100, 32],
+        [110, 36],
+        [120, 40],
+        [130, 44],
+        [140, 48],
+        [150, 52],
+        [160, 56],
+        [170, 60],
+        [180, 64],
+        [190, 68],
+        [200, 72],
+        [210, 76],
+        [220, 80],
+        [230, 84],
+        [240, 88],
+        [250, 92],
+        [260, 96],
+        [270, 100],
+        [280, 120],
+        [290, 140],
+        [300, 180],
+        [310, 200],
+		[320, 220],
+        [330, 240],
+        [340, 280],
+        [350, 300],
+        [360, 320],
+        [370, 340],
+        [380, 380],
+        [390, 400],
+		[400, 400],
+      ]
+      const lockDelayTable = [
+        [101, 30],
+        [400, 26],
+        [600, 24],
+        [800, 22],
+        [1000, 20],
+      ]
+      const musicProgressionTable = [
+        [979, 1],
+        [1000, 2],
+      ]
+      for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of dasTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.dasLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of lockDelayTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          break
+        }
+      }
+      for (const pair of musicProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+              break
+            case 2:
+              sound.loadBgm(["konoha"], "konoha-hard")
+              sound.killBgm()
+              sound.playBgm(["konoha"], "konoha-hard")
+              break
+             }
+          game.musicProgression = entry
+        }
+      }
+	  
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
+        game.stat.level = game.stat.level + 1
+      }
+      if (game.stat.initPieces > 0) {
+        game.stat.initPieces = game.stat.initPieces - 1
+      }
+	  
+	  for (const pair of gravityTable) {
+        const level = pair[0]
+        const denom = pair[1]
+        if (game.stat.level < level) {
+          gravityDenominator = denom
+          break
+        }
+      }
+	  if (game.stat.level < 400) {
+		  game.piece.ghostIsVisible = game.stat.level < 100
+		  game.piece.gravity = framesToMs(256 / gravityDenominator)
+	  } else {
+		  game.piece.ghostIsVisible = false
+		  game.piece.gravity = framesToMs(1 / 20)
+      }
+      updateFallSpeed(game)
+    },
+   },
+  konohaworld: {
+    update: (arg) => {
+      const game = gameHandler.game
+      game.rta += arg.ms
+      game.b2b = 1
+      arcadeScore(arg)
+      linesToLevel(arg, 1999, 100)
+      game.endSectionLevel =
+        game.stat.level >= 1800
+          ? 1999
+          : Math.floor(game.stat.level / 100 + 1) * 100
+      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
+	  if ((game.stat.level >= 1200) || (game.stat.level >= 2400))
+	    {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1200.jpg')`)}
+	  else if ((game.stat.level >= 1100) || (game.stat.level >= 2300))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1100.jpg')`)}
+	  else if ((game.stat.level >= 1000) || (game.stat.level >= 2200))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg1000.jpg')`)}
+      else if ((game.stat.level >= 900) || (game.stat.level >= 2100))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0900.jpg')`)}
+	  else if ((game.stat.level >= 800) || (game.stat.level >= 2000))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0800.jpg')`)}
+	  else if ((game.stat.level >= 700) || (game.stat.level >= 1900))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0700.jpg')`)}
+	  else if ((game.stat.level >= 600) || (game.stat.level >= 1800))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0600.jpg')`)}
+	  else if ((game.stat.level >= 500) || (game.stat.level >= 1700))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0500.jpg')`)}
+	  else if ((game.stat.level >= 400) || (game.stat.level >= 1600))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0400.jpg')`)}
+	  else if ((game.stat.level >= 300) || (game.stat.level >= 1500))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0300.jpg')`)}
+	  else if ((game.stat.level >= 200) || (game.stat.level >= 1400))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0200.jpg')`)}
+	  else if (((game.stat.level >= 100) || (game.stat.level >= 1300)) || (game.stat.level >= 2500))
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0100.jpg')`)}
+	  else if (game.stat.level >= 0)
+        {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/tgm4/bg0000.jpg')`)}
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+		rotate180(arg)
+        rotate(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDrop(arg, 70)
+      hardDrop(arg)
+      extendedLockdown(arg);
+      //classicLockdown(arg);
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+	  game.stat.bravos = game.stat.pcCount
+	  if (game.stat.pcCount > lastBravos) {
+		  lastBravos = game.stat.pcCount
+		  game.timeGoal += 10000
+	  }
+	  if (game.timePassed >= game.timeGoal - 10000) {
+        if (!game.playedHurryUp) {
+          sound.add("hurryup")
+          $("#timer").classList.add("hurry-up")
+          game.playedHurryUp = true
+        }
+      } else {
+        game.playedHurryUp = false
+      }
+    },
+    onInit: (game) => {
+      game.stat.level = 0
+      game.isRaceMode = true
+	  game.timeGoal = 120000
+	  game.stat.bravos = 0
+      game.stat.pcCount = 0
+	  game.arcadeCombo = 1
+      game.rta = 0
+	  game.timePassed = 0
+      game.stat.initPieces = 2
+      game.endingStats.grade = true
+      game.musicProgression = 0
+      game.drop = 0
+	  lastBravos = 0
+      game.updateStats()
+	  updateFallSpeed(game)
+    },
+    onPieceSpawn: (game) => {
+      const areTable = [
+		[0, 30],
+      ]
+      const areLineModifierTable = [
+      ]
+      const areLineTable = [
+		[0, 30],
+      ]
+      const dasTable = [
+      ]
+	  let gravityDenominator = 1
+      const gravityTable = [
+        [10, 4],
+        [20, 5],
+        [30, 6],
+        [40, 8],
+        [50, 10],
+        [60, 12],
+        [70, 16],
+        [80, 24],
+        [90, 28],
+        [100, 32],
+        [110, 36],
+        [120, 40],
+        [130, 44],
+        [140, 48],
+        [150, 52],
+        [160, 56],
+        [170, 60],
+        [180, 64],
+        [190, 68],
+        [200, 72],
+        [210, 76],
+        [220, 80],
+        [230, 84],
+        [240, 88],
+        [250, 92],
+        [260, 96],
+        [270, 100],
+        [280, 120],
+        [290, 140],
+        [300, 180],
+        [310, 200],
+		[320, 220],
+        [330, 240],
+        [340, 280],
+        [350, 300],
+        [360, 320],
+        [370, 340],
+        [380, 380],
+        [390, 400],
+		[400, 400],
+      ]
+      const lockDelayTable = [
+        [101, 30],
+        [400, 26],
+        [600, 24],
+        [800, 22],
+        [1000, 20],
+      ]
+      const musicProgressionTable = [
+        [979, 1],
+        [1000, 2],
+      ]
+      for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of dasTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.dasLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of lockDelayTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          break
+        }
+      }
+      for (const pair of musicProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+              break
+            case 2:
+              sound.loadBgm(["konoha"], "konoha-hard")
+              sound.killBgm()
+              sound.playBgm(["konoha"], "konoha-hard")
+              break
+             }
+          game.musicProgression = entry
+        }
+      }
+	  
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
+        game.stat.level = game.stat.level + 1
+      }
+      if (game.stat.initPieces > 0) {
+        game.stat.initPieces = game.stat.initPieces - 1
+      }
+	  
+	  for (const pair of gravityTable) {
+        const level = pair[0]
+        const denom = pair[1]
+        if (game.stat.level < level) {
+          gravityDenominator = denom
+          break
+        }
+      }
+	  if (game.stat.level < 400) {
+		  game.piece.ghostIsVisible = game.stat.level < 100
+		  game.piece.gravity = framesToMs(256 / gravityDenominator)
+	  } else {
+		  game.piece.ghostIsVisible = false
+		  game.piece.gravity = framesToMs(1 / 20)
+      }
+      updateFallSpeed(game)
+    },
+   },
   ace: {
     update: (arg) => {
       collapse(arg)
@@ -1517,7 +2006,7 @@ export const loops = {
       }
       gravity(arg)
       if (settings.game.ace.arstype === "acears") {
-		softDrop(arg)
+		softDrop(arg, 70)
 		hardDrop(arg)
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
@@ -1982,7 +2471,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg)
+      softDrop(arg, 70)
 	  hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {

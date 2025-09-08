@@ -91,7 +91,6 @@ export default class Game {
     this.onPaceTime = 0
     this.startedOnPaceEvent = false
     this.background = ""
-	this.bigMode = false
     this.stat = {
       b2b: 0,
       pcCount: 0,
@@ -217,9 +216,6 @@ export default class Game {
         if (!this.settings.disableDefaultSkinLoad) {
           this.makeSprite()
         }
-		if (!this.settings.enableBigMode) {
-		  this.bigMode = true
-		}
         const soundbankName =
           settings.settings.soundbank === "auto"
             ? SOUND_SETS[this.settings.rotationSystem]
@@ -847,13 +843,6 @@ export default class Game {
       window.innerWidth / gameAspectRatio,
       window.innerHeight
     )
-	let cellDivider = 100
-	if (this.bigMode) {
-		cellDivider = 50
-	}
-	else {
-		cellDivider = 100
-	}
     return Math.floor(
       ((base / 1.2 / this.settings.height) * this.userSettings.size) / 100
     )
