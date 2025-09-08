@@ -217,6 +217,9 @@ export default class Game {
         if (!this.settings.disableDefaultSkinLoad) {
           this.makeSprite()
         }
+		if (!this.settings.enableBigMode) {
+		  this.bigMode = true
+		}
         const soundbankName =
           settings.settings.soundbank === "auto"
             ? SOUND_SETS[this.settings.rotationSystem]
