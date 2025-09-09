@@ -208,6 +208,7 @@ class Menu {
     this.isLocked = false
     this.isEnabled = true
     this.show()
+	}
   }
   show() {
     $("#menu-container").classList.remove("hidden")
