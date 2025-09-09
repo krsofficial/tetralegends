@@ -4253,7 +4253,7 @@ export const SKIN_SETS = {
   friends: "friends",
   dshock: "dshock",
   arsae: "arika",
-  worldae: "pyramidal",
+  worldae: "glossy",
   t99: "t99",
   ppt: "ppt",
   krs: "oshisaure",
