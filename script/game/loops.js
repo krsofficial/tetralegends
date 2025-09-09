@@ -168,6 +168,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -412,6 +413,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -634,6 +636,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -772,6 +775,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -1015,6 +1019,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -1236,6 +1241,7 @@ export const loops = {
       } else {
         respawnPiece(arg)
         rotate(arg)
+		rotate180(arg)
         shifting(arg)
       }
       gravity(arg)
@@ -1393,7 +1399,6 @@ export const loops = {
     update: (arg) => {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
-      game.b2b = 1
       arcadeScore(arg)
       linesToLevel(arg, 1999, 100)
       game.endSectionLevel =
@@ -1586,7 +1591,6 @@ export const loops = {
     update: (arg) => {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
-      game.b2b = 1
       arcadeScore(arg)
       linesToLevel(arg, 1999, 100)
       game.endSectionLevel =
