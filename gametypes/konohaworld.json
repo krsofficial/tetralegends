@@ -1,8 +1,8 @@
 {
   "settings": {
-    "width": 5,
+    "width": 10,
     "height": 20,
-    "hiddenHeight": 4,
+    "hiddenHeight": 20,
     "pieces": "standard",
     "unfavored": null,
     "randomizer": "bag",
