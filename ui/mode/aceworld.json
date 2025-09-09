@@ -2,8 +2,7 @@
   "properties": {
     "parent": "arcadeworld",
     "langOverride": "mode-options",
-    "game": "aceworld",
-    "pgmusic": "pg-ace"
+    "game": "aceworld"
   },
   "data": [
     {
