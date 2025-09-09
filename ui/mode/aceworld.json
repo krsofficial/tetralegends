@@ -3,7 +3,7 @@
     "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "aceworld",
-    "pgmusic": "pg-arcade"
+    "pgmusic": "pg-ace"
   },
   "data": [
     {

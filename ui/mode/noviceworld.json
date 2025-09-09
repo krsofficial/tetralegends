@@ -3,7 +3,7 @@
     "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "noviceworld",
-    "pgmusic": "pg-arcade"
+    "pgmusic": "pg-special"
   },
   "data": [
     {
