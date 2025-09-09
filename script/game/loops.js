@@ -406,7 +406,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      firmDrop(arg)
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1413,7 +1413,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      firmDrop(arg)
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1827,7 +1827,12 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  if (game.stat.level <= 10) {
-				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 2.5
+				  if (game.stat.level <= 5) {
+					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+				  }
+				  else {
+					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 5
+			      }
 			  }
 			  else {
 				  game.piece.gravity = framesToMs(1 / 20)
@@ -1836,7 +1841,7 @@ export const loops = {
 		  }
 		  case 2: {
 			  if (game.stat.level <= 5) {
-				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 10
+				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 20
 			  }
 			  else {
 				  game.piece.gravity = framesToMs(1 / 20)
@@ -2258,7 +2263,12 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  if (game.stat.level <= 10) {
-				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 2.5
+				  if (game.stat.level <= 5) {
+					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+				  }
+				  else {
+					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 5
+			      }
 			  }
 			  else {
 				  game.piece.gravity = framesToMs(1 / 20)
