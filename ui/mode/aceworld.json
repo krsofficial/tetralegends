@@ -2,7 +2,7 @@
   "properties": {
     "parent": "arcadeworld",
     "langOverride": "mode-options",
-    "game": "aceworld",
+    "game": "aceworld"
   },
   "data": [
     {
