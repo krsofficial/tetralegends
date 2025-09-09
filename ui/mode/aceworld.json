@@ -3,7 +3,6 @@
     "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "aceworld",
-    "pgmusic": "pg-ace"
   },
   "data": [
     {
@@ -40,31 +39,31 @@
       "action": "select",
       "selectOptions": [
         {
-          "label": "NORMAL",
+          "label": "NOVICE",
 		  "description": "",
           "fixedText": true,
           "value": 1
         },
         {
-          "label": "HIGH SPEED",
+          "label": "SPECIAL",
 		  "description": "",
           "fixedText": true,
           "value": 2
         },
 		{
-          "label": "HIGH SPEED 2",
+          "label": "SPECIAL 2",
 		  "description": "",
           "fixedText": true,
           "value": 3
         },
         {
-          "label": "ANOTHER",
+          "label": "SUDDEN",
 		  "description": "",
           "fixedText": true,
           "value": 4
         },
 		{
-          "label": "ANOTHER 2",
+          "label": "SUDDEN 2",
 		  "description": "",
           "fixedText": true,
           "value": 5

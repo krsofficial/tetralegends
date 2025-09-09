@@ -173,6 +173,46 @@ class Menu {
         sound.killBgm()
         sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
         sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
+	  } else if (this.current.properties.game === "ace" || this.current.properties.game === "aceworld") {
+        let difficulty = 1
+		let songname = "ace"
+		switch (this.current.properties.game) {
+			case "ace": {
+				difficulty = parseInt(settings.game.ace.difficulty)
+				break
+			}
+			case "aceworld": {
+				difficulty = parseInt(settings.game.aceworld.difficulty)
+			}
+		}
+		switch (difficulty) {
+			case 1: {
+				songname = "ace"
+				break
+			}
+			case 2: {
+				songname = "special"
+				break
+			}
+			case 3: {
+				songname = "sudden"
+				break
+			}
+			case 4: {
+				songname = "another"
+				break
+			}
+			case 5: {
+				songname = "another"
+				break
+			}
+		}
+		if (sound.bgmName !== `menu-pg-${songname}`)
+		{
+			sound.killBgm()
+			sound.loadBgm([`pg-${songname}`], "menu")
+			sound.playBgm([`pg-${songname}`], "menu")
+		}
       } else if (this.current.properties.pgmusic) {
         sound.killBgm()
         sound.loadBgm([this.current.properties.pgmusic], "menu")
@@ -601,7 +641,54 @@ class Menu {
               sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
               sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
             }
-
+			
+			if (
+              (this.current.properties.game === "ace" || this.current.properties.game === "aceworld") &&
+              (gameHandler.game.b2b == null ||
+                gameHandler.game.isOver == true ||
+                gameHandler.game.isPaused == false) &&
+              sound.bgmName !== `menu-pg-${settings.game.beat.song}`
+            ) {
+				let difficulty = 1
+				let songname = "ace"
+				switch (this.current.properties.game) {
+					case "ace": {
+						difficulty = parseInt(settings.game.ace.difficulty)
+					break
+					}
+					case "aceworld": {
+						difficulty = parseInt(settings.game.aceworld.difficulty)
+					}
+				}
+				switch (difficulty) {
+					case 1: {
+						songname = "ace"
+						break
+					}
+					case 2: {
+						songname = "special"
+						break
+					}
+					case 3: {
+						songname = "sudden"
+						break
+					}
+					case 4: {
+						songname = "another"
+						break
+					}
+					case 5: {
+						songname = "another"
+						break
+					}
+				}
+				if (sound.bgmName !== `menu-pg-${songname}`)
+				{
+					sound.killBgm()
+					sound.loadBgm([`pg-${songname}`], "menu")
+					sound.playBgm([`pg-${songname}`], "menu")
+				}
+			}
             break
         }
       }
