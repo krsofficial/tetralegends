@@ -18,8 +18,6 @@
   "piece": {
     "areLimit": 100,
     "xSpawnOffset": -3,
-    "areLineLimit": 166.666666667,
-    "areLimitLineModifier": 166.666666667,
     "spinDetectionType": "3corner"
   },
   "next": {

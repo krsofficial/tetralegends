@@ -425,7 +425,6 @@ export const loops = {
       game.stat.initPieces = 2
       game.endingStats.grade = true
       game.musicProgression = 0
-      game.drop = 0
       game.updateStats()
 	  updateFallSpeed(game)
     },
@@ -1027,7 +1026,6 @@ export const loops = {
       game.stat.initPieces = 2
       game.endingStats.grade = true
       game.musicProgression = 0
-      game.drop = 0
       game.updateStats()
 	  updateFallSpeed(game)
     },
@@ -1446,7 +1444,6 @@ export const loops = {
 	  game.timePassed = 0
       game.stat.initPieces = 2
       game.musicProgression = 0
-      game.drop = 0
 	  lastBravos = 0
       game.updateStats()
 	  updateFallSpeed(game)
@@ -1640,7 +1637,6 @@ export const loops = {
 	  game.timePassed = 0
       game.stat.initPieces = 2
       game.musicProgression = 0
-      game.drop = 0
 	  lastBravos = 0
       game.updateStats()
 	  updateFallSpeed(game)
