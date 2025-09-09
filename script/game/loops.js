@@ -775,7 +775,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      softDrop(arg, 20)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1008,7 +1008,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      softDrop(arg, 20)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1239,7 +1239,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      softDrop(arg, 20)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1628,7 +1628,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      softDrop(arg, 20)
       hardDrop(arg)
       extendedLockdown(arg);
       //classicLockdown(arg);
@@ -1835,7 +1835,7 @@ export const loops = {
       }
       gravity(arg)
       if (settings.game.ace.arstype === "acears") {
-		softDrop(arg, 40)
+		softDrop(arg, 20)
 		hardDrop(arg)
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
@@ -2271,7 +2271,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      softDrop(arg, 20)
 	  hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
