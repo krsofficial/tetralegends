@@ -325,8 +325,18 @@ export const loops = {
         }
       }
 	  game.piece.ghostIsVisible = false
-      if (game.stat.level >= 1200 && game.rta <= 600000)
+      if (game.stat.level >= 500 && game.rta <= 205000)
         game.torikanPassed = true
+      else if (
+        (game.stat.level >= 500 && !game.torikanPassed) ||
+        game.stat.level === 1299
+      ) {
+        if (game.stat.level < 1299) game.stat.level = 500
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
@@ -493,15 +503,6 @@ export const loops = {
         [287, 208],
         [295, 224],
         [300, 240],
-		[319, 260],
-        [335, 280],
-        [340, 300],
-        [350, 320],
-        [360, 340],
-        [370, 360],
-        [380, 380],
-        [390, 400],
-		[400, 400],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -600,7 +601,7 @@ export const loops = {
           break
         }
       }
-	  if (game.stat.level < 400) {
+	  if (game.stat.level < 300) {
 		  game.piece.ghostIsVisible = game.stat.level < 100
 		  game.piece.gravity = framesToMs(256 / gravityDenominator)
 	  } else {
@@ -927,8 +928,18 @@ export const loops = {
         }
       }
 	  game.piece.ghostIsVisible = false
-      if (game.stat.level >= 1200 && game.rta <= 600000)
+      if (game.stat.level >= 500 && game.rta <= 205000)
         game.torikanPassed = true
+      else if (
+        (game.stat.level >= 500 && !game.torikanPassed) ||
+        game.stat.level === 1299
+      ) {
+        if (game.stat.level < 1299) game.stat.level = 500
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
@@ -1094,15 +1105,6 @@ export const loops = {
         [287, 208],
         [295, 224],
         [300, 240],
-		[319, 260],
-        [335, 280],
-        [340, 300],
-        [350, 320],
-        [360, 340],
-        [370, 360],
-        [380, 380],
-        [390, 400],
-		[400, 400],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -1201,7 +1203,7 @@ export const loops = {
           break
         }
       }
-	  if (game.stat.level < 400) {
+	  if (game.stat.level < 300) {
 		  game.piece.ghostIsVisible = game.stat.level < 100
 		  game.piece.gravity = framesToMs(256 / gravityDenominator)
 	  } else {
