@@ -1450,7 +1450,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 30],
+		[100, 10],
       ]
       const areLineTable = [
 		[100, 30],
@@ -1643,7 +1643,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 30],
+		[100, 10],
       ]
       const areLineTable = [
 		[100, 30],
