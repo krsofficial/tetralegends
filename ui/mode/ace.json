@@ -2,7 +2,8 @@
   "properties": {
     "parent": "arcadears",
     "langOverride": "mode-options",
-    "game": "ace"
+    "game": "ace",
+    "pgmusic": "pg-ace"
   },
   "data": [
     {

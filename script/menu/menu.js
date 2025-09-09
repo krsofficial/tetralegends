@@ -173,27 +173,6 @@ class Menu {
         sound.killBgm()
         sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
         sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
-	  } else if (
-		this.current.properties.game === "ace" || this.current.properties.game === "aceworld"
-	  ) {
-		let acedifficulty = 1
-		if (this.current.properties.game === "ace") {
-			acedifficulty = parseInt(settings.game.ace.difficulty)
-		} else if (this.current.properties.game === "aceworld") {
-			acedifficulty = parseInt(settings.game.aceworld.difficulty)
-		if (acedifficulty <= 1 && sound.bgmName !== "menu-pg-ace") {
-			sound.killBgm()
-			sound.loadBgm(["pg-ace"], "menu")
-			sound.playBgm(["pg-ace"], "menu")
-		} else if (acedifficulty <= 2 && sound.bgmName !== "menu-pg-special") {
-			sound.killBgm()
-			sound.loadBgm(["pg-special"], "menu")
-			sound.playBgm(["pg-special"], "menu")
-		} else if (acedifficulty <= 5 && sound.bgmName !== "menu-pg-another") {
-			sound.killBgm()
-			sound.loadBgm(["pg-another"], "menu")
-			sound.playBgm(["pg-another"], "menu")
-		}
       } else if (this.current.properties.pgmusic) {
         sound.killBgm()
         sound.loadBgm([this.current.properties.pgmusic], "menu")
@@ -208,7 +187,6 @@ class Menu {
     this.isLocked = false
     this.isEnabled = true
     this.show()
-	}
   }
   show() {
     $("#menu-container").classList.remove("hidden")
