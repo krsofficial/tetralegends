@@ -1605,7 +1605,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 20)
+      softDrop(arg, 40)
       hardDrop(arg)
       extendedLockdown(arg);
       //classicLockdown(arg);
