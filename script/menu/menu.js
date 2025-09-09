@@ -179,7 +179,7 @@ class Menu {
 		let acedifficulty = 1
 		if (this.current.properties.game === "ace") {
 			acedifficulty = parseInt(settings.game.ace.difficulty)
-		} else if (this.current.properties.game === "aceworld) {
+		} else if (this.current.properties.game === "aceworld") {
 			acedifficulty = parseInt(settings.game.aceworld.difficulty)
 		if (acedifficulty <= 1 && sound.bgmName !== "menu-pg-ace") {
 			sound.killBgm()
