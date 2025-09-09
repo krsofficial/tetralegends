@@ -194,7 +194,6 @@ class Menu {
 			sound.loadBgm(["pg-another"], "menu")
 			sound.playBgm(["pg-another"], "menu")
 		}
-		}
       } else if (this.current.properties.pgmusic) {
         sound.killBgm()
         sound.loadBgm([this.current.properties.pgmusic], "menu")
