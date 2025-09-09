@@ -1453,14 +1453,10 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[0, 30],
-      ]
-      const areLineModifierTable = [
+		[100, 30],
       ]
       const areLineTable = [
-		[0, 30],
-      ]
-      const dasTable = [
+		[100, 30],
       ]
 	  let gravityDenominator = 1
       const gravityTable = [
@@ -1524,27 +1520,11 @@ export const loops = {
           break
         }
       }
-      for (const pair of areLineModifierTable) {
-        const level = pair[0]
-        const entry = pair[1]
-        if (game.stat.level < level) {
-          game.piece.areLimitLineModifier = framesToMs(entry)
-          break
-        }
-      }
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
           game.piece.areLineLimit = framesToMs(entry)
-          break
-        }
-      }
-      for (const pair of dasTable) {
-        const level = pair[0]
-        const entry = pair[1]
-        if (game.stat.level < level) {
-          game.piece.dasLimit = framesToMs(entry)
           break
         }
       }
@@ -1594,7 +1574,7 @@ export const loops = {
         }
       }
 	  if (game.stat.level < 400) {
-		  game.piece.ghostIsVisible = game.stat.level < 100
+		  game.piece.ghostIsVisible = true
 		  game.piece.gravity = framesToMs(256 / gravityDenominator)
 	  } else {
 		  game.piece.ghostIsVisible = false
