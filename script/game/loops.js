@@ -1830,8 +1830,8 @@ export const loops = {
       gravity(arg)
       softDrop(arg)
       hardDrop(arg)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      extendedLockdown(arg)
+      //classicLockdown(arg);
       if (!arg.piece.inAre) {
         hold(arg)
       }
