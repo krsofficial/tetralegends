@@ -1974,9 +1974,10 @@ export const loops = {
       }
 	  
 	  if (game.stat.level < 1000) {
-		  game.stack.isHidden = true
+		  $("#game-container").classList.remove("sil")
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
+		  $("#game-container").classList.add("sil")
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)
@@ -2178,9 +2179,10 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  if (game.stat.level < 1000) {
-		  game.stack.isHidden = true
+		  $("#game-container").classList.remove("sil")
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
+		  $("#game-container").classList.add("sil")
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)

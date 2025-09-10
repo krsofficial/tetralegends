@@ -35,9 +35,6 @@ export default class Stack extends GameModule {
     this.antiGarbageBuffer = 0
     this.copyBottomForGarbage = false
     this.isClutch = false
-	this.isHidden = false
-	//this.isUnderwater = false;
-	//this.isFrozen = false;
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
@@ -752,14 +749,6 @@ export default class Stack extends GameModule {
         }
 		if (this.parent.piece.useBoneBlocks) {
 			suffix = "bone"
-		}
-		if (this.isFrozen) {
-			name = "stack"
-			suffix = "frozen"
-		}
-		if (this.isHidden) {
-			name = "stack"
-			suffix = "hidden"
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
