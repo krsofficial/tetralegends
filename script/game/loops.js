@@ -1977,7 +1977,6 @@ export const loops = {
 		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)
@@ -2182,7 +2181,6 @@ export const loops = {
 		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)
