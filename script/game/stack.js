@@ -755,13 +755,11 @@ export default class Stack extends GameModule {
 		}
 		if (this.isFrozen) {
 			name = "stack"
-			color = ""
 			suffix = "frozen"
 		}
 		if (this.isHidden) {
 			name = "stack"
-			color = ""
-			suffix = "invisible"
+			suffix = "hidden"
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
