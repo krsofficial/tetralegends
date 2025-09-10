@@ -4,13 +4,13 @@
   },
   "data": [
     {
-      "string": "World Rule",
+      "string": "Arcade (World Rule)",
       "fixedText": true,
       "type": "header"
     },
     {
       "label": "NOVICE",
-      "description": "A slow game for beginners. (WIP)",
+      "description": "A slow game for beginners.",
       "fixedText": true,
       "default": true,
       "action": "submenu",
@@ -18,28 +18,35 @@
     },
 	{
       "label": "SPECIAL",
-      "description": "Earn points to earn better grade. (WIP)",
+      "description": "Earn points to earn better grade.",
       "fixedText": true,
       "action": "submenu",
-      "submenu": "mode/maniaworld"
+      "submenu": "mode/specialworld"
     },
 	{
       "label": "SUDDEN",
-      "description": "The pieces spawn on the ground and only get faster! (WIP)",
+      "description": "The pieces spawn on the ground and only get faster!",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/suddenworld"
     },
 	{
       "label": "TIME ATTACK",
-      "description": "Make sure not to reach the time limit! (WIP)",
+      "description": "Clearing 10 lines resets the time limit! Can you reach the line goal?",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/aceworld"
     },
 	{
+      "label": "TIME PRESSURE",
+      "description": "Similar to Sudden, but there is a time limit. How many levels can you reach?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/asukaworld"
+    },
+	{
       "label": "RALLY",
-      "description": "Getting all clears extends the time limit! (WIP)",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/konohaworld"

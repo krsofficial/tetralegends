@@ -1,0 +1,30 @@
+{
+  "settings": {
+    "width": 5,
+    "height": 20,
+    "hiddenHeight": 20,
+    "pieces": "standard",
+    "unfavored": null,
+    "randomizer": "bag",
+    "rotationSystem": "worldae",
+    "skin": "pyramidal",
+    "soundbank": "tgm4",
+    "music": "../asuka/asuka1",
+    "hasDangerBgm": false,
+    "scoreTable": "blank",
+    "background": "marathon.jpg",
+    "isHardMode": false
+  },
+  "piece": {
+    "areLimit": 100,
+    "xSpawnOffset": -3,
+    "spinDetectionType": "3corner"
+  },
+  "next": {
+    "nextLimit": 6
+  },
+  "hold": {
+    "isDisabled": false
+  },
+  "stats": ["grade", "score", "level", "line"]
+}

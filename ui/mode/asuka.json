@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadeclassic",
+    "langOverride": "mode-options",
+    "game": "asuka",
+    "pgmusic": "pg-asuka"
+  },
+  "data": [
+    {
+      "label": "Time Pressure",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

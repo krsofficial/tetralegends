@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadears",
+    "langOverride": "mode-options",
+    "game": "asukaworld",
+    "pgmusic": "pg-asuka"
+  },
+  "data": [
+    {
+      "label": "Time Pressure",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

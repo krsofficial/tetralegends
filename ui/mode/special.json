@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadeclassic",
+    "langOverride": "mode-options",
+    "game": "mania",
+    "pgmusic": "pg-special"
+  },
+  "data": [
+    {
+      "label": "Special",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

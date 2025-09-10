@@ -3360,15 +3360,6 @@ export const PIECE_COLORS = {
     J: "green",
     S: "green",
   },
-  krs: {
-    I: "orange",
-    L: "red",
-    O: "yellow",
-    Z: "lightBlue",
-    T: "green",
-    J: "blue",
-    S: "purple",
-  },
 }
 PIECE_COLORS.asc = PIECE_COLORS.srs
 PIECE_COLORS.ascx = PIECE_COLORS.srs
@@ -3385,6 +3376,7 @@ PIECE_COLORS.t99 = PIECE_COLORS.srs
 PIECE_COLORS.ppt = PIECE_COLORS.srs
 PIECE_COLORS.arsae = PIECE_COLORS.arsx
 PIECE_COLORS.worldae = PIECE_COLORS.world
+PIECE_COLORS.krs = PIECE_COLORS.arsx
 
 export const NEXT_OFFSETS = {
   monomino: {
@@ -4256,7 +4248,7 @@ export const SKIN_SETS = {
   worldae: "pyramidal",
   t99: "t99",
   ppt: "ppt",
-  krs: "oshisaure",
+  krs: "arika",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -4281,5 +4273,5 @@ export const SOUND_SETS = {
   worldae: "tgm4",
   t99: "t99",
   ppt: "ppt",
-  krs: "nullpomino",
+  krs: "ace",
 }

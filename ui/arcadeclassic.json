@@ -1,0 +1,55 @@
+{
+  "properties": {
+    "parent": "arcade"
+  },
+  "data": [
+    {
+      "string": "Arcade (Classic Rule)",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "NOVICE",
+      "description": "A slow game for beginners.",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "mode/novice"
+    },
+	{
+      "label": "SPECIAL",
+      "description": "Earn points to earn better grade.",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/special"
+    },
+    {
+      "label": "SUDDEN",
+      "description": "The pieces spawn on the ground and only get faster!",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/sudden"
+    },
+	{
+      "label": "TIME ATTACK",
+      "description": "Clearing 10 lines resets the time limit! Can you reach the line goal?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/ace"
+    },
+	{
+      "label": "TIME PRESSURE",
+      "description": "Similar to Sudden, but there is a time limit. How many levels can you reach?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/asuka"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konoha"
+    }
+  ]
+}
