@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "arcadears",
+    "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "asukaworld",
     "pgmusic": "pg-asuka"
