@@ -15,7 +15,7 @@
       "fixedText": true,
       "default": true,
       "action": "submenu",
-      "submenu": "arcadears"
+      "submenu": "arcadeclassic"
     },
 	{
       "label": "WORLD RULE",
