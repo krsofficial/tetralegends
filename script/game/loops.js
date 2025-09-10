@@ -1973,14 +1973,6 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  
-	  for (const pair of gravityTable) {
-        const level = pair[0]
-        const denom = pair[1]
-        if (game.stat.level < level) {
-          gravityDenominator = denom
-          break
-        }
-      }
 	  if (game.stat.level < 1000) {
 		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
@@ -2185,15 +2177,6 @@ export const loops = {
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
-      }
-	  
-	  for (const pair of gravityTable) {
-        const level = pair[0]
-        const denom = pair[1]
-        if (game.stat.level < level) {
-          gravityDenominator = denom
-          break
-        }
       }
 	  if (game.stat.level < 1000) {
 		  game.stack.isHidden = true
@@ -3209,6 +3192,9 @@ export const loops = {
           break
 		case "ggg":
           bpm = 154
+          break
+		case "ar":
+          bpm = 100
           break
       }
       /* game.isRaceMode = true; */
