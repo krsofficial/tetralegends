@@ -53,7 +53,7 @@
     },
 	{
       "label": "ABRUPT",
-      "description": "The ultimate test of skill.",
+      "description": "The ultimate test of skill. (WIP, please expect bugs.)",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/rounds"
