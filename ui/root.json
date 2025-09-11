@@ -89,6 +89,13 @@
       "description": "Import and export your settings here",
       "action": "submenu",
       "submenu": "settings"
+    },
+	{
+      "fixedText": true,
+      "label": "GitHub Repository",
+      "description": "Go to the GitHub Repository of Tetra Legends Ace",
+      "action": "link",
+      "url": "https://github.com/Sub2Ninah/tetralegends/"
     }
   ]
 }
