@@ -589,13 +589,13 @@ export default class Stack extends GameModule {
 		else {
 			for (const y of this.toCollapse) {
 				if (y <= 18) {
-					this.toCollapseUnderwater = [...this.toCollapse, this.toCollapseUnderwater]
+					this.toCollapseUnderwater = [...this.toCollapse, ...this.toCollapseUnderwater]
 					this.toCollapse = []
 				}
 			}
 		}
 	} else {
-		this.toCollapse = [...this.toCollapseUnderwater, this.toCollapse]
+		this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 		this.toCollapseUnderwater = []
 	}
     let fallenBlocks = 0
