@@ -1459,7 +1459,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 10],
+		[100, 24],
       ]
       const areLineTable = [
 		[100, 30],
@@ -1508,9 +1508,9 @@ export const loops = {
 		[200, 400],
       ]
       const lockDelayTable = [
-        [101, 30],
-        [1000, 30],
-		[2000, 30],
+        [101, 60],
+        [1000, 60],
+		[2000, 60],
       ]
       const musicProgressionTable = [
         [979, 1],
@@ -1649,7 +1649,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 10],
+		[100, 24],
       ]
       const areLineTable = [
 		[100, 30],
@@ -1698,9 +1698,9 @@ export const loops = {
 		[200, 400],
       ]
       const lockDelayTable = [
-        [101, 30],
-        [1000, 30],
-		[2000, 30],
+        [101, 60],
+        [1000, 60],
+		[2000, 60],
       ]
       const musicProgressionTable = [
         [979, 1],
