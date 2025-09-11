@@ -602,7 +602,7 @@ export default class Stack extends GameModule {
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
 		if (this.toCollapse[1] !== null) {
-				this.toCollapse.push(1)
+			this.toCollapse.push(1)
 		}
 	}
 	this.toCollapse = [...this.toCollapse, this.bottomRow]
@@ -613,7 +613,7 @@ export default class Stack extends GameModule {
           if (frozenStacks[x][shiftY] === null && frozenStacks[x][shiftY - 1] === null) {
 			if (
 				this.grid[x][shiftY] != null &&
-				this.grid[x][shiftY - 1] != null &&
+				this.grid[x][shiftY - 1] != null
 			) {
 				fallenBlocks++
 			}
@@ -621,7 +621,7 @@ export default class Stack extends GameModule {
 		  } else if (shiftY <= 1 && this.lineClear >= 4) {
 			if (
 				this.grid[x][shiftY] != null &&
-				this.grid[x][shiftY - 1] != null &&
+				this.grid[x][shiftY - 1] != null
 			) {
 				fallenBlocks++
 			}
