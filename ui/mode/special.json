@@ -2,7 +2,7 @@
   "properties": {
     "parent": "arcadeclassic",
     "langOverride": "mode-options",
-    "game": "mania",
+    "game": "special",
     "pgmusic": "pg-special"
   },
   "data": [
