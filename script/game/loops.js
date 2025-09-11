@@ -202,7 +202,6 @@ export const loops = {
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
-	  game.redrawOnLevelUp = true
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
@@ -809,7 +808,6 @@ export const loops = {
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
-	  game.redrawOnLevelUp = true
       game.musicProgression = 0
       game.drop = 0
       game.updateStats()
@@ -1852,10 +1850,10 @@ export const loops = {
       game.isRaceMode = true
 	  game.timeGoal = 420000
       game.stat.grade = ""
+	  game.endingStats.grade = true
 	  game.arcadeCombo = 1
 	  game.timePassed = 0
       game.stat.initPieces = 2
-	  game.redrawOnLevelUp = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
@@ -2057,10 +2055,10 @@ export const loops = {
       game.isRaceMode = true
 	  game.timeGoal = 420000
       game.stat.grade = ""
+	  game.endingStats.grade = true
 	  game.arcadeCombo = 1
 	  game.timePassed = 0
       game.stat.initPieces = 2
-	  game.redrawOnLevelUp = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
@@ -2277,11 +2275,10 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = ""
+	  game.endingStats.grade = true
 	  game.arcadeCombo = 1
       game.rta = 0
       game.stat.initPieces = 2
-	  game.stat.grade = ""
-	  game.redrawOnLevelUp = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
@@ -2544,8 +2541,7 @@ export const loops = {
 	  game.arcadeCombo = 1
       game.rta = 0
       game.stat.initPieces = 2
-	  game.stat.grade = ""
-	  game.redrawOnLevelUp = true
+	  game.endingStats.grade = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
