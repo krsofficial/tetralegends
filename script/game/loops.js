@@ -2439,9 +2439,6 @@ export const loops = {
 	  (game.stat.level > 700 && game.stat.level < 999)
 	  ) {
 		  game.stack.isUnderwater = true
-		  if (game.stat.level >= 399 || game.stat.level >= 599 || game.stat.level >= 799 || game.stat.level >= 899 || game.stat.level >= 999) {
-			  game.stack.clearUnderwaterLines()
-		  }
 	  } else {
 		  game.stack.isUnderwater = false
       }
@@ -2706,9 +2703,6 @@ export const loops = {
 	  (game.stat.level > 700 && game.stat.level < 999)
 	  ) {
 		  game.stack.isUnderwater = true
-		  if (game.stat.level >= 399 || game.stat.level >= 599 || game.stat.level >= 799 || game.stat.level >= 899 || game.stat.level >= 999) {
-			  game.stack.clearUnderwaterLines()
-		  }
 	  } else {
 		  game.stack.isUnderwater = false
       }
