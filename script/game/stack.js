@@ -39,7 +39,7 @@ export default class Stack extends GameModule {
 	this.clearUnderwaterRows = false
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
-	this.underwaterHeight = 18
+	this.underwaterHeight = 12
 	this.frozenStacks = []
   }
   makeAllDirty() {
