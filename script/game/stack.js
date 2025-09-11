@@ -35,6 +35,10 @@ export default class Stack extends GameModule {
     this.antiGarbageBuffer = 0
     this.copyBottomForGarbage = false
     this.isClutch = false
+	this.isUnderwater = false
+	this.isFrozen = false
+	this.toCollapseUnderwater = []
+	this.frozenStacks = []
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
@@ -572,14 +576,47 @@ export default class Stack extends GameModule {
     if (this.toCollapse.length === 0) {
       return
     }
+	if (this.isUnderwater) {
+		for (const y of this.toCollapse) {
+			if (y <= 18) {
+				this.toCollapseUnderwater = [...this.toCollapse, this.toCollapseUnderwater]
+				this.toCollapse = []
+			}
+		}
+	} else {
+		this.toCollapse = [...this.toCollapseUnderwater, this.toCollapse]
+		this.toCollapseUnderwater = []
+	}
     let fallenBlocks = 0
-    for (const y of this.toCollapse) {
+    if (this.isFrozen) {
+	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
           if (
             this.grid[x][shiftY] != null &&
             this.grid[x][shiftY - 1] != null
+          ) {
+            if (frozenStacks[x][shiftY] === null && frozenStacks[x][shiftY - 1] === null) {
+				fallenBlocks++
+			}
+          }
+          this.dirtyCells.push([x, shiftY + 1])
+        }
+      }
+      for (let i = 0; i < this.flashY.length; i++) {
+        if (this.flashY[i] < y) {
+          this.flashY[i]++
+        }
+      }
+    }} else {
+	for (const y of this.toCollapse) {
+      for (let x = 0; x < this.grid.length; x++) {
+        for (let shiftY = y; shiftY >= 0; shiftY--) {
+          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
+          if (
+            this.grid[x][shiftY] != null &&
+            this.grid[x][shiftY - 1] != null &&
           ) {
             fallenBlocks++
           }
@@ -591,7 +628,7 @@ export default class Stack extends GameModule {
           this.flashY[i]++
         }
       }
-    }
+    }}
     this.parent.stat.line += this.lineClear
     this.parent.addScore(`erase${this.lineClear}`)
     this.parent.updateStats()
@@ -749,6 +786,11 @@ export default class Stack extends GameModule {
         }
 		if (this.parent.piece.useBoneBlocks) {
 			suffix = "bone"
+		}
+		if (this.isFrozen) {
+			color = "frozen"
+			suffix = ""
+			frozenStacks.push(this.grid[x][y])
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
