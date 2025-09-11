@@ -50,6 +50,13 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/konoha"
+    },
+	{
+      "label": "ABRUPT",
+      "description": "The ultimate test of skill.",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/rounds"
     }
   ]
 }

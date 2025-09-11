@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "arcadeworld",
+    "langOverride": "mode-options",
+    "game": "roundsworld",
+    "pgmusic": "pg-rounds"
+  },
+  "data": [
+    {
+      "label": "Abrupt",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

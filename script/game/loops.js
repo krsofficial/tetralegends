@@ -366,8 +366,8 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.torikanPassed) game.stat.grade = "GM"
-      else if (game.stat.level >= 999 && game.torikanPassed)
+      if (game.stat.level >= 999 && game.stat.score >= 120000 && game.torikanPassed) game.stat.grade = "GM"
+      else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
       else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
@@ -973,8 +973,8 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.torikanPassed) game.stat.grade = "GM"
-      else if (game.stat.level >= 999 && game.torikanPassed)
+      if (game.stat.level >= 999 && game.stat.score >= 120000 && game.torikanPassed) game.stat.grade = "GM"
+      else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
       else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
@@ -1782,7 +1782,7 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1300, 100)
+      linesToLevel(arg, 1299, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
           ? 1299
@@ -1851,11 +1851,10 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
 	  game.timeGoal = 420000
-      game.stat.pcCount = 0
+      game.stat.grade = ""
 	  game.arcadeCombo = 1
 	  game.timePassed = 0
       game.stat.initPieces = 2
-	  game.stat.grade = ""
 	  game.redrawOnLevelUp = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
@@ -1988,7 +1987,7 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1300, 100)
+      linesToLevel(arg, 1299, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
           ? 1299
@@ -2057,11 +2056,10 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
 	  game.timeGoal = 420000
-      game.stat.pcCount = 0
+      game.stat.grade = ""
 	  game.arcadeCombo = 1
 	  game.timePassed = 0
       game.stat.initPieces = 2
-	  game.stat.grade = ""
 	  game.redrawOnLevelUp = true
       game.musicProgression = 0
 	  game.piece.gravity = framesToMs(1 / 20)
@@ -2185,6 +2183,540 @@ export const loops = {
 		  $("#game-container").classList.add("sil")
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+      updateFallSpeed(game)
+    },
+   },
+  rounds: {
+    update: (arg) => {
+      const game = gameHandler.game
+	  updateArcadeBg(game.stat.level)
+      arcadeScore(arg)
+      linesToLevel(arg, 2599, 100)
+      game.endSectionLevel =
+        game.stat.level >= 2500
+          ? 2599
+          : Math.floor(game.stat.level / 100 + 1) * 100
+      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
+	  if (game.stat.level >= 2599) game.stat.grade = "GM"
+	  else if (game.stat.level >= 2500)
+        game.stat.grade = "S25"
+	  else if (game.stat.level >= 2400)
+        game.stat.grade = "S24"
+	  else if (game.stat.level >= 2300)
+        game.stat.grade = "S23"
+	  else if (game.stat.level >= 2200)
+        game.stat.grade = "S22"
+	  else if (game.stat.level >= 2100)
+        game.stat.grade = "S21"
+	  else if (game.stat.level >= 2000)
+        game.stat.grade = "S20"
+	  else if (game.stat.level >= 1900)
+        game.stat.grade = "S19"
+	  else if (game.stat.level >= 1800)
+        game.stat.grade = "S18"
+	  else if (game.stat.level >= 1700)
+        game.stat.grade = "S17"
+	  else if (game.stat.level >= 1600)
+        game.stat.grade = "S16"
+	  else if (game.stat.level >= 1500)
+        game.stat.grade = "S15"
+	  else if (game.stat.level >= 1400)
+        game.stat.grade = "S14"
+	  else if (game.stat.level >= 1300)
+        game.stat.grade = "S13"
+	  else if (game.stat.level >= 1200)
+        game.stat.grade = "S12"
+	  else if (game.stat.level >= 1100)
+        game.stat.grade = "S11"
+	  else if (game.stat.level >= 1000)
+        game.stat.grade = "S10"
+      else if (game.stat.level >= 900)
+        game.stat.grade = "S9"
+	  else if (game.stat.level >= 800)
+        game.stat.grade = "S8"
+	  else if (game.stat.level >= 700)
+        game.stat.grade = "S7"
+	  else if (game.stat.level >= 600)
+        game.stat.grade = "66"
+	  else if (game.stat.level >= 500)
+        game.stat.grade = "S5"
+	  else if (game.stat.level >= 400)
+        game.stat.grade = "S4"
+	  else if (game.stat.level >= 300)
+        game.stat.grade = "33"
+	  else if (game.stat.level >= 200)
+        game.stat.grade = "S2"
+	  else if (game.stat.level >= 100)
+        game.stat.grade = "S1"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = ""
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+		rotate180(arg)
+        rotate(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      sonicDrop(arg, true)
+      firmDrop(arg)
+      //extendedLockdown(arg);
+      classicLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+    },
+    onInit: (game) => {
+      game.stat.level = 0
+      game.isRaceMode = true
+      game.stat.grade = ""
+	  game.arcadeCombo = 1
+      game.rta = 0
+      game.stat.initPieces = 2
+	  game.stat.grade = ""
+	  game.redrawOnLevelUp = true
+      game.musicProgression = 0
+	  game.piece.gravity = framesToMs(1 / 20)
+      game.updateStats()
+	  updateFallSpeed(game)
+    },
+    onPieceSpawn: (game) => {
+      const areTable = [
+		[0, 12],
+        [301, 10],
+        [401, 9],
+        [501, 8],
+        [601, 7],
+        [901, 6],
+		[1001, 12],
+      ]
+      const areLineModifierTable = [
+		[0, -4],
+        [101, -4],
+        [301, -6],
+        [1000, 0],
+      ]
+      const areLineTable = [
+        [0, 8],
+        [301, 8],
+        [401, 7],
+        [501, 6],
+        [601, 5],
+        [901, 5],
+		[1001, 10],
+      ]
+      const dasTable = [
+        [0, 10],
+        [301, 8],
+        [401, 8],
+        [501, 8],
+        [601, 8],
+        [901, 8],
+		[1001, 8],
+		[2001, 4],
+      ]
+      const lockDelayTable = [
+        [0, 30],
+        [301, 20],
+        [401, 19],
+        [501, 18],
+        [601, 17],
+        [901, 16],
+		[1001, 16],
+		[2001, 10],
+      ]
+      const musicProgressionTable = [
+        [279, 1],
+        [300, 2],
+		[679, 3],
+		[700, 4],
+		[974, 5],
+		[1000, 6],
+		[1279, 7],
+		[1300, 8],
+      ]
+      for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of dasTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.dasLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of lockDelayTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          break
+        }
+      }
+      for (const pair of musicProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+              break
+			case 3:
+			  sound.killBgm()
+              break
+			case 5:
+			  sound.killBgm()
+              break
+			case 7:
+			  sound.killBgm()
+              break
+            case 2:
+              sound.loadBgm(["master2"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master2"], "rounds")
+              break
+			case 4:
+              sound.loadBgm(["master3"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master3"], "rounds")
+              break
+			case 6:
+              sound.loadBgm(["master4"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master4"], "rounds")
+              break
+			case 8:
+              sound.loadBgm(["master5"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master5"], "rounds")
+              break
+             }
+          game.musicProgression = entry
+        }
+      }
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
+        game.stat.level = game.stat.level + 1
+      }
+      if (game.stat.initPieces > 0) {
+        game.stat.initPieces = game.stat.initPieces - 1
+      }
+	  if (
+	  (game.stat.level > 300 && game.stat.level < 399) ||
+	  (game.stat.level > 500 && game.stat.level < 599) ||
+	  (game.stat.level > 700 && game.stat.level < 999)
+	  ) {
+		  game.stack.isUnderwater = true
+		  if (game.stat.level >= 399 || game.stat.level >= 599 || game.stat.level >= 799 || game.stat.level >= 899 || game.stat.level >= 999) {
+			  game.stack.clearUnderwaterLines()
+		  }
+	  } else {
+		  game.stack.isUnderwater = false
+      }
+	  if (game.stat.level >= 1300) {
+		  game.stack.isFrozen = true
+	  } else {
+		  game.stack.isFrozen = false
+	  }
+      updateFallSpeed(game)
+    },
+   },
+  roundsworld: {
+    update: (arg) => {
+      const game = gameHandler.game
+	  updateArcadeBg(game.stat.level)
+      arcadeScore(arg)
+      linesToLevel(arg, 2599, 100)
+      game.endSectionLevel =
+        game.stat.level >= 2500
+          ? 2599
+          : Math.floor(game.stat.level / 100 + 1) * 100
+      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
+	  if (game.stat.level >= 2599) game.stat.grade = "GM"
+	  else if (game.stat.level >= 2500)
+        game.stat.grade = "S25"
+	  else if (game.stat.level >= 2400)
+        game.stat.grade = "S24"
+	  else if (game.stat.level >= 2300)
+        game.stat.grade = "S23"
+	  else if (game.stat.level >= 2200)
+        game.stat.grade = "S22"
+	  else if (game.stat.level >= 2100)
+        game.stat.grade = "S21"
+	  else if (game.stat.level >= 2000)
+        game.stat.grade = "S20"
+	  else if (game.stat.level >= 1900)
+        game.stat.grade = "S19"
+	  else if (game.stat.level >= 1800)
+        game.stat.grade = "S18"
+	  else if (game.stat.level >= 1700)
+        game.stat.grade = "S17"
+	  else if (game.stat.level >= 1600)
+        game.stat.grade = "S16"
+	  else if (game.stat.level >= 1500)
+        game.stat.grade = "S15"
+	  else if (game.stat.level >= 1400)
+        game.stat.grade = "S14"
+	  else if (game.stat.level >= 1300)
+        game.stat.grade = "S13"
+	  else if (game.stat.level >= 1200)
+        game.stat.grade = "S12"
+	  else if (game.stat.level >= 1100)
+        game.stat.grade = "S11"
+	  else if (game.stat.level >= 1000)
+        game.stat.grade = "S10"
+      else if (game.stat.level >= 900)
+        game.stat.grade = "S9"
+	  else if (game.stat.level >= 800)
+        game.stat.grade = "S8"
+	  else if (game.stat.level >= 700)
+        game.stat.grade = "S7"
+	  else if (game.stat.level >= 600)
+        game.stat.grade = "66"
+	  else if (game.stat.level >= 500)
+        game.stat.grade = "S5"
+	  else if (game.stat.level >= 400)
+        game.stat.grade = "S4"
+	  else if (game.stat.level >= 300)
+        game.stat.grade = "33"
+	  else if (game.stat.level >= 200)
+        game.stat.grade = "S2"
+	  else if (game.stat.level >= 100)
+        game.stat.grade = "S1"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = ""
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+		rotate180(arg)
+        rotate(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      softDrop(arg)
+      hardDrop(arg)
+      extendedLockdown(arg)
+      //classicLockdown(arg);
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+    },
+    onInit: (game) => {
+      game.stat.level = 0
+      game.isRaceMode = true
+      game.stat.grade = ""
+	  game.arcadeCombo = 1
+      game.rta = 0
+      game.stat.initPieces = 2
+	  game.stat.grade = ""
+	  game.redrawOnLevelUp = true
+      game.musicProgression = 0
+	  game.piece.gravity = framesToMs(1 / 20)
+      game.updateStats()
+	  updateFallSpeed(game)
+    },
+    onPieceSpawn: (game) => {
+      const areTable = [
+		[0, 12],
+        [301, 10],
+        [401, 9],
+        [501, 8],
+        [601, 7],
+        [901, 6],
+		[1001, 12],
+      ]
+      const areLineModifierTable = [
+		[0, -4],
+        [101, -4],
+        [301, -6],
+        [1000, 0],
+      ]
+      const areLineTable = [
+        [0, 8],
+        [301, 8],
+        [401, 7],
+        [501, 6],
+        [601, 5],
+        [901, 5],
+		[1001, 10],
+      ]
+      const dasTable = [
+        [0, 10],
+        [301, 8],
+        [401, 8],
+        [501, 8],
+        [601, 8],
+        [901, 8],
+		[1001, 8],
+		[2001, 4],
+      ]
+      const lockDelayTable = [
+        [0, 30],
+        [301, 20],
+        [401, 19],
+        [501, 18],
+        [601, 17],
+        [901, 16],
+		[1001, 16],
+		[2001, 10],
+      ]
+      const musicProgressionTable = [
+        [279, 1],
+        [300, 2],
+		[679, 3],
+		[700, 4],
+		[974, 5],
+		[1000, 6],
+		[1279, 7],
+		[1300, 8],
+      ]
+      for (const pair of areTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineModifierTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of dasTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.dasLimit = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of lockDelayTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level < level) {
+          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          break
+        }
+      }
+      for (const pair of musicProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.killBgm()
+              break
+			case 3:
+			  sound.killBgm()
+              break
+			case 5:
+			  sound.killBgm()
+              break
+			case 7:
+			  sound.killBgm()
+              break
+            case 2:
+              sound.loadBgm(["master2"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master2"], "rounds")
+              break
+			case 4:
+              sound.loadBgm(["master3"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master3"], "rounds")
+              break
+			case 6:
+              sound.loadBgm(["master4"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master4"], "rounds")
+              break
+			case 8:
+              sound.loadBgm(["master5"], "rounds")
+              sound.killBgm()
+              sound.playBgm(["master5"], "rounds")
+              break
+             }
+          game.musicProgression = entry
+        }
+      }
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
+        game.stat.level = game.stat.level + 1
+      }
+      if (game.stat.initPieces > 0) {
+        game.stat.initPieces = game.stat.initPieces - 1
+      }
+	  if (
+	  (game.stat.level > 300 && game.stat.level < 399) ||
+	  (game.stat.level > 500 && game.stat.level < 599) ||
+	  (game.stat.level > 700 && game.stat.level < 999)
+	  ) {
+		  game.stack.isUnderwater = true
+		  if (game.stat.level >= 399 || game.stat.level >= 599 || game.stat.level >= 799 || game.stat.level >= 899 || game.stat.level >= 999) {
+			  game.stack.clearUnderwaterLines()
+		  }
+	  } else {
+		  game.stack.isUnderwater = false
+      }
+	  if (game.stat.level >= 1300) {
+		  game.stack.isFrozen = true
+	  } else {
+		  game.stack.isFrozen = false
+	  }
       updateFallSpeed(game)
     },
    },
