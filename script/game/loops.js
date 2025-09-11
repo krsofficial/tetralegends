@@ -1894,7 +1894,7 @@ export const loops = {
         [301, 22],
         [401, 18],
         [1000, 15],
-		[1200, 10],
+		[1200, 15],
       ]
       const musicProgressionTable = [
         [979, 1],
