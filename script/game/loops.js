@@ -2433,24 +2433,15 @@ export const loops = {
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-	  if (game.stat.level >= 300 && game.stat.level < 400) {
+	  if (
+	  (game.stat.level > 300 && game.stat.level < 399) ||
+	  (game.stat.level > 500 && game.stat.level < 599) ||
+	  (game.stat.level > 700 && game.stat.level < 999)
+	  ) {
 		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 400 && game.stat.level < 500) {
+	  } else {
 		  game.stack.isUnderwater = false
-	  }
-	  if (game.stat.level >= 500 && game.stat.level < 600) {
-		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 600 && game.stat.level < 700) {
-		  game.stack.isUnderwater = false
-	  }
-	  if (game.stat.level >= 700 && game.stat.level < 1000) {
-		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 1000) {
-		  game.stack.isUnderwater = false
-	  }
+      }
 	  if (game.stat.level >= 1300) {
 		  game.stack.isFrozen = true
 	  } else {
@@ -2706,24 +2697,15 @@ export const loops = {
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-	  if (game.stat.level >= 300 && game.stat.level < 400) {
+	  if (
+	  (game.stat.level > 300 && game.stat.level < 399) ||
+	  (game.stat.level > 500 && game.stat.level < 599) ||
+	  (game.stat.level > 700 && game.stat.level < 999)
+	  ) {
 		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 400 && game.stat.level < 500) {
+	  } else {
 		  game.stack.isUnderwater = false
-	  }
-	  if (game.stat.level >= 500 && game.stat.level < 600) {
-		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 600 && game.stat.level < 700) {
-		  game.stack.isUnderwater = false
-	  }
-	  if (game.stat.level >= 700 && game.stat.level < 1000) {
-		  game.stack.isUnderwater = true
-	  }
-	  if (game.stat.level >= 1000) {
-		  game.stack.isUnderwater = false
-	  }
+      }
 	  if (game.stat.level >= 1300) {
 		  game.stack.isFrozen = true
 	  } else {
