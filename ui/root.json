@@ -85,11 +85,6 @@
     },
     {
       "fixedText": true,
-      "label": "Data Management",
-      "type": "overline"
-    },
-    {
-      "fixedText": true,
       "label": "Settings",
       "description": "Import and export your settings here",
       "action": "submenu",
