@@ -39,6 +39,7 @@ export default class Stack extends GameModule {
 	this.clearUnderwaterRows = false
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
+	this.underwaterHeight = 18
 	this.frozenStacks = []
   }
   makeAllDirty() {
@@ -188,7 +189,7 @@ export default class Stack extends GameModule {
 					delete this.grid[x][y]
 				}
 			} else if (this.isUnderwater) {
-				if (y > 12) {
+				if (y > this.underwaterHeight) {
 					delete this.grid[x][y]
 				}
 			} else {
@@ -598,7 +599,7 @@ export default class Stack extends GameModule {
 		}
 		else {
 			for (const y of this.toCollapse) {
-				if (y <= 12) {
+				if (y <= this.underwaterHeight) {
 					this.toCollapseUnderwater.push(y)
 					this.toCollapse.splice(this.toCollapse.indexOf(y))
 				}
