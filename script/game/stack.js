@@ -36,6 +36,7 @@ export default class Stack extends GameModule {
     this.copyBottomForGarbage = false
     this.isClutch = false
 	this.isUnderwater = false
+	this.clearUnderwaterRows = false
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
 	this.frozenStacks = []
@@ -572,15 +573,25 @@ export default class Stack extends GameModule {
       return
     }
   }
+  clearUnderwaterLines() {
+	  this.clearUnderwaterRows = true
+  }
   collapse() {
     if (this.toCollapse.length === 0) {
       return
     }
 	if (this.isUnderwater) {
-		for (const y of this.toCollapse) {
-			if (y <= 18) {
-				this.toCollapseUnderwater = [...this.toCollapse, this.toCollapseUnderwater]
-				this.toCollapse = []
+		if (this.clearUnderwaterRows) {
+			this.toCollapse = [...this.toCollapseUnderwater, this.toCollapse]
+			this.toCollapseUnderwater = []
+			this.clearUnderwaterRows = false
+		}
+		else {
+			for (const y of this.toCollapse) {
+				if (y <= 18) {
+					this.toCollapseUnderwater = [...this.toCollapse, this.toCollapseUnderwater]
+					this.toCollapse = []
+				}
 			}
 		}
 	} else {
