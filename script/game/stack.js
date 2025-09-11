@@ -183,7 +183,17 @@ export default class Stack extends GameModule {
           }
 
           for (let x = 0; x < this.grid.length; x++) {
-            delete this.grid[x][y]
+            if (this.isFrozen) {
+				if (this.frozenStacks[x][y] === null) {
+					delete this.grid[x][y]
+				}
+			} else if (this.isUnderwater) {
+				if (y > 12) {
+					delete this.grid[x][y]
+				}
+			} else {
+				delete this.grid[x][y]
+			}
           }
           this.parent.piece.hasLineDelay = true
           this.lineClear++
@@ -588,9 +598,9 @@ export default class Stack extends GameModule {
 		}
 		else {
 			for (const y of this.toCollapse) {
-				if (y <= 18) {
-					this.toCollapseUnderwater = [...this.toCollapse, ...this.toCollapseUnderwater]
-					this.toCollapse = []
+				if (y <= 12) {
+					this.toCollapseUnderwater.push(y)
+					this.toCollapse.splice(this.toCollapse.indexOf(y))
 				}
 			}
 		}
@@ -610,7 +620,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (frozenStacks[x][shiftY] === null && frozenStacks[x][shiftY - 1] === null) {
+          if (this.frozenStacks[x][shiftY] === null && this.frozenStacks[x][shiftY - 1] === null) {
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
@@ -816,8 +826,10 @@ export default class Stack extends GameModule {
 			color = "frozen"
 			suffix = ""
 			if (this.lineClear <= 0) {
-				frozenStacks.push(this.grid[x][y])
+				this.frozenStacks[x][y] = this.grid[x][y]
 			}
+		} else {
+			this.frozenStacks = []
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
