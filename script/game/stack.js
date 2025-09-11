@@ -641,7 +641,7 @@ export default class Stack extends GameModule {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
           if (
             this.grid[x][shiftY] != null &&
-            this.grid[x][shiftY - 1] != null &&
+            this.grid[x][shiftY - 1] != null
           ) {
             fallenBlocks++
           }
