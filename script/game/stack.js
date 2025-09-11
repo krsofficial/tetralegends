@@ -615,7 +615,6 @@ export default class Stack extends GameModule {
 			this.toCollapse.push(1)
 		}
 	}
-	this.toCollapse = [...this.toCollapse, this.bottomRow]
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
