@@ -600,19 +600,33 @@ export default class Stack extends GameModule {
 	}
     let fallenBlocks = 0
     if (this.isFrozen) {
+	if (this.lineClear >= 4) {
+		if (this.toCollapse[1] !== null) {
+				this.toCollapse.push(1)
+		}
+	}
+	this.toCollapse = [...this.toCollapse, this.bottomRow]
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (
-            this.grid[x][shiftY] != null &&
-            this.grid[x][shiftY - 1] != null
-          ) {
-            if (frozenStacks[x][shiftY] === null && frozenStacks[x][shiftY - 1] === null) {
+          if (frozenStacks[x][shiftY] === null && frozenStacks[x][shiftY - 1] === null) {
+			if (
+				this.grid[x][shiftY] != null &&
+				this.grid[x][shiftY - 1] != null &&
+			) {
 				fallenBlocks++
 			}
-          }
-          this.dirtyCells.push([x, shiftY + 1])
+			this.dirtyCells.push([x, shiftY + 1])
+		  } else if (shiftY <= 1 && this.lineClear >= 4) {
+			if (
+				this.grid[x][shiftY] != null &&
+				this.grid[x][shiftY - 1] != null &&
+			) {
+				fallenBlocks++
+			}
+			this.dirtyCells.push([x, shiftY + 1])
+		  }
         }
       }
       for (let i = 0; i < this.flashY.length; i++) {
@@ -801,7 +815,9 @@ export default class Stack extends GameModule {
 		if (this.isFrozen) {
 			color = "frozen"
 			suffix = ""
-			frozenStacks.push(this.grid[x][y])
+			if (this.lineClear <= 0) {
+				frozenStacks.push(this.grid[x][y])
+			}
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
