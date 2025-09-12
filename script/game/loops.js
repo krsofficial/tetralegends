@@ -2030,7 +2030,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg)
-      extendedLockdown(arg)
+      infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
