@@ -1092,6 +1092,7 @@ export default class Game {
       "whitebone",
       "blackbone",
 	  "frozen",
+	  "hidden",
     ],
     types = ["mino", "ghost", "stack"],
     skin = settings.settings.skin === "auto"

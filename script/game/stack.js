@@ -35,6 +35,7 @@ export default class Stack extends GameModule {
     this.antiGarbageBuffer = 0
     this.copyBottomForGarbage = false
     this.isClutch = false
+	this.isHidden = false
 	this.isUnderwater = false
 	this.clearUnderwaterRows = false
 	this.isFrozen = false
@@ -821,6 +822,10 @@ export default class Stack extends GameModule {
         }
 		if (this.parent.piece.useBoneBlocks) {
 			suffix = "bone"
+		}
+		if (this.isHidden) {
+			color = "hidden"
+			suffix = ""
 		}
 		if (this.isFrozen) {
 			if (this.lineClear <= 0) {

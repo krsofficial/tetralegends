@@ -1421,8 +1421,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1611,8 +1610,7 @@ export const loops = {
       gravity(arg)
       softDrop(arg, 40)
       hardDrop(arg)
-      extendedLockdown(arg);
-      //classicLockdown(arg);
+      infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1828,8 +1826,7 @@ export const loops = {
       gravity(arg)
       softDrop(arg)
       hardDrop(arg)
-      extendedLockdown(arg)
-      //classicLockdown(arg);
+      infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1971,10 +1968,10 @@ export const loops = {
       }
 	  
 	  if (game.stat.level < 1000) {
-		  $("#game-container").classList.remove("sil")
+		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  $("#game-container").classList.add("sil")
+		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)
@@ -2033,8 +2030,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -2175,10 +2171,10 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  if (game.stat.level < 1000) {
-		  $("#game-container").classList.remove("sil")
+		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  $("#game-container").classList.add("sil")
+		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
       }
       updateFallSpeed(game)
@@ -2263,8 +2259,7 @@ export const loops = {
       gravity(arg)
       sonicDrop(arg, true)
       firmDrop(arg)
-      //extendedLockdown(arg);
-      classicLockdown(arg)
+      extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -2527,7 +2522,6 @@ export const loops = {
       softDrop(arg)
       hardDrop(arg)
       extendedLockdown(arg)
-      //classicLockdown(arg);
       if (!arg.piece.inAre) {
         hold(arg)
       }
