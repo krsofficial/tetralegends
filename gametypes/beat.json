@@ -6,7 +6,7 @@
     "pieces": "standard",
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
-    "rotationSystem": "srs",
+    "rotationSystem": "beatmode",
     "skin": "srsx",
     "soundbank": "standard",
     "scoreTable": "guideline",

@@ -56,7 +56,7 @@
         {
           "label": "Tetra Online",
           "fixedText": true,
-          "value": "srsx"
+          "value": "tonline"
         },
         {
           "label": "Tetra-X",
@@ -79,9 +79,9 @@
           "value": "friends"
         },
         {
-          "string": "tetraOnlineLabel",
-          "langOverride": "menu_daspresets",
-          "value": "tonline"
+          "string": "SRS-X",
+          "fixedText": true,
+          "value": "srsx"
         },
         {
           "label": "Arika",
