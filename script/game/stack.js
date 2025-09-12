@@ -823,9 +823,9 @@ export default class Stack extends GameModule {
 			suffix = "bone"
 		}
 		if (this.isFrozen) {
-			color = "frozen"
-			suffix = ""
 			if (this.lineClear <= 0) {
+				color = "frozen"
+				suffix = ""
 				this.frozenStacks[x][y] = this.grid[x][y]
 			}
 		} else {
