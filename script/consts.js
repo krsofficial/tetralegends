@@ -3050,6 +3050,7 @@ KICK_TEMPLATES.ppt = KICK_TEMPLATES.srs
 KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
 KICK_TEMPLATES.worldae = KICK_TEMPLATES.world
 KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
+KICK_TEMPLATES.beatmode = KICK_TEMPLATES.srs
 KICK_TEMPLATES.krs = {
   x: {
     ...KICK_TEMPLATES.srs.x,
@@ -3068,24 +3069,6 @@ KICK_TEMPLATES.krs = {
     ...KICK_TEMPLATES.arsx.T,
 	...KICK_TEMPLATES.asc.x,
 	...KICK_TEMPLATES.oshisaure.x,
-  },
-  O: {
-	...KICK_TEMPLATES.o,
-    ...KICK_TEMPLATES.asc.x,
-  },
-}
-KICK_TEMPLATES.beatmode = {
-  x: {
-    ...KICK_TEMPLATES.srs.x,
-	...KICK_TEMPLATES.asc.x,
-  },
-  I: {
-    ...KICK_TEMPLATES.srs.I,
-	...KICK_TEMPLATES.asc.x,
-  },
-  T: {
-    ...KICK_TEMPLATES.srs.x,
-	...KICK_TEMPLATES.asc.x,
   },
   O: {
 	...KICK_TEMPLATES.o,
@@ -3292,6 +3275,7 @@ KICK_TABLES.ppt = KICK_TABLES.srs
 KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.world
 KICK_TABLES.srsx = KICK_TABLES.srs
+KICK_TABLES.beatmode = KICK_TABLES.srs
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
   L: KICK_TEMPLATES.krs.x,
@@ -3300,15 +3284,6 @@ KICK_TABLES.krs = {
   T: KICK_TEMPLATES.krs.T,
   J: KICK_TEMPLATES.krs.x,
   S: KICK_TEMPLATES.krs.x,
-}
-KICK_TABLES.beatmode = {
-  I: KICK_TEMPLATES.beatmode.I,
-  L: KICK_TEMPLATES.beatmode.x,
-  O: KICK_TEMPLATES.beatmode.O,
-  Z: KICK_TEMPLATES.beatmode.x,
-  T: KICK_TEMPLATES.beatmode.T,
-  J: KICK_TEMPLATES.beatmode.x,
-  S: KICK_TEMPLATES.beatmode.x,
 }
 
 export const PIECE_COLORS = {
