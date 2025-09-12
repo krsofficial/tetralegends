@@ -8,7 +8,7 @@
     "randomizer": "tetrax",
     "rotationSystem": "tetrax",
     "skin": "standard",
-    "soundbank": "standard",
+    "soundbank": "tetrax",
     "music": ["../master/master", "../master/master-last"],
     "hasDangerBgm": true,
     "scoreTable": "tetrax",
