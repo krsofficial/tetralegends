@@ -9,7 +9,7 @@
     "rotationSystem": "srs",
     "skin": "tonline",
     "soundbank": "standard",
-    "music": "sprint",
+    "music": "../sprint/sprint",
     "hasDangerBgm": false,
     "hasPaceBgm": false,
     "scoreTable": "guideline",
