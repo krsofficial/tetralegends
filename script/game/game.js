@@ -282,15 +282,15 @@ export default class Game {
         }
 		
 		if (gametype === "retro") {
-          this.settings.music = settings.game.retro.song
+          this.settings.music = settings.game.retro.music
         }
 		
 		if (gametype === "handheld") {
-          this.settings.music = settings.game.handheld.song
+          this.settings.music = settings.game.handheld.music
         }
 		
 		if (gametype === "deluxe") {
-          this.settings.music = settings.game.deluxe.song
+          this.settings.music = settings.game.deluxe.music
         }
 
         if (this.settings.musicLinePoints != null) {

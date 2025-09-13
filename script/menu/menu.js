@@ -173,18 +173,18 @@ class Menu {
         sound.killBgm()
         sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
         sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
-	  } else if (this.current.properties.game === "retro" && sound.bgmName !== `menu-pg-retro${settings.game.retro.song}`) {
+	  } else if (this.current.properties.game === "retro" && sound.bgmName !== `menu-pg-retro${settings.game.retro.music}`) {
 		sound.killBgm()
-        sound.loadBgm([`pg-retro-${settings.game.retro.song}`], "menu")
-        sound.playBgm([`pg-retro-${settings.game.retro.song}`], "menu")
-	  } else if (this.current.properties.game === "handheld" && sound.bgmName !== `menu-pg-handheld${settings.game.handheld.song}`) {
+        sound.loadBgm([`pg-retro-${settings.game.retro.music}`], "menu")
+        sound.playBgm([`pg-retro-${settings.game.retro.music}`], "menu")
+	  } else if (this.current.properties.game === "handheld" && sound.bgmName !== `menu-pg-handheld${settings.game.handheld.music}`) {
 		sound.killBgm()
-        sound.loadBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
-        sound.playBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
-	  } else if (this.current.properties.game === "deluxe" && sound.bgmName !== `menu-pg-deluxe${settings.game.deluxe.song}`) {
+        sound.loadBgm([`pg-handheld-${settings.game.handheld.music}`], "menu")
+        sound.playBgm([`pg-handheld-${settings.game.handheld.music}`], "menu")
+	  } else if (this.current.properties.game === "deluxe" && sound.bgmName !== `menu-pg-deluxe${settings.game.deluxe.music}`) {
 		sound.killBgm()
-        sound.loadBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
-        sound.playBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
+        sound.loadBgm([`pg-deluxe-${settings.game.deluxe.music}`], "menu")
+        sound.playBgm([`pg-deluxe-${settings.game.deluxe.music}`], "menu")
 	  } else if (this.current.properties.game === "ace" || this.current.properties.game === "aceworld") {
         let difficulty = 1
 		let songname = "ace"
@@ -659,11 +659,11 @@ class Menu {
               (gameHandler.game.b2b == null ||
                 gameHandler.game.isOver == true ||
                 gameHandler.game.isPaused == false) &&
-              sound.bgmName !== `menu-pg-retro-${settings.game.retro.song}`
+              sound.bgmName !== `menu-pg-retro-${settings.game.retro.music}`
             ) {
               sound.killBgm()
-              sound.loadBgm([`pg-retro-${settings.game.retro.song}`], "menu")
-              sound.playBgm([`pg-retro-${settings.game.retro.song}`], "menu")
+              sound.loadBgm([`pg-retro-${settings.game.retro.music}`], "menu")
+              sound.playBgm([`pg-retro-${settings.game.retro.music}`], "menu")
             }
 			
 			if (
@@ -671,11 +671,11 @@ class Menu {
               (gameHandler.game.b2b == null ||
                 gameHandler.game.isOver == true ||
                 gameHandler.game.isPaused == false) &&
-              sound.bgmName !== `menu-pg-handheld-${settings.game.handheld.song}`
+              sound.bgmName !== `menu-pg-handheld-${settings.game.handheld.music}`
             ) {
               sound.killBgm()
-              sound.loadBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
-              sound.playBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
+              sound.loadBgm([`pg-handheld-${settings.game.handheld.music}`], "menu")
+              sound.playBgm([`pg-handheld-${settings.game.handheld.music}`], "menu")
             }
 			
 			if (
@@ -683,11 +683,11 @@ class Menu {
               (gameHandler.game.b2b == null ||
                 gameHandler.game.isOver == true ||
                 gameHandler.game.isPaused == false) &&
-              sound.bgmName !== `menu-pg-deluxe-${settings.game.deluxe.song}`
+              sound.bgmName !== `menu-pg-deluxe-${settings.game.deluxe.music}`
             ) {
               sound.killBgm()
-              sound.loadBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
-              sound.playBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
+              sound.loadBgm([`pg-deluxe-${settings.game.deluxe.music}`], "menu")
+              sound.playBgm([`pg-deluxe-${settings.game.deluxe.music}`], "menu")
             }
 			
 			if (
