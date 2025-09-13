@@ -173,6 +173,18 @@ class Menu {
         sound.killBgm()
         sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
         sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
+	  } else if (this.current.properties.game === "retro" && sound.bgmName !== `menu-pg-retro${settings.game.retro.song}`) {
+		sound.killBgm()
+        sound.loadBgm([`pg-retro-${settings.game.retro.song}`], "menu")
+        sound.playBgm([`pg-retro-${settings.game.retro.song}`], "menu")
+	  } else if (this.current.properties.game === "handheld" && sound.bgmName !== `menu-pg-handheld${settings.game.handheld.song}`) {
+		sound.killBgm()
+        sound.loadBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
+        sound.playBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
+	  } else if (this.current.properties.game === "deluxe" && sound.bgmName !== `menu-pg-deluxe${settings.game.deluxe.song}`) {
+		sound.killBgm()
+        sound.loadBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
+        sound.playBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
 	  } else if (this.current.properties.game === "ace" || this.current.properties.game === "aceworld") {
         let difficulty = 1
 		let songname = "ace"
@@ -640,6 +652,42 @@ class Menu {
               sound.killBgm()
               sound.loadBgm([`pg-${settings.game.beat.song}`], "menu")
               sound.playBgm([`pg-${settings.game.beat.song}`], "menu")
+            }
+			
+			if (
+              this.current.properties.game === "retro" &&
+              (gameHandler.game.b2b == null ||
+                gameHandler.game.isOver == true ||
+                gameHandler.game.isPaused == false) &&
+              sound.bgmName !== `menu-pg-retro-${settings.game.retro.song}`
+            ) {
+              sound.killBgm()
+              sound.loadBgm([`pg-retro-${settings.game.retro.song}`], "menu")
+              sound.playBgm([`pg-retro-${settings.game.retro.song}`], "menu")
+            }
+			
+			if (
+              this.current.properties.game === "handheld" &&
+              (gameHandler.game.b2b == null ||
+                gameHandler.game.isOver == true ||
+                gameHandler.game.isPaused == false) &&
+              sound.bgmName !== `menu-pg-handheld-${settings.game.handheld.song}`
+            ) {
+              sound.killBgm()
+              sound.loadBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
+              sound.playBgm([`pg-handheld-${settings.game.handheld.song}`], "menu")
+            }
+			
+			if (
+              this.current.properties.game === "deluxe" &&
+              (gameHandler.game.b2b == null ||
+                gameHandler.game.isOver == true ||
+                gameHandler.game.isPaused == false) &&
+              sound.bgmName !== `menu-pg-deluxe-${settings.game.deluxe.song}`
+            ) {
+              sound.killBgm()
+              sound.loadBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
+              sound.playBgm([`pg-deluxe-${settings.game.deluxe.song}`], "menu")
             }
 			
 			if (

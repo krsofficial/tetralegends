@@ -22,6 +22,36 @@
       "setting": "startingLevel",
       "gameName": "deluxe",
       "settingType": "game"
+    },
+    {
+      "label": "Music",
+      "description": "Choose which music plays during the game",
+      "fixedText": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "Type A",
+          "description": "",
+          "fixedText": true,
+          "value": "typea"
+        },
+        {
+          "label": "Type B",
+          "description": "",
+          "fixedText": true,
+          "value": "typeb"
+        },
+        {
+          "label": "Type C",
+          "description": "",
+          "fixedText": true,
+          "value": "typec"
+        }
+      ],
+      "setting": "song",
+      "gameName": "deluxe",
+      "settingType": "game"
     }
   ]
 }

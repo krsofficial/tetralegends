@@ -280,6 +280,18 @@ export default class Game {
         if (gametype === "beat") {
           this.settings.music = settings.game.beat.song
         }
+		
+		if (gametype === "retro") {
+          this.settings.music = settings.game.retro.song
+        }
+		
+		if (gametype === "handheld") {
+          this.settings.music = settings.game.handheld.song
+        }
+		
+		if (gametype === "deluxe") {
+          this.settings.music = settings.game.deluxe.song
+        }
 
         if (this.settings.musicLinePoints != null) {
           // eslint-disable-next-line no-unused-vars

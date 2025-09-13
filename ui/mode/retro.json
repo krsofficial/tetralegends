@@ -24,21 +24,32 @@
       "settingType": "game"
     },
     {
-      "string": "mechanicsLabel",
-      "stringDesc": "mechanicsDescription",
+      "label": "Music",
+      "description": "Choose which music plays during the game",
+      "fixedText": true,
       "type": "select",
       "action": "select",
       "selectOptions": [
         {
-          "string": "accurateOption",
-          "value": "accurate"
+          "label": "Type A",
+          "description": "",
+          "fixedText": true,
+          "value": "typea"
         },
         {
-          "string": "modernOption",
-          "value": "modern"
+          "label": "Type B",
+          "description": "",
+          "fixedText": true,
+          "value": "typeb"
+        },
+        {
+          "label": "Type C",
+          "description": "",
+          "fixedText": true,
+          "value": "typec"
         }
       ],
-      "setting": "mechanics",
+      "setting": "song",
       "gameName": "retro",
       "settingType": "game"
     }

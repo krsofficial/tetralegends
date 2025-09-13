@@ -9,7 +9,7 @@
     "rotationSystem": "deluxe",
     "skin": "retro",
     "soundbank": "deluxe",
-    "music": "korobeiniki",
+    "music": "../deluxe/loading",
     "scoreTable": "retro",
     "disableDefaultSkinLoad": true,
     "background": "handheld.png"

@@ -9,7 +9,7 @@
     "rotationSystem": "retro",
     "skin": "retro",
     "soundbank": "nes",
-    "music": "retro",
+    "music": "../retro/loading",
     "scoreTable": "retro",
     "disableDefaultSkinLoad": true,
     "background": "handheld.png"

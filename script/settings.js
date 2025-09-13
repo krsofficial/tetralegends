@@ -151,15 +151,18 @@ class Settings {
       retro: {
         startingLevel: 0,
         mechanics: "accurate",
+		music: "typea",
       },
       prox: {
         startingLevel: 1,
       },
       handheld: {
         startingLevel: 0,
+		music: "typea",
       },
       deluxe: {
         startingLevel: 0,
+		music: "typea",
       },
       beat: {
         song: "non",

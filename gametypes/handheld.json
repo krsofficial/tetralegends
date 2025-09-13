@@ -9,8 +9,8 @@
     "rotationSystem": "handheld",
     "skin": "retro",
     "soundbank": "handheld",
-    "music": "mono",
-    "hasDangerBgm": true,
+    "music": "../handheld/loading",
+    "hasDangerBgm": false,
     "scoreTable": "retro",
     "disableDefaultSkinLoad": true,
     "background": "handheld.png"
