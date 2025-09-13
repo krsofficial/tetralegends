@@ -5849,6 +5849,8 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
+	  game.hideGrid = true
+      game.stack.updateGrid()
       // game.stat.level = 0;
       // game.appends.level = '♥';
       // lastLevel = 0;
@@ -5918,6 +5920,8 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
+	  game.hideGrid = true
+      game.stack.updateGrid()
       game.stat.level = settings.game.handheld.startingLevel
       lastLevel = parseInt(settings.game.handheld.startingLevel)
       if (input.holdingShift) {
