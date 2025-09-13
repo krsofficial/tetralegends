@@ -4284,7 +4284,7 @@ export const SOUND_SETS = {
   aceworld: "ace",
   battle: "battle",
   friends: "friends",
-  dshock: "nblox",
+  dshock: "dshock",
   arsae: "tgm4",
   worldae: "tgm4",
   t99: "t99",
