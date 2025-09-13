@@ -79,7 +79,7 @@
           "value": "friends"
         },
         {
-          "string": "SRS-X",
+          "label": "SRS-X",
           "fixedText": true,
           "value": "srsx"
         },
