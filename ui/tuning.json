@@ -179,7 +179,7 @@
           "fixedText": true,
           "value": "world"
         },
-        {
+		{
           "label": "Console",
           "fixedText": true,
           "value": "retro"
@@ -243,11 +243,6 @@
           "label": "World-AE",
           "fixedText": true,
           "value": "worldae"
-        },
-		{
-          "label": "KRS (Mashup)",
-          "fixedText": true,
-          "value": "krs"
         },
         {
           "string": "originalOption",
