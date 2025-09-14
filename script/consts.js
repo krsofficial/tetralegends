@@ -3306,21 +3306,30 @@ export const PIECE_COLORS = {
     S: "lightBlue",
   },
   retro: {
-    I: "white",
-    L: "red",
-    O: "white",
-    Z: "blue",
-    T: "white",
+    I: "lightBlue",
+    L: "orange",
+    O: "yellow",
+    Z: "red",
+    T: "purple",
     J: "blue",
-    S: "red",
+    S: "green",
+  },
+  handheld: {
+    I: "lightBlue",
+    L: "orange",
+    O: "yellow",
+    Z: "red",
+    T: "purple",
+    J: "blue",
+    S: "green",
   },
   deluxe: {
     I: "orange",
     L: "red",
     O: "yellow",
-    Z: "orange",
+    Z: "lightBlue",
     T: "green",
-    J: "lightBlue",
+    J: "blue",
     S: "purple",
   },
   handheldSpecial: {
@@ -3372,7 +3381,6 @@ export const PIECE_COLORS = {
 PIECE_COLORS.asc = PIECE_COLORS.srs
 PIECE_COLORS.ascx = PIECE_COLORS.srs
 PIECE_COLORS.world = PIECE_COLORS.srs
-PIECE_COLORS.handheld = PIECE_COLORS.original
 PIECE_COLORS.arsti = PIECE_COLORS.ars
 PIECE_COLORS.arsx = PIECE_COLORS.ars
 PIECE_COLORS.ace = PIECE_COLORS.world
@@ -4247,7 +4255,7 @@ export const SKIN_SETS = {
   tetrax: "standard",
   retro: "retro",
   handheld: "handheld",
-  deluxe: "handheld",
+  deluxe: "deluxe",
   ars: "arika",
   arsti: "arika",
   arsx: "arika",

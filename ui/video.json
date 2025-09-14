@@ -122,14 +122,19 @@
           "value": "pyramidal"
         },
         {
-          "string": "retroLabel",
-          "langOverride": "menu_root",
+          "label": "Retro",
+          "fixedText": true,
           "value": "retro"
         },
         {
-          "string": "handheldLabel",
-          "langOverride": "menu_retro",
+          "label": "Handheld",
+          "fixedText": true,
           "value": "handheld"
+        },
+		{
+          "label": "Handheld DX",
+          "fixedText": true,
+          "value": "deluxe"
         },
         {
           "label": "Tetr.js Enhanced",
