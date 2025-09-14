@@ -19,7 +19,8 @@
     "areLineLimit": 640,
     "dasLimit": 272,
     "arrLimit": 17,
-    "lockDelayLimit": 500
+    "lockDelayLimit": 500,
+	"spinDetectionType": "3corner"
   },
   "next": {
     "nextLimit": 3
