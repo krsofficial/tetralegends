@@ -244,11 +244,6 @@
           "fixedText": true,
           "value": "worldae"
         },
-		{
-          "label": "KRS",
-          "fixedText": true,
-          "value": "krs"
-        },
         {
           "string": "originalOption",
           "value": "original"
