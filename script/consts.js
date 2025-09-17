@@ -3055,18 +3055,21 @@ KICK_TEMPLATES.krs = {
   x: {
     ...KICK_TEMPLATES.arsx.x,
 	...KICK_TEMPLATES.oshisaure.x,
+	...KICK_TEMPLATES.tetrax.x,
     ...KICK_TEMPLATES.srs.x,
 	...KICK_TEMPLATES.asc.x,
   },
   I: {
     ...KICK_TEMPLATES.arsx.I,
 	...KICK_TEMPLATES.oshisaure.I,
+	...KICK_TEMPLATES.tetrax.I,
     ...KICK_TEMPLATES.srs.I,
 	...KICK_TEMPLATES.asc.x,
   },
   T: {
     ...KICK_TEMPLATES.arsx.T,
 	...KICK_TEMPLATES.oshisaure.x,
+	...KICK_TEMPLATES.tetrax.x,
     ...KICK_TEMPLATES.srs.x,
 	...KICK_TEMPLATES.asc.x,
   },
