@@ -3053,24 +3053,24 @@ KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
 KICK_TEMPLATES.beatmode = KICK_TEMPLATES.srs
 KICK_TEMPLATES.krs = {
   x: {
-    ...KICK_TEMPLATES.arsx.x,
-	...KICK_TEMPLATES.oshisaure.x,
-	...KICK_TEMPLATES.tetrax.x,
+    ...KICK_TEMPLATES.arsti.x,
     ...KICK_TEMPLATES.srs.x,
+	...KICK_TEMPLATES.tetrax.x,
+	...KICK_TEMPLATES.arsx.x,
 	...KICK_TEMPLATES.asc.x,
   },
   I: {
-    ...KICK_TEMPLATES.arsx.I,
-	...KICK_TEMPLATES.oshisaure.I,
-	...KICK_TEMPLATES.tetrax.I,
+    ...KICK_TEMPLATES.arsti.I,
     ...KICK_TEMPLATES.srs.I,
+	...KICK_TEMPLATES.tetrax.I,
+	...KICK_TEMPLATES.arsx.I,
 	...KICK_TEMPLATES.asc.x,
   },
   T: {
-    ...KICK_TEMPLATES.arsx.T,
-	...KICK_TEMPLATES.oshisaure.x,
-	...KICK_TEMPLATES.tetrax.x,
+    ...KICK_TEMPLATES.arsti.T,
     ...KICK_TEMPLATES.srs.x,
+	...KICK_TEMPLATES.tetrax.x,
+	...KICK_TEMPLATES.arsx.T,
 	...KICK_TEMPLATES.asc.x,
   },
   O: {
@@ -4273,7 +4273,7 @@ export const SKIN_SETS = {
   worldae: "pyramidal",
   t99: "t99",
   ppt: "ppt",
-  krs: "standard",
+  krs: "arika",
   beatmode: "tonline",
   srsx: "srsx",
 }
@@ -4300,7 +4300,7 @@ export const SOUND_SETS = {
   worldae: "tgm4",
   t99: "t99",
   ppt: "ppt",
-  krs: "standardbeatmode",
+  krs: "ace",
   beatmode: "standardbeatmode",
   srsx: "tetrax",
 }
