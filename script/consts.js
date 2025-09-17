@@ -1096,6 +1096,7 @@ SPAWN_OFFSETS.arsae = SPAWN_OFFSETS.arsx
 SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.world
 SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.srsk = SPAWN_OFFSETS.srs
 
 export const INITIAL_ORIENTATION = {
   srs: {
@@ -1140,6 +1141,7 @@ INITIAL_ORIENTATION.arsae = INITIAL_ORIENTATION.arsx
 INITIAL_ORIENTATION.worldae = INITIAL_ORIENTATION.world
 INITIAL_ORIENTATION.beatmode = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.srsx = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.srsk = INITIAL_ORIENTATION.srs
 
 const KICK_TEMPLATES = {
   o: {
@@ -3050,7 +3052,21 @@ KICK_TEMPLATES.ppt = KICK_TEMPLATES.srs
 KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
 KICK_TEMPLATES.worldae = KICK_TEMPLATES.world
 KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
-KICK_TEMPLATES.beatmode = KICK_TEMPLATES.srs
+KICK_TEMPLATES.beatmode = {
+  x: {
+    ...KICK_TEMPLATES.srs.x,
+  },
+  I: {
+    ...KICK_TEMPLATES.srs.I,
+  },
+  T: {
+    ...KICK_TEMPLATES.srs.x,
+  },
+  O: {
+	...KICK_TEMPLATES.o,
+    ...KICK_TEMPLATES.asc.x,
+  },
+}
 KICK_TEMPLATES.krs = {
   x: {
     ...KICK_TEMPLATES.ars.x,
@@ -3072,6 +3088,21 @@ KICK_TEMPLATES.krs = {
 	...KICK_TEMPLATES.tetrax.x,
 	...KICK_TEMPLATES.arsx.T,
 	...KICK_TEMPLATES.asc.x,
+  },
+  O: {
+	...KICK_TEMPLATES.o,
+    ...KICK_TEMPLATES.asc.x,
+  },
+}
+KICK_TEMPLATES.srsk = {
+  x: {
+    ...KICK_TEMPLATES.srs.x,
+  },
+  I: {
+    ...KICK_TEMPLATES.srs.I,
+  },
+  T: {
+    ...KICK_TEMPLATES.srs.x,
   },
   O: {
 	...KICK_TEMPLATES.o,
@@ -3278,7 +3309,15 @@ KICK_TABLES.ppt = KICK_TABLES.srs
 KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.world
 KICK_TABLES.srsx = KICK_TABLES.srs
-KICK_TABLES.beatmode = KICK_TABLES.srs
+KICK_TABLES.beatmode = {
+  I: KICK_TEMPLATES.srsk.I,
+  L: KICK_TEMPLATES.srsk.x,
+  O: KICK_TEMPLATES.srsk.O,
+  Z: KICK_TEMPLATES.srsk.x,
+  T: KICK_TEMPLATES.srsk.T,
+  J: KICK_TEMPLATES.srsk.x,
+  S: KICK_TEMPLATES.srsk.x,
+}
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
   L: KICK_TEMPLATES.krs.x,
@@ -3287,6 +3326,15 @@ KICK_TABLES.krs = {
   T: KICK_TEMPLATES.krs.T,
   J: KICK_TEMPLATES.krs.x,
   S: KICK_TEMPLATES.krs.x,
+}
+KICK_TABLES.srsk = {
+  I: KICK_TEMPLATES.srsk.I,
+  L: KICK_TEMPLATES.srsk.x,
+  O: KICK_TEMPLATES.srsk.O,
+  Z: KICK_TEMPLATES.srsk.x,
+  T: KICK_TEMPLATES.srsk.T,
+  J: KICK_TEMPLATES.srsk.x,
+  S: KICK_TEMPLATES.srsk.x,
 }
 
 export const PIECE_COLORS = {
@@ -3396,8 +3444,9 @@ PIECE_COLORS.ppt = PIECE_COLORS.srs
 PIECE_COLORS.arsae = PIECE_COLORS.arsx
 PIECE_COLORS.worldae = PIECE_COLORS.world
 PIECE_COLORS.srsx = PIECE_COLORS.srs
-PIECE_COLORS.krs = PIECE_COLORS.arsx
 PIECE_COLORS.beatmode = PIECE_COLORS.srs
+PIECE_COLORS.krs = PIECE_COLORS.arsx
+PIECE_COLORS.srsk = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
   monomino: {
@@ -3444,13 +3493,14 @@ NEXT_OFFSETS.aceworld = NEXT_OFFSETS.world
 NEXT_OFFSETS.battle = NEXT_OFFSETS.srs
 NEXT_OFFSETS.friends = NEXT_OFFSETS.srs
 NEXT_OFFSETS.dshock = NEXT_OFFSETS.srs
-NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.t99 = NEXT_OFFSETS.srs
 NEXT_OFFSETS.ppt = NEXT_OFFSETS.srs
 NEXT_OFFSETS.srsx = NEXT_OFFSETS.srs
 NEXT_OFFSETS.arsae = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.worldae = NEXT_OFFSETS.world
 NEXT_OFFSETS.beatmode = NEXT_OFFSETS.srs
+NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
+NEXT_OFFSETS.srsk = NEXT_OFFSETS.srs
 
 export const PIECE_OFFSETS = {
   asc: {
@@ -3797,13 +3847,20 @@ PIECE_OFFSETS.dshock = PIECE_OFFSETS.srs
 PIECE_OFFSETS.srsx = PIECE_OFFSETS.srs
 PIECE_OFFSETS.arsae = PIECE_OFFSETS.arsx
 PIECE_OFFSETS.worldae = PIECE_OFFSETS.srs
-PIECE_OFFSETS.krs = {
+PIECE_OFFSETS.beatmode = {
   ...PIECE_OFFSETS.srs,
-  ...PIECE_OFFSETS.arsx,
-  ...PIECE_OFFSETS.oshisaure,
   ...PIECE_OFFSETS.asc,
 }
-PIECE_OFFSETS.beatmode = PIECE_OFFSETS.srs
+PIECE_OFFSETS.krs = {
+  ...PIECE_OFFSETS.ars,
+  ...PIECE_OFFSETS.srs,
+  ...PIECE_OFFSETS.arsx,
+  ...PIECE_OFFSETS.asc,
+}
+PIECE_OFFSETS.srsk = {
+  ...PIECE_OFFSETS.srs,
+  ...PIECE_OFFSETS.asc,
+}
 
 export const PIECE_BINARIES = {
   L: 0b000,
@@ -4273,9 +4330,10 @@ export const SKIN_SETS = {
   worldae: "pyramidal",
   t99: "t99",
   ppt: "ppt",
-  krs: "arika",
-  beatmode: "tonline",
   srsx: "srsx",
+  beatmode: "tonline",
+  krs: "metallic",
+  srsk: "bevelled",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -4300,7 +4358,8 @@ export const SOUND_SETS = {
   worldae: "tgm4",
   t99: "t99",
   ppt: "ppt",
-  krs: "ace",
-  beatmode: "standardbeatmode",
   srsx: "tetrax",
+  beatmode: "standardbeatmode",
+  krs: "newcentury",
+  srsk: "newcentury",
 }

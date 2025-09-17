@@ -5,6 +5,7 @@ Play here: https://sub2ninah.github.io/tetralegends/
 # Additions
 - Total UI Overhaul
 - New Arcade modes [Novice (TGM3 Easy), Special (TGM3 Master), Sudden (TGM3 Shirase), Time Attack (TGM ACE), Time Pressure (TGM4 Asuka), Rally (TGM4 Konoha), Abrupt (TGM4 Master)]
+- New Skins [PPT, T99, Friends, Pyramidal, Metallic, Bevelled]
 
 # Notes
 - Abrupt is a WIP. Expect bugs.
