@@ -249,6 +249,11 @@
           "fixedText": true,
           "value": "krs"
         },
+		{
+          "label": "SRS-K",
+          "fixedText": true,
+          "value": "srsk"
+        },
         {
           "string": "originalOption",
           "value": "original"
