@@ -3053,21 +3053,21 @@ KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
 KICK_TEMPLATES.beatmode = KICK_TEMPLATES.srs
 KICK_TEMPLATES.krs = {
   x: {
-    ...KICK_TEMPLATES.arsti.x,
+    ...KICK_TEMPLATES.ars.x,
     ...KICK_TEMPLATES.srs.x,
 	...KICK_TEMPLATES.tetrax.x,
 	...KICK_TEMPLATES.arsx.x,
 	...KICK_TEMPLATES.asc.x,
   },
   I: {
-    ...KICK_TEMPLATES.arsti.I,
+    ...KICK_TEMPLATES.ars.I,
     ...KICK_TEMPLATES.srs.I,
 	...KICK_TEMPLATES.tetrax.I,
 	...KICK_TEMPLATES.arsx.I,
 	...KICK_TEMPLATES.asc.x,
   },
   T: {
-    ...KICK_TEMPLATES.arsti.T,
+    ...KICK_TEMPLATES.ars.T,
     ...KICK_TEMPLATES.srs.x,
 	...KICK_TEMPLATES.tetrax.x,
 	...KICK_TEMPLATES.arsx.T,
