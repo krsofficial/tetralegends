@@ -42,12 +42,6 @@
           "description": "Manuel<br>154 BPM",
           "fixedText": true,
           "value": "ggg"
-        },
-		{
-          "label": "Airborne Robots",
-          "description": "F-777<br>100 BPM",
-          "fixedText": true,
-          "value": "ar"
         }
       ],
       "setting": "song",
