@@ -35,7 +35,7 @@
 	{
       "fixedText": true,
       "label": "KRS",
-      "description": "Custom variant of the puzzle designed for Tetra Legends Ace. (Coming soon)",
+      "description": "Levelling up resets the time limit! Can you reach the goal? (Coming soon)",
       "action": "link",
       "url": "https://github.com/Sub2Ninah/tetralegends/"
     },

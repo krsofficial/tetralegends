@@ -435,7 +435,7 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  if (game.stat.level <= 999) {
+	  if (game.stat.level >= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.new()
@@ -641,7 +641,7 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
-	  if (game.stat.level <= 999 && endRollPassed) {
+	  if (game.stat.level >= 999 && endRollPassed) {
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
 		sound.killVox()
 		sound.add("voxexcellent")
@@ -1073,7 +1073,7 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  if (game.stat.level <= 999) {
+	  if (game.stat.level >= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.new()
@@ -1279,7 +1279,7 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
-	  if (game.stat.level <= 999 && endRollPassed) {
+	  if (game.stat.level >= 999 && endRollPassed) {
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
 		sound.killVox()
 		sound.add("voxexcellent")
