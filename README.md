@@ -7,6 +7,7 @@ Play here: https://sub2ninah.github.io/tetralegends/
 - New Arcade modes [Novice (TGM3 Easy), Special (TGM3 Master), Sudden (TGM3 Shirase)]
 - New Rounds modes [Pressure (TGM4 Asuka), Rally (TGM4 Konoha), Abrupt (TGM4 Master)]
 - New Skins [PPT, T99, Friends, Pyramidal, Metallic, Bevelled]
+- New Beat mode song [Gas Gas Gas (180BPM)]
 
 # Notes
 - Abrupt is a WIP. Expect bugs.
