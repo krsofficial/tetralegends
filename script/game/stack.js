@@ -172,7 +172,12 @@ export default class Stack extends GameModule {
         return
       }
     }
-
+	
+	if (this.isFrozen) {
+		if (this.wouldCauseLineClear() <= 0) {
+			frozenStacks[passedX][passedY] = true
+		}
+	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
         if (x === this.grid.length) {
@@ -828,10 +833,9 @@ export default class Stack extends GameModule {
 			suffix = ""
 		}
 		if (this.isFrozen) {
-			if (this.lineClear <= 0) {
+			if (this.frozenStacks[x][y] !== null) {
 				color = "frozen"
 				suffix = ""
-				this.frozenStacks[x][y] = this.grid[x][y]
 			}
 		} else {
 			this.frozenStacks = []
