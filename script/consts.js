@@ -4353,6 +4353,6 @@ export const SOUND_SETS = {
   ppt: "ppt",
   srsx: "tetrax",
   beatmode: "standardbeatmode",
-  krs: "newcentury",
-  srsk: "newcentury",
+  krs: "krs",
+  srsk: "krs",
 }
