@@ -41,7 +41,7 @@ export default class Stack extends GameModule {
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
 	this.underwaterHeight = 12
-	this.frozenStacks = []
+	this.this.hiddenStacks = []
 	this.boneStacks = []
 	this.hiddenStacks = []
   }
@@ -187,10 +187,10 @@ export default class Stack extends GameModule {
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
-			frozenStacks[passedX][passedY] = true
+			this.hiddenStacks[passedX][passedY] = true
 		}
 	} else {
-		frozenStacks = []
+		this.hiddenStacks = []
 	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
@@ -205,7 +205,7 @@ export default class Stack extends GameModule {
 
           for (let x = 0; x < this.grid.length; x++) {
             if (this.isFrozen) {
-				if (this.frozenStacks[x][y] === null) {
+				if (this.this.hiddenStacks[x][y] === null) {
 					delete this.grid[x][y]
 				}
 			} else if (this.isUnderwater) {
@@ -640,7 +640,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
           this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (this.frozenStacks[x][shiftY] === null && this.frozenStacks[x][shiftY - 1] === null) {
+          if (this.this.hiddenStacks[x][shiftY] === null && this.this.hiddenStacks[x][shiftY - 1] === null) {
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
@@ -851,7 +851,7 @@ export default class Stack extends GameModule {
 			}
 		}
 		if (this.isFrozen) {
-			if (this.frozenStacks[x][y] !== null) {
+			if (this.this.hiddenStacks[x][y] !== null) {
 				color = "frozen"
 				suffix = ""
 			}
