@@ -176,14 +176,14 @@ export default class Stack extends GameModule {
     }
 	
 	if (this.parent.piece.useBoneBlocks) {
-		boneStacks[passedX][passedY] = true
+		this.boneStacks[passedX][passedY] = true
 	} else {
-		boneStacks = []
+		this.boneStacks = []
 	}
 	if (this.isHidden) {
-		hiddenStacks[passedX][passedY] = true
+		this.hiddenStacks[passedX][passedY] = true
 	} else {
-		hiddenStacks = []
+		this.hiddenStacks = []
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
