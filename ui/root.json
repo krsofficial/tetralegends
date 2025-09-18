@@ -34,7 +34,7 @@
     },
 	{
       "fixedText": true,
-      "label": "TETRA-K",
+      "label": "KRS",
       "description": "Custom variant of the puzzle designed for Tetra Legends Ace. (Coming soon)",
       "action": "link",
       "url": "https://github.com/Sub2Ninah/tetralegends/"

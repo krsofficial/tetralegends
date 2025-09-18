@@ -130,6 +130,11 @@
           "value": "dshock"
         },
 		{
+          "label": "KRS",
+          "fixedText": true,
+          "value": "newcentury"
+        },
+		{
           "label": "???",
           "fixedText": true,
           "value": "idolmaster"
