@@ -14,7 +14,7 @@
       "fixedText": true,
       "default": true,
       "action": "submenu",
-      "submenu": "mode/aceclassic"
+      "submenu": "mode/ace"
     },
 	{
       "label": "WORLD RULE",

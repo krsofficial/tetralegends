@@ -57,6 +57,9 @@ let shown20GMessage = false
 let shownHoldWarning = false
 let lastSeenI = 0
 let lastBravos = 0
+let rtaGoal = 0
+let isEndRoll = false
+let endRollPassed = false
 let nonEvents = []
 let bpm
 const levelUpdate = (game) => {
@@ -125,13 +128,13 @@ export const loops = {
 	  updateArcadeBg(game.stat.level)
       game.rta += arg.ms
       arcadeScore(arg)
-      linesToLevel(arg, 1299, 100)
+      linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
-          ? 1299
+          ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 1299) game.stat.grade = "S13"
+      if (game.stat.level >= 1300) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
@@ -329,9 +332,9 @@ export const loops = {
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
-        game.stat.level === 1299
+        game.stat.level === 1300
       ) {
-        if (game.stat.level < 1299) game.stat.level = 500
+        if (game.stat.level < 1300) game.stat.level = 500
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -363,7 +366,15 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 120000 && game.torikanPassed) game.stat.grade = "GM"
+      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 200000)
+        game.stat.grade = "MM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 180000)
+        game.stat.grade = "MO"
+	  else if (game.stat.level >= 999 && game.stat.score >= 160000)
+        game.stat.grade = "MV"
+	  else if (game.stat.level >= 999 && game.stat.score >= 140000)
+        game.stat.grade = "MK"
       else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
       else if (game.stat.score >= 120000)
@@ -424,6 +435,22 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (game.stat.level <= 999) {
+		  if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.isHidden = true
+			rtaGoal = game.rta + 60000
+			sound.loadBgm(["ending2"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending2"], "arcade")
+		  } else if (isEndRoll === true) {
+			game.stack.isHidden = true
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		  }
+		  game.stat.level = 999
+	  }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -431,6 +458,7 @@ export const loops = {
       game.stat.grade = ""
 	  game.arcadeCombo = 1
       game.rta = 0
+	  game.redrawOnLevelUp = true
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
@@ -516,6 +544,7 @@ export const loops = {
         [300, 2],
         [379, 3],
         [400, 4],
+		[979, 5],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -566,6 +595,9 @@ export const loops = {
             case 3:
               sound.killBgm()
               break
+			case 5:
+              sound.killBgm()
+              break
             case 2:
               sound.loadBgm(["arcade2"], "arcade")
               sound.killBgm()
@@ -608,6 +640,12 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+	  if (game.stat.level <= 999 && endRollPassed) {
+		$("#kill-message").textContent = locale.getString("ui", "excellent")
+		sound.killVox()
+		sound.add("voxexcellent")
+		game.end(true)
+	  }
       updateFallSpeed(game)
     },
    },
@@ -729,13 +767,13 @@ export const loops = {
 	  updateArcadeBg(game.stat.level)
       game.rta += arg.ms
       arcadeScore(arg)
-      linesToLevel(arg, 1299, 100)
+      linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
-          ? 1299
+          ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 1299) game.stat.grade = "S13"
+      if (game.stat.level >= 1300) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
@@ -932,9 +970,9 @@ export const loops = {
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
-        game.stat.level === 1299
+        game.stat.level === 1300
       ) {
-        if (game.stat.level < 1299) game.stat.level = 500
+        if (game.stat.level < 1300) game.stat.level = 500
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -966,7 +1004,15 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 120000 && game.torikanPassed) game.stat.grade = "GM"
+      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 200000)
+        game.stat.grade = "MM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 180000)
+        game.stat.grade = "MO"
+	  else if (game.stat.level >= 999 && game.stat.score >= 160000)
+        game.stat.grade = "MV"
+	  else if (game.stat.level >= 999 && game.stat.score >= 140000)
+        game.stat.grade = "MK"
       else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
       else if (game.stat.score >= 120000)
@@ -1026,6 +1072,22 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (game.stat.level <= 999) {
+		  if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.isHidden = true
+			rtaGoal = game.rta + 60000
+			sound.loadBgm(["ending2"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending2"], "arcade")
+		  } else if (isEndRoll === true) {
+			game.stack.isHidden = true
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		  }
+		  game.stat.level = 999
+	  }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -1033,6 +1095,7 @@ export const loops = {
       game.stat.grade = ""
 	  game.arcadeCombo = 1
       game.rta = 0
+	  game.redrawOnLevelUp = true
       game.torikanPassed = false
       game.stat.initPieces = 2
       game.endingStats.grade = true
@@ -1042,7 +1105,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[0, 28],
+		[0, 30],
 		[100, 24],
 		[200, 20],
         [300, 18],
@@ -1057,7 +1120,7 @@ export const loops = {
         [800, 0],
       ]
       const areLineTable = [
-		[0, 28],
+		[0, 30],
 		[100, 24],
 		[200, 20],
 		[300, 18],
@@ -1118,6 +1181,7 @@ export const loops = {
         [300, 2],
         [379, 3],
         [400, 4],
+		[979, 5],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -1168,6 +1232,9 @@ export const loops = {
             case 3:
               sound.killBgm()
               break
+			case 5:
+              sound.killBgm()
+              break
             case 2:
               sound.loadBgm(["arcade2"], "arcade")
               sound.killBgm()
@@ -1210,6 +1277,12 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+	  if (game.stat.level <= 999 && endRollPassed) {
+		$("#kill-message").textContent = locale.getString("ui", "excellent")
+		sound.killVox()
+		sound.add("voxexcellent")
+		game.end(true)
+	  }
       updateFallSpeed(game)
     },
    },
@@ -1394,10 +1467,10 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1999, 100)
+      linesToLevel(arg, 2000, 100)
       game.endSectionLevel =
         game.stat.level >= 1800
-          ? 1999
+          ? 2000
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       collapse(arg)
@@ -1575,6 +1648,14 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+	  if (
+        game.stat.level >= 2000
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       updateFallSpeed(game)
     },
    },
@@ -1583,10 +1664,10 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1999, 100)
+      linesToLevel(arg, 2000, 100)
       game.endSectionLevel =
         game.stat.level >= 1800
-          ? 1999
+          ? 2000
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       collapse(arg)
@@ -1764,6 +1845,14 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+	  if (
+        game.stat.level >= 2000
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       updateFallSpeed(game)
     },
    },
@@ -1772,13 +1861,13 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1299, 100)
+      linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
-          ? 1299
+          ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 1299) game.stat.grade = "Am-GM"
+	  if (game.stat.level >= 1300) game.stat.grade = "Am-GM"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "Am-G12"
 	  else if (game.stat.level >= 1100)
@@ -1967,6 +2056,14 @@ export const loops = {
 	  } else {
 		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
+      }
+	  if (
+        game.stat.level >= 1300
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
       }
       updateFallSpeed(game)
     },
@@ -1976,13 +2073,13 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 1299, 100)
+      linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
         game.stat.level >= 1200
-          ? 1299
+          ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 1299) game.stat.grade = "Am-GM"
+	  if (game.stat.level >= 1300) game.stat.grade = "Am-GM"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "Am-G12"
 	  else if (game.stat.level >= 1100)
@@ -2171,6 +2268,14 @@ export const loops = {
 		  game.stack.isHidden = true
 		  game.piece.gravity = framesToMs(1 / 20)
       }
+	  if (
+        game.stat.level >= 1300
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       updateFallSpeed(game)
     },
    },
@@ -2179,13 +2284,13 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 2599, 100)
+      linesToLevel(arg, 2600, 100)
       game.endSectionLevel =
         game.stat.level >= 2500
-          ? 2599
+          ? 2600
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 2599) game.stat.grade = "GM"
+	  if (game.stat.level >= 2600) game.stat.grade = "GM"
 	  else if (game.stat.level >= 2500)
         game.stat.grade = "S25"
 	  else if (game.stat.level >= 2400)
@@ -2433,6 +2538,14 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
+	  if (
+        game.stat.level >= 2600
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       updateFallSpeed(game)
     },
    },
@@ -2441,13 +2554,13 @@ export const loops = {
       const game = gameHandler.game
 	  updateArcadeBg(game.stat.level)
       arcadeScore(arg)
-      linesToLevel(arg, 2599, 100)
+      linesToLevel(arg, 2600, 100)
       game.endSectionLevel =
         game.stat.level >= 2500
-          ? 2599
+          ? 2600
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 2599) game.stat.grade = "GM"
+	  if (game.stat.level >= 2600) game.stat.grade = "GM"
 	  else if (game.stat.level >= 2500)
         game.stat.grade = "S25"
 	  else if (game.stat.level >= 2400)
@@ -2695,6 +2808,14 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
+	  if (
+        game.stat.level >= 2600
+      ) {
+        $("#kill-message").textContent = locale.getString("ui", "excellent")
+        sound.killVox()
+        sound.add("voxexcellent")
+        game.end(true)
+      }
       updateFallSpeed(game)
     },
    },
@@ -3109,7 +3230,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/kachusha-easy"]
+			  game.settings.music = ["../ace/katsyuha-easy"]
 			  break
 		  }
 		  case 2: {
@@ -3542,7 +3663,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/kachusha-easy"]
+			  game.settings.music = ["../ace/katsyuha-easy"]
 			  break
 		  }
 		  case 2: {

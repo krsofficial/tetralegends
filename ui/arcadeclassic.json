@@ -18,7 +18,7 @@
     },
 	{
       "label": "SPECIAL",
-      "description": "Earn points to earn better grade.",
+      "description": "Your grade will depend on how well you play.",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/special"
