@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "parent": "root",
+  },
+  "data": [
+    {
+      "label": "Ace",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "CLASSIC RULE",
+      "description": "The ruleset used in the arcade games.",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "mode/aceclassic"
+    },
+	{
+      "label": "WORLD RULE",
+      "description": "The ruleset used in the guideline games.",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/aceworld"
+    }
+  ]
+}

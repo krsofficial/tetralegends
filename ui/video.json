@@ -116,6 +116,11 @@
           "fixedText": true,
           "value": "ppt"
         },
+		{
+          "label": "Pyramidal",
+          "fixedText": true,
+          "value": "pyramidal"
+        },
         {
           "label": "Retro",
           "fixedText": true,

@@ -29,8 +29,17 @@
     {
       "string": "tetraxLabel",
       "stringDesc": "tetraxDescription",
+	  "width": "half",
       "action": "submenu",
       "submenu": "tetrax"
+    },
+	{
+      "fixedText": true,
+      "label": "TETRA-K",
+      "description": "Custom variant of the puzzle designed for Tetra Legends Ace. (Coming soon)",
+	  "width": "half",
+      "action": "link",
+      "url": "https://github.com/Sub2Ninah/tetralegends/"
     },
     {
       "string": "retroLabel",
@@ -45,6 +54,22 @@
       "width": "half",
       "action": "submenu",
       "submenu": "arcade"
+    },
+	{
+      "fixedText": true,
+      "label": "Ace",
+      "description": "Clearing 10 lines resets the time limit! Can you reach the goal?",
+	  "width": "half",
+      "action": "submenu",
+      "submenu": "arcadeace"
+    },
+	{
+      "fixedText": true,
+      "label": "Rounds",
+      "description": "An even more difficult variant of the puzzle for those who enjoyed the Arcade modes.",
+	  "width": "half",
+      "action": "submenu",
+      "submenu": "arcadeae"
     },
     {
       "fixedText": true,

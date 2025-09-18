@@ -1,0 +1,33 @@
+{
+  "properties": {
+    "parent": "arcadeae"
+  },
+  "data": [
+    {
+      "string": "Rounds (Arcade Rule)",
+      "fixedText": true,
+      "type": "header"
+    },
+	{
+      "label": "PRESSURE",
+      "description": "You have a time limit that cannot be reset nor extended. How many levels can you reach?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/asuka"
+    },
+	{
+      "label": "ABRUPT",
+      "description": "The ultimate test of skill. (WIP, please expect bugs.)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/rounds"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konoha"
+    }
+  ]
+}

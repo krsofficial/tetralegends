@@ -29,13 +29,6 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/sudden"
-    },
-	{
-      "label": "TIME ATTACK",
-      "description": "Clearing 10 lines resets the time limit! Can you reach the line goal?",
-      "fixedText": true,
-      "action": "submenu",
-      "submenu": "mode/ace"
     }
   ]
 }

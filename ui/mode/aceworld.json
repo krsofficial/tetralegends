@@ -1,12 +1,12 @@
 {
   "properties": {
-    "parent": "arcadeworld",
+    "parent": "arcadeace",
     "langOverride": "mode-options",
     "game": "aceworld"
   },
   "data": [
     {
-      "string": "Time Attack",
+      "string": "Ace (World Rule)",
       "fixedText": true,
       "type": "header"
     },

@@ -235,7 +235,17 @@
           "value": "aceworld"
         },
 		{
-          "label": "KRS",
+          "label": "ARS-AE",
+          "fixedText": true,
+          "value": "arsae"
+        },
+		{
+          "label": "World-AE",
+          "fixedText": true,
+          "value": "worldae"
+        },
+		{
+          "label": "TETRA-K",
           "fixedText": true,
           "value": "krs"
         },

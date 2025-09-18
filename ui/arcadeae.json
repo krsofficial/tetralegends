@@ -1,0 +1,27 @@
+{
+  "properties": {
+    "parent": "root",
+  },
+  "data": [
+    {
+      "label": "Rounds",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "ARCADE RULE",
+      "description": "The ruleset used in the arcade games.",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "aeclassic"
+    },
+	{
+      "label": "STANDARD RULE",
+      "description": "The ruleset used in the guideline games.",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "aeworld"
+    }
+  ]
+}

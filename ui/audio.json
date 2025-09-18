@@ -74,6 +74,11 @@
           "fixedText": true,
           "value": "ace"
         },
+		{
+          "label": "TGM4",
+          "fixedText": true,
+          "value": "tgm4"
+        },
         {
           "label": "T99",
           "fixedText": true,

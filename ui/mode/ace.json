@@ -1,12 +1,12 @@
 {
   "properties": {
-    "parent": "arcadeclassic",
+    "parent": "arcadeace",
     "langOverride": "mode-options",
     "game": "ace"
   },
   "data": [
     {
-      "string": "Time Attack",
+      "string": "Ace (Classic Rule)",
       "fixedText": true,
       "type": "header"
     },
