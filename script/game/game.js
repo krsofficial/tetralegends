@@ -99,6 +99,7 @@ export default class Game {
     this.onPaceTime = 0
     this.startedOnPaceEvent = false
     this.background = ""
+	this.loadedSoundbank = ""
     this.stat = {
       b2b: 0,
       pcCount: 0,
@@ -229,6 +230,7 @@ export default class Game {
             ? SOUND_SETS[this.settings.rotationSystem]
             : settings.settings.soundbank
         sound.load(soundbankName)
+		this.loadedSoundbank = soundbankName
         this.colors = JSON.parse(
           JSON.stringify(PIECE_COLORS[this.settings.rotationSystem])
         )
