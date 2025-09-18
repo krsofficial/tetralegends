@@ -21,6 +21,7 @@ import sound from "../sound.js"
 import Particle from "./particle.js"
 import locale from "../lang.js"
 let endScreenTimeout = null
+let endScreenDelay = 1700
 export default class Game {
   constructor(gametype) {
 //    if (gametype === "beat") {
@@ -494,6 +495,36 @@ export default class Game {
     sound.killBgm()
     sound.killAllLoops()
     $("#game").classList.add("dead")
+	switch (this.loadedSoundbank) {
+		case "nullpomino": {
+			endScreenDelay = 4700
+			break
+		}
+		case "ace": {
+			endScreenDelay = 6700
+			break
+		}
+		case "tgm3": {
+			endScreenDelay = 2700
+			break
+		}
+		case "tgm4": {
+			endScreenDelay = 2700
+			break
+		}
+		case "newcentury": {
+			endScreenDelay = 6700
+			break
+		}
+		case "krs": {
+			endScreenDelay = 6700
+			break
+		}
+		default: {
+			endScreenDelay = 1700
+			break
+		}
+	}
     endScreenTimeout = setTimeout(() => {
       sound.stopSeLoop("alarm")
       $("#kill-message-container").classList.add("hidden")
@@ -511,7 +542,7 @@ export default class Game {
       }
       $("#end-message-container").classList.remove("hidden")
       $("#return-to-menu").textContent = locale.getString("ui", "returnToMenu")
-    }, 1700)
+    }, endScreenDelay)
   }
   calculateActionText(lineClear, isSpin, isMini, b2b, isClutch) {
     if (!settings.settings.displayActionText) {

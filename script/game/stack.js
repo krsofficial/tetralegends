@@ -42,6 +42,8 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.underwaterHeight = 12
 	this.frozenStacks = []
+	this.boneStacks = []
+	this.hiddenStacks = []
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
@@ -173,10 +175,22 @@ export default class Stack extends GameModule {
       }
     }
 	
+	if (this.parent.piece.useBoneBlocks) {
+		boneStacks[passedX][passedY] = true
+	} else {
+		boneStacks = []
+	}
+	if (this.isHidden) {
+		hiddenStacks[passedX][passedY] = true
+	} else {
+		hiddenStacks = []
+	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
 			frozenStacks[passedX][passedY] = true
 		}
+	} else {
+		frozenStacks = []
 	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
@@ -826,19 +840,21 @@ export default class Stack extends GameModule {
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
 		if (this.parent.piece.useBoneBlocks) {
-			suffix = "bone"
+			if (this.boneStacks[x][y] !== null) {
+				suffix = "bone"
+			}
 		}
 		if (this.isHidden) {
-			color = "hidden"
-			suffix = ""
+			if (this.hiddenStacks[x][y] !== null) {
+				color = "hidden"
+				suffix = ""
+			}
 		}
 		if (this.isFrozen) {
 			if (this.frozenStacks[x][y] !== null) {
 				color = "frozen"
 				suffix = ""
 			}
-		} else {
-			this.frozenStacks = []
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
