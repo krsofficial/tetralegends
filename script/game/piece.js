@@ -997,7 +997,7 @@ export default class Piece extends GameModule {
       const drop = this.getDrop()
       this.parent.addScore("sonicDrop", drop)
       if (
-	  settings.settings.soundbank === "ace" || settings.settings.soundbank === "newcentury"
+	  settings.settings.soundbank === "ace" || settings.settings.soundbank === "newcentury" || settings.settings.soundbank === "krs"
 	  ) {
 		  sound.add("harddrop")
 	  } else {
