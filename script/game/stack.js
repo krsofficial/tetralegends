@@ -40,6 +40,7 @@ export default class Stack extends GameModule {
 	this.clearUnderwaterRows = false
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
+	this.redrawOnHidden = false
 	this.underwaterHeight = 12
 	this.frozenStacks = []
 	this.boneStacks = []
@@ -181,6 +182,8 @@ export default class Stack extends GameModule {
 		this.boneStacks = []
 	}
 	if (this.isHidden) {
+		this.hiddenStacks[passedX][passedY] = true
+	} else if (this.redrawOnHidden) {
 		this.hiddenStacks[passedX][passedY] = true
 	} else {
 		this.hiddenStacks = []
