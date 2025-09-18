@@ -1006,12 +1006,16 @@ export default class Piece extends GameModule {
 	  }
       this.genDropParticles()
     } else if (!this.isDead && this.isLanded) {
-      const drop = this.getDrop()
+	  const drop = this.getDrop()
       this.parent.addScore("hardDrop", drop)
       sound.add("harddrop")
       this.genDropParticles()
-    }
-    this.sonicDrop()
+	}
+	this.sonicDrop()
+	if (this.isLanded) {
+	  this.hasHardDropped = true
+	  this.mustLock = true
+	}
   }
   hardDrop() {
     if (!this.isDead) {
