@@ -12,8 +12,11 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
       if (!arg.piece.isLanded) {
         arg.piece.genPieceParticles()
       } else {
+		if (arg.piece.mustLock === false) {
+			arg.piece.mustLock = true
+			sound.add("harddrop")
+		}
         arg.piece.mustLock = true
-		sound.add("harddrop")
       }
     } else {
       arg.piece.gravityMultiplier = 1
@@ -27,8 +30,11 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
       if (!arg.piece.isLanded) {
         arg.piece.genPieceParticles()
       } else {
+		if (arg.piece.mustLock === false) {
+			arg.piece.mustLock = true
+			sound.add("harddrop")
+		}
         arg.piece.mustLock = true
-		sound.add("harddrop")
       }
     } else {
       arg.piece.gravityMultiplier = 1
