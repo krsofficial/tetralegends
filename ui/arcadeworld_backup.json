@@ -36,6 +36,27 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/aceworld"
+    },
+	{
+      "label": "TIME PRESSURE",
+      "description": "Similar to Sudden, but there is a time limit. How many levels can you reach?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/asukaworld"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konohaworld"
+    },
+	{
+      "label": "ABRUPT",
+      "description": "The ultimate test of skill. (WIP, please expect bugs.)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/roundsworld"
     }
   ]
 }

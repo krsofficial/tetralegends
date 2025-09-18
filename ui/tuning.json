@@ -235,16 +235,6 @@
           "value": "aceworld"
         },
 		{
-          "label": "ARS-AE",
-          "fixedText": true,
-          "value": "arsae"
-        },
-		{
-          "label": "World-AE",
-          "fixedText": true,
-          "value": "worldae"
-        },
-		{
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
