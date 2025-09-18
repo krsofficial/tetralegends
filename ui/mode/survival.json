@@ -63,50 +63,6 @@
       "settingType": "game"
     },
     {
-      "string": "matrixWidthLabel",
-      "stringDesc": "matrixWidthDescription",
-      "type": "select",
-      "action": "select",
-      "selectOptions": [
-        {
-          "label": "4",
-          "fixedText": true,
-          "value": 4
-        },
-        {
-          "label": "5",
-          "fixedText": true,
-          "value": 5
-        },
-        {
-          "string": "narrowWidthOption",
-          "value": 6
-        },
-        {
-          "label": "7",
-          "fixedText": true,
-          "value": 7
-        },
-        {
-          "label": "8",
-          "fixedText": true,
-          "value": 8
-        },
-        {
-          "label": "9",
-          "fixedText": true,
-          "value": 9
-        },
-        {
-          "string": "standardWidthOption",
-          "value": 10
-        }
-      ],
-      "setting": "matrixWidth",
-      "gameName": "survival",
-      "settingType": "game"
-    },
-    {
       "label": "Garbage Cap",
       "description": "Limit how many broken lines (lines of garbage) may enter the Matrix at a time",
       "fixedText": true,

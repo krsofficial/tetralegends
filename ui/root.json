@@ -29,7 +29,6 @@
     {
       "string": "tetraxLabel",
       "stringDesc": "tetraxDescription",
-	  "width": "half",
       "action": "submenu",
       "submenu": "tetrax"
     },
@@ -37,7 +36,6 @@
       "fixedText": true,
       "label": "TETRA-K",
       "description": "Custom variant of the puzzle designed for Tetra Legends Ace. (Coming soon)",
-	  "width": "half",
       "action": "link",
       "url": "https://github.com/Sub2Ninah/tetralegends/"
     },

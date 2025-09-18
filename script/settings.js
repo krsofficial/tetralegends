@@ -143,7 +143,7 @@ class Settings {
       survival: {
         startingLevel: 1,
         difficulty: 3,
-        matrixWidth: 6,
+        matrixWidth: 10,
       },
       combo: {
         holdType: "skip",
