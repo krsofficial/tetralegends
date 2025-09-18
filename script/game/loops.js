@@ -438,6 +438,7 @@ export const loops = {
 	  if (game.stat.level <= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
+			game.stack.new()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending2"], "arcade")
@@ -1075,6 +1076,7 @@ export const loops = {
 	  if (game.stat.level <= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
+			game.stack.new()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending2"], "arcade")
