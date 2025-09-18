@@ -489,13 +489,7 @@ export default class Game {
     $("#kill-message-container").classList.remove("hidden")
     if (victory) {
       sound.add("excellent")
-    } else {
-      sound.add("ko")
-    }
-    sound.killBgm()
-    sound.killAllLoops()
-    $("#game").classList.add("dead")
-	switch (this.loadedSoundbank) {
+	  switch (this.loadedSoundbank) {
 		case "nullpomino": {
 			endScreenDelay = 4700
 			break
@@ -525,6 +519,13 @@ export default class Game {
 			break
 		}
 	}
+    } else {
+	  endScreenDelay = 1700
+      sound.add("ko")
+    }
+    sound.killBgm()
+    sound.killAllLoops()
+    $("#game").classList.add("dead")
     endScreenTimeout = setTimeout(() => {
       sound.stopSeLoop("alarm")
       $("#kill-message-container").classList.add("hidden")
