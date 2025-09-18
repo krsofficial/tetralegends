@@ -1,5 +1,4 @@
 import GameModule from "./game-module.js"
-import gameHandler from "./game-handler.js"
 import {
   PIECES,
   MONOMINO_PIECES,
@@ -997,25 +996,10 @@ export default class Piece extends GameModule {
     if (!this.isDead && !this.isLanded) {
       const drop = this.getDrop()
       this.parent.addScore("sonicDrop", drop)
-      if (
-	  gameHandler.game.loadedSoundbank === "ace" || gameHandler.game.loadedSoundbank === "newcentury" || gameHandler.game.loadedSoundbank === "krs"
-	  ) {
-		  sound.add("harddrop")
-	  } else {
-		  sound.add("land")
-	  }
+      sound.add("land")
       this.genDropParticles()
-    } else if (!this.isDead && this.isLanded) {
-	  const drop = this.getDrop()
-      this.parent.addScore("hardDrop", drop)
-      sound.add("harddrop")
-      this.genDropParticles()
-	}
-	this.sonicDrop()
-	if (this.isLanded) {
-	  this.hasHardDropped = true
-	  this.mustLock = true
-	}
+    }
+    this.sonicDrop()
   }
   hardDrop() {
     if (!this.isDead) {

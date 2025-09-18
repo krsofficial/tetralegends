@@ -1,4 +1,5 @@
 import input from "../../input.js"
+import sound from "../sound.js"
 import { framesToMs } from "../../shortcuts.js"
 
 export default function firmDrop(arg, frameGravity = 1, safelock = false) {
@@ -12,6 +13,7 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
         arg.piece.genPieceParticles()
       } else {
         arg.piece.mustLock = true
+		sound.add("harddrop")
       }
     } else {
       arg.piece.gravityMultiplier = 1
@@ -26,6 +28,7 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
         arg.piece.genPieceParticles()
       } else {
         arg.piece.mustLock = true
+		sound.add("harddrop")
       }
     } else {
       arg.piece.gravityMultiplier = 1
