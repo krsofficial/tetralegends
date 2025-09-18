@@ -1,4 +1,5 @@
 import GameModule from "./game-module.js"
+import gameHandler from "./game-handler.js"
 import {
   PIECES,
   MONOMINO_PIECES,
