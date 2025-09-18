@@ -3232,7 +3232,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/katsyuha-easy"]
+			  game.settings.music = ["../ace/kachusha-easy"]
 			  break
 		  }
 		  case 2: {
@@ -3665,7 +3665,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.aceworld.difficulty)
       switch (difficulty) {
 		  case 1: {
-			  game.settings.music = ["../ace/katsyuha-easy"]
+			  game.settings.music = ["../ace/kachusha-easy"]
 			  break
 		  }
 		  case 2: {
