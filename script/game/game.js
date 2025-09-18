@@ -490,12 +490,16 @@ export default class Game {
     if (victory) {
       sound.add("excellent")
 	  switch (this.loadedSoundbank) {
+		case "deluxe": {
+			endScreenDelay = 2000
+			break
+		}
 		case "nullpomino": {
-			endScreenDelay = 4700
+			endScreenDelay = 4200
 			break
 		}
 		case "ace": {
-			endScreenDelay = 6700
+			endScreenDelay = 4200
 			break
 		}
 		case "tgm3": {
@@ -503,15 +507,15 @@ export default class Game {
 			break
 		}
 		case "tgm4": {
-			endScreenDelay = 2700
+			endScreenDelay = 2400
 			break
 		}
 		case "newcentury": {
-			endScreenDelay = 6700
+			endScreenDelay = 6300
 			break
 		}
 		case "krs": {
-			endScreenDelay = 6700
+			endScreenDelay = 6300
 			break
 		}
 		default: {
