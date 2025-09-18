@@ -1,6 +1,7 @@
 {
   "files": [
-    "alarm",
+    "initialrotate",
+	"initialhold",
     "b2b",
     "collapse",
     "erase1",
