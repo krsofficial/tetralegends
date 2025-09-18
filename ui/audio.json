@@ -130,11 +130,6 @@
           "value": "dshock"
         },
 		{
-          "label": "New Century",
-          "fixedText": true,
-          "value": "newcentury"
-        },
-		{
           "label": "???",
           "fixedText": true,
           "value": "idolmaster"
