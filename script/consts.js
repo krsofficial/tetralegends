@@ -3070,6 +3070,17 @@ KICK_TEMPLATES.krs = {
   x: {
 	right: {
 		...KICK_TEMPLATES.ascx.x.right,
+	},
+	left: {
+		...KICK_TEMPLATES.ascx.x.left,
+	},
+	double: {
+		...KICK_TEMPLATES.ascx.x.double,
+	},
+  },  
+  LJ: {
+	right: {
+		...KICK_TEMPLATES.ascx.x.right,
 		...KICK_TEMPLATES.arsx.x.right,
 	},
 	left: {
@@ -3327,11 +3338,11 @@ KICK_TABLES.beatmode = {
 }
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
-  L: KICK_TEMPLATES.krs.x,
+  L: KICK_TEMPLATES.krs.LJ,
   O: KICK_TEMPLATES.krs.O,
   Z: KICK_TEMPLATES.krs.x,
   T: KICK_TEMPLATES.krs.T,
-  J: KICK_TEMPLATES.krs.x,
+  J: KICK_TEMPLATES.krs.LJ,
   S: KICK_TEMPLATES.krs.x,
 }
 KICK_TABLES.srsk = {
@@ -3865,11 +3876,11 @@ PIECE_OFFSETS.beatmode = {
 }
 PIECE_OFFSETS.krs = {
   I: PIECE_OFFSETS.ascx.I,
-  L: PIECE_OFFSETS.arsx.L,
+  L: {...PIECE_OFFSETS.ascx.L, ...PIECE_OFFSETS.arsx.L},
   O: PIECE_OFFSETS.ascx.O,
   Z: PIECE_OFFSETS.ascx.Z,
-  T: PIECE_OFFSETS.arsx.T,
-  J: PIECE_OFFSETS.arsx.J,
+  T: {...PIECE_OFFSETS.ascx.T, ...PIECE_OFFSETS.arsx.T},
+  J: {...PIECE_OFFSETS.ascx.J, ...PIECE_OFFSETS.arsx.J},
   S: PIECE_OFFSETS.ascx.S,
 }
 PIECE_OFFSETS.srsk = {
