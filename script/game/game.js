@@ -514,10 +514,6 @@ export default class Game {
 			endScreenDelay = 6300
 			break
 		}
-		case "krs": {
-			endScreenDelay = 6300
-			break
-		}
 		default: {
 			endScreenDelay = 1700
 			break

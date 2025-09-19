@@ -14,8 +14,10 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
       } else {
 		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
+			arg.piece.hasHardDropped = true
 			sound.add("harddrop")
 		}
+		arg.piece.hasHardDropped = true
         arg.piece.mustLock = true
       }
     } else {
@@ -32,8 +34,10 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
       } else {
 		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
+			arg.piece.hasHardDropped = true
 			sound.add("harddrop")
 		}
+		arg.piece.hasHardDropped = true
         arg.piece.mustLock = true
       }
     } else {
