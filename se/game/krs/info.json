@@ -1,7 +1,5 @@
 {
   "files": [
-    "initialrotate",
-	"initialhold",
     "b2b",
     "collapse",
     "erase1",
@@ -9,7 +7,10 @@
     "erase3",
     "erase4",
     "excellent",
+	"garbage",
     "hold",
+	"initialrotate",
+	"initialhold",
     "ko",
     "land",
     "levelup",
