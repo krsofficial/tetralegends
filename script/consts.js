@@ -3071,21 +3071,21 @@ KICK_TEMPLATES.krs = {
   x: {
     ...KICK_TEMPLATES.ars.x,
 	...KICK_TEMPLATES.arsx.x,
-	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.ascx.x,
   },
   I: {
     ...KICK_TEMPLATES.ars.I,
 	...KICK_TEMPLATES.arsx.I,
-	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.ascx.x,
   },
   T: {
     ...KICK_TEMPLATES.ars.T,
 	...KICK_TEMPLATES.arsx.T,
-	...KICK_TEMPLATES.asc.x,
+	...KICK_TEMPLATES.ascx.x,
   },
   O: {
 	...KICK_TEMPLATES.o,
-    ...KICK_TEMPLATES.asc.x,
+    ...KICK_TEMPLATES.ascx.x,
   },
 }
 KICK_TEMPLATES.srsk = {
@@ -3848,7 +3848,7 @@ PIECE_OFFSETS.beatmode = {
 PIECE_OFFSETS.krs = {
   ...PIECE_OFFSETS.ars,
   ...PIECE_OFFSETS.arsx,
-  ...PIECE_OFFSETS.asc,
+  ...PIECE_OFFSETS.ascx,
 }
 PIECE_OFFSETS.srsk = {
   ...PIECE_OFFSETS.srs,
