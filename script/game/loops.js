@@ -686,7 +686,7 @@ export const loops = {
         gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
-      linesToLevel(arg, 300, 300)
+      linesToLevel(arg, 200, 100)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1346,7 +1346,7 @@ export const loops = {
         gameHandler.game.drop += framesToMs(2 * arg.piece.getDrop())
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
-      linesToLevel(arg, 300, 300)
+      linesToLevel(arg, 200, 100)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
