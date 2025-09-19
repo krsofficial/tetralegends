@@ -3063,25 +3063,42 @@ KICK_TEMPLATES.beatmode = {
     ...KICK_TEMPLATES.srs.x,
   },
   O: {
-	...KICK_TEMPLATES.o,
     ...KICK_TEMPLATES.asc.x,
   },
 }
 KICK_TEMPLATES.krs = {
   x: {
-	...KICK_TEMPLATES.arsx.x,
-	...KICK_TEMPLATES.ascx.x,
+	right: {
+		...KICK_TEMPLATES.arsx.x.right,
+		...KICK_TEMPLATES.ascx.x.right,
+	},
+	left: {
+		...KICK_TEMPLATES.arsx.x.left,
+		...KICK_TEMPLATES.ascx.x.left,
+	},
+	double: {
+		...KICK_TEMPLATES.arsx.x.double,
+		...KICK_TEMPLATES.ascx.x.double,
+	},
   },
   I: {
-	...KICK_TEMPLATES.arsx.I,
 	...KICK_TEMPLATES.ascx.x,
   },
   T: {
-	...KICK_TEMPLATES.arsx.T,
-	...KICK_TEMPLATES.ascx.x,
+	right: {
+		...KICK_TEMPLATES.arsx.T.right,
+		...KICK_TEMPLATES.ascx.x.right,
+	},
+	left: {
+		...KICK_TEMPLATES.arsx.T.left,
+		...KICK_TEMPLATES.ascx.x.left,
+	},
+	double: {
+		...KICK_TEMPLATES.arsx.T.double,
+		...KICK_TEMPLATES.ascx.x.double,
+	},
   },
   O: {
-	...KICK_TEMPLATES.o,
     ...KICK_TEMPLATES.ascx.x,
   },
 }
@@ -3096,7 +3113,6 @@ KICK_TEMPLATES.srsk = {
     ...KICK_TEMPLATES.srs.x,
   },
   O: {
-	...KICK_TEMPLATES.o,
     ...KICK_TEMPLATES.asc.x,
   },
 }
@@ -3301,13 +3317,13 @@ KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.world
 KICK_TABLES.srsx = KICK_TABLES.srs
 KICK_TABLES.beatmode = {
-  I: KICK_TEMPLATES.srsk.I,
-  L: KICK_TEMPLATES.srsk.x,
-  O: KICK_TEMPLATES.srsk.O,
-  Z: KICK_TEMPLATES.srsk.x,
-  T: KICK_TEMPLATES.srsk.T,
-  J: KICK_TEMPLATES.srsk.x,
-  S: KICK_TEMPLATES.srsk.x,
+  I: KICK_TEMPLATES.beatmode.I,
+  L: KICK_TEMPLATES.beatmode.x,
+  O: KICK_TEMPLATES.beatmode.O,
+  Z: KICK_TEMPLATES.beatmode.x,
+  T: KICK_TEMPLATES.beatmode.T,
+  J: KICK_TEMPLATES.beatmode.x,
+  S: KICK_TEMPLATES.beatmode.x,
 }
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
@@ -3839,16 +3855,31 @@ PIECE_OFFSETS.srsx = PIECE_OFFSETS.srs
 PIECE_OFFSETS.arsae = PIECE_OFFSETS.arsx
 PIECE_OFFSETS.worldae = PIECE_OFFSETS.srs
 PIECE_OFFSETS.beatmode = {
-  ...PIECE_OFFSETS.srs,
-  ...PIECE_OFFSETS.asc,
+  I: PIECE_OFFSETS.srs.I,
+  L: PIECE_OFFSETS.srs.L,
+  O: PIECE_OFFSETS.asc.O,
+  Z: PIECE_OFFSETS.srs.Z,
+  T: PIECE_OFFSETS.srs.T,
+  J: PIECE_OFFSETS.srs.J,
+  S: PIECE_OFFSETS.srs.S,
 }
 PIECE_OFFSETS.krs = {
-  ...PIECE_OFFSETS.arsx,
-  ...PIECE_OFFSETS.ascx,
+  I: PIECE_OFFSETS.ascx.I,
+  L: {...PIECE_OFFSETS.arsx.L, ...PIECE_OFFSETS.ascx.L},
+  O: PIECE_OFFSETS.ascx.O,
+  Z: {...PIECE_OFFSETS.arsx.Z, ...PIECE_OFFSETS.ascx.Z},
+  T: {...PIECE_OFFSETS.arsx.T, ...PIECE_OFFSETS.ascx.T},
+  J: {...PIECE_OFFSETS.arsx.J, ...PIECE_OFFSETS.ascx.J},
+  S: {...PIECE_OFFSETS.arsx.S, ...PIECE_OFFSETS.ascx.S},
 }
 PIECE_OFFSETS.srsk = {
-  ...PIECE_OFFSETS.srs,
-  ...PIECE_OFFSETS.asc,
+  I: PIECE_OFFSETS.srs.I,
+  L: PIECE_OFFSETS.srs.L,
+  O: PIECE_OFFSETS.asc.O,
+  Z: PIECE_OFFSETS.srs.Z,
+  T: PIECE_OFFSETS.srs.T,
+  J: PIECE_OFFSETS.srs.J,
+  S: PIECE_OFFSETS.srs.S,
 }
 
 export const PIECE_BINARIES = {
