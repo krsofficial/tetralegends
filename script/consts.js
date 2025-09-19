@@ -3067,36 +3067,12 @@ KICK_TEMPLATES.beatmode = {
   },
 }
 KICK_TEMPLATES.krs = {
-  x: {
-	right: {
-		...KICK_TEMPLATES.arsx.x.right,
-		...KICK_TEMPLATES.ascx.x.right,
-	},
-	left: {
-		...KICK_TEMPLATES.arsx.x.left,
-		...KICK_TEMPLATES.ascx.x.left,
-	},
-	double: {
-		...KICK_TEMPLATES.arsx.x.double,
-		...KICK_TEMPLATES.ascx.x.double,
-	},
-  },
+  x: KICK_TEMPLATES.ascx.x.concat(KICK_TEMPLATES.arsx.x),
   I: {
 	...KICK_TEMPLATES.ascx.x,
   },
   T: {
-	right: {
-		...KICK_TEMPLATES.arsx.T.right,
-		...KICK_TEMPLATES.ascx.x.right,
-	},
-	left: {
-		...KICK_TEMPLATES.arsx.T.left,
-		...KICK_TEMPLATES.ascx.x.left,
-	},
-	double: {
-		...KICK_TEMPLATES.arsx.T.double,
-		...KICK_TEMPLATES.ascx.x.double,
-	},
+	...KICK_TEMPLATES.arsx.T,
   },
   O: {
     ...KICK_TEMPLATES.ascx.x,
@@ -3107,7 +3083,7 @@ KICK_TEMPLATES.srsk = {
     ...KICK_TEMPLATES.srs.x,
   },
   I: {
-    ...KICK_TEMPLATES.srs.I,
+    ...KICK_TEMPLATES.asc.x,
   },
   T: {
     ...KICK_TEMPLATES.srs.x,
@@ -3865,15 +3841,15 @@ PIECE_OFFSETS.beatmode = {
 }
 PIECE_OFFSETS.krs = {
   I: PIECE_OFFSETS.ascx.I,
-  L: {...PIECE_OFFSETS.arsx.L, ...PIECE_OFFSETS.ascx.L},
+  L: PIECE_OFFSETS.ascx.L.concat(PIECE_OFFSETS.arsx.L),
   O: PIECE_OFFSETS.ascx.O,
-  Z: {...PIECE_OFFSETS.arsx.Z, ...PIECE_OFFSETS.ascx.Z},
-  T: {...PIECE_OFFSETS.arsx.T, ...PIECE_OFFSETS.ascx.T},
-  J: {...PIECE_OFFSETS.arsx.J, ...PIECE_OFFSETS.ascx.J},
-  S: {...PIECE_OFFSETS.arsx.S, ...PIECE_OFFSETS.ascx.S},
+  Z: PIECE_OFFSETS.ascx.Z.concat(PIECE_OFFSETS.arsx.Z),
+  T: PIECE_OFFSETS.arsx.T,
+  J: PIECE_OFFSETS.ascx.J.concat(PIECE_OFFSETS.arsx.J),
+  S: PIECE_OFFSETS.ascx.S.concat(PIECE_OFFSETS.arsx.S),
 }
 PIECE_OFFSETS.srsk = {
-  I: PIECE_OFFSETS.srs.I,
+  I: PIECE_OFFSETS.asc.I,
   L: PIECE_OFFSETS.srs.L,
   O: PIECE_OFFSETS.asc.O,
   Z: PIECE_OFFSETS.srs.Z,
