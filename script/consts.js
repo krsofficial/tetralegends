@@ -3073,8 +3073,8 @@ KICK_TEMPLATES.krs = {
 	...KICK_TEMPLATES.ascx.x,
   },
   I: {
-	...KICK_TEMPLATES.ascx.x,
 	...KICK_TEMPLATES.arsx.I,
+	...KICK_TEMPLATES.ascx.x,
   },
   T: {
 	...KICK_TEMPLATES.arsx.T,
