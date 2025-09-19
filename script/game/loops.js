@@ -368,17 +368,35 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 200000 && endRollLines >= 32)
+      if (game.stat.level >= 999 && game.stat.score >= 265000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 32)
         game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 180000 && endRollLines >= 24)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 24)
         game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 160000 && endRollLines >= 16)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 16)
         game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 140000 && endRollLines >= 10)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 10)
         game.stat.grade = "MK"
-      else if (game.stat.level >= 999 && game.stat.score >= 120000)
+      else if (game.stat.level >= 999 && game.stat.score >= 265000)
         game.stat.grade = "M"
+	  else if (game.stat.score >= 265000)
+        game.stat.grade = "M9"
+	  else if (game.stat.score >= 250000)
+        game.stat.grade = "M8"
+	  else if (game.stat.score >= 235000)
+        game.stat.grade = "M7"
+	  else if (game.stat.score >= 220000)
+        game.stat.grade = "M6"
+	  else if (game.stat.score >= 205000)
+        game.stat.grade = "M5"
+	  else if (game.stat.score >= 180000)
+        game.stat.grade = "M4"
+	  else if (game.stat.score >= 165000)
+        game.stat.grade = "M3"
+	  else if (game.stat.score >= 150000)
+        game.stat.grade = "M2"
+	  else if (game.stat.score >= 135000)
+        game.stat.grade = "M1"
       else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
 	  else if (game.stat.score >= 100000)
@@ -1011,17 +1029,35 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 200000)
+      if (game.stat.level >= 999 && game.stat.score >= 265000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 32)
         game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 180000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 24)
         game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 160000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 16)
         game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 140000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 10)
         game.stat.grade = "MK"
-      else if (game.stat.level >= 999 && game.stat.score >= 120000)
+      else if (game.stat.level >= 999 && game.stat.score >= 265000)
         game.stat.grade = "M"
+	  else if (game.stat.score >= 265000)
+        game.stat.grade = "M9"
+	  else if (game.stat.score >= 250000)
+        game.stat.grade = "M8"
+	  else if (game.stat.score >= 235000)
+        game.stat.grade = "M7"
+	  else if (game.stat.score >= 220000)
+        game.stat.grade = "M6"
+	  else if (game.stat.score >= 205000)
+        game.stat.grade = "M5"
+	  else if (game.stat.score >= 180000)
+        game.stat.grade = "M4"
+	  else if (game.stat.score >= 165000)
+        game.stat.grade = "M3"
+	  else if (game.stat.score >= 150000)
+        game.stat.grade = "M2"
+	  else if (game.stat.score >= 135000)
+        game.stat.grade = "M1"
       else if (game.stat.score >= 120000)
         game.stat.grade = "S9"
 	  else if (game.stat.score >= 100000)
