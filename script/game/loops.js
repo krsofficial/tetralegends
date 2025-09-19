@@ -60,6 +60,8 @@ let lastBravos = 0
 let rtaGoal = 0
 let isEndRoll = false
 let endRollPassed = false
+let endRollLines = 0
+let preEndRollLines = 0
 let nonEvents = []
 let bpm
 const levelUpdate = (game) => {
@@ -366,14 +368,14 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 200000)
+      if (game.stat.level >= 999 && game.stat.score >= 200000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 200000 && endRollLines >= 32)
         game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 180000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 180000 && endRollLines >= 24)
         game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 160000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 160000 && endRollLines >= 16)
         game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 140000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 140000 && endRollLines >= 10)
         game.stat.grade = "MK"
       else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
@@ -451,6 +453,10 @@ export const loops = {
 			}
 		  }
 		  game.stat.level = 999
+		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+	  } else {
+		  preEndRollLines = game.stat.line
+		  endRollLines = 0
 	  }
     },
     onInit: (game) => {
@@ -1089,6 +1095,10 @@ export const loops = {
 			}
 		  }
 		  game.stat.level = 999
+		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+	  } else {
+		  preEndRollLines = game.stat.line
+		  endRollLines = 0
 	  }
     },
     onInit: (game) => {
