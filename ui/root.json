@@ -34,7 +34,7 @@
     },
 	{
       "fixedText": true,
-      "label": "KRS",
+      "label": "Kegaris",
       "description": "Levelling up resets the time limit! Can you reach the goal? (Coming soon)",
       "action": "link",
       "url": "https://github.com/Sub2Ninah/tetralegends/"
