@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "arcadeclassic",
+    "parent": "aeclassic",
     "langOverride": "mode-options",
     "game": "asuka",
     "pgmusic": "pg-asuka"
