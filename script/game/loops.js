@@ -782,7 +782,7 @@ export const loops = {
           break
         }
       }
-      if (game.stat.level <= 200) {
+      if (game.stat.level < 200) {
 		game.piece.gravity = framesToMs(256 / gravityDenominator)
 		game.piece.ghostIsVisible = game.stat.level < 100
 	  } else {
@@ -1459,7 +1459,7 @@ export const loops = {
           break
         }
       }
-      if (game.stat.level <= 200) {
+      if (game.stat.level < 200) {
 		game.piece.gravity = framesToMs(256 / gravityDenominator)
 		game.piece.ghostIsVisible = game.stat.level < 100
 	  } else {
