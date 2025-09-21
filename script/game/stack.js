@@ -785,6 +785,14 @@ export default class Stack extends GameModule {
     }
     this.grid = cells
   }
+  endRollStart() {
+	  sound.add("bravo")
+	  this.new()
+	  this.frozenCells = []
+	  this.boneCells = []
+	  this.hiddenCells = []
+	  this.draw()
+  }
   get highest() {
     let highest = 0
     for (const currentY of this.grid) {

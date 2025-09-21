@@ -458,7 +458,7 @@ export const loops = {
 	  if (game.stat.level >= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
-			game.stack.new()
+			game.stack.endRollStart()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending2"], "arcade")
@@ -712,7 +712,7 @@ export const loops = {
 	  if (game.stat.level >= 200) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
-			game.stack.new()
+			game.stack.endRollStart()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending1"], "arcade")
@@ -773,16 +773,6 @@ export const loops = {
         [174, 112],
         [180, 128],
         [200, 144],
-        [212, 16],
-        [221, 48],
-        [232, 80],
-        [244, 112],
-        [256, 144],
-        [267, 176],
-        [277, 192],
-        [287, 208],
-        [295, 224],
-        [300, 240],
       ]
       for (const pair of gravityTable) {
         const level = pair[0]
@@ -792,8 +782,13 @@ export const loops = {
           break
         }
       }
-      game.piece.gravity = framesToMs(256 / gravityDenominator)
-      game.piece.ghostIsVisible = game.stat.level < 100
+      if (game.stat.level <= 200) {
+		game.piece.gravity = framesToMs(256 / gravityDenominator)
+		game.piece.ghostIsVisible = game.stat.level < 100
+	  } else {
+		game.piece.gravity = framesToMs(1 / 20)
+		game.piece.ghostIsVisible = false
+	  }
       updateFallSpeed(game)
     },
     onInit: (game) => {
@@ -1140,7 +1135,7 @@ export const loops = {
 	  if (game.stat.level >= 999) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
-			game.stack.new()
+			game.stack.endRollStart()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending2"], "arcade")
@@ -1394,7 +1389,7 @@ export const loops = {
 	  if (game.stat.level >= 200) {
 		  if (isEndRoll === false) {
 			isEndRoll = true
-			game.stack.new()
+			game.stack.endRollStart()
 			game.stack.isHidden = true
 			rtaGoal = game.rta + 60000
 			sound.loadBgm(["ending1"], "arcade")
@@ -1455,7 +1450,6 @@ export const loops = {
         [174, 112],
         [180, 128],
         [200, 144],
-        [201, 5120],
       ]
       for (const pair of gravityTable) {
         const level = pair[0]
@@ -1465,9 +1459,14 @@ export const loops = {
           break
         }
       }
-      game.piece.gravity = framesToMs(256 / gravityDenominator)
-      game.piece.ghostIsVisible = game.stat.level < 100
-      updateFallSpeed(game)
+      if (game.stat.level <= 200) {
+		game.piece.gravity = framesToMs(256 / gravityDenominator)
+		game.piece.ghostIsVisible = game.stat.level < 100
+	  } else {
+		game.piece.gravity = framesToMs(1 / 20)
+		game.piece.ghostIsVisible = false
+	  }
+	  updateFallSpeed(game)
     },
     onInit: (game) => {
       game.stat.level = 0
