@@ -5,6 +5,13 @@ import locale from "../lang.js"
 import settings from "../settings.js"
 import { SCORE_TABLES } from "../consts.js"
 export default class Stack extends GameModule {
+  newStacks() {
+	const cells = new Array(this.width)
+	for (let i = 0; i < this.width; i++) {
+		cells[i] = new Array(this.height + this.hiddenHeight)
+	}
+	return cells
+  }
   constructor(parent, ctx) {
     super(parent)
     this.width = this.parent.settings.width
@@ -42,13 +49,6 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	get newStacks() {
-		const cells = new Array(this.width)
-		for (let i = 0; i < this.width; i++) {
-			cells[i] = new Array(this.height + this.hiddenHeight)
-		}
-		return cells
-	}
 	this.frozenStacks = newStacks()
 	this.boneStacks = newStacks()
 	this.hiddenStacks = newStacks()
