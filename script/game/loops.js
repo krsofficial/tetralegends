@@ -571,6 +571,7 @@ export const loops = {
         [379, 3],
         [400, 4],
 		[979, 5],
+		[999, 6],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -747,7 +748,7 @@ export const loops = {
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-      if (game.stat.level >= 180) {
+      if (game.stat.level >= 180 && game.stat.level < 200) {
         sound.killBgm()
       }
       let gravityDenominator = 1
@@ -1248,6 +1249,7 @@ export const loops = {
         [379, 3],
         [400, 4],
 		[979, 5],
+		[999, 6],
       ]
       for (const pair of areTable) {
         const level = pair[0]
@@ -1424,7 +1426,7 @@ export const loops = {
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-      if (game.stat.level >= 180) {
+      if (game.stat.level >= 180 && game.stat.level < 200) {
         sound.killBgm()
       }
       let gravityDenominator = 1
