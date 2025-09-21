@@ -42,7 +42,7 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	newStacks() {
+	get newStacks() {
 		const cells = new Array(this.width)
 		for (let i = 0; i < this.width; i++) {
 			cells[i] = new Array(this.height + this.hiddenHeight)
