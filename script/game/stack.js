@@ -186,21 +186,21 @@ export default class Stack extends GameModule {
 	if (this.parent.piece.useBoneBlocks) {
 		this.boneStacks[passedX][passedY] = true
 	} else {
-		this.boneStacks = []
+		this.boneStacks = newStacks()
 	}
 	if (this.isHidden) {
 		this.hiddenStacks[passedX][passedY] = true
 	} else if (this.redrawOnHidden) {
 		this.hiddenStacks[passedX][passedY] = true
 	} else {
-		this.hiddenStacks = []
+		this.hiddenStacks = newStacks()
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
 			this.frozenStacks[passedX][passedY] = true
 		}
 	} else {
-		this.frozenStacks = []
+		this.frozenStacks = newStacks()
 	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
