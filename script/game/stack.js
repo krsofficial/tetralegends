@@ -788,10 +788,11 @@ export default class Stack extends GameModule {
   endRollStart() {
 	  sound.add("bravo")
 	  this.new()
+	  this.makeAllDirty()
+	  this.draw()
 	  this.frozenCells = []
 	  this.boneCells = []
 	  this.hiddenCells = []
-	  this.draw()
   }
   get highest() {
     let highest = 0
