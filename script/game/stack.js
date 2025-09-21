@@ -5,13 +5,6 @@ import locale from "../lang.js"
 import settings from "../settings.js"
 import { SCORE_TABLES } from "../consts.js"
 export default class Stack extends GameModule {
-  newStacks() {
-	const cells = new Array(this.width)
-	for (let i = 0; i < this.width; i++) {
-		cells[i] = new Array(this.height + this.hiddenHeight)
-	}
-	return cells
-  }
   constructor(parent, ctx) {
     super(parent)
     this.width = this.parent.settings.width
@@ -49,9 +42,9 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	this.frozenStacks = this.newStacks()
-	this.boneStacks = this.newStacks()
-	this.hiddenStacks = this.newStacks()
+	this.frozenCells = []
+	this.boneCells = []
+	this.hiddenCells = []
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
@@ -184,23 +177,23 @@ export default class Stack extends GameModule {
     }
 	
 	if (this.parent.piece.useBoneBlocks) {
-		this.boneStacks[passedX][passedY] = true
+		this.boneCells.push([passedX, passedY])
 	} else {
-		this.boneStacks = this.newStacks()
+		this.boneCells = []
 	}
 	if (this.isHidden) {
-		this.hiddenStacks[passedX][passedY] = true
+		this.hiddenCells.push([passedX, passedY])
 	} else if (this.redrawOnHidden) {
-		this.hiddenStacks[passedX][passedY] = true
+		this.hiddenCells.push([passedX, passedY])
 	} else {
-		this.hiddenStacks = this.newStacks()
+		this.hiddenCells = []
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
-			this.frozenStacks[passedX][passedY] = true
+			this.frozenCells.push([passedX, passedY])
 		}
 	} else {
-		this.frozenStacks = this.newStacks()
+		this.frozenCells = []
 	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
@@ -215,13 +208,23 @@ export default class Stack extends GameModule {
 
           for (let x = 0; x < this.grid.length; x++) {
             if (this.isFrozen) {
-				if (this.frozenStacks[x][y] === null) {
+				if (this.frozenCells.includes([x, y]) !== true) {
 					delete this.grid[x][y]
+					this.frozenCells.splice(this.frozenCells.indexOf([x,y]),1)
 				}
 			} else if (this.isUnderwater) {
 				if (y > this.underwaterHeight) {
 					delete this.grid[x][y]
 				}
+			} else if (this.redrawOnHidden) {
+				delete this.grid[x][y]
+				this.hiddenCells.splice(this.frozenCells.indexOf([x,y]),1)
+			} else if (this.isHidden) {
+				delete this.grid[x][y]
+				this.hiddenCells.splice(this.frozenCells.indexOf([x,y]),1)
+			} else if (this.parent.piece.useBoneBlocks) {
+				delete this.grid[x][y]
+				this.boneCells.splice(this.frozenCells.indexOf([x,y]),1)
 			} else {
 				delete this.grid[x][y]
 			}
@@ -649,8 +652,8 @@ export default class Stack extends GameModule {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (this.frozenStacks[x][shiftY] === null && this.frozenStacks[x][shiftY - 1] === null) {
+          if (this.frozenCells.includes([x, shiftY]) !== true && this.frozenCells.includes([x, shiftY - 1]) !== true) {
+			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
@@ -659,14 +662,62 @@ export default class Stack extends GameModule {
 			}
 			this.dirtyCells.push([x, shiftY + 1])
 		  } else if (shiftY <= 1 && this.lineClear >= 4) {
+			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
 				this.grid[x][shiftY - 1] != null
 			) {
 				fallenBlocks++
 			}
+			this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
+			this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
+			this.frozenCells.push([x, shiftY + 1])
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
+        }
+      }
+      for (let i = 0; i < this.flashY.length; i++) {
+        if (this.flashY[i] < y) {
+          this.flashY[i]++
+        }
+      }
+    }} else if (this.isHidden || this.redrawOnHidden) {
+	for (const y of this.toCollapse) {
+      for (let x = 0; x < this.grid.length; x++) {
+        for (let shiftY = y; shiftY >= 0; shiftY--) {
+          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
+          if (
+            this.grid[x][shiftY] != null &&
+            this.grid[x][shiftY - 1] != null
+          ) {
+            fallenBlocks++
+          }
+		  this.hiddenCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
+		  this.hiddenCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
+		  this.hiddenCells.push([x, shiftY + 1])
+          this.dirtyCells.push([x, shiftY + 1])
+        }
+      }
+      for (let i = 0; i < this.flashY.length; i++) {
+        if (this.flashY[i] < y) {
+          this.flashY[i]++
+        }
+      }
+    }}  else if (this.parent.piece.useBoneBlocks) {
+	for (const y of this.toCollapse) {
+      for (let x = 0; x < this.grid.length; x++) {
+        for (let shiftY = y; shiftY >= 0; shiftY--) {
+          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
+          if (
+            this.grid[x][shiftY] != null &&
+            this.grid[x][shiftY - 1] != null
+          ) {
+            fallenBlocks++
+          }
+		  this.boneCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
+		  this.boneCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
+		  this.boneCells.push([x, shiftY + 1])
+          this.dirtyCells.push([x, shiftY + 1])
         }
       }
       for (let i = 0; i < this.flashY.length; i++) {
@@ -850,18 +901,18 @@ export default class Stack extends GameModule {
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
 		if (this.parent.piece.useBoneBlocks) {
-			if (this.boneStacks[x][y] !== null) {
+			if (this.boneCells.includes([x, y])) {
 				suffix = "bone"
 			}
 		}
 		if (this.isHidden) {
-			if (this.hiddenStacks[x][y] !== null) {
+			if (this.hiddenCells.includes([x, y])) {
 				color = "hidden"
 				suffix = ""
 			}
 		}
 		if (this.isFrozen) {
-			if (this.frozenStacks[x][y] !== null) {
+			if (this.frozenCells.includes([x, y])) {
 				color = "frozen"
 				suffix = ""
 			}
