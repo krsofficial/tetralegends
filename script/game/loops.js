@@ -480,6 +480,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.isRaceMode = true
+	  endRollPassed = false
       game.stat.grade = ""
 	  game.arcadeCombo = 1
       game.rta = 0
@@ -708,13 +709,34 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (game.stat.level >= 200) {
+		  if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.new()
+			game.stack.isHidden = true
+			rtaGoal = game.rta + 60000
+			sound.loadBgm(["ending1"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending1"], "arcade")
+		  } else if (isEndRoll === true) {
+			game.stack.isHidden = true
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		  }
+		  game.stat.level = 200
+		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+	  } else {
+		  preEndRollLines = game.stat.line
+		  endRollLines = 0
+	  }
     },
     onPieceSpawn: (game) => {
       game.drop = 0
-      if (game.stat.level === 300) {
+      if (game.stat.level >= 200 && endRollPassed) {
         game.stat.score += Math.max(
           0,
-          (300 - Math.floor(game.rta / 1000)) * 1253
+          (200 - Math.floor((game.rta - 60000) / 1000)) * 1253
         )
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
@@ -777,6 +799,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.rta = 0
+	  endRollPassed = false
       game.isRaceMode = true
       game.arcadeCombo = 1
       game.drop = 0
@@ -1140,6 +1163,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.isRaceMode = true
+	  endRollPassed = false
       game.stat.grade = ""
 	  game.arcadeCombo = 1
       game.rta = 0
@@ -1368,13 +1392,34 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (game.stat.level >= 200) {
+		  if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.new()
+			game.stack.isHidden = true
+			rtaGoal = game.rta + 60000
+			sound.loadBgm(["ending1"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending1"], "arcade")
+		  } else if (isEndRoll === true) {
+			game.stack.isHidden = true
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		  }
+		  game.stat.level = 200
+		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+	  } else {
+		  preEndRollLines = game.stat.line
+		  endRollLines = 0
+	  }
     },
     onPieceSpawn: (game) => {
       game.drop = 0
-      if (game.stat.level === 300) {
+      if (game.stat.level === 200 && endRollPassed) {
         game.stat.score += Math.max(
           0,
-          (300 - Math.floor(game.rta / 1000)) * 1253
+          (200 - Math.floor((game.rta - 60000) / 1000)) * 1253
         )
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
@@ -1411,16 +1456,7 @@ export const loops = {
         [174, 112],
         [180, 128],
         [200, 144],
-        [212, 16],
-        [221, 48],
-        [232, 80],
-        [244, 112],
-        [256, 144],
-        [267, 176],
-        [277, 192],
-        [287, 208],
-        [295, 224],
-        [300, 240],
+        [201, 5120],
       ]
       for (const pair of gravityTable) {
         const level = pair[0]
@@ -1438,6 +1474,7 @@ export const loops = {
       game.stat.level = 0
       game.rta = 0
       game.isRaceMode = true
+	  endRollPassed = false
       game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
