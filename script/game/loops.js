@@ -480,6 +480,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.isRaceMode = true
+	  isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = ""
 	  game.arcadeCombo = 1
@@ -689,6 +690,7 @@ export const loops = {
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 200, 100)
+	  game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -795,6 +797,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.rta = 0
+	  isEndRoll = false
 	  endRollPassed = false
       game.isRaceMode = true
       game.arcadeCombo = 1
@@ -1158,6 +1161,7 @@ export const loops = {
     onInit: (game) => {
       game.stat.level = 0
       game.isRaceMode = true
+	  isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = ""
 	  game.arcadeCombo = 1
@@ -1367,6 +1371,7 @@ export const loops = {
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 200, 100)
+	  game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1474,6 +1479,7 @@ export const loops = {
       game.stat.level = 0
       game.rta = 0
       game.isRaceMode = true
+	  isEndRoll = false
 	  endRollPassed = false
       game.arcadeCombo = 1
       game.drop = 0
