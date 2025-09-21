@@ -49,9 +49,9 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	this.frozenStacks = newStacks()
-	this.boneStacks = newStacks()
-	this.hiddenStacks = newStacks()
+	this.frozenStacks = this.newStacks()
+	this.boneStacks = this.newStacks()
+	this.hiddenStacks = this.newStacks()
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
@@ -186,21 +186,21 @@ export default class Stack extends GameModule {
 	if (this.parent.piece.useBoneBlocks) {
 		this.boneStacks[passedX][passedY] = true
 	} else {
-		this.boneStacks = newStacks()
+		this.boneStacks = this.newStacks()
 	}
 	if (this.isHidden) {
 		this.hiddenStacks[passedX][passedY] = true
 	} else if (this.redrawOnHidden) {
 		this.hiddenStacks[passedX][passedY] = true
 	} else {
-		this.hiddenStacks = newStacks()
+		this.hiddenStacks = this.newStacks()
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
 			this.frozenStacks[passedX][passedY] = true
 		}
 	} else {
-		this.frozenStacks = newStacks()
+		this.frozenStacks = this.newStacks()
 	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
