@@ -670,8 +670,8 @@ export default class Stack extends GameModule {
 				fallenBlocks++
 			}
 			this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
-			this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
-			this.frozenCells.push([x, shiftY + 1])
+			this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY+1]),1)
+			this.frozenCells.push([x, shiftY - 1])
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
         }
@@ -692,9 +692,9 @@ export default class Stack extends GameModule {
           ) {
             fallenBlocks++
           }
-		  this.hiddenCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
-		  this.hiddenCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
-		  this.hiddenCells.push([x, shiftY + 1])
+		  this.hiddenCells.splice(this.hiddenCells.indexOf([x, shiftY]),1)
+		  this.hiddenCells.splice(this.hiddenCells.indexOf([x, shiftY+1]),1)
+		  this.hiddenCells.push([x, shiftY - 1])
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
@@ -714,9 +714,9 @@ export default class Stack extends GameModule {
           ) {
             fallenBlocks++
           }
-		  this.boneCells.splice(this.frozenCells.indexOf([x, shiftY]),1)
-		  this.boneCells.splice(this.frozenCells.indexOf([x, shiftY - 1]),1)
-		  this.boneCells.push([x, shiftY + 1])
+		  this.boneCells.splice(this.boneCells.indexOf([x, shiftY]),1)
+		  this.boneCells.splice(this.boneCells.indexOf([x, shiftY+1]),1)
+		  this.boneCells.push([x, shiftY - 1])
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
