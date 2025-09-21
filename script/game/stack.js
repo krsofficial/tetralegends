@@ -42,9 +42,16 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	this.frozenStacks = []
-	this.boneStacks = []
-	this.hiddenStacks = []
+	newStacks() {
+		const cells = new Array(this.width)
+		for (let i = 0; i < this.width; i++) {
+			cells[i] = new Array(this.height + this.hiddenHeight)
+		}
+		return cells
+	}
+	this.frozenStacks = newStacks()
+	this.boneStacks = newStacks()
+	this.hiddenStacks = newStacks()
   }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
