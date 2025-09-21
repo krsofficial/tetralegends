@@ -742,12 +742,12 @@ export const loops = {
         sound.killVox()
         sound.add("voxexcellent")
         game.end(true)
-      } else if (game.stat.initPieces === 0 && game.stat.level !== 299) {
+      } else if (game.stat.initPieces === 0 && game.stat.level !== 199) {
         game.stat.level = game.stat.level + 1
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-      if (game.stat.level >= 280) {
+      if (game.stat.level >= 180) {
         sound.killBgm()
       }
       let gravityDenominator = 1
@@ -804,7 +804,6 @@ export const loops = {
       game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
-      game.appends.level = `<span class="small">/300</span>`
       updateFallSpeed(game)
       game.updateStats()
     },
@@ -1425,12 +1424,12 @@ export const loops = {
         sound.killVox()
         sound.add("voxexcellent")
         game.end(true)
-      } else if (game.stat.initPieces === 0 && game.stat.level !== 299) {
+      } else if (game.stat.initPieces === 0 && game.stat.level !== 199) {
         game.stat.level = game.stat.level + 1
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-      if (game.stat.level >= 280) {
+      if (game.stat.level >= 180) {
         sound.killBgm()
       }
       let gravityDenominator = 1
@@ -1478,7 +1477,6 @@ export const loops = {
       game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
-      game.appends.level = `<span class="small">/300</span>`
       updateFallSpeed(game)
       game.updateStats()
     },
