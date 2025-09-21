@@ -4869,5 +4869,5 @@ export const SOUND_SETS = {
   srsx: "tetrax",
   beatmode: "standardbeatmode",
   krs: "krs",
-  srsk: "srsk",
+  srsk: "krs",
 }

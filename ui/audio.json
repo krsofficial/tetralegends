@@ -130,14 +130,9 @@
           "value": "dshock"
         },
 		{
-          "label": "Kegaris (KRS)",
+          "label": "Kegaris",
           "fixedText": true,
           "value": "krs"
-        },
-		{
-          "label": "Kegaris (SRS)",
-          "fixedText": true,
-          "value": "srsk"
         },
 		{
           "label": "???",
