@@ -160,11 +160,6 @@
           "value": "ascx"
         },
         {
-          "label": "ARS",
-          "fixedText": true,
-          "value": "ars"
-        },
-        {
           "label": "ARS-TI",
           "fixedText": true,
           "value": "arsti"

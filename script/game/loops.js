@@ -499,6 +499,12 @@ export const loops = {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
 	  }
+	  if (game.stat.level >= 999 && endRollPassed) {
+		$("#kill-message").textContent = locale.getString("ui", "excellent")
+		sound.killVox()
+		sound.add("voxexcellent")
+		game.end(true)
+	  }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -691,12 +697,6 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
-	  if (game.stat.level >= 999 && endRollPassed) {
-		$("#kill-message").textContent = locale.getString("ui", "excellent")
-		sound.killVox()
-		sound.add("voxexcellent")
-		game.end(true)
-	  }
       updateFallSpeed(game)
     },
    },
@@ -756,10 +756,7 @@ export const loops = {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
 	  }
-    },
-    onPieceSpawn: (game) => {
-      game.drop = 0
-      if (game.stat.level >= 200 && endRollPassed) {
+	  if (game.stat.level >= 200 && endRollPassed) {
         game.stat.score += Math.max(
           0,
           (200 - Math.floor((game.rta - 60000) / 1000)) * 1253
@@ -768,7 +765,11 @@ export const loops = {
         sound.killVox()
         sound.add("voxexcellent")
         game.end(true)
-      } else if (game.stat.initPieces === 0 && game.stat.level !== 199) {
+	  }
+    },
+    onPieceSpawn: (game) => {
+      game.drop = 0
+      if (game.stat.initPieces === 0 && game.stat.level !== 199) {
         game.stat.level = game.stat.level + 1
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1180,6 +1181,12 @@ export const loops = {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
 	  }
+	  if (game.stat.level >= 999 && endRollPassed) {
+		$("#kill-message").textContent = locale.getString("ui", "excellent")
+		sound.killVox()
+		sound.add("voxexcellent")
+		game.end(true)
+	  }
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -1372,12 +1379,6 @@ export const loops = {
 		  game.piece.ghostIsVisible = false
 		  game.piece.gravity = framesToMs(1 / 20)
       }
-	  if (game.stat.level >= 999 && endRollPassed) {
-		$("#kill-message").textContent = locale.getString("ui", "excellent")
-		sound.killVox()
-		sound.add("voxexcellent")
-		game.end(true)
-	  }
       updateFallSpeed(game)
     },
    },
@@ -1437,10 +1438,7 @@ export const loops = {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
 	  }
-    },
-    onPieceSpawn: (game) => {
-      game.drop = 0
-      if (game.stat.level === 200 && endRollPassed) {
+	  if (game.stat.level === 200 && endRollPassed) {
         game.stat.score += Math.max(
           0,
           (200 - Math.floor((game.rta - 60000) / 1000)) * 1253
@@ -1449,7 +1447,11 @@ export const loops = {
         sound.killVox()
         sound.add("voxexcellent")
         game.end(true)
-      } else if (game.stat.initPieces === 0 && game.stat.level !== 199) {
+      }
+    },
+    onPieceSpawn: (game) => {
+      game.drop = 0
+      if (game.stat.initPieces === 0 && game.stat.level !== 199) {
         game.stat.level = game.stat.level + 1
       } else {
         game.stat.initPieces = game.stat.initPieces - 1

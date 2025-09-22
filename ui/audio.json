@@ -64,11 +64,6 @@
           "fixedText": true,
           "value": "tetrax"
         },
-		{
-          "label": "TGM2",
-          "fixedText": true,
-          "value": "tgm2"
-        },
         {
           "label": "TGM3",
           "fixedText": true,
@@ -163,11 +158,6 @@
           "string": "auto",
           "value": "auto",
           "langOverride": "menu_general"
-        },
-		{
-          "label": "TGM2",
-          "fixedText": true,
-          "value": "tgm2"
         },
         {
           "label": "TGM3",
