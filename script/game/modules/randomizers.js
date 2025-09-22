@@ -20,6 +20,44 @@ export function* history6rolls(pieces) {
     yield generated
   }
 }
+export function* history4rolls(pieces) {
+  let history = ["Z", "S", "Z", "S"]
+  let first = true
+  let generated
+  while (true) {
+    if (first) {
+      generated = ["I", "J", "L", "T"][Math.floor(Math.random() * 4)]
+      first = false
+    } else {
+      for (let i = 0; i < 4; i++) {
+        generated = pieces[Math.floor(Math.random() * pieces.length)]
+        if (!history.includes(generated)) break
+      }
+    }
+    history.shift()
+    history.push(generated)
+    yield generated
+  }
+}
+export function* sega(pieces) {
+  let history = ["Z", "S", "Z", "S"]
+  let first = true
+  let generated
+  while (true) {
+    if (first) {
+      generated = ["I", "J", "L", "T"][Math.floor(Math.random() * 4)]
+      first = false
+    } else {
+      for (let i = 0; i < 2; i++) {
+        generated = pieces[Math.floor(Math.random() * pieces.length)]
+        if (!history.includes(generated)) break
+      }
+    }
+    history.shift()
+    history.push(generated)
+    yield generated
+  }
+}
 export function* memoryless(pieces, unfavored = []) {
   const favored = pieces.filter((x) => !unfavored.includes(x))
   yield favored[Math.floor(Math.random() * favored.length)]
