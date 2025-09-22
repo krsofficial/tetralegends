@@ -6356,6 +6356,7 @@ export const loops = {
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
+	  levelUpdate(game)
     },
     onPieceSpawn: (game) => {
       //game.stat.level = Math.floor(game.stat.line / 8)
@@ -6364,7 +6365,6 @@ export const loops = {
       game.piece.gravity = Math.max(gravityEquation * 500, framesToMs(1 / 20))
       game.piece.lockDelayLimit = 500
       updateFallSpeed(game)
-      levelUpdate(game)
 	  game.piece.ghostIsVisible = false
     },
     onInit: (game) => {
