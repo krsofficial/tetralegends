@@ -91,6 +91,8 @@ export default class Stack extends GameModule {
     return lineClear
   }
   add(passedX, passedY, shape, color) {
+	console.log(passedX)
+	console.log(passedY)
     let garbageToClear = 0
     sound.syncBgm()
     if (!this.parent.piece.hasHardDropped) {
@@ -643,7 +645,6 @@ export default class Stack extends GameModule {
 		}
 		else {
 			for (const y of this.toCollapse) {
-				console.log(y)
 				if (y <= this.underwaterHeight) {
 					this.toCollapseUnderwater.push(y)
 					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
