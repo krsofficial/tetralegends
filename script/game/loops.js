@@ -64,7 +64,6 @@ let endRollLines = 0
 let preEndRollLines = 0
 let levelTimer = 0
 let levelTimerLimit = 58000
-let levelOffset = 0
 let lastPieces = 0
 let nonEvents = []
 let bpm
@@ -6351,13 +6350,12 @@ export const loops = {
 	  } else {
 		  levelTimerLimit = 58000
 	  }
-	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelOffset) {
+	  if (Math.floor(game.stat.line / 8) > game.stat.level) {
 		  levelTimer = 0
 		  game.stat.level += 1
 	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
 		  levelTimer = 0
 		  game.stat.level += 1
-		  levelOffset += 1
 	  }
 	  lastPieces = game.stat.piece
       const x = game.stat.level
@@ -6378,7 +6376,6 @@ export const loops = {
       lastLevel = 0
 	  levelTimer = 0
 	  levelTimerLimit = 58000
-	  levelOffset = 0
 	  lastPieces = 0
       game.piece.gravity = 500
       updateFallSpeed(game)
