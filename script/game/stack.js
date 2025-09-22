@@ -679,7 +679,7 @@ export default class Stack extends GameModule {
 				fallenBlocks++
 			}
 			this.dirtyCells.push([x, shiftY + 1])
-		  } else if (shiftY <= 1 && this.lineClear >= 4) {
+		  } else if (y === bottomLine && this.lineClear >= 4) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
