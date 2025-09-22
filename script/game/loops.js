@@ -6341,12 +6341,12 @@ export const loops = {
 	  game.piece.ghostIsVisible = false
     },
     onInit: (game) => {
+	  game.hideGrid = true
       if (settings.game.marathon.lineGoal >= 0) {
         game.lineGoal = settings.game.marathon.lineGoal
       }
       game.stat.level = 0
       lastLevel = 0
-	  game.hideGrid = true
       game.piece.gravity = 500
       updateFallSpeed(game)
       game.updateStats()
