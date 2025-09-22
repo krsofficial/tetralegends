@@ -637,6 +637,7 @@ export default class Stack extends GameModule {
     if (this.toCollapse.length === 0) {
       return
     }
+	console.log(this.toCollapse)
 	if (this.isUnderwater) {
 		if (this.clearUnderwaterRows) {
 			this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
