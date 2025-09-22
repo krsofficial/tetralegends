@@ -186,20 +186,20 @@ export default class Stack extends GameModule {
     }
 	
 	if (this.parent.piece.useBoneBlocks) {
-		this.boneCells.push([passedX, passedY])
+		this.boneCells.push([xLocation, yLocation])
 	} else {
 		this.boneCells = []
 	}
 	if (this.isHidden) {
-		this.hiddenCells.push([passedX, passedY])
+		this.hiddenCells.push([xLocation, yLocation])
 	} else if (this.redrawOnHidden) {
-		this.hiddenCells.push([passedX, passedY])
+		this.hiddenCells.push([xLocation, yLocation])
 	} else {
 		this.hiddenCells = []
 	}
 	if (this.isFrozen) {
 		if (this.wouldCauseLineClear() <= 0) {
-			this.frozenCells.push([passedX, passedY])
+			this.frozenCells.push([xLocation, yLocation])
 		}
 	} else {
 		this.frozenCells = []
@@ -215,6 +215,7 @@ export default class Stack extends GameModule {
             }
           }
 
+		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           for (let x = 0; x < this.grid.length; x++) {
             if (this.isFrozen) {
 				if (this.frozenCells.includes([x, y]) !== true) {
@@ -223,7 +224,7 @@ export default class Stack extends GameModule {
 					this.removeFromArray(this.frozenCells, [x, y])
 				}
 			} else if (this.isUnderwater) {
-				if (y > this.underwaterHeight) {
+				if (y < underwaterHeightPosition) {
 					delete this.grid[x][y]
 				}
 			} else if (this.redrawOnHidden) {
@@ -638,6 +639,9 @@ export default class Stack extends GameModule {
       return
     }
 	console.log(this.toCollapse)
+	let fallenBlocks = 0
+	let bottomLine = this.height + this.hiddenHeight - 1
+	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
 	if (this.isUnderwater) {
 		if (this.clearUnderwaterRows) {
 			this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
@@ -646,7 +650,7 @@ export default class Stack extends GameModule {
 		}
 		else {
 			for (const y of this.toCollapse) {
-				if (y <= this.underwaterHeight) {
+				if (y >= underwaterHeightPosition) {
 					this.toCollapseUnderwater.push(y)
 					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
 					this.removeFromArray(this.toCollapse, y)
@@ -657,11 +661,10 @@ export default class Stack extends GameModule {
 		this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 		this.toCollapseUnderwater = []
 	}
-    let fallenBlocks = 0
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
-		if (this.toCollapse[1] !== null) {
-			this.toCollapse.push(1)
+		if (this.toCollapse.includes(bottomLine) !== true) {
+			this.toCollapse.push(bottomLine)
 		}
 	}
 	for (const y of this.toCollapse) {
