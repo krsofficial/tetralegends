@@ -460,7 +460,7 @@ export const loops = {
 			isEndRoll = true
 			game.stack.endRollStart()
 			game.stack.isHidden = true
-			rtaGoal = game.rta + 60000
+			rtaGoal = game.rta + 55000
 			sound.loadBgm(["ending2"], "arcade")
 			sound.killBgm()
 			sound.playBgm(["ending2"], "arcade")
@@ -717,7 +717,7 @@ export const loops = {
 			isEndRoll = true
 			game.stack.endRollStart()
 			game.stack.isHidden = true
-			rtaGoal = game.rta + 60000
+			rtaGoal = game.rta + 55000
 			sound.loadBgm(["ending1"], "arcade")
 			sound.killBgm()
 			sound.playBgm(["ending1"], "arcade")
@@ -1141,7 +1141,7 @@ export const loops = {
 			isEndRoll = true
 			game.stack.endRollStart()
 			game.stack.isHidden = true
-			rtaGoal = game.rta + 60000
+			rtaGoal = game.rta + 55000
 			sound.loadBgm(["ending2"], "arcade")
 			sound.killBgm()
 			sound.playBgm(["ending2"], "arcade")
@@ -1398,7 +1398,7 @@ export const loops = {
 			isEndRoll = true
 			game.stack.endRollStart()
 			game.stack.isHidden = true
-			rtaGoal = game.rta + 60000
+			rtaGoal = game.rta + 55000
 			sound.loadBgm(["ending1"], "arcade")
 			sound.killBgm()
 			sound.playBgm(["ending1"], "arcade")
