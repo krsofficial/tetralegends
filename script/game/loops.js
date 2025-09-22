@@ -6318,8 +6318,6 @@ export const loops = {
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
-        initialRotation(arg)
-        initialHold(arg)
         arg.piece.are += arg.ms
       } else {
         respawnPiece(arg)
