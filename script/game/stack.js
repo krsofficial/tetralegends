@@ -688,7 +688,10 @@ export default class Stack extends GameModule {
 				fallenBlocks++
 			}
 			//this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY+1]),1)
-			this.removeFromArray(this.frozenCells, [x, shiftY + 1])
+			this.removeFromArray(this.frozenCells, [x, shiftY - 1])
+			if (this.frozenCells.includes([x, shiftY + 1]) !== true) {
+				this.frozenCells.push([x, shiftY + 1])
+			}
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
         }
@@ -710,7 +713,10 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  //this.hiddenCells.splice(this.hiddenCells.indexOf([x, shiftY+1]),1)
-		  this.removeFromArray(this.hiddenCells, [x, shiftY + 1])
+		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
+		  if (this.hiddenCells.includes([x, shiftY + 1]) !== true) {
+			  this.hiddenCells.push([x, shiftY + 1])
+		  }
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
@@ -731,7 +737,10 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  //this.boneCells.splice(this.boneCells.indexOf([x, shiftY + 1]),1)
-		  this.removeFromArray(this.boneCells, [x, shiftY + 1])
+		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
+		  if (this.boneCells.includes([x, shiftY + 1]) !== true) {
+			  this.boneCells.push([x, shiftY + 1])
+		  }
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
