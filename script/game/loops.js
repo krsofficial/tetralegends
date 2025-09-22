@@ -6055,9 +6055,6 @@ export const loops = {
       softDropRetro(arg, framesToMs(2))
       classicLockdown(arg)
       lockFlash(arg)
-	  if (game.stat.score >= 999999) {
-		game.stat.score = 999999
-	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6130,9 +6127,6 @@ export const loops = {
       softDropRetro(arg, 50)
       retroLockdown(arg)
       lockFlash(arg)
-	  if (game.stat.score >= 999999) {
-		game.stat.score = 999999
-	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6231,9 +6225,6 @@ export const loops = {
         arg.piece.holdingTime += arg.ms
       }
       lockFlash(arg)
-	  if (game.stat.score >= 999999) {
-		game.stat.score = 999999
-	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6323,6 +6314,7 @@ export const loops = {
   },
   sega: {
     update: (arg) => {
+	  updateSegaBg()
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -6334,9 +6326,6 @@ export const loops = {
         rotate(arg)
         shifting(arg)
       }
-	  if (game.stat.score >= 999999) {
-		game.stat.score = 999999
-	  }
       gravity(arg)
       firmDrop(arg)
       classicLockdown(arg)
