@@ -65,6 +65,7 @@ let preEndRollLines = 0
 let levelTimer = 0
 let levelTimerLimit = 58000
 let lastPieces = 0
+let testMode = true
 let nonEvents = []
 let bpm
 const levelUpdate = (game) => {
@@ -321,7 +322,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -642,7 +647,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -1004,7 +1013,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -1324,7 +1337,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -1718,7 +1735,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -1915,7 +1936,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -2132,7 +2157,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -2344,7 +2373,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -2587,7 +2620,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }
@@ -2857,7 +2894,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+          if (testMode === false) {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+		  } else {
+			game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
+		  }
           break
         }
       }

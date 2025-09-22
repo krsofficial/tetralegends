@@ -654,6 +654,12 @@ export default class Stack extends GameModule {
 					this.toCollapseUnderwater.push(y)
 					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
 					this.removeFromArray(this.toCollapse, y)
+					if (this.toCollapse.length === 0) {
+						this.parent.stat.line += this.lineClear
+						this.parent.addScore(`erase${this.lineClear}`)
+						lineClear = 0
+						return
+					}
 				}
 			}
 		}
