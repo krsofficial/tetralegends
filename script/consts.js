@@ -3944,6 +3944,7 @@ export const KICK_TABLES = {
         [[[]], [[]], [[]], [[]]],
       ],
     },
+  },
   sega: {
     I: KICK_TEMPLATES.sega.I,
     L: KICK_TEMPLATES.sega.x,
