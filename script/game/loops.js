@@ -6342,6 +6342,7 @@ export const loops = {
     },
     onInit: (game) => {
 	  game.hideGrid = true
+	  game.stack.updateGrid()
       if (settings.game.marathon.lineGoal >= 0) {
         game.lineGoal = settings.game.marathon.lineGoal
       }
