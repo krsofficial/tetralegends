@@ -63,7 +63,7 @@ let endRollPassed = false
 let endRollLines = 0
 let preEndRollLines = 0
 let levelTimer = 0
-let levelTimerLimit = 3480
+let levelTimerLimit = 58000
 let levelTimerOffset = 0
 let lastPieces = 0
 let nonEvents = []
@@ -6320,9 +6320,29 @@ export const loops = {
   },
   sega: {
     update: (arg) => {
-	  updateSegaBg()
-      collapse(arg)
+	  const game = gameHandler.game
+	  updateSegaBg(game.stat.level)
+	  if (game.stat.level < 1) {
+		  levelTimer = 58000
+	  } else if (game.stat.level >= 1 && game.stat.level < 9) {
+		  levelTimer = 38670
+	  } else if (game.stat.level >= 9 && game.stat.level < 11) {
+		  levelTimer = 58000
+	  } else if (game.stat.level >= 11 && game.stat.level <15) {
+		  levelTimer = 29000
+	  } else {
+		  levelTimer = 58000
+	  }
 	  levelTimer += arg.ms
+	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelTimerOffset) {
+		  game.stat.level += 1
+	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
+		  levelTimer = 0
+		  game.stat.level += 1
+		  levelTimerOffset += 1
+	  }
+	  lastPieces = game.stat.piece
+      collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
         arg.piece.are += arg.ms
@@ -6339,14 +6359,6 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       //game.stat.level = Math.floor(game.stat.line / 8)
-	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelTimerOffset) {
-		  game.stat.level += 1
-	  } else if (levelTimerOffset >= levelTimer && game.stat.piece > lastPieces) {
-		  levelTimer = 0
-		  game.stat.level += 1
-		  levelTimerOffset += 1
-	  }
-	  lastPieces = game.stat.piece
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       game.piece.gravity = Math.max(gravityEquation * 500, framesToMs(1 / 20))
@@ -6364,7 +6376,7 @@ export const loops = {
       game.stat.level = 0
       lastLevel = 0
 	  levelTimer = 0
-	  levelTimerLimit = 3480
+	  levelTimerLimit = 58000
 	  levelTimerOffset = 0
 	  lastPieces = 0
       game.piece.gravity = 500
