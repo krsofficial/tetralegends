@@ -1,0 +1,16 @@
+{
+  "properties": {
+    "parent": "retro",
+    "langOverride": "mode-options",
+    "game": "sega",
+    "pgmusic": "pg-sega"
+  },
+  "data": [
+    {
+      "label": "Sega",
+      "description": "",
+      "fixedText": true,
+      "type": "header"
+    }
+  ]
+}

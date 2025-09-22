@@ -147,6 +147,11 @@
           "value": "oshisaure"
         },
 		{
+          "label": "Sega",
+          "fixedText": true,
+          "value": "sega"
+        },
+		{
           "label": "Metallic",
           "fixedText": true,
           "value": "metallic"

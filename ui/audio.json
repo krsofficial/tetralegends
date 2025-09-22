@@ -130,6 +130,11 @@
           "value": "dshock"
         },
 		{
+          "label": "Sega",
+          "fixedText": true,
+          "value": "sega"
+        },
+		{
           "label": "Kegaris",
           "fixedText": true,
           "value": "krs"

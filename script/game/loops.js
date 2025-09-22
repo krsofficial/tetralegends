@@ -102,7 +102,7 @@ const updateArcadeBg = (level) => {
 	else if (level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 const updateAceBg = (level) => {
-	if (level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
+	if (level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
 	else if (level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
 	else if (level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.png')`)}
 	else if (level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back16.png')`)}
@@ -122,6 +122,29 @@ const updateAceBg = (level) => {
 	else if (level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
 	else if (level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
 	else if (level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+}
+const updateSegaBg = (level) => {
+	if (level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (level >= 16) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (level >= 15) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (level >= 14) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (level >= 13) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (level >= 12) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (level >= 11) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (level >= 10) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (level >= 9) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (level >= 8) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (level >= 7) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (level >= 6) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (level >= 5) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (level >= 4) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+	else if (level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 export const loops = {
   sudden: {
@@ -690,7 +713,7 @@ export const loops = {
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 200, 100)
-	  game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
+	  game.appends.level = `<span class="small">/200</span>`
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1371,7 +1394,7 @@ export const loops = {
       }
       arcadeScore(arg, roundMsToFrames(gameHandler.game.drop), 6)
       linesToLevel(arg, 200, 100)
-	  game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
+	  game.appends.level = `<span class="small">/200</span>`
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -6032,6 +6055,9 @@ export const loops = {
       softDropRetro(arg, framesToMs(2))
       classicLockdown(arg)
       lockFlash(arg)
+	  if (game.stat.score >= 999999) {
+		game.stat.score = 999999
+	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6104,6 +6130,9 @@ export const loops = {
       softDropRetro(arg, 50)
       retroLockdown(arg)
       lockFlash(arg)
+	  if (game.stat.score >= 999999) {
+		game.stat.score = 999999
+	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6202,6 +6231,9 @@ export const loops = {
         arg.piece.holdingTime += arg.ms
       }
       lockFlash(arg)
+	  if (game.stat.score >= 999999) {
+		game.stat.score = 999999
+	  }
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
@@ -6287,6 +6319,48 @@ export const loops = {
       game.updateStats()
       game.piece.lockDownType = null
       game.drawLockdown()
+    },
+  },
+  sega: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        shifting(arg)
+      }
+	  if (game.stat.score >= 999999) {
+		game.stat.score = 999999
+	  }
+      gravity(arg)
+      firmDrop(arg)
+      classicLockdown(arg)
+      lockFlash(arg)
+      updateLasts(arg)
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.floor(game.stat.line / 8)
+      const x = game.stat.level
+      const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
+      game.piece.gravity = Math.max(gravityEquation * 250, framesToMs(1 / 20))
+      game.piece.lockDelayLimit = 500
+      updateFallSpeed(game)
+      levelUpdate(game)
+    },
+    onInit: (game) => {
+      if (settings.game.marathon.lineGoal >= 0) {
+        game.lineGoal = settings.game.marathon.lineGoal
+      }
+      game.stat.level = 0
+      lastLevel = 0
+      game.piece.gravity = 250
+      updateFallSpeed(game)
+      game.updateStats()
     },
   },
 }

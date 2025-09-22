@@ -1006,7 +1006,7 @@ export default class Piece extends GameModule {
     if (!this.isDead) {
       const drop = this.getDrop()
       this.parent.addScore("hardDrop", drop)
-	  if (gameHandler.game.loadedSoundbank === "ace" || gameHandler.game.loadedSoundbank === "nullpomino") {
+	  if (gameHandler.game.loadedSoundbank === "ace" || gameHandler.game.loadedSoundbank === "nullpomino" || gameHandler.game.loadedSoundbank === "sega") {
 		if (!this.isLanded) {
 			sound.add("land")
 		}

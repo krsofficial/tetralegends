@@ -245,6 +245,11 @@
           "value": "worldae"
         },
 		{
+          "label": "Sega",
+          "fixedText": true,
+          "value": "sega"
+        },
+		{
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
