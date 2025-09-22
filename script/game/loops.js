@@ -6323,15 +6323,15 @@ export const loops = {
 	  const game = gameHandler.game
 	  updateSegaBg(game.stat.level)
 	  if (game.stat.level < 1) {
-		  levelTimer = 58000
+		  levelTimerLimit = 58000
 	  } else if (game.stat.level >= 1 && game.stat.level < 9) {
-		  levelTimer = 38670
+		  levelTimerLimit = 38670
 	  } else if (game.stat.level >= 9 && game.stat.level < 11) {
-		  levelTimer = 58000
+		  levelTimerLimit = 58000
 	  } else if (game.stat.level >= 11 && game.stat.level <15) {
-		  levelTimer = 29000
+		  levelTimerLimit = 29000
 	  } else {
-		  levelTimer = 58000
+		  levelTimerLimit = 58000
 	  }
 	  levelTimer += arg.ms
 	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelTimerOffset) {
