@@ -18,7 +18,7 @@
     "areLimit": 432,
     "areLineLimit": 640,
     "arrLimit": 17,
-    "lockDelayLimit": 500,
+    "lockDelayLimit": 500
   },
   "next": {
     "nextLimit": 1
