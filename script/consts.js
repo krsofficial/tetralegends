@@ -4916,7 +4916,7 @@ export const SOUND_SETS = {
   retro: "nes",
   handheld: "handheld",
   deluxe: "deluxe",
-  ars: "tgm3",
+  ars: "tgm2",
   arsti: "tgm3",
   arsx: "ace",
   oshisaure: "standard",
