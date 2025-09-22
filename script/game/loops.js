@@ -6335,6 +6335,7 @@ export const loops = {
 	  }
 	  levelTimer += arg.ms
 	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelTimerOffset) {
+		  levelTimer = 0
 		  game.stat.level += 1
 	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
 		  levelTimer = 0
