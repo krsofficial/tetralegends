@@ -64,7 +64,7 @@ let endRollLines = 0
 let preEndRollLines = 0
 let levelTimer = 0
 let levelTimerLimit = 58000
-let levelTimerOffset = 0
+let levelOffset = 0
 let lastPieces = 0
 let nonEvents = []
 let bpm
@@ -6322,27 +6322,7 @@ export const loops = {
     update: (arg) => {
 	  const game = gameHandler.game
 	  updateSegaBg(game.stat.level)
-	  if (game.stat.level < 1) {
-		  levelTimerLimit = 58000
-	  } else if (game.stat.level >= 1 && game.stat.level < 9) {
-		  levelTimerLimit = 38670
-	  } else if (game.stat.level >= 9 && game.stat.level < 11) {
-		  levelTimerLimit = 58000
-	  } else if (game.stat.level >= 11 && game.stat.level <15) {
-		  levelTimerLimit = 29000
-	  } else {
-		  levelTimerLimit = 58000
-	  }
 	  levelTimer += arg.ms
-	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelTimerOffset) {
-		  levelTimer = 0
-		  game.stat.level += 1
-	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
-		  levelTimer = 0
-		  game.stat.level += 1
-		  levelTimerOffset += 1
-	  }
-	  lastPieces = game.stat.piece
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -6357,16 +6337,36 @@ export const loops = {
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
-	  levelUpdate(game)
     },
     onPieceSpawn: (game) => {
       //game.stat.level = Math.floor(game.stat.line / 8)
+	  if (game.stat.level < 1) {
+		  levelTimerLimit = 58000
+	  } else if (game.stat.level >= 1 && game.stat.level < 9) {
+		  levelTimerLimit = 38670
+	  } else if (game.stat.level >= 9 && game.stat.level < 11) {
+		  levelTimerLimit = 58000
+	  } else if (game.stat.level >= 11 && game.stat.level <15) {
+		  levelTimerLimit = 29000
+	  } else {
+		  levelTimerLimit = 58000
+	  }
+	  if (Math.floor(game.stat.line / 8) > game.stat.level + levelOffset) {
+		  levelTimer = 0
+		  game.stat.level += 1
+	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
+		  levelTimer = 0
+		  game.stat.level += 1
+		  levelOffset += 1
+	  }
+	  lastPieces = game.stat.piece
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
       game.piece.gravity = Math.max(gravityEquation * 500, framesToMs(1 / 20))
       game.piece.lockDelayLimit = 500
       updateFallSpeed(game)
 	  game.piece.ghostIsVisible = false
+	  levelUpdate(game)
     },
     onInit: (game) => {
 	  game.hideGrid = true
@@ -6378,7 +6378,7 @@ export const loops = {
       lastLevel = 0
 	  levelTimer = 0
 	  levelTimerLimit = 58000
-	  levelTimerOffset = 0
+	  levelOffset = 0
 	  lastPieces = 0
       game.piece.gravity = 500
       updateFallSpeed(game)
