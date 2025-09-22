@@ -4508,9 +4508,9 @@ export const SCORE_TABLES = {
   },
   sega: {
     erase1: 100,
-    erase2: 200,
-    erase3: 400,
-    erase4: 800,
+    erase2: 400,
+    erase3: 900,
+    erase4: 2000,
     softDrop: 1,
     sonicDrop: 2,
     hardDrop: 2,

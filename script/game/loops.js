@@ -571,16 +571,16 @@ export const loops = {
         [174, 112],
         [180, 128],
         [200, 144],
-        [212, 16],
-        [221, 48],
-        [232, 80],
-        [244, 112],
-        [256, 144],
-        [267, 176],
-        [277, 192],
-        [287, 208],
-        [295, 224],
-        [300, 240],
+        [212, 176],
+        [221, 192],
+        [232, 208],
+        [244, 224],
+        [256, 240],
+        [267, 5120],
+        [277, 5120],
+        [287, 5120],
+        [295, 5120],
+        [300, 5120],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -1252,16 +1252,16 @@ export const loops = {
         [174, 112],
         [180, 128],
         [200, 144],
-        [212, 16],
-        [221, 48],
-        [232, 80],
-        [244, 112],
-        [256, 144],
-        [267, 176],
-        [277, 192],
-        [287, 208],
-        [295, 224],
-        [300, 240],
+        [212, 176],
+        [221, 192],
+        [232, 208],
+        [244, 224],
+        [256, 240],
+        [267, 5120],
+        [277, 5120],
+        [287, 5120],
+        [295, 5120],
+        [300, 5120],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -6336,10 +6336,11 @@ export const loops = {
       game.stat.level = Math.floor(game.stat.line / 8)
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      game.piece.gravity = Math.max(gravityEquation * 250, framesToMs(1 / 20))
+      game.piece.gravity = Math.max(gravityEquation * 500, framesToMs(1 / 20))
       game.piece.lockDelayLimit = 500
       updateFallSpeed(game)
       levelUpdate(game)
+	  game.piece.ghostIsVisible = false
     },
     onInit: (game) => {
       if (settings.game.marathon.lineGoal >= 0) {
@@ -6347,7 +6348,8 @@ export const loops = {
       }
       game.stat.level = 0
       lastLevel = 0
-      game.piece.gravity = 250
+	  game.hideGrid = true
+      game.piece.gravity = 500
       updateFallSpeed(game)
       game.updateStats()
     },
