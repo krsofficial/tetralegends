@@ -643,6 +643,7 @@ export default class Stack extends GameModule {
 		}
 		else {
 			for (const y of this.toCollapse) {
+				console.log(y)
 				if (y <= this.underwaterHeight) {
 					this.toCollapseUnderwater.push(y)
 					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
