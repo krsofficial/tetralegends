@@ -2900,6 +2900,198 @@ const KICK_TEMPLATES = {
       double: [[[0, 0]], [[0, 0]], [[0, 0]], [[0, 0]]],
     },
   },
+  sega: {
+    x: {
+      right: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+      ],
+      left: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+      ],
+      double: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+      ],
+    },
+    I: {
+      right: [
+        [
+          [0, 0],
+          [0, -1],
+          [0, -2],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [2, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [0, -1],
+          [0, -2],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [2, 0],
+          [-1, 0],
+        ],
+      ],
+      left: [
+        [
+          [0, 0],
+          [0, -1],
+          [0, -2],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [2, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [0, -1],
+          [0, -2],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [2, 0],
+          [-1, 0],
+        ],
+      ],
+      double: [[[0, 0]], [[0, 0]], [[0, 0]], [[0, 0]]],
+    },
+    T: {
+      right: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+          [0, -1],
+        ],
+      ],
+      left: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+          [0, -1],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+      ],
+      double: [
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+          [0, -1],
+        ],
+        [
+          [0, 0],
+          [1, 0],
+          [-1, 0],
+        ],
+      ],
+    },
+  },
   none: {
     all: {
       right: [[[0, 0]], [[0, 0]], [[0, 0]], [[0, 0]]],
@@ -3054,7 +3246,6 @@ KICK_TEMPLATES.ppt = KICK_TEMPLATES.srs
 KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
 KICK_TEMPLATES.worldae = KICK_TEMPLATES.world
 KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
-KICK_TEMPLATES.sega = KICK_TEMPLATES.ars
 KICK_TEMPLATES.beatmode = {
   x: {
     ...KICK_TEMPLATES.srs.x,
@@ -3673,13 +3864,94 @@ export const KICK_TABLES = {
     S: KICK_TEMPLATES.deluxe.x,
   },
   ars: {
-    I: KICK_TEMPLATES.none.all,
+    I: KICK_TEMPLATES.ars.I,
     L: KICK_TEMPLATES.ars.x,
     O: KICK_TEMPLATES.o,
     Z: KICK_TEMPLATES.ars.x,
     T: KICK_TEMPLATES.ars.x,
     J: KICK_TEMPLATES.ars.x,
     S: KICK_TEMPLATES.ars.x,
+    exception: {
+      L: [
+        [
+          [1, 0],
+          [1, -1],
+        ],
+        [],
+        [
+          [1, 2],
+          [1, 0],
+        ],
+        [],
+      ],
+      J: [
+        [
+          [1, 0],
+          [1, -1],
+        ],
+        [],
+        [
+          [1, 2],
+          [1, 0],
+        ],
+        [],
+      ],
+      T: [[[1, -1]], [], [[1, 0]], []],
+    },
+    unlessToWith: {
+      L: [
+        [
+          [[]],
+          [[]],
+          [[]],
+          [
+            [0, -1],
+            [1, 0],
+          ],
+        ],
+        [[[]], [[]], [[]], [[]]],
+        [
+          [[]],
+          [[]],
+          [[]],
+          [
+            [0, 0],
+            [1, 2],
+          ],
+        ],
+        [[[]], [[]], [[]], [[]]],
+      ],
+      J: [
+        [
+          [[]],
+          [
+            [2, -1],
+            [1, 0],
+          ],
+          [[]],
+          [[]],
+        ],
+        [[[]], [[]], [[]], [[]]],
+        [
+          [[]],
+          [
+            [2, 0],
+            [1, 2],
+          ],
+          [[]],
+          [[]],
+        ],
+        [[[]], [[]], [[]], [[]]],
+      ],
+    },
+  sega: {
+    I: KICK_TEMPLATES.sega.I,
+    L: KICK_TEMPLATES.sega.x,
+    O: KICK_TEMPLATES.o,
+    Z: KICK_TEMPLATES.sega.x,
+    T: KICK_TEMPLATES.sega.T,
+    J: KICK_TEMPLATES.sega.x,
+    S: KICK_TEMPLATES.sega.x,
     exception: {
       L: [
         [
@@ -3806,7 +4078,6 @@ KICK_TABLES.t99 = KICK_TABLES.srs
 KICK_TABLES.ppt = KICK_TABLES.srs
 KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.world
-KICK_TABLES.sega = KICK_TABLES.ars
 KICK_TABLES.srsx = KICK_TABLES.srs
 KICK_TABLES.beatmode = {
   I: KICK_TEMPLATES.beatmode.I,
