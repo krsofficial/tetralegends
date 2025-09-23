@@ -186,10 +186,7 @@ export default class Stack extends GameModule {
 		  } else {
 			  this.boneCells = []
 		  }
-		  if (this.isHidden) {
-			  this.hiddenCells.push([xLocation, yLocation])
-			  console.log(this.hiddenCells)
-		  } else if (this.redrawOnHidden) {
+		  if (this.isHidden || this.redrawOnHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
 			  console.log(this.hiddenCells)
 		  } else {
@@ -242,10 +239,7 @@ export default class Stack extends GameModule {
 				if (y < underwaterHeightPosition) {
 					delete this.grid[x][y]
 				}
-			} else if (this.redrawOnHidden) {
-				delete this.grid[x][y]
-				this.removeFromArray(this.hiddenCells, [x, y])
-			} else if (this.isHidden) {
+			} else if (this.isHidden || this.redrawOnHidden) {
 				delete this.grid[x][y]
 				this.removeFromArray(this.hiddenCells, [x, y])
 			} else if (this.parent.piece.useBoneBlocks) {
@@ -959,10 +953,7 @@ export default class Stack extends GameModule {
 			}
 		}
 		if (this.isHidden) {
-			if (this.hiddenCells.includes([x, y]) === true) {
-				color = "hidden"
-				suffix = ""
-			} else if (this.redrawOnHidden) {
+			if (this.hiddenCells.includes([x, y]) === true || this.redrawOnHidden) {
 				color = "hidden"
 				suffix = ""
 			}
