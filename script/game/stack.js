@@ -79,10 +79,22 @@ export default class Stack extends GameModule {
     let lineClear = 0
     for (let y = 0; y < newGrid[0].length; y++) {
       for (let x = 0; x <= newGrid.length; x++) {
-        if (x === newGrid.length) {
-          lineClear++
-          break
-        }
+        if (this.isUnderwater) {
+			if (x === newGrid.length && this.toCollapseUnderwater.includes(y) !== true) {
+				lineClear++
+				break
+			}
+		} else if (this.isFrozen) {
+			if (x === newGrid.length && this.frozenCells.includes([x, y]) !== true) {
+				lineClear++
+				break
+			}
+		} else {
+			if (x === newGrid.length) {
+				lineClear++
+				break
+			}
+		}
         if (newGrid[x][y] == null) {
           break
         }
@@ -170,13 +182,16 @@ export default class Stack extends GameModule {
 		  
 		  if (this.parent.piece.useBoneBlocks) {
 			  this.boneCells.push([xLocation, yLocation])
+			  console.log(this.boneCells)
 		  } else {
 			  this.boneCells = []
 		  }
 		  if (this.isHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
+			  console.log(this.hiddenCells)
 		  } else if (this.redrawOnHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
+			  console.log(this.hiddenCells)
 		  } else {
 			  this.hiddenCells = []
 		  }
@@ -184,6 +199,7 @@ export default class Stack extends GameModule {
 			  console.log(this.wouldCauseLineClear())
 			  if (this.wouldCauseLineClear() < 1) {
 				  this.frozenCells.push([xLocation, yLocation])
+				  console.log(this.frozenCells)
 			  }
 		  } else {
 			  this.frozenCells = []
@@ -644,42 +660,28 @@ export default class Stack extends GameModule {
 			this.toCollapseUnderwater = []
 			this.clearUnderwaterRows = false
 		} else {
-			if (this.toCollapse.length > 1) {
-				for (const y of this.toCollapse) {
-					if (y >= underwaterHeightPosition) {
-						this.toCollapseUnderwater.push(y)
-						this.removeFromArray(this.toCollapse, y)
-					}
-				}
-			} else {
-				if (this.toCollapse >= underwaterHeightPosition) {
-					this.parent.stat.line += this.lineClear
-					this.parent.addScore(`erase${this.lineClear}`)
-					this.parent.updateStats()
-					this.toCollapse = []
-					this.lineClear = 0
-					this.alarmCheck()
-					this.isDirty = true
-					this.parent.piece.isDirty = true
-					return
+			for (const y of this.toCollapse) {
+				if (y >= underwaterHeightPosition) {
+					this.toCollapseUnderwater.push(y)
+					this.removeFromArray(this.toCollapse, y)
 				}
 			}
-		}
-		if (this.toCollapse.length < 1) {
-			this.parent.stat.line += this.lineClear
-			this.parent.addScore(`erase${this.lineClear}`)
-			this.parent.updateStats()
-			this.toCollapse = []
-			this.lineClear = 0
-			this.alarmCheck()
-			this.isDirty = true
-			this.parent.piece.isDirty = true
-			return
 		}
 	} else {
 		this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 		this.toCollapseUnderwater = []
 	}
+	if (this.toCollapse.length < 1 && this.isUnderwater) {
+	  this.parent.stat.line += this.lineClear
+	  this.parent.addScore(`erase${this.lineClear}`)
+	  this.parent.updateStats()
+	  this.toCollapse = []
+	  this.lineClear = 0
+	  this.alarmCheck()
+	  this.isDirty = true
+	  this.parent.piece.isDirty = true
+	  return
+    } else {
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
 		if (this.toCollapse.includes(bottomLine) !== true) {
@@ -817,6 +819,7 @@ export default class Stack extends GameModule {
     this.alarmCheck()
     this.isDirty = true
     this.parent.piece.isDirty = true
+	}
   }
   new() {
     const cells = new Array(this.width)
