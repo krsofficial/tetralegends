@@ -717,7 +717,7 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
-		  if (this.hiddenCells.includes[x, shiftY - 1]) !== true) {
+		  if (this.hiddenCells.includes([x, shiftY - 1]) !== true) {
 			 this.hiddenCells.push([x, shiftY + 1])
 		  }
           this.dirtyCells.push([x, shiftY + 1])
@@ -740,7 +740,7 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
-		  if (this.boneCells.includes[x, shiftY - 1]) !== true) {
+		  if (this.boneCells.includes([x, shiftY - 1]) !== true) {
 			 this.boneCells.push([x, shiftY + 1])
 		  }
           this.dirtyCells.push([x, shiftY + 1])
