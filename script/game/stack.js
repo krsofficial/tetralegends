@@ -79,21 +79,19 @@ export default class Stack extends GameModule {
     let lineClear = 0
     for (let y = 0; y < newGrid[0].length; y++) {
       for (let x = 0; x <= newGrid.length; x++) {
-        if (this.isUnderwater) {
-			if (x === newGrid.length && this.toCollapseUnderwater.includes(y) !== true) {
-				lineClear++
-				break
-			}
-		} else if (this.isFrozen) {
-			if (x === newGrid.length && this.frozenCells.includes([x, y]) !== true) {
-				lineClear++
-				break
-			}
-		} else {
-			if (x === newGrid.length) {
-				lineClear++
-				break
-			}
+        if (x === newGrid.length) {
+		  if (this.isUnderwater) {
+			  if (this.toCollapseUnderwater.includes(y) !== true) {
+				  lineClear++
+			  }
+		  } else if (this.isFrozen) {
+			  if (this.frozenCells.includes([x, y]) !== true) {
+				  lineClear++
+			  }
+		  } else {
+			  lineClear++
+		  }
+		  break
 		}
         if (newGrid[x][y] == null) {
           break
@@ -954,6 +952,12 @@ export default class Stack extends GameModule {
 		}
 		if (this.isHidden) {
 			if (this.hiddenCells.includes([x, y]) === true || this.redrawOnHidden) {
+				color = "hidden"
+				suffix = ""
+			}
+		}
+		if (this.isUnderwater) {
+			if (this.toCollapseUnderwater.includes(y) === true) {
 				color = "hidden"
 				suffix = ""
 			}
