@@ -652,7 +652,7 @@ export default class Stack extends GameModule {
 					}
 				}
 			} else {
-				if this.toCollapse >= underwaterHeightPosition {
+				if (this.toCollapse >= underwaterHeightPosition) {
 					this.parent.stat.line += this.lineClear
 					this.parent.addScore(`erase${this.lineClear}`)
 					this.parent.updateStats()
