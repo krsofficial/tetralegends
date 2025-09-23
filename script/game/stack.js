@@ -178,7 +178,7 @@ export default class Stack extends GameModule {
 				this.grid[xLocation][yLocation] = `${color}bone`
 			} else if (this.isHidden) {
 				this.grid[xLocation][yLocation] = "hidden"
-			} else if (this.isFrozen && this.wouldCauseLineClear() < 4) {
+			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
 			} else {
 				this.grid[xLocation][yLocation] = color
@@ -654,17 +654,6 @@ export default class Stack extends GameModule {
 		this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 		this.toCollapseUnderwater = []
 	}
-	if (this.toCollapse.length < 1 && this.isUnderwater) {
-	  this.parent.stat.line += this.lineClear
-	  this.parent.addScore(`erase${this.lineClear}`)
-	  this.parent.updateStats()
-	  this.toCollapse = []
-	  this.lineClear = 0
-	  this.alarmCheck()
-	  this.isDirty = true
-	  this.parent.piece.isDirty = true
-	  return
-    } else {
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
 		if (this.arrayContains(this.toCollapse, bottomLine) !== true) {
@@ -754,7 +743,6 @@ export default class Stack extends GameModule {
     this.alarmCheck()
     this.isDirty = true
     this.parent.piece.isDirty = true
-	}
   }
   new() {
     const cells = new Array(this.width)
