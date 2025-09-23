@@ -530,22 +530,31 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (isEndRoll === false) {
-			isEndRoll = true
-			game.stack.endRollStart()
-			game.stack.isHidden = true
-			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending2"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending2"], "arcade")
-		  } else if (isEndRoll === true) {
-			game.stack.isHidden = true
-			if (game.rta >= rtaGoal) {
-				endRollPassed = true
+		  if (game.torikanPassed) {
+			if (isEndRoll === false) {
+				isEndRoll = true
+				game.stack.endRollStart()
+				game.stack.isHidden = true
+				rtaGoal = game.rta + 55000
+				sound.loadBgm(["ending2"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending2"], "arcade")
+			} else if (isEndRoll === true) {
+				game.stack.isHidden = true
+				if (game.rta >= rtaGoal) {
+					endRollPassed = true
+				}
 			}
+			game.stat.level = 999
+			endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+		  } else {
+			game.stat.level = 999
+			endRollLines = 0
+			$("#kill-message").textContent = locale.getString("ui", "excellent")
+			sound.killVox()
+			sound.add("voxexcellent")
+			game.end(true)
 		  }
-		  game.stat.level = 999
-		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
 	  } else {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
@@ -1130,22 +1139,31 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (isEndRoll === false) {
-			isEndRoll = true
-			game.stack.endRollStart()
-			game.stack.isHidden = true
-			rtaGoal = game.rta + 55000
-			sound.loadBgm(["ending2"], "arcade")
-			sound.killBgm()
-			sound.playBgm(["ending2"], "arcade")
-		  } else if (isEndRoll === true) {
-			game.stack.isHidden = true
-			if (game.rta >= rtaGoal) {
-				endRollPassed = true
+		  if (game.torikanPassed) {
+			if (isEndRoll === false) {
+				isEndRoll = true
+				game.stack.endRollStart()
+				game.stack.isHidden = true
+				rtaGoal = game.rta + 55000
+				sound.loadBgm(["ending2"], "arcade")
+				sound.killBgm()
+				sound.playBgm(["ending2"], "arcade")
+			} else if (isEndRoll === true) {
+				game.stack.isHidden = true
+				if (game.rta >= rtaGoal) {
+					endRollPassed = true
+				}
 			}
+			game.stat.level = 999
+			endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
+		  } else {
+			game.stat.level = 999
+			endRollLines = 0
+			$("#kill-message").textContent = locale.getString("ui", "excellent")
+			sound.killVox()
+			sound.add("voxexcellent")
+			game.end(true)
 		  }
-		  game.stat.level = 999
-		  endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
 	  } else {
 		  preEndRollLines = game.stat.line
 		  endRollLines = 0
