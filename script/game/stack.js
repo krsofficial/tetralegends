@@ -249,7 +249,11 @@ export default class Stack extends GameModule {
           }
           this.parent.piece.hasLineDelay = true
           this.lineClear++
-          this.toCollapse.push(y)
+          if (this.isUnderwater && y >= underwaterHeightPosition) {
+			  this.toCollapseUnderwater.push(y)
+		  } else {
+			  this.toCollapse.push(y)
+		  }
           break
         }
         if (this.grid[x][y] == null) {
