@@ -668,7 +668,7 @@ export default class Stack extends GameModule {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          if (this.grid[x][shiftY] !== "frozen" && this.grid[x][shiftY - 1] !== "frozen") {
+          if (this.grid[x][shiftY] !== "frozen") {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
