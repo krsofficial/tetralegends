@@ -230,7 +230,7 @@ export default class Stack extends GameModule {
           }
           this.parent.piece.hasLineDelay = true
           if (this.isUnderwater) {
-				if (arrayContains(this.toCollapseUnderwater, y) !== true) {
+				if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 					this.lineClear++
 				}
 		  } else {
