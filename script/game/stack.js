@@ -91,8 +91,6 @@ export default class Stack extends GameModule {
     return lineClear
   }
   add(passedX, passedY, shape, color) {
-	console.log(passedX)
-	console.log(passedY)
     let garbageToClear = 0
     sound.syncBgm()
     if (!this.parent.piece.hasHardDropped) {
@@ -183,7 +181,8 @@ export default class Stack extends GameModule {
 			  this.hiddenCells = []
 		  }
 		  if (this.isFrozen) {
-			  if (this.wouldCauseLineClear() === 0) {
+			  console.log(wouldCauseLineClear)
+			  if (this.wouldCauseLineClear() < 1) {
 				  this.frozenCells.push([xLocation, yLocation])
 			  }
 		  } else {
@@ -221,7 +220,6 @@ export default class Stack extends GameModule {
             if (this.isFrozen) {
 				if (this.frozenCells.includes([x, y]) !== true) {
 					delete this.grid[x][y]
-					//this.frozenCells.splice(this.frozenCells.indexOf([x,y]),1)
 					this.removeFromArray(this.frozenCells, [x, y])
 				}
 			} else if (this.isUnderwater) {
@@ -230,15 +228,12 @@ export default class Stack extends GameModule {
 				}
 			} else if (this.redrawOnHidden) {
 				delete this.grid[x][y]
-				//this.hiddenCells.splice(this.frozenCells.indexOf([x,y]),1)
 				this.removeFromArray(this.hiddenCells, [x, y])
 			} else if (this.isHidden) {
 				delete this.grid[x][y]
-				//this.hiddenCells.splice(this.frozenCells.indexOf([x,y]),1)
 				this.removeFromArray(this.hiddenCells, [x, y])
 			} else if (this.parent.piece.useBoneBlocks) {
 				delete this.grid[x][y]
-				//this.boneCells.splice(this.frozenCells.indexOf([x,y]),1)
 				this.removeFromArray(this.boneCells, [x, y])
 			} else {
 				delete this.grid[x][y]
@@ -639,7 +634,7 @@ export default class Stack extends GameModule {
     if (this.toCollapse.length === 0) {
 	  return
     }
-	console.log(this.toCollapse)
+	//console.log(this.toCollapse)
 	let fallenBlocks = 0
 	let bottomLine = this.height + this.hiddenHeight - 1
 	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
@@ -648,26 +643,24 @@ export default class Stack extends GameModule {
 			this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 			this.toCollapseUnderwater = []
 			this.clearUnderwaterRows = false
-		}
-		else {
+		} else {
 			for (const y of this.toCollapse) {
 				if (y >= underwaterHeightPosition) {
 					this.toCollapseUnderwater.push(y)
-					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
 					this.removeFromArray(this.toCollapse, y)
 				}
 			}
-			if (this.toCollapse.length === 0) {
-				this.parent.stat.line += this.lineClear
-				this.parent.addScore(`erase${this.lineClear}`)
-				this.parent.updateStats()
-				this.toCollapse = []
-				this.lineClear = 0
-				this.alarmCheck()
-				this.isDirty = true
-				this.parent.piece.isDirty = true
-				return
-			}
+		}
+		if (this.toCollapse.length < 1) {
+			this.parent.stat.line += this.lineClear
+			this.parent.addScore(`erase${this.lineClear}`)
+			this.parent.updateStats()
+			this.toCollapse = []
+			this.lineClear = 0
+			this.alarmCheck()
+			this.isDirty = true
+			this.parent.piece.isDirty = true
+			return
 		}
 	} else {
 		this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
@@ -699,9 +692,10 @@ export default class Stack extends GameModule {
 			) {
 				fallenBlocks++
 			}
-			//this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY+1]),1)
 			this.removeFromArray(this.frozenCells, [x, shiftY - 1])
-			this.frozenCells.push([x, shiftY + 1])
+			if (this.frozenCells.includes([x, shiftY + 1]) !== true) {
+				this.frozenCells.push([x, shiftY + 1])
+			}
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
         }
@@ -722,9 +716,10 @@ export default class Stack extends GameModule {
           ) {
             fallenBlocks++
           }
-		  //this.hiddenCells.splice(this.hiddenCells.indexOf([x, shiftY+1]),1)
 		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
-		  this.hiddenCells.push([x, shiftY + 1])
+		  if (this.hiddenCells.includes[x, shiftY - 1]) !== true) {
+			 this.hiddenCells.push([x, shiftY + 1])
+		  }
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
@@ -744,9 +739,10 @@ export default class Stack extends GameModule {
           ) {
             fallenBlocks++
           }
-		  //this.boneCells.splice(this.boneCells.indexOf([x, shiftY + 1]),1)
 		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
-		  this.boneCells.push([x, shiftY + 1])
+		  if (this.boneCells.includes[x, shiftY - 1]) !== true) {
+			 this.boneCells.push([x, shiftY + 1])
+		  }
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
@@ -941,12 +937,12 @@ export default class Stack extends GameModule {
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
 		if (this.parent.piece.useBoneBlocks) {
-			if (this.boneCells.includes([x, y])) {
+			if (this.boneCells.includes([x, y]) === true) {
 				suffix = "bone"
 			}
 		}
 		if (this.isHidden) {
-			if (this.hiddenCells.includes([x, y])) {
+			if (this.hiddenCells.includes([x, y]) === true) {
 				color = "hidden"
 				suffix = ""
 			} else if (this.redrawOnHidden) {
@@ -955,7 +951,7 @@ export default class Stack extends GameModule {
 			}
 		}
 		if (this.isFrozen) {
-			if (this.frozenCells.includes([x, y])) {
+			if (this.frozenCells.includes([x, y]) === true) {
 				color = "frozen"
 				suffix = ""
 			}
