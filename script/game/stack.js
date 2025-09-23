@@ -175,7 +175,14 @@ export default class Stack extends GameModule {
 		  } else {
 			  this.boneCells = []
 		  }
-		  if (this.isHidden) {
+		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
+		  if (this.isUnderwater) {
+			  if (yLocation >= underwaterHeightPosition) {
+				  removeFromArray(this.flashX, xLocation)
+				  removeFromArray(this.flashY, yLocation)
+			  }
+		  }
+		  else if (this.isHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
 		  } else if (this.redrawOnHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
@@ -185,6 +192,8 @@ export default class Stack extends GameModule {
 		  if (this.isFrozen) {
 			  if (this.wouldCauseLineClear() === 0) {
 				  this.frozenCells.push([xLocation, yLocation])
+				  removeFromArray(this.flashX, xLocation)
+				  removeFromArray(this.flashY, yLocation)
 			  }
 		  } else {
 			  this.frozenCells = []
@@ -637,7 +646,10 @@ export default class Stack extends GameModule {
   }
   collapse() {
     if (this.toCollapse.length === 0) {
-      return
+      if (this.isUnderwater) {
+		this.lineClear = 0
+	  }
+	  return
     }
 	console.log(this.toCollapse)
 	let fallenBlocks = 0
@@ -655,13 +667,13 @@ export default class Stack extends GameModule {
 					this.toCollapseUnderwater.push(y)
 					//this.toCollapse.splice(this.toCollapse.indexOf(y),1)
 					this.removeFromArray(this.toCollapse, y)
-					if (this.toCollapse.length === 0) {
-						this.parent.stat.line += this.lineClear
-						this.parent.addScore(`erase${this.lineClear}`)
-						this.lineClear = 0
-						return
-					}
 				}
+			}
+			if (this.toCollapse.length === 0) {
+				this.parent.stat.line += this.lineClear
+				this.parent.addScore(`erase${this.lineClear}`)
+				this.lineClear = 0
+				return
 			}
 		}
 	} else {
@@ -944,12 +956,6 @@ export default class Stack extends GameModule {
 		if (this.parent.piece.useBoneBlocks) {
 			if (this.boneCells.includes([x, y])) {
 				suffix = "bone"
-			}
-		}
-		if (this.isUnderwater) {
-			if (y >= underwaterHeightPosition) {
-				color = "hidden"
-				suffix = ""
 			}
 		}
 		if (this.isHidden) {
