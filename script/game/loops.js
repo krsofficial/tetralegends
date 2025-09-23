@@ -2564,7 +2564,7 @@ export const loops = {
           ? 2600
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  updateRoundsGrade()
+	  updateRoundsGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
