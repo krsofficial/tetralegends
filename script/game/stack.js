@@ -644,10 +644,24 @@ export default class Stack extends GameModule {
 			this.toCollapseUnderwater = []
 			this.clearUnderwaterRows = false
 		} else {
-			for (const y of this.toCollapse) {
-				if (y >= underwaterHeightPosition) {
-					this.toCollapseUnderwater.push(y)
-					this.removeFromArray(this.toCollapse, y)
+			if (this.toCollapse.length > 1) {
+				for (const y of this.toCollapse) {
+					if (y >= underwaterHeightPosition) {
+						this.toCollapseUnderwater.push(y)
+						this.removeFromArray(this.toCollapse, y)
+					}
+				}
+			} else {
+				if this.toCollapse >= underwaterHeightPosition {
+					this.parent.stat.line += this.lineClear
+					this.parent.addScore(`erase${this.lineClear}`)
+					this.parent.updateStats()
+					this.toCollapse = []
+					this.lineClear = 0
+					this.alarmCheck()
+					this.isDirty = true
+					this.parent.piece.isDirty = true
+					return
 				}
 			}
 		}
