@@ -53,6 +53,15 @@ export default class Stack extends GameModule {
 	  }
 	  return array
   }
+  arrayContains(array, elementToFind) {
+	  let result = false
+	  if (array.includes(elementToFind) !== false || array.indexOf(elementToFind) > -1) {
+		  result = true
+	  } else {
+		  result = false
+	  }
+	  return result
+  }
   makeAllDirty() {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
@@ -81,7 +90,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x <= newGrid.length; x++) {
         if (x === newGrid.length) {
 		  if (this.isUnderwater) {
-			  if (this.toCollapseUnderwater.includes(y) !== true) {
+			  if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 				  lineClear++
 			  }
 		  } else {
@@ -225,9 +234,8 @@ export default class Stack extends GameModule {
 		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           for (let x = 0; x < this.grid.length; x++) {
             if (this.isFrozen) {
-				if (this.frozenCells.includes([x, y]) !== true) {
+				if (this.arrayContains(this.frozenCells, [x, y]) !== true) {
 					delete this.grid[x][y]
-					this.removeFromArray(this.frozenCells, [x, y])
 				}
 			} else if (this.isUnderwater) {
 				if (y < underwaterHeightPosition) {
@@ -676,14 +684,14 @@ export default class Stack extends GameModule {
     } else {
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
-		if (this.toCollapse.includes(bottomLine) !== true) {
+		if (this.arrayContains(this.toCollapse, bottomLine) {
 			this.toCollapse.push(bottomLine)
 		}
 	}
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          if (this.frozenCells.includes([x, shiftY]) !== true && this.frozenCells.includes([x, shiftY - 1]) !== true) {
+          if (this.arrayContains(this.frozenCells, [x, shiftY]) !== true && this.arrayContains(this.frozenCells, [x, shiftY - 1]) !== true) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
@@ -701,7 +709,7 @@ export default class Stack extends GameModule {
 				fallenBlocks++
 			}
 			this.removeFromArray(this.frozenCells, [x, shiftY - 1])
-			if (this.frozenCells.includes([x, shiftY + 1]) !== true) {
+			if (this.arrayContains(this.frozenCells, [x, shiftY + 1]) !== true) {
 				this.frozenCells.push([x, shiftY + 1])
 			}
 			this.dirtyCells.push([x, shiftY + 1])
@@ -725,7 +733,7 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
-		  if (this.hiddenCells.includes([x, shiftY - 1]) !== true) {
+		  if (this.arrayContains(this.hiddenCells, [x, shiftY + 1]) !== true) {
 			 this.hiddenCells.push([x, shiftY + 1])
 		  }
           this.dirtyCells.push([x, shiftY + 1])
@@ -748,7 +756,7 @@ export default class Stack extends GameModule {
             fallenBlocks++
           }
 		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
-		  if (this.boneCells.includes([x, shiftY - 1]) !== true) {
+		  if (this.arrayContains(this.boneCells, [x, shiftY + 1]) !== true !== true) {
 			 this.boneCells.push([x, shiftY + 1])
 		  }
           this.dirtyCells.push([x, shiftY + 1])
@@ -946,24 +954,24 @@ export default class Stack extends GameModule {
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
 		if (this.parent.piece.useBoneBlocks) {
-			if (this.boneCells.includes([x, y]) === true) {
+			if (this.arrayContains(this.boneCells, [x, y]) !== false) {
 				suffix = "bone"
 			}
 		}
 		if (this.isHidden) {
-			if (this.hiddenCells.includes([x, y]) === true || this.redrawOnHidden) {
+			if (this.arrayContains(this.hiddenCells, [x, y]) !== false || this.redrawOnHidden) {
 				color = "hidden"
 				suffix = ""
 			}
 		}
 		if (this.isUnderwater) {
-			if (this.toCollapseUnderwater.includes(y) === true) {
+			if (this.arrayContains(this.toCollapseUnderwater, y) !== false) {
 				color = "hidden"
 				suffix = ""
 			}
 		}
 		if (this.isFrozen) {
-			if (this.frozenCells.includes([x, y]) === true) {
+			if (this.arrayContains(this.frozenCells, [x, y]) !== false) {
 				color = "frozen"
 				suffix = ""
 			}
