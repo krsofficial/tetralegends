@@ -175,14 +175,7 @@ export default class Stack extends GameModule {
 		  } else {
 			  this.boneCells = []
 		  }
-		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
-		  if (this.isUnderwater) {
-			  if (yLocation >= underwaterHeightPosition) {
-				  this.removeFromArray(this.flashX, xLocation)
-				  this.removeFromArray(this.flashY, yLocation)
-			  }
-		  }
-		  else if (this.isHidden) {
+		  if (this.isHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
 		  } else if (this.redrawOnHidden) {
 			  this.hiddenCells.push([xLocation, yLocation])
@@ -192,8 +185,6 @@ export default class Stack extends GameModule {
 		  if (this.isFrozen) {
 			  if (this.wouldCauseLineClear() === 0) {
 				  this.frozenCells.push([xLocation, yLocation])
-				  this.removeFromArray(this.flashX, xLocation)
-				  this.removeFromArray(this.flashY, yLocation)
 			  }
 		  } else {
 			  this.frozenCells = []
@@ -646,9 +637,6 @@ export default class Stack extends GameModule {
   }
   collapse() {
     if (this.toCollapse.length === 0) {
-      if (this.isUnderwater) {
-		this.lineClear = 0
-	  }
 	  return
     }
 	console.log(this.toCollapse)
@@ -672,7 +660,12 @@ export default class Stack extends GameModule {
 			if (this.toCollapse.length === 0) {
 				this.parent.stat.line += this.lineClear
 				this.parent.addScore(`erase${this.lineClear}`)
+				this.parent.updateStats()
+				this.toCollapse = []
 				this.lineClear = 0
+				this.alarmCheck()
+				this.isDirty = true
+				this.parent.piece.isDirty = true
 				return
 			}
 		}
@@ -708,9 +701,7 @@ export default class Stack extends GameModule {
 			}
 			//this.frozenCells.splice(this.frozenCells.indexOf([x, shiftY+1]),1)
 			this.removeFromArray(this.frozenCells, [x, shiftY - 1])
-			if (this.frozenCells.includes([x, shiftY + 1]) !== true) {
-				this.frozenCells.push([x, shiftY + 1])
-			}
+			this.frozenCells.push([x, shiftY + 1])
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
         }
@@ -733,9 +724,7 @@ export default class Stack extends GameModule {
           }
 		  //this.hiddenCells.splice(this.hiddenCells.indexOf([x, shiftY+1]),1)
 		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
-		  if (this.hiddenCells.includes([x, shiftY + 1]) !== true) {
-			  this.hiddenCells.push([x, shiftY + 1])
-		  }
+		  this.hiddenCells.push([x, shiftY + 1])
           this.dirtyCells.push([x, shiftY + 1])
         }
       }
@@ -757,9 +746,7 @@ export default class Stack extends GameModule {
           }
 		  //this.boneCells.splice(this.boneCells.indexOf([x, shiftY + 1]),1)
 		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
-		  if (this.boneCells.includes([x, shiftY + 1]) !== true) {
-			  this.boneCells.push([x, shiftY + 1])
-		  }
+		  this.boneCells.push([x, shiftY + 1])
           this.dirtyCells.push([x, shiftY + 1])
         }
       }

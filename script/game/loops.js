@@ -65,6 +65,7 @@ let preEndRollLines = 0
 let levelTimer = 0
 let levelTimerLimit = 58000
 let lastPieces = 0
+let underwaterProgression = 0
 let testMode = true
 let nonEvents = []
 let bpm
@@ -2384,6 +2385,7 @@ export const loops = {
       updateLasts(arg)
     },
     onInit: (game) => {
+	  underwaterProgression = 0
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = ""
@@ -2495,6 +2497,16 @@ export const loops = {
           break
         }
       }
+	  const musicProgressionTable = [
+        [279, 1],
+        [300, 2],
+		[679, 3],
+		[700, 4],
+		[974, 5],
+		[1000, 6],
+		[1279, 7],
+		[1300, 8],
+      ]
       for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -2554,6 +2566,25 @@ export const loops = {
 		  game.stack.isUnderwater = true
 	  } else {
 		  game.stack.isUnderwater = false
+      }
+	  const underwaterProgressionTable = [
+        [800, 1],
+        [900, 2],
+      ]
+	  for (const pair of underwaterProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && underwaterProgression < entry) {
+          switch (entry) {
+            case 1:
+			  game.stack.clearUnderwaterLines()
+              break
+			case 2:
+			  game.stack.clearUnderwaterLines()
+              break
+          }
+          underwaterProgression = entry
+        }
       }
 	  if (game.stat.level >= 1300) {
 		  game.stack.isFrozen = true
@@ -2606,6 +2637,7 @@ export const loops = {
       updateLasts(arg)
     },
     onInit: (game) => {
+	  underwaterProgression = 0
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = ""
@@ -2776,6 +2808,25 @@ export const loops = {
 		  game.stack.isUnderwater = true
 	  } else {
 		  game.stack.isUnderwater = false
+      }
+	  const underwaterProgressionTable = [
+        [800, 1],
+        [900, 2],
+      ]
+	  for (const pair of underwaterProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && underwaterProgression < entry) {
+          switch (entry) {
+            case 1:
+			  game.stack.clearUnderwaterLines()
+              break
+			case 2:
+			  game.stack.clearUnderwaterLines()
+              break
+          }
+          underwaterProgression = entry
+        }
       }
 	  if (game.stat.level >= 1300) {
 		  game.stack.isFrozen = true
