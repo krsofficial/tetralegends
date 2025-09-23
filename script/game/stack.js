@@ -684,7 +684,7 @@ export default class Stack extends GameModule {
     } else {
     if (this.isFrozen) {
 	if (this.lineClear >= 4) {
-		if (this.arrayContains(this.toCollapse, bottomLine) {
+		if (this.arrayContains(this.toCollapse, bottomLine) !== true) {
 			this.toCollapse.push(bottomLine)
 		}
 	}
