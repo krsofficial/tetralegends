@@ -84,10 +84,6 @@ export default class Stack extends GameModule {
 			  if (this.toCollapseUnderwater.includes(y) !== true) {
 				  lineClear++
 			  }
-		  } else if (this.isFrozen) {
-			  if (this.frozenCells.includes([x, y]) !== true) {
-				  lineClear++
-			  }
 		  } else {
 			  lineClear++
 		  }
