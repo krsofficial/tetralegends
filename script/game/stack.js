@@ -169,6 +169,26 @@ export default class Stack extends GameModule {
           this.dirtyCells.push([xLocation, yLocation])
           this.flashX.unshift(xLocation)
           this.flashY.unshift(yLocation)
+		  
+		  if (this.parent.piece.useBoneBlocks) {
+			  this.boneCells.push([xLocation, yLocation])
+		  } else {
+			  this.boneCells = []
+		  }
+		  if (this.isHidden) {
+			  this.hiddenCells.push([xLocation, yLocation])
+		  } else if (this.redrawOnHidden) {
+			  this.hiddenCells.push([xLocation, yLocation])
+		  } else {
+			  this.hiddenCells = []
+		  }
+		  if (this.isFrozen) {
+			  if (this.wouldCauseLineClear() <= 0) {
+				  this.frozenCells.push([xLocation, yLocation])
+			  }
+		  } else {
+			  this.frozenCells = []
+		  }
         }
       }
     }
@@ -185,25 +205,6 @@ export default class Stack extends GameModule {
       }
     }
 	
-	if (this.parent.piece.useBoneBlocks) {
-		this.boneCells.push([xLocation, yLocation])
-	} else {
-		this.boneCells = []
-	}
-	if (this.isHidden) {
-		this.hiddenCells.push([xLocation, yLocation])
-	} else if (this.redrawOnHidden) {
-		this.hiddenCells.push([xLocation, yLocation])
-	} else {
-		this.hiddenCells = []
-	}
-	if (this.isFrozen) {
-		if (this.wouldCauseLineClear() <= 0) {
-			this.frozenCells.push([xLocation, yLocation])
-		}
-	} else {
-		this.frozenCells = []
-	}
     for (let y = 0; y < this.grid[0].length; y++) {
       for (let x = 0; x <= this.grid.length; x++) {
         if (x === this.grid.length) {
@@ -657,7 +658,7 @@ export default class Stack extends GameModule {
 					if (this.toCollapse.length === 0) {
 						this.parent.stat.line += this.lineClear
 						this.parent.addScore(`erase${this.lineClear}`)
-						lineClear = 0
+						this.lineClear = 0
 						return
 					}
 				}
