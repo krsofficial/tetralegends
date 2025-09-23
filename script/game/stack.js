@@ -46,7 +46,7 @@ export default class Stack extends GameModule {
 	this.boneCells = []
 	this.hiddenCells = []
   }
-  this.removeFromArray(array, elementToRemove) {
+  removeFromArray(array, elementToRemove) {
 	  const indexToRemove = array.indexOf(elementToRemove)
 	  if (indexToRemove > -1) {
 		  array.splice(indexToRemove, 1)
