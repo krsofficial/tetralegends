@@ -83,87 +83,75 @@ const levelUpdate = (game) => {
   lastLevel = game.stat.level
   return returnValue
 }
-const updateArcadeBg = (level) => {
-	if (level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
-	else if (level >= 1800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
-	else if (level >= 1700) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.png')`)}
-	else if (level >= 1600) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back16.png')`)}
-	else if (level >= 1500) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back15.png')`)}
-	else if (level >= 1400) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back14.png')`)}
-	else if (level >= 1300) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back13.png')`)}
-	else if (level >= 1200) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back12.png')`)}
-	else if (level >= 1100) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back11.png')`)}
-	else if (level >= 1000) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back10.png')`)}
-	else if (level >= 900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
-	else if (level >= 800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
-	else if (level >= 700) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
-	else if (level >= 600) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
-	else if (level >= 500) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
-	else if (level >= 400) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
-	else if (level >= 300) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
-	else if (level >= 200) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
-	else if (level >= 100) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
-	else if (level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+const updateArcadeBg = (game) => {
+	if (game.stat.level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
+	else if (game.stat.level >= 1800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
+	else if (game.stat.level >= 1700) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.png')`)}
+	else if (game.stat.level >= 1600) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back16.png')`)}
+	else if (game.stat.level >= 1500) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back15.png')`)}
+	else if (game.stat.level >= 1400) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back14.png')`)}
+	else if (game.stat.level >= 1300) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back13.png')`)}
+	else if (game.stat.level >= 1200) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back12.png')`)}
+	else if (game.stat.level >= 1100) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back11.png')`)}
+	else if (game.stat.level >= 1000) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back10.png')`)}
+	else if (game.stat.level >= 900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (game.stat.level >= 800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (game.stat.level >= 700) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (game.stat.level >= 600) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (game.stat.level >= 500) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (game.stat.level >= 400) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (game.stat.level >= 300) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (game.stat.level >= 200) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (game.stat.level >= 100) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
-const updateAceBg = (level) => {
-	if (level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
-	else if (level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
-	else if (level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.png')`)}
-	else if (level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back16.png')`)}
-	else if (level >= 16) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back15.png')`)}
-	else if (level >= 15) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back14.png')`)}
-	else if (level >= 14) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back13.png')`)}
-	else if (level >= 13) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back12.png')`)}
-	else if (level >= 12) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back11.png')`)}
-	else if (level >= 11) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back10.png')`)}
-	else if (level >= 10) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
-	else if (level >= 9) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
-	else if (level >= 8) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
-	else if (level >= 7) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
-	else if (level >= 6) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
-	else if (level >= 5) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
-	else if (level >= 4) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
-	else if (level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
-	else if (level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
-	else if (level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+const updateAceBg = (game) => {
+	if (game.stat.level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
+	else if (game.stat.level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
+	else if (game.stat.level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back17.png')`)}
+	else if (game.stat.level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back16.png')`)}
+	else if (game.stat.level >= 16) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back15.png')`)}
+	else if (game.stat.level >= 15) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back14.png')`)}
+	else if (game.stat.level >= 14) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back13.png')`)}
+	else if (game.stat.level >= 13) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back12.png')`)}
+	else if (game.stat.level >= 12) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back11.png')`)}
+	else if (game.stat.level >= 11) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back10.png')`)}
+	else if (game.stat.level >= 10) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (game.stat.level >= 9) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (game.stat.level >= 8) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (game.stat.level >= 7) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (game.stat.level >= 6) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (game.stat.level >= 5) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (game.stat.level >= 4) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (game.stat.level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (game.stat.level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (game.stat.level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
-const updateSegaBg = (level) => {
-	if (level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
-	else if (level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
-	else if (level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
-	else if (level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
-	else if (level >= 16) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
-	else if (level >= 15) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
-	else if (level >= 14) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
-	else if (level >= 13) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
-	else if (level >= 12) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
-	else if (level >= 11) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
-	else if (level >= 10) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
-	else if (level >= 9) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
-	else if (level >= 8) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
-	else if (level >= 7) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
-	else if (level >= 6) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
-	else if (level >= 5) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
-	else if (level >= 4) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
-	else if (level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
-	else if (level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
-	else if (level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
-	else if (level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+const updateSegaBg = (game) => {
+	if (game.stat.level >= 20) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (game.stat.level >= 19) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (game.stat.level >= 18) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back9.png')`)}
+	else if (game.stat.level >= 17) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (game.stat.level >= 16) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back8.png')`)}
+	else if (game.stat.level >= 15) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (game.stat.level >= 14) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back7.png')`)}
+	else if (game.stat.level >= 13) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (game.stat.level >= 12) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back6.png')`)}
+	else if (game.stat.level >= 11) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (game.stat.level >= 10) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back5.png')`)}
+	else if (game.stat.level >= 9) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (game.stat.level >= 8) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back4.png')`)}
+	else if (game.stat.level >= 7) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (game.stat.level >= 6) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back3.png')`)}
+	else if (game.stat.level >= 5) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (game.stat.level >= 4) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back2.png')`)}
+	else if (game.stat.level >= 3) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (game.stat.level >= 2) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back1.png')`)}
+	else if (game.stat.level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
+	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
-export const loops = {
-  sudden: {
-    update: (arg) => {
-      const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
-      game.rta += arg.ms
-      arcadeScore(arg)
-      linesToLevel(arg, 1300, 100)
-      game.endSectionLevel =
-        game.stat.level >= 1200
-          ? 1300
-          : Math.floor(game.stat.level / 100 + 1) * 100
-      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 1300) game.stat.grade = "S13"
+const updateShiraseGrade = (game) => {
+	  if (game.stat.level >= 1300) game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
@@ -190,6 +178,125 @@ export const loops = {
         game.stat.grade = "S1"
 	  else if (game.stat.level >= 0)
         game.stat.grade = "1"
+}
+const updateMasterGrade = (game) => {
+	  if (game.stat.level >= 999 && game.stat.score >= 270000 && game.torikanPassed && endRollPassed && endRollLines >= 32) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 270000 && endRollLines >= 32)
+        game.stat.grade = "MM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 270000 && endRollLines >= 24)
+        game.stat.grade = "MO"
+	  else if (game.stat.level >= 999 && game.stat.score >= 270000 && endRollLines >= 16)
+        game.stat.grade = "MV"
+	  else if (game.stat.level >= 999 && game.stat.score >= 270000 && endRollLines >= 8)
+        game.stat.grade = "MK"
+      else if (game.stat.level >= 999 && game.stat.score >= 270000)
+        game.stat.grade = "M"
+	  else if (game.stat.score >= 265000)
+        game.stat.grade = "M9"
+	  else if (game.stat.score >= 250000)
+        game.stat.grade = "M8"
+	  else if (game.stat.score >= 235000)
+        game.stat.grade = "M7"
+	  else if (game.stat.score >= 220000)
+        game.stat.grade = "M6"
+	  else if (game.stat.score >= 205000)
+        game.stat.grade = "M5"
+	  else if (game.stat.score >= 180000)
+        game.stat.grade = "M4"
+	  else if (game.stat.score >= 165000)
+        game.stat.grade = "M3"
+	  else if (game.stat.score >= 150000)
+        game.stat.grade = "M2"
+	  else if (game.stat.score >= 135000)
+        game.stat.grade = "M1"
+      else if (game.stat.score >= 120000)
+        game.stat.grade = "S9"
+	  else if (game.stat.score >= 100000)
+        game.stat.grade = "S8"
+	  else if (game.stat.score >= 82000)
+        game.stat.grade = "S7"
+	  else if (game.stat.score >= 66000)
+        game.stat.grade = "S6"
+	  else if (game.stat.score >= 52000)
+        game.stat.grade = "S5"
+	  else if (game.stat.score >= 40000)
+        game.stat.grade = "S4"
+	  else if (game.stat.score >= 30000)
+        game.stat.grade = "S3"
+	  else if (game.stat.score >= 22000)
+        game.stat.grade = "S2"
+	  else if (game.stat.score >= 16000)
+        game.stat.grade = "S1"
+	  else if (game.stat.score >= 12000)
+        game.stat.grade = "1"
+	  else if (game.stat.score >= 8000)
+        game.stat.grade = "2"
+	  else if (game.stat.score >= 5500)
+        game.stat.grade = "3"
+	  else if (game.stat.score >= 3500)
+        game.stat.grade = "4"
+	  else if (game.stat.score >= 2000)
+        game.stat.grade = "5"
+	  else if (game.stat.score >= 1400)
+        game.stat.grade = "6"
+	  else if (game.stat.score >= 800)
+        game.stat.grade = "7"
+	  else if (game.stat.score >= 400)
+        game.stat.grade = "8"
+	  else if (game.stat.score >= 0)
+        game.stat.grade = "9"
+}
+const updateAsukaGrade = (game) => {
+	  if (game.stat.level >= 1300) game.stat.grade = "AM"
+	  else if (game.stat.level >= 1200)
+        game.stat.grade = "Am-G12"
+	  else if (game.stat.level >= 1100)
+        game.stat.grade = "Am-G11"
+	  else if (game.stat.level >= 1000)
+        game.stat.grade = "Am-G10"
+      else if (game.stat.level >= 900)
+        game.stat.grade = "Am-G9"
+	  else if (game.stat.level >= 800)
+        game.stat.grade = "Am-G8"
+	  else if (game.stat.level >= 700)
+        game.stat.grade = "Am-G7"
+	  else if (game.stat.level >= 600)
+        game.stat.grade = "Am-G6"
+	  else if (game.stat.level >= 500)
+        game.stat.grade = "Am-G5"
+	  else if (game.stat.level >= 400)
+        game.stat.grade = "Am-G4"
+	  else if (game.stat.level >= 300)
+        game.stat.grade = "Am-G3"
+	  else if (game.stat.level >= 200)
+        game.stat.grade = "Am-G2"
+	  else if (game.stat.level >= 100)
+        game.stat.grade = "Am-G1"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = ""
+}
+const updateRoundsGrade = (game) => {
+	  if (game.stat.level >= 2600) game.stat.grade = "GM"
+	  else if (game.stat.level >= 1100)
+        game.stat.grade = "M"
+	  else if (game.stat.level >= 0)
+        game.stat.grade = ""
+}
+
+export const loops = {
+  sudden: {
+    update: (arg) => {
+      const game = gameHandler.game
+	  updateArcadeBg(game)
+      game.rta += arg.ms
+      arcadeScore(arg)
+      linesToLevel(arg, 1300, 100)
+      game.endSectionLevel =
+        game.stat.level >= 1200
+          ? 1300
+          : Math.floor(game.stat.level / 100 + 1) * 100
+      game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
+      updateShiraseGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -390,7 +497,7 @@ export const loops = {
   special: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       game.rta += arg.ms
       arcadeScore(arg)
       linesToLevel(arg, 999, 100)
@@ -399,71 +506,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 265000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 32)
-        game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 24)
-        game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 16)
-        game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 10)
-        game.stat.grade = "MK"
-      else if (game.stat.level >= 999 && game.stat.score >= 265000)
-        game.stat.grade = "M"
-	  else if (game.stat.score >= 265000)
-        game.stat.grade = "M9"
-	  else if (game.stat.score >= 250000)
-        game.stat.grade = "M8"
-	  else if (game.stat.score >= 235000)
-        game.stat.grade = "M7"
-	  else if (game.stat.score >= 220000)
-        game.stat.grade = "M6"
-	  else if (game.stat.score >= 205000)
-        game.stat.grade = "M5"
-	  else if (game.stat.score >= 180000)
-        game.stat.grade = "M4"
-	  else if (game.stat.score >= 165000)
-        game.stat.grade = "M3"
-	  else if (game.stat.score >= 150000)
-        game.stat.grade = "M2"
-	  else if (game.stat.score >= 135000)
-        game.stat.grade = "M1"
-      else if (game.stat.score >= 120000)
-        game.stat.grade = "S9"
-	  else if (game.stat.score >= 100000)
-        game.stat.grade = "S8"
-	  else if (game.stat.score >= 82000)
-        game.stat.grade = "S7"
-	  else if (game.stat.score >= 66000)
-        game.stat.grade = "S6"
-	  else if (game.stat.score >= 52000)
-        game.stat.grade = "S5"
-	  else if (game.stat.score >= 40000)
-        game.stat.grade = "S4"
-	  else if (game.stat.score >= 30000)
-        game.stat.grade = "S3"
-	  else if (game.stat.score >= 22000)
-        game.stat.grade = "S2"
-	  else if (game.stat.score >= 16000)
-        game.stat.grade = "S1"
-	  else if (game.stat.score >= 12000)
-        game.stat.grade = "1"
-	  else if (game.stat.score >= 8000)
-        game.stat.grade = "2"
-	  else if (game.stat.score >= 5500)
-        game.stat.grade = "3"
-	  else if (game.stat.score >= 3500)
-        game.stat.grade = "4"
-	  else if (game.stat.score >= 2000)
-        game.stat.grade = "5"
-	  else if (game.stat.score >= 1400)
-        game.stat.grade = "6"
-	  else if (game.stat.score >= 800)
-        game.stat.grade = "7"
-	  else if (game.stat.score >= 400)
-        game.stat.grade = "8"
-	  else if (game.stat.score >= 0)
-        game.stat.grade = "9"
+      updateMasterGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -715,7 +758,7 @@ export const loops = {
   novice: {
     update: (arg) => {
 	  const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       gameHandler.game.rta += arg.ms
       if (input.getGameDown("softDrop")) {
         gameHandler.game.drop += arg.ms
@@ -846,7 +889,7 @@ export const loops = {
   suddenworld: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       game.rta += arg.ms
       arcadeScore(arg)
       linesToLevel(arg, 1300, 100)
@@ -855,33 +898,7 @@ export const loops = {
           ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 1300) game.stat.grade = "S13"
-	  else if (game.stat.level >= 1200)
-        game.stat.grade = "S12"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "S11"
-	  else if (game.stat.level >= 1000)
-        game.stat.grade = "S10"
-      else if (game.stat.level >= 900)
-        game.stat.grade = "S9"
-	  else if (game.stat.level >= 800)
-        game.stat.grade = "S8"
-	  else if (game.stat.level >= 700)
-        game.stat.grade = "S7"
-	  else if (game.stat.level >= 600)
-        game.stat.grade = "S6"
-	  else if (game.stat.level >= 500)
-        game.stat.grade = "S5"
-	  else if (game.stat.level >= 400)
-        game.stat.grade = "S4"
-	  else if (game.stat.level >= 300)
-        game.stat.grade = "S3"
-	  else if (game.stat.level >= 200)
-        game.stat.grade = "S2"
-	  else if (game.stat.level >= 100)
-        game.stat.grade = "S1"
-	  else if (game.stat.level >= 0)
-        game.stat.grade = "1"
+      updateShiraseGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1081,7 +1098,7 @@ export const loops = {
   specialworld: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       game.rta += arg.ms
       arcadeScore(arg)
       linesToLevel(arg, 999, 100)
@@ -1090,71 +1107,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999 && game.stat.score >= 265000 && game.torikanPassed && endRollPassed && endRollLines >= 40) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 32)
-        game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 24)
-        game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 16)
-        game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 265000 && endRollLines >= 10)
-        game.stat.grade = "MK"
-      else if (game.stat.level >= 999 && game.stat.score >= 265000)
-        game.stat.grade = "M"
-	  else if (game.stat.score >= 265000)
-        game.stat.grade = "M9"
-	  else if (game.stat.score >= 250000)
-        game.stat.grade = "M8"
-	  else if (game.stat.score >= 235000)
-        game.stat.grade = "M7"
-	  else if (game.stat.score >= 220000)
-        game.stat.grade = "M6"
-	  else if (game.stat.score >= 205000)
-        game.stat.grade = "M5"
-	  else if (game.stat.score >= 180000)
-        game.stat.grade = "M4"
-	  else if (game.stat.score >= 165000)
-        game.stat.grade = "M3"
-	  else if (game.stat.score >= 150000)
-        game.stat.grade = "M2"
-	  else if (game.stat.score >= 135000)
-        game.stat.grade = "M1"
-      else if (game.stat.score >= 120000)
-        game.stat.grade = "S9"
-	  else if (game.stat.score >= 100000)
-        game.stat.grade = "S8"
-	  else if (game.stat.score >= 82000)
-        game.stat.grade = "S7"
-	  else if (game.stat.score >= 66000)
-        game.stat.grade = "S6"
-	  else if (game.stat.score >= 52000)
-        game.stat.grade = "S5"
-	  else if (game.stat.score >= 40000)
-        game.stat.grade = "S4"
-	  else if (game.stat.score >= 30000)
-        game.stat.grade = "S3"
-	  else if (game.stat.score >= 22000)
-        game.stat.grade = "S2"
-	  else if (game.stat.score >= 16000)
-        game.stat.grade = "S1"
-	  else if (game.stat.score >= 12000)
-        game.stat.grade = "1"
-	  else if (game.stat.score >= 8000)
-        game.stat.grade = "2"
-	  else if (game.stat.score >= 5500)
-        game.stat.grade = "3"
-	  else if (game.stat.score >= 3500)
-        game.stat.grade = "4"
-	  else if (game.stat.score >= 2000)
-        game.stat.grade = "5"
-	  else if (game.stat.score >= 1400)
-        game.stat.grade = "6"
-	  else if (game.stat.score >= 800)
-        game.stat.grade = "7"
-	  else if (game.stat.score >= 400)
-        game.stat.grade = "8"
-	  else if (game.stat.score >= 0)
-        game.stat.grade = "9"
+      updateMasterGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1405,7 +1358,7 @@ export const loops = {
   noviceworld: {
     update: (arg) => {
 	  const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       gameHandler.game.rta += arg.ms
       if (input.getGameDown("softDrop")) {
         gameHandler.game.drop += arg.ms
@@ -1600,7 +1553,7 @@ export const loops = {
   konoha: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 2000, 100)
       game.endSectionLevel =
@@ -1801,7 +1754,7 @@ export const loops = {
   konohaworld: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 2000, 100)
       game.endSectionLevel =
@@ -2002,7 +1955,7 @@ export const loops = {
   asukaworld: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
@@ -2010,33 +1963,7 @@ export const loops = {
           ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 1300) game.stat.grade = "Am-GM"
-	  else if (game.stat.level >= 1200)
-        game.stat.grade = "Am-G12"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "Am-G11"
-	  else if (game.stat.level >= 1000)
-        game.stat.grade = "Am-G10"
-      else if (game.stat.level >= 900)
-        game.stat.grade = "Am-G9"
-	  else if (game.stat.level >= 800)
-        game.stat.grade = "Am-G8"
-	  else if (game.stat.level >= 700)
-        game.stat.grade = "Am-G7"
-	  else if (game.stat.level >= 600)
-        game.stat.grade = "Am-G6"
-	  else if (game.stat.level >= 500)
-        game.stat.grade = "Am-G5"
-	  else if (game.stat.level >= 400)
-        game.stat.grade = "Am-G4"
-	  else if (game.stat.level >= 300)
-        game.stat.grade = "Am-G3"
-	  else if (game.stat.level >= 200)
-        game.stat.grade = "Am-G2"
-	  else if (game.stat.level >= 100)
-        game.stat.grade = "Am-G1"
-	  else if (game.stat.level >= 0)
-        game.stat.grade = ""
+	  updateAsukaGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -2218,7 +2145,7 @@ export const loops = {
   asuka: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 1300, 100)
       game.endSectionLevel =
@@ -2226,33 +2153,7 @@ export const loops = {
           ? 1300
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 1300) game.stat.grade = "Am-GM"
-	  else if (game.stat.level >= 1200)
-        game.stat.grade = "Am-G12"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "Am-G11"
-	  else if (game.stat.level >= 1000)
-        game.stat.grade = "Am-G10"
-      else if (game.stat.level >= 900)
-        game.stat.grade = "Am-G9"
-	  else if (game.stat.level >= 800)
-        game.stat.grade = "Am-G8"
-	  else if (game.stat.level >= 700)
-        game.stat.grade = "Am-G7"
-	  else if (game.stat.level >= 600)
-        game.stat.grade = "Am-G6"
-	  else if (game.stat.level >= 500)
-        game.stat.grade = "Am-G5"
-	  else if (game.stat.level >= 400)
-        game.stat.grade = "Am-G4"
-	  else if (game.stat.level >= 300)
-        game.stat.grade = "Am-G3"
-	  else if (game.stat.level >= 200)
-        game.stat.grade = "Am-G2"
-	  else if (game.stat.level >= 100)
-        game.stat.grade = "Am-G1"
-	  else if (game.stat.level >= 0)
-        game.stat.grade = ""
+	  updateAsukaGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -2433,7 +2334,7 @@ export const loops = {
   rounds: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 2600, 100)
       game.endSectionLevel =
@@ -2441,11 +2342,7 @@ export const loops = {
           ? 2600
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 2600) game.stat.grade = "GM"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "M"
-	  else if (game.stat.level >= 0)
-        game.stat.grade = ""
+	  updateRoundsGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -2659,7 +2556,7 @@ export const loops = {
   roundsworld: {
     update: (arg) => {
       const game = gameHandler.game
-	  updateArcadeBg(game.stat.level)
+	  updateArcadeBg(game)
       arcadeScore(arg)
       linesToLevel(arg, 2600, 100)
       game.endSectionLevel =
@@ -2667,12 +2564,7 @@ export const loops = {
           ? 2600
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-	  if (game.stat.level >= 2600) game.stat.grade = "GM"
-	  else if (game.stat.level >= 1100)
-        game.stat.grade = "M"
-	  else if (game.stat.level >= 0)
-        game.stat.grade = ""
+	  updateRoundsGrade()
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -2886,7 +2778,7 @@ export const loops = {
   ace: {
     update: (arg) => {
 	  const game = gameHandler.game
-	  updateAceBg(game.stat.level)
+	  updateAceBg(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -3328,7 +3220,7 @@ export const loops = {
   aceworld: {
     update: (arg) => {
 	  const game = gameHandler.game
-	  updateAceBg(game.stat.level)
+	  updateAceBg(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -6266,7 +6158,7 @@ export const loops = {
   sega: {
     update: (arg) => {
 	  const game = gameHandler.game
-	  updateSegaBg(game.stat.level)
+	  updateSegaBg(game)
 	  levelTimer += arg.ms
       collapse(arg)
       if (arg.piece.inAre) {
