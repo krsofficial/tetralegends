@@ -229,7 +229,13 @@ export default class Stack extends GameModule {
 			}
           }
           this.parent.piece.hasLineDelay = true
-          this.lineClear++
+          if (this.isUnderwater) {
+				if (arrayContains(this.toCollapseUnderwater, y) !== true) {
+					this.lineClear++
+				}
+		  } else {
+				this.lineClear++
+		  }
           if (this.isUnderwater && y >= underwaterHeightPosition) {
 			  this.toCollapseUnderwater.push(y)
 		  } else {
@@ -694,7 +700,9 @@ export default class Stack extends GameModule {
           this.flashY[i]++
         }
       }
-    }} else {
+    }
+	this.draw()
+	} else {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
