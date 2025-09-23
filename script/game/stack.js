@@ -42,9 +42,6 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 12
-	this.frozenCells = []
-	this.boneCells = []
-	this.hiddenCells = []
   }
   removeFromArray(array, elementToRemove) {
 	  const indexToRemove = array.indexOf(elementToRemove)
@@ -177,33 +174,19 @@ export default class Stack extends GameModule {
           if (this.parent.piece.useSpecialI && this.parent.piece.name === "I") {
             this.grid[xLocation][yLocation] = "i" + shape[y][x]
           } else {
-            this.grid[xLocation][yLocation] = color
+			if (this.parent.piece.useBoneBlocks) {
+				this.grid[xLocation][yLocation] = `${color}bone`
+			} else if (this.isHidden) {
+				this.grid[xLocation][yLocation] = "hidden"
+			} else if (this.isFrozen && this.wouldCauseLineClear() < 4) {
+				this.grid[xLocation][yLocation] = "frozen"
+			} else {
+				this.grid[xLocation][yLocation] = color
+			}
           }
           this.dirtyCells.push([xLocation, yLocation])
           this.flashX.unshift(xLocation)
           this.flashY.unshift(yLocation)
-		  
-		  if (this.parent.piece.useBoneBlocks) {
-			  this.boneCells.push([xLocation, yLocation])
-			  console.log(this.boneCells)
-		  } else {
-			  this.boneCells = []
-		  }
-		  if (this.isHidden || this.redrawOnHidden) {
-			  this.hiddenCells.push([xLocation, yLocation])
-			  console.log(this.hiddenCells)
-		  } else {
-			  this.hiddenCells = []
-		  }
-		  if (this.isFrozen) {
-			  console.log(this.wouldCauseLineClear())
-			  if (this.wouldCauseLineClear() < 1) {
-				  this.frozenCells.push([xLocation, yLocation])
-				  console.log(this.frozenCells)
-			  }
-		  } else {
-			  this.frozenCells = []
-		  }
         }
       }
     }
@@ -234,19 +217,13 @@ export default class Stack extends GameModule {
 		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           for (let x = 0; x < this.grid.length; x++) {
             if (this.isFrozen) {
-				if (this.arrayContains(this.frozenCells, [x, y]) !== true) {
+				if (this.grid[x][y] !== "frozen") {
 					delete this.grid[x][y]
 				}
 			} else if (this.isUnderwater) {
 				if (y < underwaterHeightPosition) {
 					delete this.grid[x][y]
 				}
-			} else if (this.isHidden || this.redrawOnHidden) {
-				delete this.grid[x][y]
-				this.removeFromArray(this.hiddenCells, [x, y])
-			} else if (this.parent.piece.useBoneBlocks) {
-				delete this.grid[x][y]
-				this.removeFromArray(this.boneCells, [x, y])
 			} else {
 				delete this.grid[x][y]
 			}
@@ -691,7 +668,7 @@ export default class Stack extends GameModule {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          if (this.arrayContains(this.frozenCells, [x, shiftY]) !== true && this.arrayContains(this.frozenCells, [x, shiftY - 1]) !== true) {
+          if (this.grid[x][shiftY] !== "frozen" && this.grid[x][shiftY - 1] !== "frozen") {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
@@ -708,58 +685,8 @@ export default class Stack extends GameModule {
 			) {
 				fallenBlocks++
 			}
-			this.removeFromArray(this.frozenCells, [x, shiftY - 1])
-			if (this.arrayContains(this.frozenCells, [x, shiftY + 1]) !== true) {
-				this.frozenCells.push([x, shiftY + 1])
-			}
 			this.dirtyCells.push([x, shiftY + 1])
 		  }
-        }
-      }
-      for (let i = 0; i < this.flashY.length; i++) {
-        if (this.flashY[i] < y) {
-          this.flashY[i]++
-        }
-      }
-    }} else if (this.isHidden || this.redrawOnHidden) {
-	for (const y of this.toCollapse) {
-      for (let x = 0; x < this.grid.length; x++) {
-        for (let shiftY = y; shiftY >= 0; shiftY--) {
-          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (
-            this.grid[x][shiftY] != null &&
-            this.grid[x][shiftY - 1] != null
-          ) {
-            fallenBlocks++
-          }
-		  this.removeFromArray(this.hiddenCells, [x, shiftY - 1])
-		  if (this.arrayContains(this.hiddenCells, [x, shiftY + 1]) !== true) {
-			 this.hiddenCells.push([x, shiftY + 1])
-		  }
-          this.dirtyCells.push([x, shiftY + 1])
-        }
-      }
-      for (let i = 0; i < this.flashY.length; i++) {
-        if (this.flashY[i] < y) {
-          this.flashY[i]++
-        }
-      }
-    }}  else if (this.parent.piece.useBoneBlocks) {
-	for (const y of this.toCollapse) {
-      for (let x = 0; x < this.grid.length; x++) {
-        for (let shiftY = y; shiftY >= 0; shiftY--) {
-          this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-          if (
-            this.grid[x][shiftY] != null &&
-            this.grid[x][shiftY - 1] != null
-          ) {
-            fallenBlocks++
-          }
-		  this.removeFromArray(this.boneCells, [x, shiftY - 1])
-		  if (this.arrayContains(this.boneCells, [x, shiftY + 1]) !== true !== true) {
-			 this.boneCells.push([x, shiftY + 1])
-		  }
-          this.dirtyCells.push([x, shiftY + 1])
         }
       }
       for (let i = 0; i < this.flashY.length; i++) {
@@ -833,9 +760,6 @@ export default class Stack extends GameModule {
 	  this.new()
 	  this.makeAllDirty()
 	  this.draw()
-	  this.frozenCells = []
-	  this.boneCells = []
-	  this.hiddenCells = []
   }
   get highest() {
     let highest = 0
@@ -953,28 +877,9 @@ export default class Stack extends GameModule {
           }
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
-		if (this.parent.piece.useBoneBlocks) {
-			if (this.arrayContains(this.boneCells, [x, y]) !== false) {
-				suffix = "bone"
-			}
-		}
-		if (this.isHidden) {
-			if (this.arrayContains(this.hiddenCells, [x, y]) !== false || this.redrawOnHidden) {
-				color = "hidden"
-				suffix = ""
-			}
-		}
-		if (this.isUnderwater) {
-			if (this.arrayContains(this.toCollapseUnderwater, y) !== false) {
-				color = "hidden"
-				suffix = ""
-			}
-		}
-		if (this.isFrozen) {
-			if (this.arrayContains(this.frozenCells, [x, y]) !== false) {
-				color = "frozen"
-				suffix = ""
-			}
+		if (this.isHidden && this.redrawOnHidden) {
+			color = "hidden"
+			suffix = ""
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)
         const xPos = x * cellSize
