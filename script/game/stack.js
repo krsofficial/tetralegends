@@ -46,7 +46,7 @@ export default class Stack extends GameModule {
 	this.boneCells = []
 	this.hiddenCells = []
   }
-  removeFromArray(array, elementToRemove) {
+  this.removeFromArray(array, elementToRemove) {
 	  const indexToRemove = array.indexOf(elementToRemove)
 	  if (indexToRemove > -1) {
 		  array.splice(indexToRemove, 1)
@@ -178,8 +178,8 @@ export default class Stack extends GameModule {
 		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
 		  if (this.isUnderwater) {
 			  if (yLocation >= underwaterHeightPosition) {
-				  removeFromArray(this.flashX, xLocation)
-				  removeFromArray(this.flashY, yLocation)
+				  this.removeFromArray(this.flashX, xLocation)
+				  this.removeFromArray(this.flashY, yLocation)
 			  }
 		  }
 		  else if (this.isHidden) {
@@ -192,8 +192,8 @@ export default class Stack extends GameModule {
 		  if (this.isFrozen) {
 			  if (this.wouldCauseLineClear() === 0) {
 				  this.frozenCells.push([xLocation, yLocation])
-				  removeFromArray(this.flashX, xLocation)
-				  removeFromArray(this.flashY, yLocation)
+				  this.removeFromArray(this.flashX, xLocation)
+				  this.removeFromArray(this.flashY, yLocation)
 			  }
 		  } else {
 			  this.frozenCells = []
