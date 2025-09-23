@@ -954,7 +954,7 @@ export default class Stack extends GameModule {
       }
     }
     // Line clear animation
-    if (this.toCollapse.length > 0) {
+    if (this.toCollapse.length > 0 && this.isFrozen !== true) {
       const brightness = Math.max(
         0,
         1 -
