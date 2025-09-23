@@ -181,7 +181,7 @@ export default class Stack extends GameModule {
 			  this.hiddenCells = []
 		  }
 		  if (this.isFrozen) {
-			  console.log(wouldCauseLineClear)
+			  console.log(this.wouldCauseLineClear())
 			  if (this.wouldCauseLineClear() < 1) {
 				  this.frozenCells.push([xLocation, yLocation])
 			  }
