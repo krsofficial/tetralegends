@@ -183,7 +183,7 @@ export default class Stack extends GameModule {
 			  this.hiddenCells = []
 		  }
 		  if (this.isFrozen) {
-			  if (this.wouldCauseLineClear() <= 0) {
+			  if (this.wouldCauseLineClear() === 0) {
 				  this.frozenCells.push([xLocation, yLocation])
 			  }
 		  } else {
@@ -931,6 +931,7 @@ export default class Stack extends GameModule {
           name = "mino"
         }
         let suffix = ""
+		let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
         if (this.parent.piece.useRetroColors) {
           let modifier = 0
           if (this.levelUpAnimation < this.levelUpAnimationLimit) {
@@ -945,8 +946,17 @@ export default class Stack extends GameModule {
 				suffix = "bone"
 			}
 		}
+		if (this.isUnderwater) {
+			if (y >= underwaterHeightPosition) {
+				color = "hidden"
+				suffix = ""
+			}
+		}
 		if (this.isHidden) {
 			if (this.hiddenCells.includes([x, y])) {
+				color = "hidden"
+				suffix = ""
+			} else if (this.redrawOnHidden) {
 				color = "hidden"
 				suffix = ""
 			}
