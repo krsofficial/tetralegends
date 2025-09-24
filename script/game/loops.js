@@ -2479,18 +2479,15 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  if (
-	  (game.stat.level >= 300 && game.stat.level < 400) ||
-	  (game.stat.level >= 500 && game.stat.level < 600) ||
-	  (game.stat.level >= 700 && game.stat.level < 1000)
-	  ) {
-		  game.stack.isUnderwater = true
-	  } else {
-		  game.stack.isUnderwater = false
-      }
 	  const underwaterProgressionTable = [
-        [799, 1],
-        [899, 2],
+		[300, 1],
+		[399, 2],
+		[500, 3],
+		[599, 4],
+        [700, 5],
+        [799, 6],
+		[899, 7],
+		[999, 8],
       ]
 	  for (const pair of underwaterProgressionTable) {
         const level = pair[0]
@@ -2498,10 +2495,30 @@ export const loops = {
         if (game.stat.level >= level && underwaterProgression < entry) {
           switch (entry) {
             case 1:
-			  game.stack.clearUnderwaterRows()
+			  game.stack.isUnderwater = true
               break
 			case 2:
+			  game.stack.isUnderwater = false
+              break
+			case 3:
+			  game.stack.isUnderwater = true
+              break
+			case 4:
+			  game.stack.isUnderwater = false
+              break
+			case 5:
+			  game.stack.isUnderwater = true
+              break
+			case 6:
+			  game.stack.isUnderwater = true
 			  game.stack.clearUnderwaterRows()
+              break
+			case 7:
+			  game.stack.isUnderwater = true
+			  game.stack.clearUnderwaterRows()
+              break
+			case 8:
+			  game.stack.isUnderwater = false
               break
           }
           underwaterProgression = entry
@@ -2727,18 +2744,15 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
-	  if (
-	  (game.stat.level >= 300 && game.stat.level < 400) ||
-	  (game.stat.level >= 500 && game.stat.level < 600) ||
-	  (game.stat.level >= 700 && game.stat.level < 1000)
-	  ) {
-		  game.stack.isUnderwater = true
-	  } else {
-		  game.stack.isUnderwater = false
-      }
 	  const underwaterProgressionTable = [
-        [799, 1],
-        [899, 2],
+		[300, 1],
+		[399, 2],
+		[500, 3],
+		[599, 4],
+        [700, 5],
+        [799, 6],
+		[899, 7],
+		[999, 8],
       ]
 	  for (const pair of underwaterProgressionTable) {
         const level = pair[0]
@@ -2746,10 +2760,30 @@ export const loops = {
         if (game.stat.level >= level && underwaterProgression < entry) {
           switch (entry) {
             case 1:
-			  game.stack.clearUnderwaterRows()
+			  game.stack.isUnderwater = true
               break
 			case 2:
+			  game.stack.isUnderwater = false
+              break
+			case 3:
+			  game.stack.isUnderwater = true
+              break
+			case 4:
+			  game.stack.isUnderwater = false
+              break
+			case 5:
+			  game.stack.isUnderwater = true
+              break
+			case 6:
+			  game.stack.isUnderwater = true
 			  game.stack.clearUnderwaterRows()
+              break
+			case 7:
+			  game.stack.isUnderwater = true
+			  game.stack.clearUnderwaterRows()
+              break
+			case 8:
+			  game.stack.isUnderwater = false
               break
           }
           underwaterProgression = entry
