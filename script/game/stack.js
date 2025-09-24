@@ -88,7 +88,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x <= newGrid.length; x++) {
         if (x === newGrid.length) {
 		  if (this.isUnderwater) {
-			  if (y >= underwaterHeightPosition) {
+			  if (y < underwaterHeightPosition) {
 				  lineClear++
 			  }
 		  } else {
