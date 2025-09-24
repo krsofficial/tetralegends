@@ -178,6 +178,7 @@ export default class Stack extends GameModule {
           })
           const xLocation = x + passedX
           const yLocation = y + passedY + this.hiddenHeight
+		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           if (yLocation - this.hiddenHeight >= 0) {
             passedLockOut--
           }
@@ -191,6 +192,11 @@ export default class Stack extends GameModule {
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
 				this.makeAllFrozen()
+				this.makeAllDirty()
+			} else if (this.isUnderwater && y >= underwaterHeightPosition) {
+				this.grid[xLocation][yLocation] = color
+				this.makeAllDirty()
+			}
 			} else {
 				this.grid[xLocation][yLocation] = color
 			}
