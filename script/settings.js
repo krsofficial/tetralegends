@@ -164,6 +164,9 @@ class Settings {
         startingLevel: 0,
 		music: "typea",
       },
+	  sega: {
+        difficulty: 2,
+      },
       beat: {
         song: "non",
       },

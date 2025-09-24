@@ -3,6 +3,7 @@
     "collapse",
     "land",
     "ko",
+	"gameover",
     "levelup",
     "ready",
     "start"

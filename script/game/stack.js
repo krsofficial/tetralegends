@@ -83,11 +83,12 @@ export default class Stack extends GameModule {
   wouldCauseLineClear() {
     const newGrid = this.gridWithLockdown()
     let lineClear = 0
+	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
     for (let y = 0; y < newGrid[0].length; y++) {
       for (let x = 0; x <= newGrid.length; x++) {
         if (x === newGrid.length) {
 		  if (this.isUnderwater) {
-			  if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
+			  if (y >= underwaterHeightPosition) {
 				  lineClear++
 			  }
 		  } else {
@@ -174,9 +175,9 @@ export default class Stack extends GameModule {
           if (this.parent.piece.useSpecialI && this.parent.piece.name === "I") {
             this.grid[xLocation][yLocation] = "i" + shape[y][x]
           } else {
-			if (this.parent.piece.useBoneBlocks) {
+			if (this.parent.piece.useBoneBlocks && this.isFrozen !== true) {
 				this.grid[xLocation][yLocation] = `${color}bone`
-			} else if (this.isHidden) {
+			} else if (this.isHidden && this.isFrozen !== true) {
 				this.grid[xLocation][yLocation] = "hidden"
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
@@ -230,7 +231,7 @@ export default class Stack extends GameModule {
           }
           this.parent.piece.hasLineDelay = true
           if (this.isUnderwater) {
-				if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
+				if (y >= underwaterHeightPosition) {
 					this.lineClear++
 				}
 		  } else {
@@ -663,16 +664,17 @@ export default class Stack extends GameModule {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          if (this.grid[x][shiftY] !== "frozen") {
-			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
-			if (
-				this.grid[x][shiftY] != null &&
-				this.grid[x][shiftY - 1] != null
-			) {
-				fallenBlocks++
-			}
-			this.dirtyCells.push([x, shiftY + 1])
-		  } else if (y === bottomLine && this.lineClear >= 4) {
+//          if (this.grid[x][shiftY] !== "frozen") {
+//			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
+//			if (
+//				this.grid[x][shiftY] != null &&
+//				this.grid[x][shiftY - 1] != null
+//			) {
+//				fallenBlocks++
+//			}
+//			this.dirtyCells.push([x, shiftY + 1])
+//		  } else if (y === bottomLine && this.lineClear >= 4) {
+		  if (y === bottomLine && this.lineClear >= 4) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
@@ -873,6 +875,10 @@ export default class Stack extends GameModule {
           }
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
+		if (this.isUnderwater && y >= underwaterHeightPosition) {
+			color = "white"
+			suffix = ""
+		}
 		if (this.isHidden && this.redrawOnHidden) {
 			color = "hidden"
 			suffix = ""

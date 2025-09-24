@@ -12,5 +12,41 @@
       "fixedText": true,
       "type": "header"
     }
+	{
+      "label": "Difficulty",
+      "description": "Choose the difficulty of the game.",
+      "fixedText": true,
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "EASY",
+		  "description": "",
+          "fixedText": true,
+          "value": 1
+        },
+        {
+          "label": "NORMAL",
+		  "description": "",
+          "fixedText": true,
+          "value": 2
+        },
+		{
+          "label": "HARD",
+		  "description": "",
+          "fixedText": true,
+          "value": 3
+        },
+        {
+          "label": "HARDEST",
+		  "description": "",
+          "fixedText": true,
+          "value": 4
+        }
+      ],
+      "setting": "difficulty",
+      "gameName": "sega",
+      "settingType": "game"
+    }
   ]
 }

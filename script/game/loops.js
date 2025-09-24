@@ -277,7 +277,9 @@ const updateAsukaGrade = (game) => {
         game.stat.grade = ""
 }
 const updateRoundsGrade = (game) => {
-	  if (game.stat.level >= 2600) game.stat.grade = "GM"
+	  if (game.stat.level >= 2600 && game.rta <= 435000) game.stat.grade = "GM-Rounds"
+	  else if (game.stat.level >= 2600 && game.rta > 435000)
+        game.stat.grade = "GM"
 	  else if (game.stat.level >= 1100)
         game.stat.grade = "M"
 	  else if (game.stat.level >= 0)
@@ -6257,7 +6259,27 @@ export const loops = {
 	  lastPieces = game.stat.piece
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      game.piece.gravity = Math.max(gravityEquation * 500, framesToMs(1 / 20))
+	  let gravityMultiplier = 500
+	  const difficulty = parseInt(settings.game.sega.difficulty)
+	  switch (difficulty) {
+		  case 1: {
+			  gravityMultiplier = 550
+			  break
+		  }
+		  case 2: {
+			  gravityMultipler = 500
+			  break
+		  }
+		  case 3: {
+			  gravityMultiplier = 450
+			  break
+		  }
+		  case 4: {
+			  gravityMultiplier = 400
+			  break
+		  }
+	  }
+      game.piece.gravity = Math.max(gravityEquation * gravityMultiplier, framesToMs(1))
       game.piece.lockDelayLimit = 500
       updateFallSpeed(game)
 	  game.piece.ghostIsVisible = false
