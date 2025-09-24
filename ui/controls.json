@@ -72,7 +72,7 @@
       "control": "rotate180"
     },
     {
-	  "message": "Special",
+	  "label": "Special",
 	  "description": "Special control used in select modes.",
       "fixedText": true,
       "type": "control",
