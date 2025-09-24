@@ -239,10 +239,8 @@ export default class Stack extends GameModule {
           if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 			  this.lineClear++
 		  }
-		  if (this.isUnderwater) {
-			  if (y >= underwaterHeightPosition) {
-				  this.toCollapseUnderwater.push(y)
-			  }
+		  if (this.isUnderwater && y >= underwaterHeightPosition) {
+			  this.toCollapseUnderwater.push(y)
 		  } else {
 			  this.toCollapse.push(y)
 		  }
@@ -653,7 +651,7 @@ export default class Stack extends GameModule {
 	let bottomLine = this.height + this.hiddenHeight - 1
 	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
 	if (this.isUnderwater) {
-		if (this.clearUnderwaterRows) {
+		if (this.cleanUnderwaterRows) {
 			//this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 			if (this.toCollapseUnderwater.length > 0) {
 				for (const y of this.toCollapseUnderwater) {
