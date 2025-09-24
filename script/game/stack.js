@@ -67,6 +67,10 @@ export default class Stack extends GameModule {
     }
   }
   makeAllFrozen() {
+	if (this.isDirty !== true) {
+		this.makeAllDirty()
+		this.isDirty = true
+	}
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
