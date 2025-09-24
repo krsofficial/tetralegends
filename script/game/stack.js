@@ -192,10 +192,16 @@ export default class Stack extends GameModule {
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
 				this.makeAllFrozen()
-				this.makeAllDirty()
+				if (this.isDirty !== true) {
+					this.makeAllDirty()
+					this.isDirty = true
+				}
 			} else if (this.isUnderwater && y >= underwaterHeightPosition) {
 				this.grid[xLocation][yLocation] = color
-				this.makeAllDirty()
+				if (this.isDirty !== true) {
+					this.makeAllDirty()
+					this.isDirty = true
+				}
 			}
 			} else {
 				this.grid[xLocation][yLocation] = color
@@ -772,7 +778,7 @@ export default class Stack extends GameModule {
 	  sound.add("bravo")
 	  this.new()
 	  this.makeAllDirty()
-	  this.draw()
+	  this.isDirty = true
   }
   get highest() {
     let highest = 0
