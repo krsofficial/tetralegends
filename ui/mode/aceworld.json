@@ -32,9 +32,8 @@
       "settingType": "game"
     },
     {
-      "label": "Difficulty",
-      "description": "Choose the difficulty of the game.",
-      "fixedText": true,
+      "string": "difficultyLabel",
+      "stringDesc": "difficultyDescription",
       "type": "select",
       "action": "select",
       "selectOptions": [
