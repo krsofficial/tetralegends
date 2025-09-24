@@ -239,8 +239,10 @@ export default class Stack extends GameModule {
           if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 			  this.lineClear++
 		  }
-		  if (this.isUnderwater && y >= underwaterHeightPosition) {
-			  this.toCollapseUnderwater.push(y)
+		  if (this.isUnderwater) {
+			  if (y >= underwaterHeightPosition) {
+				  this.toCollapseUnderwater.push(y)
+			  }
 		  } else {
 			  this.toCollapse.push(y)
 		  }

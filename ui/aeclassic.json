@@ -12,6 +12,7 @@
       "label": "PRESSURE",
       "description": "You have a time limit that cannot be reset nor extended. How many levels can you reach?",
       "fixedText": true,
+	  "default": true,
       "action": "submenu",
       "submenu": "mode/asuka"
     },
