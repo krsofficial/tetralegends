@@ -41,7 +41,7 @@ export default class Stack extends GameModule {
 	this.isFrozen = false
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
-	this.underwaterHeight = 12
+	this.underwaterHeight = 10
   }
   removeFromArray(array, elementToRemove) {
 	  const indexToRemove = array.indexOf(elementToRemove)
@@ -244,7 +244,11 @@ export default class Stack extends GameModule {
 			  this.lineClear++
 		  }
 		  if (this.isUnderwater && y >= underwaterHeightPosition) {
-			  this.toCollapseUnderwater.push(y)
+			  if (this.cleanUnderwaterRows) {
+				  this.toCollapse.push(y)
+			  } else {
+				  this.toCollapseUnderwater.push(y)
+			  }
 		  } else {
 			  this.toCollapse.push(y)
 		  }
@@ -714,7 +718,7 @@ export default class Stack extends GameModule {
         }
       }
     }
-	this.draw()
+	this.makeAllFrozen()
 	} else {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
@@ -977,7 +981,7 @@ export default class Stack extends GameModule {
       }
     }
     // Line clear animation
-    if (this.toCollapse.length > 0 && this.isFrozen !== true) {
+    if (this.toCollapse.length > 0 && this.isFrozen !== true && this.parent.piece.useBoneBlocks !== true) {
       const brightness = Math.max(
         0,
         1 -
