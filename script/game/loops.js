@@ -1763,7 +1763,7 @@ export const loops = {
         const entry = pair[1]
         if (game.stat.level < level) {
 		  if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = framesToMs(10)
+			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
 		  } else {
 			game.piece.areLimit = framesToMs(entry)
 		  }
@@ -2342,7 +2342,7 @@ export const loops = {
         const entry = pair[1]
         if (game.stat.level < level) {
           if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = framesToMs(10)
+			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
 		  } else {
 			game.piece.areLimit = framesToMs(entry)
 		  }
@@ -2549,7 +2549,7 @@ export const loops = {
         const entry = pair[1]
         if (game.stat.level < level) {
           if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = framesToMs(10)
+			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
 		  } else {
 			game.piece.areLimit = framesToMs(entry)
 		  }
