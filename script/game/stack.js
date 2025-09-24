@@ -650,17 +650,19 @@ export default class Stack extends GameModule {
 	let fallenBlocks = 0
 	let bottomLine = this.height + this.hiddenHeight - 1
 	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
-	if (this.isUnderwater && this.cleanUnderwaterRows) {
-		//this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
-		if (this.toCollapseUnderwater.length > 0) {
-			for (const y of this.toCollapseUnderwater) {
-				if (this.arrayContains(this.toCollapse, y) !== true) {
-					this.toCollapse.push(y)
+	if (this.isUnderwater) {
+		if (this.clearUnderwaterRows) {
+			//this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
+			if (this.toCollapseUnderwater.length > 0) {
+				for (const y of this.toCollapseUnderwater) {
+					if (this.arrayContains(this.toCollapse, y) !== true) {
+						this.toCollapse.push(y)
+					}
 				}
 			}
+			this.toCollapseUnderwater = []
+			this.cleanUnderwaterRows = false
 		}
-		this.toCollapseUnderwater = []
-		this.cleanUnderwaterRows = false
 	} else {
 		//this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
 		if (this.toCollapseUnderwater.length > 0) {
