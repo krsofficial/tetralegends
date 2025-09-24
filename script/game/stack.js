@@ -178,7 +178,6 @@ export default class Stack extends GameModule {
           })
           const xLocation = x + passedX
           const yLocation = y + passedY + this.hiddenHeight
-		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           if (yLocation - this.hiddenHeight >= 0) {
             passedLockOut--
           }
@@ -192,17 +191,6 @@ export default class Stack extends GameModule {
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
 				this.makeAllFrozen()
-				if (this.isDirty !== true) {
-					this.makeAllDirty()
-					this.isDirty = true
-				}
-			} else if (this.isUnderwater && y >= underwaterHeightPosition) {
-				this.grid[xLocation][yLocation] = color
-				if (this.isDirty !== true) {
-					this.makeAllDirty()
-					this.isDirty = true
-				}
-			}
 			} else {
 				this.grid[xLocation][yLocation] = color
 			}
@@ -662,7 +650,12 @@ export default class Stack extends GameModule {
 	let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
 	if (this.isUnderwater) {
 		if (this.clearUnderwaterRows) {
-			this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
+			//this.toCollapse = [...this.toCollapseUnderwater, ...this.toCollapse]
+			for (const y of this.toCollapseUnderwater) {
+				if (this.arrayContains(this.toCollapse, y) !== true) {
+					this.toCollapse.push(y)
+				}
+			}
 			this.toCollapseUnderwater = []
 			this.clearUnderwaterRows = false
 		} else {
@@ -886,7 +879,6 @@ export default class Stack extends GameModule {
           name = "mino"
         }
         let suffix = ""
-		let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
         if (this.parent.piece.useRetroColors) {
           let modifier = 0
           if (this.levelUpAnimation < this.levelUpAnimationLimit) {
@@ -896,10 +888,6 @@ export default class Stack extends GameModule {
           }
           suffix = `-${negativeMod(this.parent.stat.level + modifier, 10)}`
         }
-		if (this.isUnderwater && y >= underwaterHeightPosition) {
-			color = "white"
-			suffix = ""
-		}
 		if (this.isHidden && this.redrawOnHidden) {
 			color = "hidden"
 			suffix = ""
