@@ -3229,7 +3229,7 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(22))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3240,7 +3240,7 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(22))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3251,7 +3251,7 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(18))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3262,7 +3262,7 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3310,7 +3310,7 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3321,7 +3321,7 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3460,7 +3460,7 @@ export const loops = {
 		  }
 		  case 2: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
@@ -3469,7 +3469,7 @@ export const loops = {
 		  }
 		  case 3: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
@@ -3487,7 +3487,7 @@ export const loops = {
 		  }
 		  case 5: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
@@ -3735,7 +3735,7 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(22))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3746,7 +3746,7 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(22))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3757,7 +3757,7 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(18))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3768,7 +3768,7 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3816,7 +3816,7 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3827,7 +3827,7 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
@@ -3963,7 +3963,7 @@ export const loops = {
 		  }
 		  case 2: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
@@ -3972,7 +3972,7 @@ export const loops = {
 		  }
 		  case 3: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
@@ -3990,7 +3990,7 @@ export const loops = {
 		  }
 		  case 5: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
 			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
