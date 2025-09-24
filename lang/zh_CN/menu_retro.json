@@ -20,11 +20,19 @@
     "description": "Feel free to take any liberties as long you can accurately describe the mode in a way that's localized to the language."
   },
   "deluxeLabel": {
-    "message": "豪华版",
+    "message": "掌上游戏机 DX",
     "description": "A mode based on the GBC version of Tet"
   },
   "deluxeDescription": {
     "message": "传统和现代元素的结合",
+    "description": "Feel free to take any liberties as long you can accurately describe the mode in a way that's localized to the language."
+  },
+  "segaLabel": {
+    "message": "街机",
+    "description": "A mode based on the System 16 version of Tet"
+  },
+  "segaDescription": {
+    "message": "一款远超时代的谜题版本。",
     "description": "Feel free to take any liberties as long you can accurately describe the mode in a way that's localized to the language."
   }
 }

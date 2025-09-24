@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "Pulsa cualquier tecla que desees para esta acción",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "Special"
+  },
+  "specialKeyDescription": {
+    "message": "Special control used in select modes."
   }
 }

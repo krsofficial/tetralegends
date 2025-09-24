@@ -244,17 +244,17 @@ export default class Stack extends GameModule {
 			}
           }
           this.parent.piece.hasLineDelay = true
-		  if (this.isUnderwater && y >= underwaterHeightPosition) {
-			  this.toCollapseUnderwater.push(y)
-		  } else {
-			  this.toCollapse.push(y)
-		  }
           if (this.isUnderwater) {
 				if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 					this.lineClear++
 				}
 		  } else {
 				this.lineClear++
+		  }
+		  if (this.isUnderwater && y >= underwaterHeightPosition) {
+			  this.toCollapseUnderwater.push(y)
+		  } else {
+			  this.toCollapse.push(y)
 		  }
           break
         }
@@ -338,6 +338,32 @@ export default class Stack extends GameModule {
           }
         }
       }
+	  if (this.toCollapse.length === 0) {
+		this.parent.stat.line += this.lineClear
+		this.parent.addScore(`erase${this.lineClear}`)
+		this.parent.updateStats()
+		this.parent.particle.generate({
+			amount: 100,
+			x: 0,
+			y:
+			(this.toCollapse[this.toCollapse.length - 1] - this.hiddenHeight + 1) *
+			this.parent.cellSize,
+			xRange: this.width * this.parent.cellSize,
+			yRange: 0,
+			xVelocity: 0,
+			yVelocity: 1,
+			xVariance: 5,
+			yVariance: 2,
+			gravity: 0.3,
+			gravityAccceleration: 1.05,
+			lifeVariance: 80,
+		})
+		this.toCollapse = []
+		this.lineClear = 0
+		this.alarmCheck()
+		this.isDirty = true
+		this.parent.piece.isDirty = true
+	  }
     } else {
       this.parent.combo = -1
       if (isSpin) {

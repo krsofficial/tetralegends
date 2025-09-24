@@ -29,9 +29,8 @@
       "submenu": "mode/deluxe"
     },
     {
-      "label": "Arcade",
-      "description": "A classic variant popular in arcades.",
-      "fixedText": true,
+      "string": "segaLabel",
+      "stringDesc": "segaDescription",
       "action": "submenu",
       "submenu": "mode/sega"
     }

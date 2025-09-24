@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "Drücken Sie die Taste, die Sie für diese Aktion verwenden möchten",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "Special"
+  },
+  "specialKeyDescription": {
+    "message": "Special control used in select modes."
   }
 }

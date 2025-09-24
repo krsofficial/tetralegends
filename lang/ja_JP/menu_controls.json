@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "この操作に使用するキーを押してください。",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "スペシャル"
+  },
+  "specialKeyDescription": {
+    "message": "特定のモードで使用される特別な制御。"
   }
 }

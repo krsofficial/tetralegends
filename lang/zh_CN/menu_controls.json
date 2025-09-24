@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "按下您想要用于该操作的按键",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "特别"
+  },
+  "specialKeyDescription": {
+    "message": "特定模式下使用的特殊控制。"
   }
 }

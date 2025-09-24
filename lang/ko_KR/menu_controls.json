@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "이 행동을 할 때 사용할 키를 누르세요",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "Special"
+  },
+  "specialKeyDescription": {
+    "message": "Special control used in select modes."
   }
 }

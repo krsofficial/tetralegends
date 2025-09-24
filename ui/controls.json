@@ -72,8 +72,8 @@
       "control": "rotate180"
     },
     {
-	  "label": "Special",
-	  "description": "Special control used in select modes.",
+	  "string": "specialKeyLabel",
+      "stringDesc": "specialKeyDescription",
       "fixedText": true,
       "type": "control",
       "action": "control",

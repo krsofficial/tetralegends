@@ -84,5 +84,11 @@
   "configPopupDescription": {
     "message": "Chọn phím mà bạn muốn để thêm vào chức năng này",
     "description": "Displays on the popup when you add a control binding"
+  },
+  "specialKeyLabel": {
+    "message": "Special"
+  },
+  "specialKeyDescription": {
+    "message": "Special control used in select modes."
   }
 }

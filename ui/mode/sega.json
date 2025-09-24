@@ -7,9 +7,8 @@
   },
   "data": [
     {
-      "label": "Arcade",
-      "description": "",
-      "fixedText": true,
+      "string": "segaLabel",
+      "langOverride": "menu_retro",
       "type": "header"
     },
 	{
