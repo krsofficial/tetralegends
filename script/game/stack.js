@@ -66,6 +66,15 @@ export default class Stack extends GameModule {
       }
     }
   }
+  makeAllFrozen() {
+    for (let x = 0; x < this.grid.length; x++) {
+      for (let y = 0; y < this.grid[x].length; y++) {
+        if (this.grid[x][y] != null) {
+			this.grid[x][y] = "frozen"
+		}
+      }
+    }
+  }
   gridWithLockdown() {
     const finalBlocks = this.parent.piece.getFinalBlockLocations()
     const newGrid = JSON.parse(JSON.stringify(this.grid))
@@ -88,7 +97,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x <= newGrid.length; x++) {
         if (x === newGrid.length) {
 		  if (this.isUnderwater) {
-			  if (arrayContains(this.toCollapseUnderwater, y) !== true) {
+			  if (this.arrayContains(this.toCollapseUnderwater, y) !== true) {
 				  lineClear++
 			  }
 		  } else {
@@ -181,6 +190,7 @@ export default class Stack extends GameModule {
 				this.grid[xLocation][yLocation] = "hidden"
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
+				this.makeAllFrozen()
 			} else {
 				this.grid[xLocation][yLocation] = color
 			}
