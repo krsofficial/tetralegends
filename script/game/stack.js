@@ -231,7 +231,7 @@ export default class Stack extends GameModule {
           }
           this.parent.piece.hasLineDelay = true
           if (this.isUnderwater) {
-				if (y >= underwaterHeightPosition) {
+				if (y < underwaterHeightPosition) {
 					this.lineClear++
 				}
 		  } else {
