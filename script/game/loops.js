@@ -6267,7 +6267,7 @@ export const loops = {
 	  const difficulty = parseInt(settings.game.sega.difficulty)
 	  switch (difficulty) {
 		  case 1: {
-			  gravityMultiplier = 550
+			  gravityMultiplier = 600
 			  break
 		  }
 		  case 2: {
@@ -6275,11 +6275,11 @@ export const loops = {
 			  break
 		  }
 		  case 3: {
-			  gravityMultiplier = 450
+			  gravityMultiplier = 400
 			  break
 		  }
 		  case 4: {
-			  gravityMultiplier = 400
+			  gravityMultiplier = 300
 			  break
 		  }
 	  }
