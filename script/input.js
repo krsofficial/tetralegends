@@ -22,6 +22,7 @@ class Input {
       softDrop: ["DPAD_DOWN"],
       rotateLeft: ["FACE_1"],
       rotateRight: ["FACE_2"],
+	  specialKey: ["FACE_3"],
       rotate180: ["FACE_4"],
       hold: ["LEFT_TOP_SHOULDER", "RIGHT_TOP_SHOULDER"],
       retry: ["SELECT_BACK"],

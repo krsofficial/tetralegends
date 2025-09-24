@@ -64,12 +64,20 @@
       "action": "control",
       "control": "rotateRight"
     },
-    {
+	{
       "string": "rotateDoubleLabel",
       "stringDesc": "rotateDoubleDescription",
       "type": "control",
       "action": "control",
       "control": "rotate180"
+    },
+    {
+      "label": "Special",
+	  "description": "Special control used in select modes.",
+      "fixedText": true,
+      "type": "control",
+      "action": "control",
+      "control": "specialKey"
     },
     {
       "string": "holdLabel",
