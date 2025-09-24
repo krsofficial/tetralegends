@@ -1659,8 +1659,13 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg)
+      if (input.getGameDown("specialKey")) {
+        softDrop(arg, 40)
+		hardDrop(arg)
+      } else {
+		sonicDrop(arg)
+		firmDrop(arg)
+	  }
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -1757,7 +1762,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.areLimit = framesToMs(entry)
+		  if (input.getGameDown("specialKey")) {
+			game.piece.areLimit = framesToMs(10)
+		  } else {
+			game.piece.areLimit = framesToMs(entry)
+		  }
           break
         }
       }
@@ -1765,7 +1774,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.areLineLimit = framesToMs(entry)
+		  game.piece.areLineLimit = framesToMs(entry)
           break
         }
       }
@@ -2252,8 +2261,13 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg)
+      if (input.getGameDown("specialKey")) {
+        softDrop(arg)
+		hardDrop(arg)
+      } else {
+		sonicDrop(arg, true)
+		firmDrop(arg)
+	  }
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -2327,7 +2341,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.areLimit = framesToMs(entry)
+          if (input.getGameDown("specialKey")) {
+			game.piece.areLimit = framesToMs(10)
+		  } else {
+			game.piece.areLimit = framesToMs(entry)
+		  }
           break
         }
       }
@@ -2441,8 +2459,14 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg)
+	  if (input.getGameDown("specialKey")) {
+        softDrop(arg)
+		hardDrop(arg)
+      } else {
+		sonicDrop(arg, true)
+		firmDrop(arg)
+	  }
+      
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -2524,7 +2548,11 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          game.piece.areLimit = framesToMs(entry)
+          if (input.getGameDown("specialKey")) {
+			game.piece.areLimit = framesToMs(10)
+		  } else {
+			game.piece.areLimit = framesToMs(entry)
+		  }
           break
         }
       }
