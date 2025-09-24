@@ -88,7 +88,7 @@ export default class Stack extends GameModule {
       for (let x = 0; x <= newGrid.length; x++) {
         if (x === newGrid.length) {
 		  if (this.isUnderwater) {
-			  if (y < underwaterHeightPosition) {
+			  if (arrayContains(this.toCollapseUnderwater, y) !== true) {
 				  lineClear++
 			  }
 		  } else {
@@ -231,7 +231,7 @@ export default class Stack extends GameModule {
           }
           this.parent.piece.hasLineDelay = true
           if (this.isUnderwater) {
-				if (y < underwaterHeightPosition) {
+				if (arrayContains(this.toCollapseUnderwater, y) !== true) {
 					this.lineClear++
 				}
 		  } else {
