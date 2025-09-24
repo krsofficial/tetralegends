@@ -84,6 +84,20 @@ const levelUpdate = (game) => {
   lastLevel = game.stat.level
   return returnValue
 }
+const levelUpdateSega = (game) => {
+  let returnValue = false
+  if (game.stat.level !== lastLevel) {
+    if (game.stat.level % 2 === 0) {
+      sound.add("levelup")
+	  sound.add("levelupmajor")
+    } else {
+      sound.add("levelupminor")
+    }
+    returnValue = true
+  }
+  lastLevel = game.stat.level
+  return returnValue
+}
 const updateArcadeBg = (game) => {
 	if (game.stat.level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
 	else if (game.stat.level >= 1800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}
@@ -6253,7 +6267,7 @@ export const loops = {
 	  } else {
 		  levelTimerLimit = 58000
 	  }
-	  if (Math.floor(game.stat.line / 8) > game.stat.level) {
+	  if (Math.floor(game.stat.line / 4) > game.stat.level) {
 		  levelTimer = 0
 		  game.stat.level += 1
 	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
@@ -6287,7 +6301,7 @@ export const loops = {
       game.piece.lockDelayLimit = 500
       updateFallSpeed(game)
 	  game.piece.ghostIsVisible = false
-	  levelUpdate(game)
+	  levelUpdateSega(game)
     },
     onInit: (game) => {
 	  game.hideGrid = true
