@@ -3218,9 +3218,9 @@ export const loops = {
 				switch (difficulty) {
 					case 1: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
@@ -3229,9 +3229,9 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
@@ -3240,9 +3240,9 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
@@ -3251,9 +3251,9 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(18))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3262,9 +3262,9 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3277,9 +3277,9 @@ export const loops = {
 				switch (difficulty) {
 					case 1: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
@@ -3288,9 +3288,9 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
@@ -3299,9 +3299,9 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3310,9 +3310,9 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
@@ -3321,9 +3321,9 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
@@ -3451,45 +3451,45 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/kachusha-easy"]
 			  break
 		  }
 		  case 2: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade1"]
 			  break
 		  }
 		  case 3: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade3"]
 			  break
 		  }
 		  case 4: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
 			  } else {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 		  case 5: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade6"]
 			  break
@@ -3724,9 +3724,9 @@ export const loops = {
 				switch (difficulty) {
 					case 1: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
@@ -3735,9 +3735,9 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
@@ -3746,9 +3746,9 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
@@ -3757,9 +3757,9 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(18))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3768,9 +3768,9 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3783,9 +3783,9 @@ export const loops = {
 				switch (difficulty) {
 					case 1: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(24))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade3"], "ace")
 						sound.killBgm()
@@ -3794,9 +3794,9 @@ export const loops = {
 					}
 					case 2: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade6"], "ace")
 						sound.killBgm()
@@ -3805,9 +3805,9 @@ export const loops = {
 					}
 					case 3: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade4"], "ace")
 						sound.killBgm()
@@ -3816,9 +3816,9 @@ export const loops = {
 					}
 					case 4: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
@@ -3827,9 +3827,9 @@ export const loops = {
 					}
 					case 5: {
 						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-						} else {
 							game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+						} else {
+							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
@@ -3954,45 +3954,45 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/kachusha-easy"]
 			  break
 		  }
 		  case 2: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade1"]
 			  break
 		  }
 		  case 3: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(28))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade3"]
 			  break
 		  }
 		  case 4: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(20))
 			  } else {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade6"]
 			  break
 		  }
 		  case 5: {
 			  if (testMode === false) {
-				game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
-			  } else {
 				game.piece.lockDelayLimit = Math.ceil(framesToMs(16))
+			  } else {
+				game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
 			  }
 			  game.settings.music = ["../ace/arcade6"]
 			  break
