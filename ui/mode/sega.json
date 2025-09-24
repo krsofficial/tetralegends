@@ -11,7 +11,7 @@
       "description": "",
       "fixedText": true,
       "type": "header"
-    }
+    },
 	{
       "label": "Difficulty",
       "description": "Choose the difficulty of the game.",
