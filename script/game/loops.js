@@ -1764,11 +1764,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-		  if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
-		  } else {
-			game.piece.areLimit = framesToMs(entry)
-		  }
+		  game.piece.areLimit = framesToMs(entry)
           break
         }
       }
@@ -2346,11 +2342,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
-		  } else {
-			game.piece.areLimit = framesToMs(entry)
-		  }
+          game.piece.areLimit = framesToMs(entry)
           break
         }
       }
@@ -2496,32 +2488,49 @@ export const loops = {
           switch (entry) {
             case 1:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 2:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
 			case 3:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 4:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
 			case 5:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 6:
-			  game.stack.isUnderwater = true
-			  game.stack.clearUnderwaterRows()
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = true
+				  game.stack.clearUnderwaterRows()
+				  underwaterProgression = entry
+			  }
               break
 			case 7:
-			  game.stack.isUnderwater = true
-			  game.stack.clearUnderwaterRows()
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = true
+				  game.stack.clearUnderwaterRows()
+				  underwaterProgression = entry
+			  }
               break
 			case 8:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
           }
-          underwaterProgression = entry
         }
       }
     },
@@ -2599,11 +2608,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          if (input.getGameDown("specialKey")) {
-			game.piece.areLimit = Math.min(framesToMs(6), framesToMs(entry))
-		  } else {
-			game.piece.areLimit = framesToMs(entry)
-		  }
+          game.piece.areLimit = framesToMs(entry)
           break
         }
       }
@@ -2761,32 +2766,49 @@ export const loops = {
           switch (entry) {
             case 1:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 2:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
 			case 3:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 4:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
 			case 5:
 			  game.stack.isUnderwater = true
+			  underwaterProgression = entry
               break
 			case 6:
-			  game.stack.isUnderwater = true
-			  game.stack.clearUnderwaterRows()
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = true
+				  game.stack.clearUnderwaterRows()
+				  underwaterProgression = entry
+			  }
               break
 			case 7:
-			  game.stack.isUnderwater = true
-			  game.stack.clearUnderwaterRows()
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = true
+				  game.stack.clearUnderwaterRows()
+				  underwaterProgression = entry
+			  }
               break
 			case 8:
-			  game.stack.isUnderwater = false
+			  if (game.stack.wouldCauseLineClear() >= 1) {
+				  game.stack.isUnderwater = false
+				  underwaterProgression = entry
+			  }
               break
           }
-          underwaterProgression = entry
         }
       }
     },
