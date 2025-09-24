@@ -6271,7 +6271,7 @@ export const loops = {
 			  break
 		  }
 		  case 2: {
-			  gravityMultipler = 500
+			  gravityMultiplier = 500
 			  break
 		  }
 		  case 3: {
