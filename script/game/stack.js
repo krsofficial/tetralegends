@@ -74,6 +74,10 @@ export default class Stack extends GameModule {
 		}
       }
     }
+	if (game.isDirty !== true) {
+		this.makeAllDirty()
+		this.isDirty = true
+	}
   }
   gridWithLockdown() {
     const finalBlocks = this.parent.piece.getFinalBlockLocations()

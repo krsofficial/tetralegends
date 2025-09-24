@@ -625,6 +625,7 @@ export const loops = {
 		  endRollLines = 0
 	  }
 	  if (game.stat.level >= 999 && endRollPassed) {
+		game.stat.level = 999
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
 		sound.killVox()
 		sound.add("voxexcellent")
@@ -1235,6 +1236,7 @@ export const loops = {
 		  endRollLines = 0
 	  }
 	  if (game.stat.level >= 999 && endRollPassed) {
+		game.stat.level = 999
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
 		sound.killVox()
 		sound.add("voxexcellent")
@@ -1837,6 +1839,7 @@ export const loops = {
 	  if (
         game.stat.level >= 2000
       ) {
+		game.stat.level = 2000
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -2038,6 +2041,7 @@ export const loops = {
 	  if (
         game.stat.level >= 2000
       ) {
+		game.stat.level = 2000
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -2228,6 +2232,7 @@ export const loops = {
 	  if (
         game.stat.level >= 1300
       ) {
+		game.stat.level = 1300
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -2426,6 +2431,7 @@ export const loops = {
 	  if (
         game.stat.level >= 1300
       ) {
+		game.stat.level = 1300
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -2473,6 +2479,34 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (
+	  (game.stat.level >= 300 && game.stat.level < 400) ||
+	  (game.stat.level >= 500 && game.stat.level < 600) ||
+	  (game.stat.level >= 700 && game.stat.level < 1000)
+	  ) {
+		  game.stack.isUnderwater = true
+	  } else {
+		  game.stack.isUnderwater = false
+      }
+	  const underwaterProgressionTable = [
+        [799, 1],
+        [899, 2],
+      ]
+	  for (const pair of underwaterProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && underwaterProgression < entry) {
+          switch (entry) {
+            case 1:
+			  game.stack.clearUnderwaterRows()
+              break
+			case 2:
+			  game.stack.clearUnderwaterRows()
+              break
+          }
+          underwaterProgression = entry
+        }
+      }
     },
     onInit: (game) => {
 	  underwaterProgression = 0
@@ -2633,6 +2667,11 @@ export const loops = {
           game.musicProgression = entry
         }
       }
+	  if (game.stat.level >= 1300) {
+		  game.stack.isFrozen = true
+	  } else {
+		  game.stack.isFrozen = false
+	  }
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
@@ -2644,45 +2683,9 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  if (
-	  (game.stat.level >= 300 && game.stat.level < 399) ||
-	  (game.stat.level >= 500 && game.stat.level < 599) ||
-	  (game.stat.level >= 700 && game.stat.level < 799)
-	  ) {
-		  game.stack.isUnderwater = true
-	  } else {
-		  game.stack.isUnderwater = false
-      }
-	  const underwaterProgressionTable = [
-        [799, 1],
-        [899, 2],
-      ]
-	  for (const pair of underwaterProgressionTable) {
-        const level = pair[0]
-        const entry = pair[1]
-        if (game.stat.level >= level && underwaterProgression < entry) {
-          switch (entry) {
-            case 1:
-			  game.stack.clearUnderwaterRows()
-              break
-			case 2:
-			  game.stack.clearUnderwaterRows()
-              break
-          }
-          underwaterProgression = entry
-        }
-      }
-	  if (game.stat.level >= 1300) {
-		  if (game.stack.isFrozen === false) {
-			game.stack.isFrozen = true
-			arg.stack.makeAllDirty()
-			arg.stack.isDirty = true
-		  }
-	  } else {
-		  game.stack.isFrozen = false
-	  }
-	  if (
         game.stat.level >= 2600
       ) {
+		game.stat.level = 2600
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -2724,6 +2727,34 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (
+	  (game.stat.level >= 300 && game.stat.level < 400) ||
+	  (game.stat.level >= 500 && game.stat.level < 600) ||
+	  (game.stat.level >= 700 && game.stat.level < 1000)
+	  ) {
+		  game.stack.isUnderwater = true
+	  } else {
+		  game.stack.isUnderwater = false
+      }
+	  const underwaterProgressionTable = [
+        [799, 1],
+        [899, 2],
+      ]
+	  for (const pair of underwaterProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && underwaterProgression < entry) {
+          switch (entry) {
+            case 1:
+			  game.stack.clearUnderwaterRows()
+              break
+			case 2:
+			  game.stack.clearUnderwaterRows()
+              break
+          }
+          underwaterProgression = entry
+        }
+      }
     },
     onInit: (game) => {
 	  underwaterProgression = 0
@@ -2890,46 +2921,15 @@ export const loops = {
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
-	  if (
-	  (game.stat.level >= 300 && game.stat.level < 399) ||
-	  (game.stat.level >= 500 && game.stat.level < 599) ||
-	  (game.stat.level >= 700 && game.stat.level < 799)
-	  ) {
-		  game.stack.isUnderwater = true
-	  } else {
-		  game.stack.isUnderwater = false
-      }
-	  const underwaterProgressionTable = [
-        [799, 1],
-        [899, 2],
-      ]
-	  for (const pair of underwaterProgressionTable) {
-        const level = pair[0]
-        const entry = pair[1]
-        if (game.stat.level >= level && underwaterProgression < entry) {
-          switch (entry) {
-            case 1:
-			  game.stack.clearUnderwaterRows()
-              break
-			case 2:
-			  game.stack.clearUnderwaterRows()
-              break
-          }
-          underwaterProgression = entry
-        }
-      }
 	  if (game.stat.level >= 1300) {
-		  if (game.stack.isFrozen === false) {
-			game.stack.isFrozen = true
-			arg.stack.makeAllDirty()
-			arg.stack.isDirty = true
-		  }
+		  game.stack.isFrozen = true
 	  } else {
 		  game.stack.isFrozen = false
 	  }
 	  if (
         game.stat.level >= 2600
       ) {
+		game.stat.level = 2600
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
