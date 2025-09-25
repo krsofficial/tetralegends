@@ -5,10 +5,13 @@ Play here: https://sub2ninah.github.io/tetralegends/
 # Additions
 - Total UI Overhaul
 - New Arcade modes [Novice (TGM3 Easy), Special (TGM3 Master), Sudden (TGM3 Shirase)]
+- New Ace mode [Novice (ACE Normal), Special (ACE HiSpeed), Special 2 (ACE HiSpeed 2), Sudden (ACE Another), Sudden 2 (ACE Another 2)]
 - New Rounds modes [Pressure (TGM4 Asuka), Rally (TGM4 Konoha), Abrupt (TGM4 Master)]
-- New Skins [PPT, T99, Friends, Prismal, Pyramidal, Metallic, Bevelled]
+- New Retro mode [Arcade (Sega)]
+- New Skins [PPT, T99, Friends, Prismal, Prismal, Pyramidal, Metallic, Bevelled]
 - New Beat mode song [Gas Gas Gas (180BPM)]
 
 # Notes
-- Abrupt is a WIP. Expect bugs.
+- (Pressure) Backpedalling was impossible to replicate on Tetra Legends.
+- (Abrupt) Cyclone was impossible to replicate on Tetra Legends. To compensate, Master Pikii II (frozen minos from level 1300+) has been made harsher than the original.
 - If it says 404 site not found, the site is not down, just updating.

@@ -18,7 +18,7 @@
     },
 	{
       "label": "ABRUPT",
-      "description": "The ultimate test of skill. (WIP, please expect bugs.)",
+      "description": "The ultimate test of block stacking skills. Only top-level players can reach far. (WIP)",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/roundsworld"
