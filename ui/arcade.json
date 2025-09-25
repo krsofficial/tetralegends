@@ -21,7 +21,6 @@
       "label": "ARS-TI",
       "description": "ARS, Hold, 3 next pieces",
       "fixedText": true,
-      "default": true,
       "action": "submenu",
       "submenu": "arcadeclassic"
     },

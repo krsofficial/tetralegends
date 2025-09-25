@@ -1,0 +1,34 @@
+{
+  "properties": {
+    "parent": "arcade"
+  },
+  "data": [
+    {
+      "string": "Arcade (Classic Rule)",
+      "fixedText": true,
+      "type": "header"
+    },
+    {
+      "label": "NOVICE",
+      "description": "A slow game for beginners.",
+      "fixedText": true,
+      "default": true,
+      "action": "submenu",
+      "submenu": "mode/novice"
+    },
+	{
+      "label": "SPECIAL",
+      "description": "Your grade will depend on how well you play.",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/special"
+    },
+    {
+      "label": "SUDDEN",
+      "description": "The pieces spawn on the ground and only get faster!",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/sudden"
+    }
+  ]
+}
