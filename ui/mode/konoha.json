@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "aeclassic",
+    "parent": "arcadeclassic",
     "langOverride": "mode-options",
     "game": "konoha",
     "pgmusic": "pg-rally"

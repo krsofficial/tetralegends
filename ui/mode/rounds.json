@@ -1,13 +1,13 @@
 {
   "properties": {
-    "parent": "aeclassic",
+    "parent": "arcadeclassic",
     "langOverride": "mode-options",
     "game": "rounds",
     "pgmusic": "pg-rounds"
   },
   "data": [
     {
-      "label": "Abrupt",
+      "label": "Sudden-AE",
       "description": "",
       "fixedText": true,
       "type": "header"

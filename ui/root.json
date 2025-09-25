@@ -57,17 +57,8 @@
       "fixedText": true,
       "label": "Ace",
       "description": "Clearing 10 lines resets the time limit! Can you reach the goal?",
-	  "width": "half",
       "action": "submenu",
       "submenu": "arcadeace"
-    },
-	{
-      "fixedText": true,
-      "label": "Rounds",
-      "description": "An even more difficult variant of the puzzle for those who enjoyed the Arcade modes.",
-	  "width": "half",
-      "action": "submenu",
-      "submenu": "arcadeae"
     },
     {
       "fixedText": true,

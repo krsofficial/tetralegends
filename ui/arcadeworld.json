@@ -12,19 +12,19 @@
       "label": "NOVICE",
       "description": "Not available in World Rule!",
       "fixedText": true,
-      "disabled": true,
+      "disabled": true
     },
 	{
       "label": "SPECIAL",
       "description": "Not available in World Rule!",
       "fixedText": true,
-      "disabled": true,
+      "disabled": true
     },
     {
       "label": "SUDDEN",
       "description": "Not available in World Rule!",
       "fixedText": true,
-      "disabled": true,
+      "disabled": true
     },
     {
       "label": "NOVICE-TI",
@@ -47,6 +47,28 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/suddenworld"
+    },
+	{
+      "label": "PRESSURE",
+      "description": "You have a time limit that cannot be reset nor extended. How many levels can you reach?",
+	  "fixedText": true,
+	  "default": true,
+      "action": "submenu",
+      "submenu": "mode/asukaworld"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konohaworld"
+    },
+	{
+      "label": "SUDDEN-AE",
+      "description": "The ultimate test of block stacking skills. Only top-level players can reach far. (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/roundsworld"
     }
   ]
 }

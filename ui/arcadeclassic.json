@@ -50,6 +50,28 @@
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/suddenti"
+    },
+	{
+      "label": "PRESSURE",
+      "description": "You have a time limit that cannot be reset nor extended. How many levels can you reach?",
+	  "fixedText": true,
+	  "default": true,
+      "action": "submenu",
+      "submenu": "mode/asuka"
+    },
+	{
+      "label": "RALLY",
+      "description": "Getting a perfect clear extends the time limit! How many perfect clears can you get?",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/konoha"
+    },
+	{
+      "label": "SUDDEN-AE",
+      "description": "The ultimate test of block stacking skills. Only top-level players can reach far. (WIP)",
+      "fixedText": true,
+      "action": "submenu",
+      "submenu": "mode/rounds"
     }
   ]
 }

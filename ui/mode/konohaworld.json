@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "aeworld",
+    "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "konohaworld",
     "pgmusic": "pg-rally"
