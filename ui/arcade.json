@@ -12,6 +12,7 @@
     {
       "label": "CLASSIC RULE",
       "description": "The ruleset used in the arcade games.",
+	  "default": true,
       "fixedText": true,
       "action": "submenu",
       "submenu": "arcadeclassic"
