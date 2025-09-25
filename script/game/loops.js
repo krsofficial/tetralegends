@@ -85,10 +85,12 @@ const levelUpdate = (game) => {
   return returnValue
 }
 const testModeUpdate = () => {
-	if (input.getGameDown("testModeKey")) {
-		testMode = true
-    } else {
-		testMode = false
+	if (input.getGamePress("testModeKey")) {
+		if (testMode !== false) {
+			testMode = false
+		} else {
+			testMode = true
+		}
 	}
 }
 const levelUpdateSega = (game) => {
