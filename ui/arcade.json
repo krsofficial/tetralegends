@@ -9,24 +9,16 @@
       "langOverride": "menu_root",
       "type": "header"
     },
-	{
-      "label": "ARS-TAP",
-      "description": "ARS, No hold, 1 next piece",
-      "fixedText": true,
-      "default": true,
-      "action": "submenu",
-      "submenu": "arcadeta"
-    },
     {
-      "label": "ARS-TI",
-      "description": "ARS, Hold, 3 next pieces",
+      "label": "CLASSIC RULE",
+      "description": "The ruleset used in the arcade games.",
       "fixedText": true,
       "action": "submenu",
       "submenu": "arcadeclassic"
     },
 	{
-      "label": "WORLD-TI",
-      "description": "SRS, Hold, 3 next pieces",
+      "label": "WORLD RULE",
+      "description": "The ruleset used in the guideline games.",
       "fixedText": true,
       "action": "submenu",
       "submenu": "arcadeworld"

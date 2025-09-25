@@ -9,7 +9,7 @@
       "type": "header"
     },
     {
-      "label": "ARCADE RULE",
+      "label": "CLASSIC RULE",
       "description": "The ruleset used in the arcade games.",
       "fixedText": true,
       "default": true,
@@ -17,7 +17,7 @@
       "submenu": "aeclassic"
     },
 	{
-      "label": "STANDARD RULE",
+      "label": "WORLD RULE",
       "description": "The ruleset used in the guideline games.",
       "fixedText": true,
       "action": "submenu",

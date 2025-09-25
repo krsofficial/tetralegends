@@ -8,8 +8,26 @@
       "fixedText": true,
       "type": "header"
     },
-    {
+	{
       "label": "NOVICE",
+      "description": "Not available in World Rule!",
+      "fixedText": true,
+      "disabled": true,
+    },
+	{
+      "label": "SPECIAL",
+      "description": "Not available in World Rule!",
+      "fixedText": true,
+      "disabled": true,
+    },
+    {
+      "label": "SUDDEN",
+      "description": "Not available in World Rule!",
+      "fixedText": true,
+      "disabled": true,
+    },
+    {
+      "label": "NOVICE-TI",
       "description": "A slow game for beginners.",
       "fixedText": true,
       "default": true,
@@ -17,14 +35,14 @@
       "submenu": "mode/noviceworld"
     },
 	{
-      "label": "SPECIAL",
+      "label": "SPECIAL-TI",
       "description": "Your grade will depend on how well you play.",
       "fixedText": true,
       "action": "submenu",
       "submenu": "mode/specialworld"
     },
 	{
-      "label": "SUDDEN",
+      "label": "SUDDEN-TI",
       "description": "The pieces spawn on the ground and only get faster!",
       "fixedText": true,
       "action": "submenu",
