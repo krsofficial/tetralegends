@@ -66,7 +66,7 @@ let levelTimer = 0
 let levelTimerLimit = 58000
 let lastPieces = 0
 let underwaterProgression = 0
-let testMode = true
+let testMode = false
 let nonEvents = []
 let bpm
 const levelUpdate = (game) => {
@@ -83,6 +83,13 @@ const levelUpdate = (game) => {
   }
   lastLevel = game.stat.level
   return returnValue
+}
+const testModeUpdate = () => {
+	if (input.getGameDown("testModeKey")) {
+		testMode = true
+    } else {
+		testMode = false
+	}
 }
 const levelUpdateSega = (game) => {
   let returnValue = false
@@ -394,6 +401,7 @@ export const loops = {
 		  }
         }
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -631,6 +639,7 @@ export const loops = {
 		sound.add("voxexcellent")
 		game.end(true)
 	  }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -897,6 +906,7 @@ export const loops = {
         sound.add("voxexcellent")
         game.end(true)
 	  }
+	  testModeUpdate()
     },
     onPieceSpawn: (game) => {
       game.drop = 0
@@ -1006,6 +1016,7 @@ export const loops = {
 		  }
         }
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -1242,6 +1253,7 @@ export const loops = {
 		sound.add("voxexcellent")
 		game.end(true)
 	  }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -1508,6 +1520,7 @@ export const loops = {
         sound.add("voxexcellent")
         game.end(true)
       }
+	  testModeUpdate()
     },
     onPieceSpawn: (game) => {
       game.drop = 0
@@ -1687,6 +1700,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -1866,7 +1880,7 @@ export const loops = {
 		rotate180(arg)
         rotate(arg)
         shifting(arg)
-      }
+      }	  
       gravity(arg)
       softDrop(arg, 40)
       hardDrop(arg)
@@ -1889,6 +1903,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -2088,6 +2103,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -2284,6 +2300,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
       game.stat.level = 0
@@ -2533,6 +2550,7 @@ export const loops = {
           }
         }
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
 	  underwaterProgression = 0
@@ -2811,6 +2829,7 @@ export const loops = {
           }
         }
       }
+	  testModeUpdate()
     },
     onInit: (game) => {
 	  underwaterProgression = 0
@@ -3034,6 +3053,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
       /* Might use this code later
       $('#das').max = arg.piece.dasLimit;
       $('#das').value = arg.piece.das;
@@ -3540,6 +3560,7 @@ export const loops = {
       } else {
         game.playedHurryUp = false
       }
+	  testModeUpdate()
       /* Might use this code later
       $('#das').max = arg.piece.dasLimit;
       $('#das').value = arg.piece.das;

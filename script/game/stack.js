@@ -66,12 +66,6 @@ export default class Stack extends GameModule {
       }
     }
   }
-  reRender() {
-	if (game.isDirty !== true) {
-		this.makeAllDirty()
-		this.isDirty = true
-	}
-  }
   makeAllFrozen() {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
@@ -80,7 +74,10 @@ export default class Stack extends GameModule {
 		}
       }
     }
-	this.reRender()
+	if (game.isDirty !== true) {
+		this.makeAllDirty()
+		this.isDirty = true
+	}
   }
   gridWithLockdown() {
     const finalBlocks = this.parent.piece.getFinalBlockLocations()
@@ -181,7 +178,6 @@ export default class Stack extends GameModule {
           })
           const xLocation = x + passedX
           const yLocation = y + passedY + this.hiddenHeight
-		  let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
           if (yLocation - this.hiddenHeight >= 0) {
             passedLockOut--
           }
@@ -195,8 +191,6 @@ export default class Stack extends GameModule {
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
 				this.grid[xLocation][yLocation] = "frozen"
 				this.makeAllFrozen()
-			} else if (this.isUnderwater && y >= underwaterHeightPosition) {
-				this.reRender()
 			} else {
 				this.grid[xLocation][yLocation] = color
 			}
@@ -897,7 +891,6 @@ export default class Stack extends GameModule {
           name = "mino"
         }
         let suffix = ""
-		let underwaterHeightPosition = this.height + this.hiddenHeight - this.underwaterHeight
         if (this.parent.piece.useRetroColors) {
           let modifier = 0
           if (this.levelUpAnimation < this.levelUpAnimationLimit) {
@@ -909,10 +902,6 @@ export default class Stack extends GameModule {
         }
 		if (this.isHidden && this.redrawOnHidden) {
 			color = "hidden"
-			suffix = ""
-		}
-		if (this.isUnderwater && y >= underwaterHeightPosition) {
-			name = "ghost"
 			suffix = ""
 		}
         const img = document.getElementById(`${name}-${color}${suffix}`)

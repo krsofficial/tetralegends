@@ -122,6 +122,7 @@ class Settings {
       hold: ["KeyC"],
       retry: ["KeyR"],
       pause: ["Escape"],
+	  testModeKey: ["Pause"],
     }
     this.defaultGame = {
       marathon: {

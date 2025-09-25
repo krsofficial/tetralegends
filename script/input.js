@@ -27,6 +27,7 @@ class Input {
       hold: ["LEFT_TOP_SHOULDER", "RIGHT_TOP_SHOULDER"],
       retry: ["SELECT_BACK"],
       pause: ["START_FORWARD"],
+	  testModeKey: [""],
     }
 
     this.holdingCtrl = false
