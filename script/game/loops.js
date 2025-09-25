@@ -403,7 +403,6 @@ export const loops = {
     update: (arg) => {
       const game = gameHandler.game
       game.rta += arg.ms
-      game.b2b = 0
       arcadeScore(arg)
       linesToLevel(arg, 999, 100)
       game.endSectionLevel =
@@ -858,7 +857,6 @@ export const loops = {
    },
   novice: {
     update: (arg) => {
-      gameHandler.game.b2b = 0
       gameHandler.game.rta += arg.ms
       if (input.getGameDown("softDrop")) {
         gameHandler.game.drop += arg.ms
@@ -4835,7 +4833,6 @@ export const loops = {
       updateLasts(arg)
     },
     onPieceSpawn: (game) => {
-      game.stat.b2b = game.b2b - 1 < 0 ? 0 : game.b2b - 1
       game.updateStats()
     },
     onInit: (game) => {
