@@ -3,7 +3,7 @@
     "parent": "arcadeclassic",
     "langOverride": "mode-options",
     "game": "special",
-    "pgmusic": "pg-special"
+    "pgmusic": "pg-arcade"
   },
   "data": [
     {

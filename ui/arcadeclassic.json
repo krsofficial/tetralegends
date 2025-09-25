@@ -14,21 +14,21 @@
       "fixedText": true,
       "default": true,
       "action": "submenu",
-      "submenu": "mode/novice"
+      "submenu": "mode/noviceti"
     },
 	{
       "label": "SPECIAL",
       "description": "Your grade will depend on how well you play.",
       "fixedText": true,
       "action": "submenu",
-      "submenu": "mode/special"
+      "submenu": "mode/specialti"
     },
     {
       "label": "SUDDEN",
       "description": "The pieces spawn on the ground and only get faster!",
       "fixedText": true,
       "action": "submenu",
-      "submenu": "mode/sudden"
+      "submenu": "mode/suddenti"
     }
   ]
 }

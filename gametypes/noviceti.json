@@ -6,10 +6,10 @@
     "pieces": "standard",
     "unfavored": null,
     "randomizer": "history6rolls",
-    "rotationSystem": "ars",
+    "rotationSystem": "arsti",
     "skin": "arika",
-    "soundbank": "tgm2",
-    "music": "../ta/ta-1",
+    "soundbank": "tgm3",
+    "music": "../arcade/arcade1",
     "hasDangerBgm": false,
     "scoreTable": "blank",
     "background": "marathon.jpg"
@@ -19,13 +19,14 @@
     "areLineLimit": 640,
     "dasLimit": 272,
     "arrLimit": 17,
-    "lockDelayLimit": 500
+    "lockDelayLimit": 500,
+	"spinDetectionType": "3corner"
   },
   "next": {
-    "nextLimit": 1
+    "nextLimit": 3
   },
   "hold": {
-    "isDisabled": true
+    "isDisabled": false
   },
   "stats": ["score", "level", "fallspeed", "line"]
 }

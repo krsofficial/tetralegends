@@ -2,8 +2,8 @@
   "properties": {
     "parent": "arcadeclassic",
     "langOverride": "mode-options",
-    "game": "sudden",
-    "pgmusic": "pg-arcade2"
+    "game": "suddenti",
+    "pgmusic": "pg-sudden"
   },
   "data": [
     {

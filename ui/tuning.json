@@ -159,6 +159,11 @@
           "fixedText": true,
           "value": "ascx"
         },
+		{
+          "label": "ARS-TAP",
+          "fixedText": true,
+          "value": "ars"
+        },
         {
           "label": "ARS-TI",
           "fixedText": true,

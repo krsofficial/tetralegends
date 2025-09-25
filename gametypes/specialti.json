@@ -8,25 +8,22 @@
     "randomizer": "history6rolls",
     "rotationSystem": "arsti",
     "skin": "arika",
-    "soundbank": "tgm2",
-    "music": "../tap/arcade1",
+    "soundbank": "tgm3",
+    "music": "../arcade/arcade1",
     "hasDangerBgm": false,
     "scoreTable": "blank",
-    "background": "marathon.jpg"
+    "background": "marathon.jpg",
+    "isHardMode": false
   },
   "piece": {
-    "areLimit": 432,
-    "areLineLimit": 640,
-    "dasLimit": 272,
     "arrLimit": 17,
-    "lockDelayLimit": 500,
 	"spinDetectionType": "3corner"
   },
   "next": {
-    "nextLimit": 1
+    "nextLimit": 3
   },
   "hold": {
-    "isDisabled": true
+    "isDisabled": false
   },
-  "stats": ["score", "level", "fallspeed", "line"]
+  "stats": ["grade", "score", "level", "line"]
 }

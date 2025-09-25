@@ -2,12 +2,12 @@
   "properties": {
     "parent": "arcadeclassic",
     "langOverride": "mode-options",
-    "game": "sudden",
-    "pgmusic": "pg-arcade2"
+    "game": "specialti",
+    "pgmusic": "pg-special"
   },
   "data": [
     {
-      "label": "Sudden",
+      "label": "Special",
       "description": "",
       "fixedText": true,
       "type": "header"
