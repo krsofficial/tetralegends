@@ -96,7 +96,7 @@ const testModeUpdate = () => {
 const levelUpdateSega = (game) => {
   let returnValue = false
   if (game.stat.level !== lastLevel) {
-    if (game.stat.level % 2 === 0) {
+    if (game.stat.level % 2 === 0 && game.stat.level > 15) {
       sound.add("levelup")
 	  sound.add("levelupmajor")
     } else {
