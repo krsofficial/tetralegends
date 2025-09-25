@@ -73,20 +73,20 @@
       "settingType": "game"
     },
 	{
-      "label": "ARS Type",
-      "description": "Choose the ARS type of the game.",
+      "label": "Drop Behavior",
+      "description": "Choose how the pieces drop",
       "fixedText": true,
       "type": "select",
       "action": "select",
       "selectOptions": [
         {
-          "label": "ACE-ARS",
+          "label": "Hard Drop",
 		  "description": "",
           "fixedText": true,
           "value": "acears"
         },
         {
-          "label": "ACE-ARS2",
+          "label": "Sonic Drop",
 		  "description": "",
           "fixedText": true,
           "value": "acears2"
