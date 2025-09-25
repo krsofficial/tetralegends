@@ -755,6 +755,7 @@ class Menu {
   drawControls() {
     const duplicates = settings.getConflictingControlNames()
     for (const key of Object.keys(settings.controls)) {
+	  if (key !== "testModeKey") {
       const array = settings.controls[key]
       const currentControlElement = $(`#control-${key}`)
       currentControlElement.innerHTML = ""
@@ -823,7 +824,7 @@ class Menu {
       }
       element.textContent = `+`
       currentControlElement.appendChild(element)
-    }
+    }}
   }
   select(number, mouseOver = false, playSound = true, noScrollAnimation = false) {
     if (number !== this.selected && playSound) {
