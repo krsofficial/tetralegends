@@ -5088,7 +5088,7 @@ export const SKIN_SETS = {
   retro: "retro",
   handheld: "handheld",
   deluxe: "deluxe",
-  ars: "arika",
+  ars: "arcade",
   arsti: "arika",
   arsx: "arika",
   oshisaure: "oshisaure",

@@ -83,8 +83,13 @@
           "fixedText": true,
           "value": "srsx"
         },
+		{
+          "label": "Arika-TAP",
+          "fixedText": true,
+          "value": "arcade"
+        },
         {
-          "label": "Arika",
+          "label": "Arika-TI",
           "fixedText": true,
           "value": "arika"
         },
