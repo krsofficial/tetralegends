@@ -2,7 +2,7 @@
   "usesReadyGoVoices": true,
   "files": [
     "lock",
-    "rotate",
+    "rotate"
   ],
   "ren": [],
   "nextSoundbank": "morse"
