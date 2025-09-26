@@ -5137,7 +5137,7 @@ export const SOUND_SETS = {
   arsti: "tgm3",
   arsx: "ace",
   oshisaure: "standard",
-  original: "standard",
+  original: "pc",
   ace: "ace",
   aceworld: "ace",
   battle: "battle",

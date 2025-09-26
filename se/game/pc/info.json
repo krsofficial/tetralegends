@@ -1,0 +1,9 @@
+{
+  "usesReadyGoVoices": true,
+  "files": [
+    "lock",
+    "rotate",
+  ],
+  "ren": [],
+  "nextSoundbank": "morse"
+}
