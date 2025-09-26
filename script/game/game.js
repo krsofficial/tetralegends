@@ -555,7 +555,7 @@ export default class Game {
       "double",
       "triple",
       "tetra",
-      "penta",
+      "tetraplus",
       "tetraplus",
     ][lineClear]
     if (lineClear > 6) {

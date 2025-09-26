@@ -335,6 +335,13 @@ export default class Stack extends GameModule {
         }
       }
 	  if (this.toCollapse.length === 0) {
+		this.parent.calculateActionText(
+			this.lineClear,
+			isSpin,
+			isMini,
+			this.parent.b2b,
+			this.isClutch
+		)
 		this.parent.stat.line += this.lineClear
 		this.parent.addScore(`erase${this.lineClear}`)
 		this.parent.updateStats()
@@ -343,13 +350,6 @@ export default class Stack extends GameModule {
 		this.alarmCheck()
 		this.isDirty = true
 		this.parent.piece.isDirty = true
-		this.parent.calculateActionText(
-		this.lineClear,
-		isSpin,
-		isMini,
-		this.parent.b2b,
-		this.isClutch
-		)
 	  }
     } else {
       this.parent.combo = -1
