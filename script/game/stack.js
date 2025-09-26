@@ -343,6 +343,13 @@ export default class Stack extends GameModule {
 		this.alarmCheck()
 		this.isDirty = true
 		this.parent.piece.isDirty = true
+		this.parent.calculateActionText(
+		this.lineClear,
+		isSpin,
+		isMini,
+		this.parent.b2b,
+		this.isClutch
+		)
 	  }
     } else {
       this.parent.combo = -1
