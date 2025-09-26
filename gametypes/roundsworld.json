@@ -11,9 +11,9 @@
     "soundbank": "tgm4",
     "music": "../rounds/master1",
     "hasDangerBgm": false,
-    "scoreTable": "blank",
+    "scoreTable": "tgm",
     "background": "marathon.jpg",
-    "isHardMode": false
+    "isHardMode": true
   },
   "piece": {
     "areLimit": 100,

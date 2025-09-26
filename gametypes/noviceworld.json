@@ -11,7 +11,7 @@
     "soundbank": "tgm3",
     "music": "../arcade/arcade1",
     "hasDangerBgm": false,
-    "scoreTable": "blank",
+    "scoreTable": "tgm",
     "background": "marathon.jpg"
   },
   "piece": {

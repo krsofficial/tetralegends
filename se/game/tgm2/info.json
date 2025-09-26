@@ -6,6 +6,7 @@
     "collapse",
     "erase4",
     "erasenot4",
+	"endingstart",
     "excellent",
     "gameover",
 	"garbage",
@@ -18,6 +19,9 @@
     "start",
     "tspinbonus"
   ],
-  "ren": [],
+  "ren": [
+    1,
+	2
+  ],
   "nextSoundbank": "tgm2"
 }

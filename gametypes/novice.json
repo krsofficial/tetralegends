@@ -11,7 +11,7 @@
     "soundbank": "tgm2",
     "music": "../tap/arcade1",
     "hasDangerBgm": false,
-    "scoreTable": "blank",
+    "scoreTable": "tgm",
     "background": "marathon.jpg"
   },
   "piece": {

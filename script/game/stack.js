@@ -780,7 +780,7 @@ export default class Stack extends GameModule {
     this.grid = cells
   }
   endRollStart() {
-	  sound.add("bravo")
+	  sound.add("endingstart")
 	  this.new()
 	  this.makeAllDirty()
 	  this.isDirty = true
