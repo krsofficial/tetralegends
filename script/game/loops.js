@@ -968,7 +968,7 @@ export const loops = {
       game.stat.level = 0
       game.rta = 0
       game.isRaceMode = true
-      //game.arcadeCombo = 1;
+      game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
       game.appends.level = `<span class="small">/300</span>`
@@ -1586,7 +1586,7 @@ export const loops = {
 	  isEndRoll = false
 	  endRollPassed = false
       game.isRaceMode = true
-      //game.arcadeCombo = 1;
+      game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
       updateFallSpeed(game)
@@ -2201,7 +2201,7 @@ export const loops = {
       game.isRaceMode = true
 	  isEndRoll = false
 	  endRollPassed = false
-      //game.arcadeCombo = 1;
+      game.arcadeCombo = 1
       game.drop = 0
       game.stat.initPieces = 2
       updateFallSpeed(game)

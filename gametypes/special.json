@@ -16,8 +16,7 @@
     "isHardMode": false
   },
   "piece": {
-    "arrLimit": 17,
-	"spinDetectionType": "3corner"
+    "arrLimit": 17
   },
   "next": {
     "nextLimit": 1
