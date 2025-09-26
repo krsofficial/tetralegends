@@ -1043,8 +1043,8 @@ export const loops = {
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
-        [101, 12],
-        [301, 12],
+        [101, 8],
+        [301, 7],
         [401, 6],
         [500, 6],
         [1000, 6],
@@ -1160,7 +1160,7 @@ export const loops = {
         }
       }
 	  game.piece.ghostIsVisible = false
-      if (game.stat.level >= 500 && game.rta <= 205000)
+      if (game.stat.level >= 500 && game.rta <= 148000)
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
@@ -1279,7 +1279,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 30],
+		[100, 28],
 		[200, 24],
 		[300, 20],
         [400, 18],
@@ -1294,7 +1294,7 @@ export const loops = {
         [800, 0],
       ]
       const areLineTable = [
-		[100, 30],
+		[100, 28],
 		[200, 24],
 		[300, 20],
 		[400, 18],
@@ -1659,8 +1659,8 @@ export const loops = {
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
-        [101, 12],
-        [301, 12],
+        [101, 8],
+        [301, 7],
         [401, 6],
         [500, 6],
         [1000, 6],
@@ -1776,7 +1776,7 @@ export const loops = {
         }
       }
 	  game.piece.ghostIsVisible = false
-      if (game.stat.level >= 500 && game.rta <= 205000)
+      if (game.stat.level >= 500 && game.rta <= 184000)
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
@@ -2762,7 +2762,6 @@ export const loops = {
         [300, 11],
         [400, 10],
         [1000, 8],
-		[1200, 7],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -2770,9 +2769,8 @@ export const loops = {
         [301, 22],
         [401, 18],
         [1000, 15],
-		[1200, 15],
       ]
-      const musicProgressionTable = [
+	  const musicProgressionTable = [
         [979, 1],
         [1000, 2],
 		[1279, 1],
@@ -2959,7 +2957,6 @@ export const loops = {
         [300, 11],
         [400, 10],
         [1000, 8],
-		[1200, 7],
       ]
       const lockDelayTable = [
         [101, 30],
@@ -2967,9 +2964,8 @@ export const loops = {
         [301, 22],
         [401, 18],
         [1000, 15],
-		[1200, 15],
       ]
-      const musicProgressionTable = [
+	  const musicProgressionTable = [
         [979, 1],
         [1000, 2],
 		[1279, 1],
