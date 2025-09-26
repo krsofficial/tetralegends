@@ -5121,8 +5121,8 @@ export const SKIN_SETS = {
   srsx: "srsx",
   sega: "sega",
   beatmode: "tonline",
-  krs: "metallic",
-  srsk: "bevelled",
+  krs: "arika",
+  srsk: "glossy",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -5150,6 +5150,6 @@ export const SOUND_SETS = {
   srsx: "tetrax",
   sega: "sega",
   beatmode: "standardbeatmode",
-  krs: "krs",
-  srsk: "krs",
+  krs: "ace",
+  srsk: "ace",
 }

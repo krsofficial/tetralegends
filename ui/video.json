@@ -161,16 +161,6 @@
           "fixedText": true,
           "value": "sega"
         },
-		{
-          "label": "Metallic",
-          "fixedText": true,
-          "value": "metallic"
-        },
-		{
-          "label": "Bevelled",
-          "fixedText": true,
-          "value": "bevelled"
-        },
         {
           "string": "boneOption",
           "value": "bone"

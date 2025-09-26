@@ -138,16 +138,6 @@
           "label": "Sega",
           "fixedText": true,
           "value": "sega"
-        },
-		{
-          "label": "Kegaris",
-          "fixedText": true,
-          "value": "krs"
-        },
-		{
-          "label": "???",
-          "fixedText": true,
-          "value": "idolmaster"
         }
       ],
       "setting": "soundbank",
