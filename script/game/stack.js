@@ -66,6 +66,12 @@ export default class Stack extends GameModule {
       }
     }
   }
+  reRenderStack() {
+	  if (game.isDirty !== true) {
+		this.makeAllDirty()
+		this.isDirty = true
+	}
+  }
   makeAllFrozen() {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
@@ -74,10 +80,7 @@ export default class Stack extends GameModule {
 		}
       }
     }
-	if (game.isDirty !== true) {
-		this.makeAllDirty()
-		this.isDirty = true
-	}
+	this.reRenderStack()
   }
   gridWithLockdown() {
     const finalBlocks = this.parent.piece.getFinalBlockLocations()
@@ -1042,7 +1045,9 @@ export default class Stack extends GameModule {
           )
         }
       }
-    }
+  } else {
+	  this.reRenderStack()
+  }
     this.dirtyCells = []
   }
   linesToLevel(levelLimit, levelsPerSection) {
