@@ -1011,12 +1011,12 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  game.copyBottomForGarbage = true
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
         if (garbageTimer > 10240) {
           garbageTimer -= 10240
           if (game.stat.level >= 400 && game.stat.level <= 1000) {
-			  game.copyBottomForGarbage = true
 			  arg.stack.addGarbageToCounter(1)
 		  }
         }
@@ -1626,12 +1626,12 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  game.copyBottomForGarbage = true
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
         if (garbageTimer > 10240) {
           garbageTimer -= 10240
           if (game.stat.level >= 400 && game.stat.level <= 1000) {
-			  game.copyBottomForGarbage = true
 			  arg.stack.addGarbageToCounter(1)
 		  }
         }
