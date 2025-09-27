@@ -140,6 +140,11 @@
           "value": "sega"
         },
 		{
+          "label": "New Century",
+          "fixedText": true,
+          "value": "newcentury"
+        },
+		{
           "label": "PC",
           "fixedText": true,
           "value": "pc"
