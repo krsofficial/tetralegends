@@ -2,6 +2,7 @@
   "usesReadyGoVoices": true,
   "files": [
     "lock",
+	"move",
     "rotate"
   ],
   "ren": [],
