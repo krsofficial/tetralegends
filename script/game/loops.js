@@ -1176,7 +1176,8 @@ export const loops = {
         game.end(true)
       }
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -1790,7 +1791,8 @@ export const loops = {
         game.end(true)
       }
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -2439,7 +2441,8 @@ export const loops = {
       }
 	  
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -2640,7 +2643,8 @@ export const loops = {
       }
 	  
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -2836,7 +2840,8 @@ export const loops = {
       }
 	  
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -3029,7 +3034,8 @@ export const loops = {
       }
 	  
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -3317,7 +3323,8 @@ export const loops = {
 		  game.stack.isFrozen = false
 	  }
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -3587,7 +3594,8 @@ export const loops = {
         }
       }
       if (
-        game.stat.initPieces === 0
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99
       ) {
         game.stat.level = game.stat.level + 1
       }
