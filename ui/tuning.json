@@ -250,6 +250,11 @@
           "value": "sega"
         },
 		{
+          "label": "New Century",
+          "fixedText": true,
+          "value": "newcentury"
+        },
+		{
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
