@@ -135,14 +135,14 @@
           "value": "dshock"
         },
 		{
-          "label": "PC",
-          "fixedText": true,
-          "value": "pc"
-        }
-		{
           "label": "Sega",
           "fixedText": true,
           "value": "sega"
+        },
+		{
+          "label": "PC",
+          "fixedText": true,
+          "value": "pc"
         }
       ],
       "setting": "soundbank",
