@@ -663,7 +663,7 @@ export default class Game {
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
     if (this.type === "konoha" || this.type === "konohaworld") {
-		let cellSizeKonoha = game.cellSIze * 2
+		let cellSizeKonoha = game.cellSize * 2
 		root.style.setProperty("--cell-size", `${cellSizeKonoha}px`)
 		root.style.setProperty("--matrix-width", game.settings.width * 2)
 		root.style.setProperty("--matrix-height-base", game.settings.height * 2)
