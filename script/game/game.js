@@ -907,7 +907,7 @@ export default class Game {
 	if (this.type === "konoha" || this.type === "konohaworld") {
 		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
 	}
-    return 
+    return resultingCellSize
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
