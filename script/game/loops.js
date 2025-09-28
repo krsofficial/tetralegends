@@ -1040,11 +1040,11 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 this.boneColor = "white"
+		 game.boneColor = "white"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 this.boneColor = "white"
+		 game.boneColor = "white"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
@@ -1657,11 +1657,11 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 this.boneColor = "green"
+		 game.boneColor = "green"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 this.boneColor = "green"
+		 game.boneColor = "green"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
