@@ -674,8 +674,13 @@ export default class Game {
       "holdCanvas",
       "particleCanvas",
     ]) {
-      game[element].width = game[element].clientWidth
+      if (this.type === "konoha" || this.type === "konohaworld) {
+	  game[element].width = game[element].clientWidth / 2
+      game[element].height = game[element].clientHeight / 2
+	  } else {
+	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
+	  }
     }
     let holdLabelSelection = "hold"
     if (game.hold.useSkip) {
