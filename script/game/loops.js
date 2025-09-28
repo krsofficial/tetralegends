@@ -1534,7 +1534,7 @@ export const loops = {
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
-        game.stat.level !== 998
+        game.stat.level !== 199
       ) {
         game.stat.level = game.stat.level + 1
       }
@@ -2155,7 +2155,7 @@ export const loops = {
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
-        game.stat.level !== 998
+        game.stat.level !== 199
       ) {
         game.stat.level = game.stat.level + 1
       }
