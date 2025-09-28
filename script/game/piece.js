@@ -81,6 +81,7 @@ export default class Piece extends GameModule {
     this.killLockDelayOnRotate = false
     this.lastSpinDirection = null
 	this.useBoneBlocks = false
+	this.boneColor = "green"
   }
   new(name = this.parent.next.next()) {
     this.isFrozen = false
@@ -294,12 +295,14 @@ export default class Piece extends GameModule {
     // spriteCtx.drawImage(img, 0, 0, cellSize * 9, cellSize);
     let img
 	let suffix = ""
+	let colour = color
     switch (type) {
       case "ghost":
 		if (this.useBoneBlocks) {
+		  colour = this.boneColor
 		  suffix = "bone"
 		}
-        img = document.getElementById(`ghost-${color}${suffix}`)
+        img = document.getElementById(`ghost-${colour}${suffix}`)
         break
       case "piece":
         if (this.useSpecialI && this.name === "I") {
@@ -309,9 +312,10 @@ export default class Piece extends GameModule {
           suffix = `-${this.parent.stat.level % 10}`
         }
 		if (this.useBoneBlocks) {
+		  colour = this.boneColor
 		  suffix = "bone"
 		}
-        img = document.getElementById(`mino-${color}${suffix}`)
+        img = document.getElementById(`mino-${colour}${suffix}`)
       default:
         break
     }

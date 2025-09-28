@@ -1016,7 +1016,7 @@ export const loops = {
         garbageTimer += arg.ms
         if (garbageTimer > 10240) {
           garbageTimer -= 10240
-          if (game.stat.level >= 400 && game.stat.level <= 1000) {
+          if (game.stat.level >= 500 && game.stat.level <= 1000) {
 			  arg.stack.addGarbageToCounter(1)
 		  }
         }
@@ -1040,11 +1040,11 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 game.boneColor = "white"
+		 game.piece.boneColor = "white"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 game.boneColor = "white"
+		 game.piece.boneColor = "white"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
@@ -1083,8 +1083,8 @@ export const loops = {
 		[1201, 10],
       ]
       const musicProgressionTable = [
-        [379, 1],
-        [400, 2],
+        [479, 1],
+        [500, 2],
         [679, 3],
         [700, 4],
 		[979, 5],
@@ -1633,7 +1633,7 @@ export const loops = {
         garbageTimer += arg.ms
         if (garbageTimer > 10240) {
           garbageTimer -= 10240
-          if (game.stat.level >= 400 && game.stat.level <= 1000) {
+          if (game.stat.level >= 500 && game.stat.level <= 1000) {
 			  arg.stack.addGarbageToCounter(1)
 		  }
         }
@@ -1657,11 +1657,11 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 game.boneColor = "green"
+		 game.piece.boneColor = "green"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 game.boneColor = "green"
+		 game.piece.boneColor = "green"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
@@ -1700,8 +1700,8 @@ export const loops = {
 		[1201, 10],
       ]
       const musicProgressionTable = [
-        [379, 1],
-        [400, 2],
+        [479, 1],
+        [500, 2],
         [679, 3],
         [700, 4],
 		[979, 5],

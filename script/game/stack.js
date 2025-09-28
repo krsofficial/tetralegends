@@ -42,7 +42,6 @@ export default class Stack extends GameModule {
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 10
-	this.boneColor = "green"
   }
   removeFromArray(array, elementToRemove) {
 	  const indexToRemove = array.indexOf(elementToRemove)
@@ -189,7 +188,7 @@ export default class Stack extends GameModule {
             this.grid[xLocation][yLocation] = "i" + shape[y][x]
           } else {
 			if (this.parent.piece.useBoneBlocks && this.isFrozen !== true) {
-				this.grid[xLocation][yLocation] = `${this.boneColor}bone`
+				this.grid[xLocation][yLocation] = `${this.parent.piece.boneColor}bone`
 			} else if (this.isHidden && this.isFrozen !== true) {
 				this.grid[xLocation][yLocation] = "hidden"
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
