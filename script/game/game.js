@@ -663,7 +663,7 @@ export default class Game {
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
     if (this.type === "konoha" || this.type === "konohaworld") {
-		root.style.setProperty("--cell-size", `${game.cellSize / 2}px`)
+		root.style.setProperty("--cell-size", `${game.cellSize}px`)
 		root.style.setProperty("--matrix-width", game.settings.width * 2)
 		root.style.setProperty("--matrix-height-base", game.settings.height * 2)
 	} else {
@@ -903,9 +903,11 @@ export default class Game {
       window.innerWidth / gameAspectRatio,
       window.innerHeight
     )
-    return Math.floor(
-      ((base / 1.2 / this.settings.height) * this.userSettings.size) / 100
-    )
+	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	if (this.type === "konoha" || this.type === "konohaworld") {
+		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
+	}
+    return 
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
