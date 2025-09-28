@@ -687,8 +687,10 @@ export default class Game {
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
-	  game[element].width = Math.floor(game[element].clientWidth / 2)
-      game[element].height = Math.floor(game[element].clientHeight / 2)
+	  //game[element].width = game[element].clientWidth / 2;
+      //game[element].height = game[element].clientHeight / 2;
+	  game[element].width = game[element].clientWidth / this.cellSizeRatio()
+      game[element].height = game[element].clientHeight / this.cellSizeRatio()
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
@@ -921,6 +923,25 @@ export default class Game {
 	resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	}
     return resultingCellSize
+  }
+  cellSizeRatio() {
+    const gameWidth =
+      $("#game > .game-left").offsetWidth +
+      $("#game > .game-center").offsetWidth +
+      $("#game > .game-right").offsetWidth
+    const gameAspectRatio = gameWidth / $("#game > .game-center").offsetHeight
+    const base = Math.min(
+      window.innerWidth / gameAspectRatio,
+      window.innerHeight
+    )
+	let thisCellSize1 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	let thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	if (this.settings.height <= 10 && this.settings.width <= 5) {
+	thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
+	} else {
+	thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	}
+    return thisCellSize1 / thisCellSize2
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
