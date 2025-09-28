@@ -897,9 +897,11 @@ export default class Game {
       window.innerWidth / gameAspectRatio,
       window.innerHeight
     )
-    return Math.floor(
-      ((base / 1.2 / this.settings.height) * this.userSettings.size) / 100
-    )
+	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	if (this.type === "konoha" || this.type === "konohaworld") {
+		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 50)
+	}
+    return resultingCellSize
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
