@@ -674,7 +674,7 @@ export default class Game {
       "holdCanvas",
       "particleCanvas",
     ]) {
-      if (this.type === "konoha" || this.type === "konohaworld) {
+      if (this.type === "konoha" || this.type === "konohaworld") {
 	  game[element].width = game[element].clientWidth / 2
       game[element].height = game[element].clientHeight / 2
 	  } else {
