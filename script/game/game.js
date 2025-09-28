@@ -915,7 +915,7 @@ export default class Game {
       window.innerHeight
     )
 	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
-	if (game.settings.height <= 10 && game.settings.width <= 5) {
+	if (this.settings.height <= 10 && this.settings.width <= 5) {
 	resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
 	} else {
 	resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
