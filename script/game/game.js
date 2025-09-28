@@ -918,7 +918,7 @@ export default class Game {
     )
 	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	if (this.settings.height <= 10 && this.settings.width <= 5) {
-	resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
+	resultingCellSize = Math.floor(((base / 1.2 / (this.settings.height * 2)) * this.userSettings.size) / 100)
 	} else {
 	resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	}
@@ -937,9 +937,9 @@ export default class Game {
 	let thisCellSize1 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	let thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	if (this.settings.height <= 10 && this.settings.width <= 5) {
-	thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
+	thisCellSize2 = Math.floor(((base / 1.2 / (this.settings.height * 2)) * this.userSettings.size) / 100)
 	} else {
-	thisCellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+	thisCellSize2 = thisCellSize1
 	}
     return thisCellSize1 / thisCellSize2
   }
