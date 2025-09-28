@@ -662,11 +662,13 @@ export default class Game {
     const game = gameHandler.game
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
-    root.style.setProperty("--cell-size", `${game.cellSize}px`)
     if (this.type === "konoha" || this.type === "konohaworld") {
+		let cellSizeKonoha = game.cellSIze * 2
+		root.style.setProperty("--cell-size", `${cellSizeKonoha}px`)
 		root.style.setProperty("--matrix-width", game.settings.width * 2)
 		root.style.setProperty("--matrix-height-base", game.settings.height * 2)
 	} else {
+		root.style.setProperty("--cell-size", `${game.cellSize}px`)
 		root.style.setProperty("--matrix-width", game.settings.width)
 		root.style.setProperty("--matrix-height-base", game.settings.height)
 	}
@@ -765,6 +767,13 @@ export default class Game {
         $("#infinity-symbol").classList.add("gold")
         break
       case "classic":
+        $("#pip-grid").classList.add("hidden")
+        $("#lockdown").classList.remove("hidden")
+        $("#delay").classList.remove("hidden")
+        $("#infinity-symbol").classList.add("hidden")
+        $("#infinity-symbol").classList.remove("gold")
+        break
+	  case "beat":
         $("#pip-grid").classList.add("hidden")
         $("#lockdown").classList.remove("hidden")
         $("#delay").classList.remove("hidden")
@@ -904,7 +913,7 @@ export default class Game {
     )
 	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	if (this.type === "konoha" || this.type === "konohaworld") {
-		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
+		let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
 	}
     return resultingCellSize
   }
