@@ -664,12 +664,12 @@ export default class Game {
     $("body").setAttribute("theme", settings.settings.theme)
 	if (this.type === "konoha" || this.type === "konohaworld") {
 	root.style.setProperty("--cell-size", `${game.cellSize}px`)
-	root.style.setProperty("--matrix-width", game.settings.width)
-	root.style.setProperty("--matrix-height-base", game.settings.height)
-	} else {
-	root.style.setProperty("--cell-size", `${game.cellSize}px`)
 	root.style.setProperty("--matrix-width", game.settings.width * 2)
 	root.style.setProperty("--matrix-height-base", game.settings.height * 2)
+	} else {
+	root.style.setProperty("--cell-size", `${game.cellSize}px`)
+	root.style.setProperty("--matrix-width", game.settings.width)
+	root.style.setProperty("--matrix-height-base", game.settings.height)
 	}
     for (const element of [
       "pieceCanvas",
