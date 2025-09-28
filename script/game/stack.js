@@ -991,7 +991,7 @@ export default class Stack extends GameModule {
       }
     }
     // Line clear animation
-    if (this.toCollapse.length > 0 && this.isFrozen !== true && this.parent.piece.useBoneBlocks !== true) {
+    if (this.toCollapse.length > 0 && this.isFrozen !== true) {
       const brightness = Math.max(
         0,
         1 -
@@ -1045,7 +1045,23 @@ export default class Stack extends GameModule {
           )
         }
       }
-  } else {
+  } else if (this.isFrozen === true) {
+	  for (const i of this.toCollapse) {
+		this.parent.particle.generate({
+          amount: 2,
+          x: 0,
+          y: (this.toCollapse[i] - this.hiddenHeight + buffer) * cellSize,
+          xRange: this.width * cellSize,
+          yRange: cellSize,
+          xVelocity: 0,
+          yVelocity: 0,
+          xVariance: 10,
+          yVariance: 10,
+          xDampening: 1.03,
+          yDampening: 1.03,
+          lifeVariance: 80,
+        })
+	  }
 	  this.reRenderStack()
   }
     this.dirtyCells = []
