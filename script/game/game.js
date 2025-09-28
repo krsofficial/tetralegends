@@ -662,9 +662,15 @@ export default class Game {
     const game = gameHandler.game
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
+	if (this.type === "konoha" || this.type === "konohaworld") {
 	root.style.setProperty("--cell-size", `${game.cellSize}px`)
 	root.style.setProperty("--matrix-width", game.settings.width)
 	root.style.setProperty("--matrix-height-base", game.settings.height)
+	} else {
+	root.style.setProperty("--cell-size", `${game.cellSize}px`)
+	root.style.setProperty("--matrix-width", game.settings.width * 2)
+	root.style.setProperty("--matrix-height-base", game.settings.height * 2)
+	}
     for (const element of [
       "pieceCanvas",
       "nextMatrixPreviewCanvas",
@@ -674,7 +680,13 @@ export default class Game {
       "holdCanvas",
       "particleCanvas",
     ]) {
-      if (this.type === "konoha" || this.type === "konohaworld") {
+      if
+	  ( 
+			(element === "pieceCanvas" || element === "stackCanvas")
+			&&
+			(this.type === "konoha" || this.type === "konohaworld")
+	  )
+	  {
 	  game[element].width = game[element].clientWidth / 2
       game[element].height = game[element].clientHeight / 2
 	  } else {
