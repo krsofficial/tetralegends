@@ -1531,9 +1531,14 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.drop = 0
-      if (game.stat.initPieces === 0 && game.stat.level !== 199) {
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
         game.stat.level = game.stat.level + 1
-      } else {
+      }
+      if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
       if (game.stat.level >= 180 && game.stat.level < 200) {
@@ -2147,9 +2152,14 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.drop = 0
-      if (game.stat.initPieces === 0 && game.stat.level !== 199) {
+      if (
+        game.stat.initPieces === 0 &&
+        game.stat.level % 100 !== 99 &&
+        game.stat.level !== 998
+      ) {
         game.stat.level = game.stat.level + 1
-      } else {
+      }
+      if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
       if (game.stat.level >= 180 && game.stat.level < 200) {
