@@ -686,7 +686,7 @@ export default class Game {
     ]) {
       if
 	  ( 
-		(element === "pieceCanvas" || element === "stackCanvas")
+		(element === "pieceCanvas" || element === "stackCanvas" || element === "particleCanvas")
 		&&
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
