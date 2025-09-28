@@ -662,15 +662,9 @@ export default class Game {
     const game = gameHandler.game
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
-	if (this.type === "konoha" || this.type === "konohaworld") {
-		root.style.setProperty("--cell-size", `${game.cellSize}px`)
-		root.style.setProperty("--matrix-width", game.settings.width * 2)
-		root.style.setProperty("--matrix-height-base", game.settings.height * 2)
-	} else {
-		root.style.setProperty("--cell-size", `${game.cellSize}px`)
-		root.style.setProperty("--matrix-width", game.settings.width)
-		root.style.setProperty("--matrix-height-base", game.settings.height)
-	}
+	root.style.setProperty("--cell-size", `${game.cellSize}px`)
+	root.style.setProperty("--matrix-width", game.settings.width)
+	root.style.setProperty("--matrix-height-base", game.settings.height)
     for (const element of [
       "pieceCanvas",
       "nextMatrixPreviewCanvas",
@@ -904,9 +898,6 @@ export default class Game {
       window.innerHeight
     )
 	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
-	if (this.type === "konoha" || this.type === "konohaworld") {
-		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
-	}
     return resultingCellSize
   }
   updateMusic() {
