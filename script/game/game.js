@@ -689,8 +689,8 @@ export default class Game {
 	  {
 	  //game[element].width = game[element].clientWidth / 2;
       //game[element].height = game[element].clientHeight / 2;
-	  game[element].width = game[element].clientWidth / this.cellSizeRatio()
-      game[element].height = game[element].clientHeight / this.cellSizeRatio()
+	  game[element].width = game[element].clientWidth / game.cellSizeRatio()
+      game[element].height = game[element].clientHeight / game.cellSizeRatio()
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
