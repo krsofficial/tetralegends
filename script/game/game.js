@@ -662,7 +662,7 @@ export default class Game {
     const game = gameHandler.game
     const root = document.documentElement
     $("body").setAttribute("theme", settings.settings.theme)
-	if (game.settings.height <= 10 && game.settings.height <= 5) {
+	if (game.settings.height <= 10 && game.settings.width <= 5) {
 	root.style.setProperty("--cell-size", `${game.cellSize}px`)
 	root.style.setProperty("--matrix-width", game.settings.width * 2)
 	root.style.setProperty("--matrix-height-base", game.settings.height * 2)
@@ -684,7 +684,7 @@ export default class Game {
 	  ( 
 		(element === "pieceCanvas" || element === "stackCanvas")
 		&&
-		(game.settings.height <= 10 && game.settings.height <= 5)
+		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
 	  game[element].width = game[element].clientWidth / 2
