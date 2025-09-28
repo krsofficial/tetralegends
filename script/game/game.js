@@ -502,12 +502,16 @@ export default class Game {
 			endScreenDelay = 4200
 			break
 		}
+		case "tgm2": {
+			endScreenDelay = 2700
+			break
+		}
 		case "tgm3": {
 			endScreenDelay = 2700
 			break
 		}
 		case "tgm4": {
-			endScreenDelay = 2400
+			endScreenDelay = 2700
 			break
 		}
 		case "newcentury": {
