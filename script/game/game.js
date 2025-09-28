@@ -904,7 +904,7 @@ export default class Game {
     )
 	let resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	if (this.type === "konoha" || this.type === "konohaworld") {
-		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 200)
+		resultingCellSize = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 50)
 	}
     return resultingCellSize
   }
