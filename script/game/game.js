@@ -943,7 +943,7 @@ export default class Game {
 	} else {
 	cellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	}
-    return cellSize2 / cellSize1
+    return cellSize1 / cellSize2
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
