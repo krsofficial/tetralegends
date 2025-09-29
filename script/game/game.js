@@ -695,6 +695,8 @@ export default class Game {
 		  let sizeDivider = Math.min(2, 2 - sizeModifier, 2 + sizeModifier)
 		  game[element].width = game[element].clientWidth / sizeDivider
 		  game[element].height = game[element].clientHeight / sizeDivider
+		  console.log(sizeModifier)
+		  console.log(this.cellSizeRatio)
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
