@@ -692,12 +692,7 @@ export default class Game {
 	  )
 	  {
 		  let sizeModifier = 2 - this.cellSizeRatio
-		  let sizeDivider = 2
-		  if sideModifier >= 0 {
-			  sizeDivider = (2 - sizeModifier)
-		  } else {
-			  sizeDivider = (2 + sizeModifier)
-		  }
+		  let sizeDivider = Math.min(2, 2 - sizeModifier, 2 + sizeModifier)
 		  game[element].width = game[element].clientWidth / sizeDivider
 		  game[element].height = game[element].clientHeight / sizeDivider
 	  } else {
