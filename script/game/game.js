@@ -691,12 +691,16 @@ export default class Game {
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
-		  let sizeModifier = 2 - this.cellSizeRatio
-		  let sizeDivider = Math.min(2, 2 - sizeModifier, 2 + sizeModifier)
-		  game[element].width = game[element].clientWidth / sizeDivider
-		  game[element].height = game[element].clientHeight / sizeDivider
-		  console.log(sizeModifier)
-		  console.log(this.cellSizeRatio)
+	  game[element].width = Math.max(
+	  game[element].clientWidth / 2,
+	  game[element].clientWidth / (2 + Math.abs(this.cellSizeRatio() - 2)),
+	  game[element].clientWidth / (2 - Math.abs(this.cellSizeRatio() - 2))
+	  )
+	  game[element].height = Math.max(
+	  game[element].clientHeight / 2,
+	  game[element].clientHeight / (2 + Math.abs(this.cellSizeRatio() - 2)),
+	  game[element].clientHeight / (2 - Math.abs(this.cellSizeRatio() - 2))
+	  )
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
@@ -930,7 +934,7 @@ export default class Game {
 	}
     return resultingCellSize
   }
-  get cellSizeRatio() {
+  cellSizeRatio() {
     const gameWidth =
       $("#game > .game-left").offsetWidth +
       $("#game > .game-center").offsetWidth +
