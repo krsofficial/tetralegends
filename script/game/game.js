@@ -710,11 +710,11 @@ export default class Game {
 	  let cellSizeRatio = cellSize1 / cellSize2
 	  console.log(cellSizeRatio)
 	  game[element].width = Math.max(
-	  ((game[element].clientWidth * cellSizeRatio) / 2) / 2,
+	  (game[element].clientWidth * cellSizeRatio) / 4,
 	  game[element].clientWidth / 2
 	  )
 	  game[element].height = Math.max(
-	  ((game[element].clientWidth * cellSizeRatio) / 2) / 2,
+	  (game[element].clientHeight * cellSizeRatio) / 4,
 	  game[element].clientHeight / 2
 	  )
 	  } else {
