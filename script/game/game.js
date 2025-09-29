@@ -691,8 +691,8 @@ export default class Game {
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
-	  game[element].width = game[element].clientWidth / 2
-      game[element].height = game[element].clientHeight / 2
+	  game[element].width = game[element].clientWidth * this.cellSizeRatio
+      game[element].height = game[element].clientHeight * this.cellSizeRatio
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
@@ -943,7 +943,7 @@ export default class Game {
 	} else {
 	cellSize2 = Math.floor(((base / 1.2 / this.settings.height) * this.userSettings.size) / 100)
 	}
-    return cellSize1 / cellSize2
+    return cellSize2 / cellSize1
   }
   updateMusic() {
     if (this.settings.musicLinePoints != null) {
