@@ -691,8 +691,15 @@ export default class Game {
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
-	  game[element].width = game[element].clientWidth / (2 - Math.abs(2 - this.cellSizeRatio))
-      game[element].height = game[element].clientHeight / (2 - Math.abs(2 - this.cellSizeRatio))
+		  let sizeModifier = 2 - this.cellSizeRatio
+		  let sizeDivider = 2
+		  if sideModifier >= 0 {
+			  sizeDivider = (2 - sizeModifier)
+		  } else {
+			  sizeDivider = (2 + sizeModifier)
+		  }
+		  game[element].width = game[element].clientWidth / sizeDivider
+		  game[element].height = game[element].clientHeight / sizeDivider
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
