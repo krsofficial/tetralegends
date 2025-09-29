@@ -1075,7 +1075,9 @@ export default class Stack extends GameModule {
       Math.floor(this.parent.stat.level / levelsPerSection) <
       Math.floor(newLevel / levelsPerSection)
     ) {
-      sound.add("levelup")
+      if (newLevel !== levelLimit) {
+		  sound.add("levelup")
+	  }
     }
     this.parent.stat.level = newLevel
   }
