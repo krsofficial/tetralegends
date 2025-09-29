@@ -691,6 +691,7 @@ export default class Game {
 		(game.settings.height <= 10 && game.settings.width <= 5)
 	  )
 	  {
+	  console.log(this.cellSizeRatio())
 	  game[element].width = Math.max(
 	  game[element].clientWidth / 2,
 	  game[element].clientWidth / (2 + Math.abs(this.cellSizeRatio() - 2)),
