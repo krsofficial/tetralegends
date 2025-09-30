@@ -1097,7 +1097,7 @@ SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.world
 SPAWN_OFFSETS.sega = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
-SPAWN_OFFSETS.ksrs = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.ksc = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.newcentury = SPAWN_OFFSETS.srs
 
 export const INITIAL_ORIENTATION = {
@@ -1144,7 +1144,7 @@ INITIAL_ORIENTATION.worldae = INITIAL_ORIENTATION.world
 INITIAL_ORIENTATION.sega = INITIAL_ORIENTATION.ars
 INITIAL_ORIENTATION.beatmode = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.srsx = INITIAL_ORIENTATION.srs
-INITIAL_ORIENTATION.ksrs = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.ksc = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.newcentury = INITIAL_ORIENTATION.srs
 
 const KICK_TEMPLATES = {
@@ -3716,7 +3716,7 @@ KICK_TEMPLATES.krs = {
     ...KICK_TEMPLATES.ascx.x,
   },
 }
-KICK_TEMPLATES.ksrs = {
+KICK_TEMPLATES.ksc = {
   x: {
     right: {
 		...KICK_TEMPLATES.asc.x.right,
@@ -3746,7 +3746,18 @@ KICK_TEMPLATES.ksrs = {
 	},
   },
   T: {
-    ...KICK_TEMPLATES.srs.x,
+    right: {
+		...KICK_TEMPLATES.asc.x.right,
+		...KICK_TEMPLATES.srs.x.right,
+	},
+	left: {
+		...KICK_TEMPLATES.asc.x.left,
+		...KICK_TEMPLATES.srs.x.left,
+	},
+	double: {
+		...KICK_TEMPLATES.asc.x.double,
+		...KICK_TEMPLATES.srs.x.double,
+	},
   },
   O: {
     ...KICK_TEMPLATES.asc.x,
@@ -4053,14 +4064,14 @@ KICK_TABLES.krs = {
   J: KICK_TEMPLATES.krs.LJ,
   S: KICK_TEMPLATES.krs.x,
 }
-KICK_TABLES.ksrs = {
-  I: KICK_TEMPLATES.ksrs.I,
-  L: KICK_TEMPLATES.ksrs.x,
-  O: KICK_TEMPLATES.ksrs.O,
-  Z: KICK_TEMPLATES.ksrs.x,
-  T: KICK_TEMPLATES.ksrs.T,
-  J: KICK_TEMPLATES.ksrs.x,
-  S: KICK_TEMPLATES.ksrs.x,
+KICK_TABLES.ksc = {
+  I: KICK_TEMPLATES.ksc.I,
+  L: KICK_TEMPLATES.ksc.x,
+  O: KICK_TEMPLATES.ksc.O,
+  Z: KICK_TEMPLATES.ksc.x,
+  T: KICK_TEMPLATES.ksc.T,
+  J: KICK_TEMPLATES.ksc.x,
+  S: KICK_TEMPLATES.ksc.x,
 }
 
 export const PIECE_COLORS = {
@@ -4173,7 +4184,7 @@ PIECE_COLORS.srsx = PIECE_COLORS.srs
 PIECE_COLORS.sega = PIECE_COLORS.ars
 PIECE_COLORS.beatmode = PIECE_COLORS.srs
 PIECE_COLORS.krs = PIECE_COLORS.arsx
-PIECE_COLORS.ksrs = PIECE_COLORS.srs
+PIECE_COLORS.ksc = PIECE_COLORS.srs
 PIECE_COLORS.newcentury = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
@@ -4229,7 +4240,7 @@ NEXT_OFFSETS.worldae = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sega = NEXT_OFFSETS.ars
 NEXT_OFFSETS.beatmode = NEXT_OFFSETS.srs
 NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
-NEXT_OFFSETS.ksrs = NEXT_OFFSETS.srs
+NEXT_OFFSETS.ksc = NEXT_OFFSETS.srs
 NEXT_OFFSETS.newcentury = NEXT_OFFSETS.srs
 
 export const PIECE_OFFSETS = {
@@ -4597,7 +4608,7 @@ PIECE_OFFSETS.krs = {
   J: PIECE_OFFSETS.arsx.J,
   S: PIECE_OFFSETS.ascx.S,
 }
-PIECE_OFFSETS.ksrs = {
+PIECE_OFFSETS.ksc = {
   I: PIECE_OFFSETS.srs.I,
   L: PIECE_OFFSETS.srs.L,
   O: PIECE_OFFSETS.asc.O,
@@ -5152,7 +5163,7 @@ export const SKIN_SETS = {
   newcentury: "sega",
   beatmode: "tonline",
   krs: "arcade",
-  ksrs: "arcade",
+  ksc: "arcade",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -5182,5 +5193,5 @@ export const SOUND_SETS = {
   newcentury: "newcentury",
   beatmode: "standardbeatmode",
   krs: "krs",
-  ksrs: "krs",
+  ksc: "krs",
 }
