@@ -3719,44 +3719,44 @@ KICK_TEMPLATES.krs = {
 KICK_TEMPLATES.ksc = {
   x: {
     right: {
-		...KICK_TEMPLATES.asc.x.right,
 		...KICK_TEMPLATES.srs.x.right,
+		...KICK_TEMPLATES.asc.x.right,
 	},
 	left: {
-		...KICK_TEMPLATES.asc.x.left,
 		...KICK_TEMPLATES.srs.x.left,
+		...KICK_TEMPLATES.asc.x.left,
 	},
 	double: {
-		...KICK_TEMPLATES.asc.x.double,
 		...KICK_TEMPLATES.srs.x.double,
+		...KICK_TEMPLATES.asc.x.double,
 	},
   },
   I: {
     right: {
-		...KICK_TEMPLATES.asc.x.right,
 		...KICK_TEMPLATES.srs.I.right,
+		...KICK_TEMPLATES.asc.x.right,
 	},
 	left: {
-		...KICK_TEMPLATES.asc.x.left,
 		...KICK_TEMPLATES.srs.I.left,
+		...KICK_TEMPLATES.asc.x.left,
 	},
 	double: {
+		...KICK_TEMPLATES.srs.I.doub
 		...KICK_TEMPLATES.asc.x.double,
-		...KICK_TEMPLATES.srs.I.double,
 	},
   },
   T: {
     right: {
-		...KICK_TEMPLATES.asc.x.right,
 		...KICK_TEMPLATES.srs.x.right,
+		...KICK_TEMPLATES.asc.x.right,
 	},
 	left: {
-		...KICK_TEMPLATES.asc.x.left,
 		...KICK_TEMPLATES.srs.x.left,
+		...KICK_TEMPLATES.asc.x.left,
 	},
 	double: {
-		...KICK_TEMPLATES.asc.x.double,
 		...KICK_TEMPLATES.srs.x.double,
+		...KICK_TEMPLATES.asc.x.double,
 	},
   },
   O: {
