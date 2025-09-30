@@ -165,12 +165,7 @@
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
-        },
-		{
-          "label": "SRS-K",
-          "fixedText": true,
-          "value": "ksrs"
-        },
+        }
         {
           "string": "boneOption",
           "value": "bone"

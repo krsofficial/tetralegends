@@ -1099,6 +1099,7 @@ SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ksc = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.newcentury = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.heboris = SPAWN_OFFSETS.ars
 
 export const INITIAL_ORIENTATION = {
   srs: {
@@ -1146,6 +1147,7 @@ INITIAL_ORIENTATION.beatmode = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.srsx = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.ksc = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.newcentury = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.heboris = INITIAL_ORIENTATION.ars
 
 const KICK_TEMPLATES = {
   o: {
@@ -3178,6 +3180,7 @@ KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
 KICK_TEMPLATES.worldae = KICK_TEMPLATES.srs
 KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
 KICK_TEMPLATES.newcentury = KICK_TEMPLATES.srs
+KICK_TEMPLATES.heboris = KICK_TEMPLATES.ars
 KICK_TEMPLATES.beatmode = {
   x: {
     ...KICK_TEMPLATES.srs.x,
@@ -4046,6 +4049,7 @@ KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.srs
 KICK_TABLES.srsx = KICK_TABLES.srs
 KICK_TABLES.newcentury = KICK_TABLES.srs
+KICK_TABLES.heboris = KICK_TABLES.ars
 KICK_TABLES.beatmode = {
   I: KICK_TEMPLATES.beatmode.I,
   L: KICK_TEMPLATES.beatmode.x,
@@ -4185,6 +4189,7 @@ PIECE_COLORS.sega = PIECE_COLORS.ars
 PIECE_COLORS.beatmode = PIECE_COLORS.srs
 PIECE_COLORS.krs = PIECE_COLORS.arsx
 PIECE_COLORS.ksc = PIECE_COLORS.srs
+PIECE_COLORS.heboris = PIECE_COLORS.ars
 PIECE_COLORS.newcentury = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
@@ -4242,6 +4247,7 @@ NEXT_OFFSETS.beatmode = NEXT_OFFSETS.srs
 NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.ksc = NEXT_OFFSETS.srs
 NEXT_OFFSETS.newcentury = NEXT_OFFSETS.srs
+NEXT_OFFSETS.heboris = NEXT_OFFSETS.ars
 
 export const PIECE_OFFSETS = {
   asc: {
@@ -4590,6 +4596,7 @@ PIECE_OFFSETS.arsae = PIECE_OFFSETS.arsx
 PIECE_OFFSETS.worldae = PIECE_OFFSETS.srs
 PIECE_OFFSETS.newcentury = PIECE_OFFSETS.srs
 PIECE_OFFSETS.sega = PIECE_OFFSETS.ars
+PIECE_OFFSETS.heboris = PIECE_OFFSETS.ars
 PIECE_OFFSETS.beatmode = {
   I: PIECE_OFFSETS.srs.I,
   L: PIECE_OFFSETS.srs.L,
@@ -5162,8 +5169,9 @@ export const SKIN_SETS = {
   sega: "sega",
   newcentury: "sega",
   beatmode: "tonline",
-  krs: "arcade",
-  ksc: "arcade",
+  krs: "krs",
+  ksc: "krs",
+  heboris: "arcade",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -5194,4 +5202,5 @@ export const SOUND_SETS = {
   beatmode: "standardbeatmode",
   krs: "krs",
   ksc: "krs",
+  heboris: "krs",
 }
