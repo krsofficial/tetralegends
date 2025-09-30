@@ -3741,7 +3741,7 @@ KICK_TEMPLATES.ksc = {
 		...KICK_TEMPLATES.asc.x.left,
 	},
 	double: {
-		...KICK_TEMPLATES.srs.I.doub
+		...KICK_TEMPLATES.srs.I.double,
 		...KICK_TEMPLATES.asc.x.double,
 	},
   },
