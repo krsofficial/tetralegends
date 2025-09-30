@@ -255,6 +255,11 @@
           "value": "newcentury"
         },
 		{
+          "label": "Heboris",
+          "fixedText": true,
+          "value": "heboris"
+        },
+		{
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
