@@ -165,7 +165,7 @@
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
-        }
+        },
         {
           "string": "boneOption",
           "value": "bone"

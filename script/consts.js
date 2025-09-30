@@ -5202,5 +5202,5 @@ export const SOUND_SETS = {
   beatmode: "standardbeatmode",
   krs: "krs",
   ksc: "krs",
-  heboris: "krs",
+  heboris: "heboris",
 }
