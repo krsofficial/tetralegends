@@ -1097,7 +1097,7 @@ SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.world
 SPAWN_OFFSETS.sega = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
-SPAWN_OFFSETS.srsk = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.ksrs = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.newcentury = SPAWN_OFFSETS.srs
 
 export const INITIAL_ORIENTATION = {
@@ -1144,7 +1144,7 @@ INITIAL_ORIENTATION.worldae = INITIAL_ORIENTATION.world
 INITIAL_ORIENTATION.sega = INITIAL_ORIENTATION.ars
 INITIAL_ORIENTATION.beatmode = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.srsx = INITIAL_ORIENTATION.srs
-INITIAL_ORIENTATION.srsk = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.ksrs = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.newcentury = INITIAL_ORIENTATION.srs
 
 const KICK_TEMPLATES = {
@@ -3716,12 +3716,34 @@ KICK_TEMPLATES.krs = {
     ...KICK_TEMPLATES.ascx.x,
   },
 }
-KICK_TEMPLATES.srsk = {
+KICK_TEMPLATES.ksrs = {
   x: {
-    ...KICK_TEMPLATES.srs.x,
+    right: {
+		...KICK_TEMPLATES.asc.x.right,
+		...KICK_TEMPLATES.srs.x.right,
+	},
+	left: {
+		...KICK_TEMPLATES.asc.x.left,
+		...KICK_TEMPLATES.srs.x.left,
+	},
+	double: {
+		...KICK_TEMPLATES.asc.x.double,
+		...KICK_TEMPLATES.srs.x.double,
+	},
   },
   I: {
-    ...KICK_TEMPLATES.srs.I,
+    right: {
+		...KICK_TEMPLATES.asc.x.right,
+		...KICK_TEMPLATES.srs.I.right,
+	},
+	left: {
+		...KICK_TEMPLATES.asc.x.left,
+		...KICK_TEMPLATES.srs.I.left,
+	},
+	double: {
+		...KICK_TEMPLATES.asc.x.double,
+		...KICK_TEMPLATES.srs.I.double,
+	},
   },
   T: {
     ...KICK_TEMPLATES.srs.x,
@@ -4031,14 +4053,14 @@ KICK_TABLES.krs = {
   J: KICK_TEMPLATES.krs.LJ,
   S: KICK_TEMPLATES.krs.x,
 }
-KICK_TABLES.srsk = {
-  I: KICK_TEMPLATES.srsk.I,
-  L: KICK_TEMPLATES.srsk.x,
-  O: KICK_TEMPLATES.srsk.O,
-  Z: KICK_TEMPLATES.srsk.x,
-  T: KICK_TEMPLATES.srsk.T,
-  J: KICK_TEMPLATES.srsk.x,
-  S: KICK_TEMPLATES.srsk.x,
+KICK_TABLES.ksrs = {
+  I: KICK_TEMPLATES.ksrs.I,
+  L: KICK_TEMPLATES.ksrs.x,
+  O: KICK_TEMPLATES.ksrs.O,
+  Z: KICK_TEMPLATES.ksrs.x,
+  T: KICK_TEMPLATES.ksrs.T,
+  J: KICK_TEMPLATES.ksrs.x,
+  S: KICK_TEMPLATES.ksrs.x,
 }
 
 export const PIECE_COLORS = {
@@ -4151,7 +4173,7 @@ PIECE_COLORS.srsx = PIECE_COLORS.srs
 PIECE_COLORS.sega = PIECE_COLORS.ars
 PIECE_COLORS.beatmode = PIECE_COLORS.srs
 PIECE_COLORS.krs = PIECE_COLORS.arsx
-PIECE_COLORS.srsk = PIECE_COLORS.srs
+PIECE_COLORS.ksrs = PIECE_COLORS.srs
 PIECE_COLORS.newcentury = PIECE_COLORS.srs
 
 export const NEXT_OFFSETS = {
@@ -4207,7 +4229,7 @@ NEXT_OFFSETS.worldae = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sega = NEXT_OFFSETS.ars
 NEXT_OFFSETS.beatmode = NEXT_OFFSETS.srs
 NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
-NEXT_OFFSETS.srsk = NEXT_OFFSETS.srs
+NEXT_OFFSETS.ksrs = NEXT_OFFSETS.srs
 NEXT_OFFSETS.newcentury = NEXT_OFFSETS.srs
 
 export const PIECE_OFFSETS = {
@@ -4575,7 +4597,7 @@ PIECE_OFFSETS.krs = {
   J: PIECE_OFFSETS.arsx.J,
   S: PIECE_OFFSETS.ascx.S,
 }
-PIECE_OFFSETS.srsk = {
+PIECE_OFFSETS.ksrs = {
   I: PIECE_OFFSETS.srs.I,
   L: PIECE_OFFSETS.srs.L,
   O: PIECE_OFFSETS.asc.O,
@@ -5129,8 +5151,8 @@ export const SKIN_SETS = {
   sega: "sega",
   newcentury: "sega",
   beatmode: "tonline",
-  krs: "arika",
-  srsk: "glossy",
+  krs: "arcade",
+  ksrs: "arcade",
 }
 export const SOUND_SETS = {
   asc: "standard",
@@ -5159,6 +5181,6 @@ export const SOUND_SETS = {
   sega: "sega",
   newcentury: "newcentury",
   beatmode: "standardbeatmode",
-  krs: "ace",
-  srsk: "ace",
+  krs: "krs",
+  ksrs: "krs",
 }

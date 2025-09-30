@@ -148,6 +148,11 @@
           "label": "PC",
           "fixedText": true,
           "value": "pc"
+        },
+		{
+          "label": "KRS",
+          "fixedText": true,
+          "value": "krs"
         }
       ],
       "setting": "soundbank",

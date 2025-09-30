@@ -260,9 +260,9 @@
           "value": "krs"
         },
 		{
-          "label": "SRS-K",
+          "label": "KSRS",
           "fixedText": true,
-          "value": "srsk"
+          "value": "ksrs"
         },
         {
           "string": "originalOption",
