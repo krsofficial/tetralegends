@@ -1077,6 +1077,7 @@ export default class Stack extends GameModule {
     ) {
       if (newLevel !== levelLimit) {
 		  sound.add("levelup")
+		  sound.add("levelupmajor")
 	  }
     }
     this.parent.stat.level = newLevel
