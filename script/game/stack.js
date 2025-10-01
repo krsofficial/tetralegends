@@ -728,7 +728,7 @@ export default class Stack extends GameModule {
         }
       }
     }
-	this.makeAllFrozen()
+	this.reRenderStack()
 	} else {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {

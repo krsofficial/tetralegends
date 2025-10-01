@@ -26,9 +26,15 @@
     "step",
     "topoutwarning",
 	"tspin0",
+	"tspin0mini",
     "tspin1",
+	"tspin1mini",
     "tspin2",
-    "tspin3"
+	"tspin2mini",
+    "tspin3",
+	"tspin3mini",
+	"tspin4",
+	"tspin4mini"
   ],
   "ren": []
 }
