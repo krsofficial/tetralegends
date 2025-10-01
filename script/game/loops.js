@@ -99,8 +99,6 @@ const levelUpdateSega = (game) => {
     if (game.stat.level % 2 === 0 && game.stat.level < 15) {
       sound.add("levelup")
 	  sound.add("levelupmajor")
-    } else {
-      sound.add("levelupminor")
     }
     returnValue = true
   }
