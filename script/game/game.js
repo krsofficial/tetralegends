@@ -254,7 +254,7 @@ export default class Game {
 			this.colors = PIECE_COLORS.handheld
 		}
 		if (
-			(this.settings.rotationSystem === "retro" || settings.settings.skin === "retro") && 
+			(this.settings.rotationSystem === "retro") && 
 			(!this.settings.disableDefaultSkinLoad)
 		){
 			this.colors = PIECE_COLORS.retro
