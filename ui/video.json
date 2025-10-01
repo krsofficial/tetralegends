@@ -64,16 +64,6 @@
           "value": "standard"
         },
 		{
-          "label": "T99",
-          "fixedText": true,
-          "value": "t99"
-        },
-		{
-          "label": "PPT",
-          "fixedText": true,
-          "value": "ppt"
-        },
-		{
           "label": "Friends",
           "fixedText": true,
           "value": "friends"
@@ -111,26 +101,6 @@
           "fixedText": true,
           "value": "dshock"
         },
-		{
-          "label": "T99",
-          "fixedText": true,
-          "value": "t99"
-        },
-		{
-          "label": "PPT",
-          "fixedText": true,
-          "value": "ppt"
-        },
-		{
-          "label": "Prismal",
-          "fixedText": true,
-          "value": "prismal"
-        },
-		{
-          "label": "Pyramidal",
-          "fixedText": true,
-          "value": "pyramidal"
-        },
         {
           "label": "Retro",
           "fixedText": true,
@@ -155,6 +125,26 @@
           "label": "Oshisaure",
           "fixedText": true,
           "value": "oshisaure"
+        },
+		{
+          "label": "T99",
+          "fixedText": true,
+          "value": "t99"
+        },
+		{
+          "label": "PPT",
+          "fixedText": true,
+          "value": "ppt"
+        },
+		{
+          "label": "Prismal",
+          "fixedText": true,
+          "value": "prismal"
+        },
+		{
+          "label": "Pyramidal",
+          "fixedText": true,
+          "value": "pyramidal"
         },
 		{
           "label": "Sega",
