@@ -230,8 +230,13 @@ export default class Game {
           settings.settings.soundbank === "auto"
             ? SOUND_SETS[this.settings.rotationSystem]
             : settings.settings.soundbank
-        sound.load(soundbankName)
-		this.loadedSoundbank = soundbankName
+        if (!this.settings.disableDefaultSkinLoad) {
+			sound.load(soundbankName)
+			this.loadedSoundbank = soundbankName
+		} else {
+			sound.load(this.settings.soundbank)
+			this.loadedSounbank = this.settings.soundbank
+		}
         this.colors = JSON.parse(
           JSON.stringify(PIECE_COLORS[this.settings.rotationSystem])
         )
