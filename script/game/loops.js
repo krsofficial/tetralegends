@@ -7472,7 +7472,21 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
       game.lineGoal = null
-	  game.makeSprite()
+	  game.makeSprite(
+		[
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+		],
+		["mino", "stack"],
+		"sega"
+	  )
       game.colors = PIECE_COLORS.sega
       game.stat.level = 0
       lastLevel = 0
