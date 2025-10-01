@@ -7050,6 +7050,10 @@ export const loops = {
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
+	  const game = gameHandler.game
+	  if (game.stat.score >= 999999) {
+		  game.stat.score = 999999
+	  }
     },
     onPieceSpawn: (game) => {
       // game.stat.level = Math.floor(game.stat.line / 10);
@@ -7079,8 +7083,28 @@ export const loops = {
       game.stat.level = settings.game.deluxe.startingLevel
       lastLevel = parseInt(settings.game.deluxe.startingLevel)
       if (settings.settings.skin !== "auto") {
-        game.makeSprite()
-        game.piece.useSpecialI = false
+        game.makeSprite(
+          [
+            "i1",
+            "i2",
+            "i3",
+            "i4",
+            "i5",
+            "i6",
+            "l",
+            "o",
+            "z",
+            "t",
+            "j",
+            "s",
+            "white",
+            "black",
+          ],
+          ["mino", "stack"],
+          "deluxe-special"
+        )
+        game.colors = PIECE_COLORS.handheldSpecial
+        game.piece.useSpecialI = true
       } else {
         game.makeSprite(
           [
@@ -7122,6 +7146,10 @@ export const loops = {
       retroLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
+	  const game = gameHandler.game
+	  if (game.stat.score >= 999999) {
+		  game.stat.score = 999999
+	  }
     },
     onPieceSpawn: (game) => {
       game.stat.level = Math.max(
@@ -7151,8 +7179,29 @@ export const loops = {
         game.appends.level = "♥"
       }
       if (settings.settings.skin !== "auto") {
-        game.makeSprite()
-        game.piece.useSpecialI = false
+        game.makeSprite(
+          [
+            "i1",
+            "i2",
+            "i3",
+            "i4",
+            "i5",
+            "i6",
+            "l",
+            "o",
+            "z",
+            "t",
+            "j",
+            "s",
+            "white",
+            "black",
+          ],
+          ["mino"],
+          "handheld-special"
+        )
+        game.colors = PIECE_COLORS.handheldSpecial
+        game.updateStats()
+        game.piece.useSpecialI = true
       } else {
         game.makeSprite(
           [
@@ -7220,6 +7269,10 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  const game = gameHandler.game
+	  if (game.stat.score >= 999999) {
+		  game.stat.score = 999999
+	  }
     },
     onPieceSpawn: (game) => {
       const startLevel = settings.game.retro.startingLevel
@@ -7258,7 +7311,44 @@ export const loops = {
       game.redrawOnLevelUp = true
       lastLevel = parseInt(settings.game.retro.startingLevel)
       if (settings.settings.skin !== "auto") {
-        game.makeSprite()
+        game.makeSprite(
+          [
+            "x-0",
+            "l-0",
+            "r-0",
+            "x-1",
+            "l-1",
+            "r-1",
+            "x-2",
+            "l-2",
+            "r-2",
+            "x-3",
+            "l-3",
+            "r-3",
+            "x-4",
+            "l-4",
+            "r-4",
+            "x-5",
+            "l-5",
+            "r-5",
+            "x-6",
+            "l-6",
+            "r-6",
+            "x-7",
+            "l-7",
+            "r-7",
+            "x-8",
+            "l-8",
+            "r-8",
+            "x-9",
+            "l-9",
+            "r-9",
+          ],
+          ["mino"],
+          "retro-special"
+        )
+        game.piece.useRetroColors = true
+        game.colors = PIECE_COLORS.retroSpecial
       } else {
         game.makeSprite(
           [
@@ -7325,6 +7415,9 @@ export const loops = {
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
+	  if (game.stat.score >= 999999) {
+		  game.stat.score = 999999
+	  }
     },
     onPieceSpawn: (game) => {
       //game.stat.level = Math.floor(game.stat.line / 8)
@@ -7378,9 +7471,9 @@ export const loops = {
     onInit: (game) => {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
-      if (settings.game.marathon.lineGoal >= 0) {
-        game.lineGoal = settings.game.marathon.lineGoal
-      }
+      game.lineGoal = null
+	  game.makeSprite()
+      game.colors = PIECE_COLORS.sega
       game.stat.level = 0
       lastLevel = 0
 	  levelTimer = 0

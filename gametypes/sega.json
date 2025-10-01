@@ -12,6 +12,7 @@
     "music": "../sega/sega",
 	"hasDangerBgm": false,
     "scoreTable": "sega",
+	"disableDefaultSkinLoad": true,
     "background": "handheld.png"
   },
   "piece": {
