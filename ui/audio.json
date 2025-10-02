@@ -170,12 +170,12 @@
       "action": "select",
       "selectOptions": [
         {
-          "label": "ON",
+          "label": "On",
           "fixedText": true,
           "value": "auto"
         },
         {
-          "label": "OFF",
+          "label": "Off",
           "fixedText": true,
           "value": "off"
         }
