@@ -4098,13 +4098,13 @@ export const PIECE_COLORS = {
     S: "lightBlue",
   },
   retro: {
-    I: "red",
+    I: "white",
     L: "orange",
-    O: "yellow",
-    Z: "green",
-    T: "lightBlue",
+    O: "white",
+    Z: "blue",
+    T: "white",
     J: "blue",
-    S: "purple",
+    S: "orange",
   },
   handheld: {
     I: "red",
