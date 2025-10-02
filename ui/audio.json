@@ -170,39 +170,14 @@
       "action": "select",
       "selectOptions": [
         {
-          "string": "auto",
-          "value": "auto",
-          "langOverride": "menu_general"
-        },
-		{
-          "label": "Morse",
+          "label": "ON",
           "fixedText": true,
-          "value": "morse"
-        },
-		{
-          "label": "TGM2",
-          "fixedText": true,
-          "value": "tgm2"
+          "value": "auto"
         },
         {
-          "label": "TGM3",
+          "label": "OFF",
           "fixedText": true,
-          "value": "tgm3"
-        },
-        {
-          "label": "TETR.IO",
-          "fixedText": true,
-          "value": "tetrio"
-        },
-        {
-          "label": "NullpoMino",
-          "fixedText": true,
-          "value": "nullpomino"
-        },
-        {
-          "string": "offOption",
-          "value": "off",
-          "langOverride": "mode-options"
+          "value": "off"
         }
       ],
       "setting": "nextSoundbank",
