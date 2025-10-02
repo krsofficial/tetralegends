@@ -2,6 +2,7 @@
   "files": [
     "b2b_erase4",
 	"b2b_tspin",
+	"collapse",
     "bravo",
     "erase4",
     "erasenot4",
@@ -10,7 +11,8 @@
     "harddrop",
     "hold",
     "ko",
-    "levelup",
+    "levelupmajor",
+	"levelupminor",
     "locknohd",
     "move",
     "pause",
