@@ -3687,10 +3687,10 @@ export const loops = {
 		  case 1: {
 			  if (game.stat.level <= 10) {
 				  if (game.stat.level <= 5) {
-					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / Math.max(((game.stat.level - 1) * 5), 1)
+					  game.piece.gravity = Math.max((gravityEquation * 1000) / Math.max(((game.stat.level - 1) * 5), 1), framesToMs(1 / 20))
 				  }
 				  else {
-					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 20
+					  game.piece.gravity = Math.max((gravityEquation * 1000) / 20, framesToMs(1 / 20)) 
 			      }
 			  }
 			  else {
@@ -3700,7 +3700,7 @@ export const loops = {
 		  }
 		  case 2: {
 			  if (game.stat.level <= 5) {
-				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 20
+				  game.piece.gravity = Math.max((gravityEquation * 1000) / 20, framesToMs(1 / 20))
 			  }
 			  else {
 				  game.piece.gravity = framesToMs(1 / 20)
@@ -4271,10 +4271,10 @@ export const loops = {
 		  case 1: {
 			  if (game.stat.level <= 10) {
 				  if (game.stat.level <= 5) {
-					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / Math.max(((game.stat.level - 1) * 5), 1)
+					  game.piece.gravity = Math.max((gravityEquation * 1000) / Math.max(((game.stat.level - 1) * 5), 1), framesToMs(1 / 20))
 				  }
 				  else {
-					  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 20
+					  game.piece.gravity = Math.max((gravityEquation * 1000) / 20, framesToMs(1 / 20)) 
 			      }
 			  }
 			  else {
@@ -4284,7 +4284,7 @@ export const loops = {
 		  }
 		  case 2: {
 			  if (game.stat.level <= 5) {
-				  game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20)) / 20
+				  game.piece.gravity = Math.max((gravityEquation * 1000) / 20, framesToMs(1 / 20))
 			  }
 			  else {
 				  game.piece.gravity = framesToMs(1 / 20)
