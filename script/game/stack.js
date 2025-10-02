@@ -754,7 +754,7 @@ export default class Stack extends GameModule {
     this.parent.updateStats()
     if (fallenBlocks !== 0) {
       sound.add("collapse")
-      if (this.toCollapse.length >= 4 || this.lineClear >= 4) {
+      if (this.lineClear >= 4) {
         sound.add("collapse4")
       } else {
         sound.add("collapsenot4")
