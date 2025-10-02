@@ -248,16 +248,16 @@ export default class Game {
           this.colors[pieceName] = color
         }
 		if (
-			(this.settings.rotationSystem === "handheld" || settings.settings.skin === "handheld") && 
-			(!this.settings.disableDefaultSkinLoad)
-		){
-			this.colors = PIECE_COLORS.handheld
-		}
-		if (
 			(this.settings.rotationSystem === "retro") && 
 			(!this.settings.disableDefaultSkinLoad)
 		){
 			this.colors = PIECE_COLORS.retro
+		}
+		if (
+			(this.settings.rotationSystem === "handheld" || settings.settings.skin === "handheld") && 
+			(!this.settings.disableDefaultSkinLoad)
+		){
+			this.colors = PIECE_COLORS.handheld
 		}
 		if (
 			(this.settings.rotationSystem === "deluxe" || settings.settings.skin === "deluxe") && 
