@@ -85,6 +85,21 @@ const levelUpdate = (game) => {
   lastLevel = game.stat.level
   return returnValue
 }
+const levelUpdateAce = (game) => {
+  let returnValue = false
+  if (game.stat.level !== lastLevel) {
+    sound.add("levelup")
+    game.stack.levelUpAnimation = 0
+    if ((game.stat.level - 1) % 5 === 0) {
+      sound.add("levelupmajor")
+    } else {
+      sound.add("levelupminor")
+    }
+    returnValue = true
+  }
+  lastLevel = game.stat.level
+  return returnValue
+}
 const testModeUpdate = () => {
 	if (input.getGamePress("testModeKey")) {
 		if (testMode !== false) {
@@ -3804,7 +3819,7 @@ export const loops = {
 		  }
 	  }
       updateFallSpeed(game)
-      if (levelUpdate(game)) {
+      if (levelUpdateAce(game)) {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
@@ -4486,7 +4501,7 @@ export const loops = {
 		  }
 	  }
       updateFallSpeed(game)
-      if (levelUpdate(game)) {
+      if (levelUpdateAce(game)) {
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
