@@ -57,6 +57,7 @@ let shown20GMessage = false
 let shownHoldWarning = false
 let lastSeenI = 0
 let lastBravos = 0
+let lastGrade = ""
 let rtaGoal = 0
 let isEndRoll = false
 let endRollPassed = false
@@ -172,7 +173,7 @@ const updateSegaBg = (game) => {
 	else if (game.stat.level >= 1) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
-const updateGMGrade = (game) => {
+const updateTAPGrade = (game) => {
 	  if (game.stat.level >= 999 && game.stat.score >= 120000 && endRollPassed) game.stat.grade = "GM"
 	  else if (game.stat.level >= 999 && game.stat.score >= 120000)
         game.stat.grade = "M"
@@ -212,6 +213,20 @@ const updateGMGrade = (game) => {
         game.stat.grade = "8"
 	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
+	  if (lastGrade !== game.stat.grade && game.stat.grade !== "N/A") {
+		  if (game.stat.grade !== "9") {
+			  sound.add("gradeup")
+		  }
+	  }
+	  lastGrade = game.stat.grade
+}
+const updateTADGrade = (game) => {
+	  if (game.stat.level >= 999) game.stat.grade = "GM"
+      else if (game.stat.level >= 500 && game.torikanPassed) game.stat.grade = "M"
+	  if (lastGrade !== game.stat.grade && game.stat.grade !== "N/A") {
+		  sound.add("gradeup")
+	  }
+	  lastGrade = game.stat.grade
 }
 const updateShiraseGrade = (game) => {
 	  if (game.stat.level >= 1300) game.stat.grade = "S13"
@@ -409,9 +424,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      if (game.stat.level >= 999) game.stat.grade = "GM"
-      else if (game.stat.level >= 500 && game.torikanPassed)
-        game.stat.grade = "M"
+	  updateTADGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -440,6 +453,7 @@ export const loops = {
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = "N/A"
+	  lastGrade = ""
       game.rta = 0
       game.piece.gravity = framesToMs(1 / 20)
       game.torikanPassed = false
@@ -591,7 +605,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      updateGMGrade(game)
+      updateTAPGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -650,6 +664,7 @@ export const loops = {
 	  isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
+	  lastGrade = ""
 	  //game.arcadeCombo = 1;
       game.rta = 0
 	  game.stack.redrawOnHidden = true

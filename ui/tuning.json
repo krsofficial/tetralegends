@@ -180,7 +180,7 @@
           "value": "world"
         },
 		{
-          "label": "Console",
+          "label": "Retro",
           "fixedText": true,
           "value": "retro"
         },
@@ -264,13 +264,9 @@
           "fixedText": true,
           "value": "krs"
         },
-		{
-          "label": "KSC",
-          "fixedText": true,
-          "value": "ksc"
-        },
         {
-          "string": "originalOption",
+          "label": "Original",
+          "fixedText": true,
           "value": "original"
         }
       ],

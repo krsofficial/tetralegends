@@ -90,8 +90,8 @@
           "value": "t99"
         },
         {
-          "string": "pptLabel",
-          "langOverride": "menu_daspresets",
+          "label": "PPT",
+          "fixedText": true,
           "value": "ppt"
         },
         {
@@ -105,8 +105,8 @@
           "value": "battle"
         },
         {
-          "string": "retroLabel",
-          "langOverride": "menu_root",
+          "label": "Retro",
+          "fixedText": true,
           "value": "nes"
         },
 		 {
@@ -150,14 +150,14 @@
           "value": "heboris"
         },
 		{
-          "label": "PC",
-          "fixedText": true,
-          "value": "pc"
-        },
-		{
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
+        },
+		{
+          "label": "Original",
+          "fixedText": true,
+          "value": "tengen"
         }
       ],
       "setting": "soundbank",

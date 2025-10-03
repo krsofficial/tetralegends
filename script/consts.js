@@ -5174,8 +5174,8 @@ export const SKIN_SETS = {
   heboris: "arcade",
 }
 export const SOUND_SETS = {
-  asc: "standard",
-  ascx: "standard",
+  asc: "tetrax",
+  ascx: "tetrax",
   srs: "standard",
   world: "tgm3",
   tetrax: "tetrax",
@@ -5185,8 +5185,8 @@ export const SOUND_SETS = {
   ars: "tgm2",
   arsti: "tgm3",
   arsx: "ace",
-  oshisaure: "nullpomino",
-  original: "pc",
+  oshisaure: "tetrax",
+  original: "tengen",
   ace: "ace",
   aceworld: "ace",
   battle: "battle",
