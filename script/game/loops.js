@@ -15,6 +15,7 @@ import addStaticScore from "./loop-modules/add-static-score.js"
 import arcadeScore from "./loop-modules/arcade-score.js"
 import collapse from "./loop-modules/collapse.js"
 import firmDrop from "./loop-modules/firm-drop.js"
+import tgmSoftDrop from "./loop-modules/tgm-soft-drop.js"
 import gameHandler from "./game-handler.js"
 import handheldDasAre from "./loop-modules/handheld-das-are.js"
 import hardDrop from "./loop-modules/hard-drop.js"
@@ -1690,7 +1691,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1903,7 +1904,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -2199,7 +2200,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 40)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -2397,7 +2398,7 @@ export const loops = {
       }
       gravity(arg)
       if (input.getGameDown("specialKey")) {
-        softDrop(arg, 40)
+        tgmSoftDrop(arg)
 		hardDrop(arg)
       } else {
 		sonicDrop(arg)
@@ -2603,7 +2604,7 @@ export const loops = {
         shifting(arg)
       }	  
       gravity(arg)
-      softDrop(arg, 40)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
@@ -2806,7 +2807,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3000,7 +3001,7 @@ export const loops = {
       }
       gravity(arg)
       if (input.getGameDown("specialKey")) {
-        softDrop(arg)
+        tgmSoftDrop(arg)
 		hardDrop(arg)
       } else {
 		sonicDrop(arg, true)
@@ -3197,7 +3198,7 @@ export const loops = {
       }
       gravity(arg)
 	  if (input.getGameDown("specialKey")) {
-        softDrop(arg)
+        tgmSoftDrop(arg)
 		hardDrop(arg)
       } else {
 		sonicDrop(arg, true)
@@ -3478,7 +3479,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg)
+      tgmSoftDrop(arg)
       hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3747,7 +3748,7 @@ export const loops = {
       }
       gravity(arg)
       if (settings.game.ace.arstype === "acears") {
-		softDrop(arg, 20)
+		tgmSoftDrop(arg)
 		hardDrop(arg)
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
@@ -4434,7 +4435,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDrop(arg, 20)
+      tgmSoftDrop(arg)
 	  hardDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
