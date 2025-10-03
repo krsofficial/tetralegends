@@ -1319,7 +1319,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 28],
+		[100, 24],
 		[200, 24],
 		[300, 20],
         [400, 18],
@@ -1334,7 +1334,7 @@ export const loops = {
         [800, 0],
       ]
       const areLineTable = [
-		[100, 28],
+		[100, 24],
 		[200, 24],
 		[300, 20],
 		[400, 18],
@@ -1390,14 +1390,6 @@ export const loops = {
         [800, 20],
         [1000, 18],
       ]
-      const musicProgressionTable = [
-        [279, 1],
-        [300, 2],
-        [379, 3],
-        [400, 4],
-		[979, 5],
-		[999, 6],
-      ]
       for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -1442,6 +1434,30 @@ export const loops = {
           break
         }
       }
+	  
+	  if (game.stat.level >= 350 && game.rta <= 175000) {
+        game.torikanPassed = true
+	  }
+	  let musicProgressionTable = []
+	  if (game.torikanPassed === true) {
+		  musicProgressionTable = [
+			[279, 1],
+			[300, 2],
+			[379, 3],
+			[400, 4],
+			[979, 5],
+			[999, 6],
+		  ]
+	  } else {
+		  musicProgressionTable = [
+			[279, 1],
+			[300, 2],
+			[479, 3],
+			[500, 4],
+			[979, 5],
+			[999, 6],
+		  ]
+	  }
       for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -1468,8 +1484,6 @@ export const loops = {
         }
       }
 	  
-      if (game.stat.level >= 350 && game.rta <= 175000)
-        game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
@@ -1949,7 +1963,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       const areTable = [
-		[100, 30],
+		[100, 24],
 		[200, 24],
 		[300, 20],
         [400, 18],
@@ -1964,7 +1978,7 @@ export const loops = {
         [800, 0],
       ]
       const areLineTable = [
-		[100, 30],
+		[100, 24],
 		[200, 24],
 		[300, 20],
 		[400, 18],
