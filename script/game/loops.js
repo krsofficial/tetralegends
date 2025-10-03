@@ -641,7 +641,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -932,7 +932,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg)
-      firmDrop(arg)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
       classicLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -1260,7 +1260,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1557,7 +1557,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg)
-      firmDrop(arg)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
       classicLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -2402,7 +2402,7 @@ export const loops = {
 		hardDrop(arg)
       } else {
 		sonicDrop(arg)
-		firmDrop(arg)
+		firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
 	  }
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3005,7 +3005,7 @@ export const loops = {
 		hardDrop(arg)
       } else {
 		sonicDrop(arg, true)
-		firmDrop(arg)
+		firmDrop(arg, 1, true)
 	  }
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3202,7 +3202,7 @@ export const loops = {
 		hardDrop(arg)
       } else {
 		sonicDrop(arg, true)
-		firmDrop(arg)
+		firmDrop(arg, 1, true)
 	  }
       
       extendedLockdown(arg)
@@ -3753,7 +3753,7 @@ export const loops = {
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
 		sonicDrop(arg)
-        firmDrop(arg)
+        firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
 	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -7706,7 +7706,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      firmDrop(arg)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(1))
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
