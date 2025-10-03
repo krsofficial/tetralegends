@@ -174,42 +174,42 @@ const updateSegaBg = (game) => {
 	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 const updateTAPGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 120000 && endRollPassed) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 120000)
+	  if (game.stat.level >= 999 && game.stat.score >= 125000 && endRollPassed) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 125000)
         game.stat.grade = "M"
-      else if (game.stat.score >= 120000)
+      else if (game.stat.score >= 125000)
         game.stat.grade = "S9"
-	  else if (game.stat.score >= 100000)
+	  else if (game.stat.score >= 105000)
         game.stat.grade = "S8"
-	  else if (game.stat.score >= 82000)
+	  else if (game.stat.score >= 87500)
         game.stat.grade = "S7"
-	  else if (game.stat.score >= 66000)
+	  else if (game.stat.score >= 72500)
         game.stat.grade = "S6"
-	  else if (game.stat.score >= 52000)
+	  else if (game.stat.score >= 57500)
         game.stat.grade = "S5"
-	  else if (game.stat.score >= 40000)
+	  else if (game.stat.score >= 45000)
         game.stat.grade = "S4"
-	  else if (game.stat.score >= 30000)
+	  else if (game.stat.score >= 35000)
         game.stat.grade = "S3"
-	  else if (game.stat.score >= 22000)
+	  else if (game.stat.score >= 25000)
         game.stat.grade = "S2"
-	  else if (game.stat.score >= 16000)
+	  else if (game.stat.score >= 20000)
         game.stat.grade = "S1"
-	  else if (game.stat.score >= 12000)
+	  else if (game.stat.score >= 16000)
         game.stat.grade = "1"
-	  else if (game.stat.score >= 8000)
+	  else if (game.stat.score >= 8400)
         game.stat.grade = "2"
-	  else if (game.stat.score >= 5500)
+	  else if (game.stat.score >= 6000)
         game.stat.grade = "3"
-	  else if (game.stat.score >= 3500)
+	  else if (game.stat.score >= 4000)
         game.stat.grade = "4"
-	  else if (game.stat.score >= 2000)
+	  else if (game.stat.score >= 2400)
         game.stat.grade = "5"
-	  else if (game.stat.score >= 1400)
+	  else if (game.stat.score >= 1800)
         game.stat.grade = "6"
-	  else if (game.stat.score >= 800)
+	  else if (game.stat.score >= 1200)
         game.stat.grade = "7"
-	  else if (game.stat.score >= 400)
+	  else if (game.stat.score >= 800)
         game.stat.grade = "8"
 	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
@@ -258,68 +258,68 @@ const updateShiraseGrade = (game) => {
         game.stat.grade = "1"
 }
 const updateMasterGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 220000 && game.torikanPassed && endRollPassed && endRollLines >= 32) game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 220000 && endRollLines >= 32)
+	  if (game.stat.level >= 999 && game.stat.score >= 250000 && game.torikanPassed && endRollPassed && endRollLines >= 32) game.stat.grade = "GM"
+	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 32)
         game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 220000 && endRollLines >= 24)
+	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 24)
         game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 220000 && endRollLines >= 16)
+	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 16)
         game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 220000 && endRollLines >= 8)
+	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 8)
         game.stat.grade = "MK"
-      else if (game.stat.level >= 999 && game.stat.score >= 220000)
+      else if (game.stat.level >= 999 && game.stat.score >= 250000)
         game.stat.grade = "M"
-	  else if (game.stat.score >= 210000)
+	  else if (game.stat.score >= 240000)
         game.stat.grade = "M9"
-	  else if (game.stat.score >= 200000)
+	  else if (game.stat.score >= 230000)
         game.stat.grade = "M8"
-	  else if (game.stat.score >= 190000)
+	  else if (game.stat.score >= 220000)
         game.stat.grade = "M7"
-	  else if (game.stat.score >= 180000)
+	  else if (game.stat.score >= 210000)
         game.stat.grade = "M6"
-	  else if (game.stat.score >= 170000)
+	  else if (game.stat.score >= 200000)
         game.stat.grade = "M5"
-	  else if (game.stat.score >= 160000)
+	  else if (game.stat.score >= 190000)
         game.stat.grade = "M4"
-	  else if (game.stat.score >= 150000)
+	  else if (game.stat.score >= 180000)
         game.stat.grade = "M3"
-	  else if (game.stat.score >= 140000)
+	  else if (game.stat.score >= 170000)
         game.stat.grade = "M2"
-	  else if (game.stat.score >= 130000)
+	  else if (game.stat.score >= 160000)
         game.stat.grade = "M1"
-      else if (game.stat.score >= 120000)
+      else if (game.stat.score >= 150000)
         game.stat.grade = "S9"
-	  else if (game.stat.score >= 100000)
+	  else if (game.stat.score >= 135000)
         game.stat.grade = "S8"
-	  else if (game.stat.score >= 82000)
+	  else if (game.stat.score >= 120000)
         game.stat.grade = "S7"
-	  else if (game.stat.score >= 66000)
+	  else if (game.stat.score >= 105000)
         game.stat.grade = "S6"
-	  else if (game.stat.score >= 52000)
+	  else if (game.stat.score >= 90000)
         game.stat.grade = "S5"
-	  else if (game.stat.score >= 40000)
+	  else if (game.stat.score >= 75000)
         game.stat.grade = "S4"
-	  else if (game.stat.score >= 30000)
+	  else if (game.stat.score >= 60000)
         game.stat.grade = "S3"
-	  else if (game.stat.score >= 22000)
+	  else if (game.stat.score >= 45000)
         game.stat.grade = "S2"
-	  else if (game.stat.score >= 16000)
+	  else if (game.stat.score >= 30000)
         game.stat.grade = "S1"
-	  else if (game.stat.score >= 12000)
+	  else if (game.stat.score >= 15000)
         game.stat.grade = "1"
-	  else if (game.stat.score >= 8000)
+	  else if (game.stat.score >= 9000)
         game.stat.grade = "2"
-	  else if (game.stat.score >= 5500)
+	  else if (game.stat.score >= 6000)
         game.stat.grade = "3"
-	  else if (game.stat.score >= 3500)
+	  else if (game.stat.score >= 5000)
         game.stat.grade = "4"
-	  else if (game.stat.score >= 2000)
+	  else if (game.stat.score >= 4000)
         game.stat.grade = "5"
-	  else if (game.stat.score >= 1400)
+	  else if (game.stat.score >= 3000)
         game.stat.grade = "6"
-	  else if (game.stat.score >= 800)
+	  else if (game.stat.score >= 2000)
         game.stat.grade = "7"
-	  else if (game.stat.score >= 400)
+	  else if (game.stat.score >= 1000)
         game.stat.grade = "8"
 	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
