@@ -641,7 +641,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -932,7 +932,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg)
-      firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
       classicLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -1260,7 +1260,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg, true)
-      firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
       //extendedLockdown(arg);
       classicLockdown(arg)
       if (!arg.piece.inAre) {
@@ -1557,7 +1557,7 @@ export const loops = {
       }
       gravity(arg)
       sonicDrop(arg)
-      firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
       classicLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -2402,7 +2402,7 @@ export const loops = {
 		hardDrop(arg)
       } else {
 		sonicDrop(arg)
-		firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+		firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
 	  }
       infiniteLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3753,7 +3753,7 @@ export const loops = {
 	  }
 	  else if (settings.game.ace.arstype === "acears2") {
 		sonicDrop(arg)
-        firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+        firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
 	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
@@ -3985,15 +3985,14 @@ export const loops = {
 		[197, 7],
       ]
 	  const lockDelayTable = [
-	    [0, 50, 1],
-        [50, 100, 2],
-        [100, 200, 3],
+		[50, 1],
+		[100, 2],
+	    [200, 3],
       ]
 	  for (const pair of lockDelayTable) {
         const line = pair[0]
-		const limit = pair[1]
-        const entry = pair[2]
-        if (game.stat.line >= line && game.stat.line < limit) {
+		const entry = pair[1]
+        if (game.stat.line < line) {
           switch (entry) {
             case 1:
 			  switch (difficulty) {
@@ -4667,15 +4666,14 @@ export const loops = {
 		[197, 7],
       ]
 	  const lockDelayTable = [
-	    [0, 50, 1],
-        [50, 100, 2],
-        [100, 200, 3],
+		[50, 1],
+		[100, 2],
+		[200, 3],
       ]
 	  for (const pair of lockDelayTable) {
         const line = pair[0]
-		const limit = pair[1]
-        const entry = pair[2]
-        if (game.stat.line >= line && game.stat.line < limit) {
+		const entry = pair[1]
+        if (game.stat.line < line) {
           switch (entry) {
             case 1:
 			  switch (difficulty) {
@@ -7706,7 +7704,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      firmDrop(arg, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+      firmDrop(arg, 1, game.piece.gravity <= framesToMs(2.5) && game.piece.isLanded)
       classicLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
