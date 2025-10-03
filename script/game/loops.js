@@ -174,7 +174,8 @@ const updateSegaBg = (game) => {
 	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 const updateTAPGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 125000 && endRollPassed) game.stat.grade = "GM"
+	  if (game.stat.level >= 999 && game.stat.score >= 125000 && endRollPassed)
+		game.stat.grade = "GM"
 	  else if (game.stat.level >= 999 && game.stat.score >= 125000)
         game.stat.grade = "M"
       else if (game.stat.score >= 125000)
@@ -229,7 +230,8 @@ const updateTADGrade = (game) => {
 	  lastGrade = game.stat.grade
 }
 const updateShiraseGrade = (game) => {
-	  if (game.stat.level >= 1300) game.stat.grade = "S13"
+	  if (game.stat.level >= 1300)
+		game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
@@ -257,8 +259,9 @@ const updateShiraseGrade = (game) => {
 	  else if (game.stat.level >= 0)
         game.stat.grade = "1"
 }
-const updateMasterGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 250000 && game.torikanPassed && endRollPassed && endRollLines >= 32) game.stat.grade = "GM"
+const updateTIGrade = (game) => {
+	  if (game.stat.level >= 999 && game.stat.score >= 250000 && game.torikanPassed && endRollPassed && endRollLines >= 32)
+		game.stat.grade = "GM"
 	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 32)
         game.stat.grade = "MM"
 	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 24)
@@ -325,7 +328,8 @@ const updateMasterGrade = (game) => {
         game.stat.grade = "9"
 }
 const updateAsukaGrade = (game) => {
-	  if (game.stat.level >= 1300) game.stat.grade = "AM"
+	  if (game.stat.level >= 1300)
+		game.stat.grade = "AM"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "Am-G12"
 	  else if (game.stat.level >= 1100)
@@ -354,7 +358,8 @@ const updateAsukaGrade = (game) => {
         game.stat.grade = "N/A"
 }
 const updateRoundsGrade = (game) => {
-	  if (game.stat.level >= 2600 && game.rta <= 435000) game.stat.grade = "GM-Rounds"
+	  if (game.stat.level >= 2600 && game.rta <= 435000)
+		game.stat.grade = "GM-Rounds"
 	  else if (game.stat.level >= 2600)
         game.stat.grade = "GM"
 	  else if (game.stat.level >= 2500)
@@ -1215,7 +1220,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      updateMasterGrade(game)
+      updateTIGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1445,7 +1450,7 @@ export const loops = {
         }
       }
 	  
-      if (game.stat.level >= 350 && game.rta <= 300000)
+      if (game.stat.level >= 350 && game.rta <= 180000)
         game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
@@ -1837,7 +1842,7 @@ export const loops = {
           ? 999
           : Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
-      updateMasterGrade(game)
+      updateTIGrade(game)
       collapse(arg)
       if (arg.piece.inAre) {
         initialDas(arg)
@@ -1988,14 +1993,6 @@ export const loops = {
         [800, 20],
         [1000, 18],
       ]
-      const musicProgressionTable = [
-        [279, 1],
-        [300, 2],
-        [379, 3],
-        [400, 4],
-		[979, 5],
-		[999, 6],
-      ]
       for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -2040,6 +2037,30 @@ export const loops = {
           break
         }
       }
+	  
+	  if (game.stat.level >= 350 && game.rta <= 180000) {
+        game.torikanPassed = true
+	  }
+	  let musicProgressionTable = []
+	  if (game.torikanPassed === true) {
+		  musicProgressionTable = [
+			[279, 1],
+			[300, 2],
+			[379, 3],
+			[400, 4],
+			[979, 5],
+			[999, 6],
+		  ]
+	  } else {
+		  musicProgressionTable = [
+			[279, 1],
+			[300, 2],
+			[479, 3],
+			[500, 4],
+			[979, 5],
+			[999, 6],
+		  ]
+	  }
       for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -2066,8 +2087,6 @@ export const loops = {
         }
       }
 	  
-      if (game.stat.level >= 350 && game.rta <= 300000)
-        game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99 &&
