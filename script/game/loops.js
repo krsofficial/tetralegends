@@ -1450,7 +1450,7 @@ export const loops = {
         }
       }
 	  
-      if (game.stat.level >= 350 && game.rta <= 180000)
+      if (game.stat.level >= 350 && game.rta <= 175000)
         game.torikanPassed = true
       if (
         game.stat.initPieces === 0 &&
@@ -2038,7 +2038,7 @@ export const loops = {
         }
       }
 	  
-	  if (game.stat.level >= 350 && game.rta <= 180000) {
+	  if (game.stat.level >= 350 && game.rta <= 175000) {
         game.torikanPassed = true
 	  }
 	  let musicProgressionTable = []
