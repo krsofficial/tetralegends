@@ -153,11 +153,6 @@
           "label": "KRS",
           "fixedText": true,
           "value": "krs"
-        },
-		{
-          "label": "Original",
-          "fixedText": true,
-          "value": "tengen"
         }
       ],
       "setting": "soundbank",

@@ -5186,7 +5186,7 @@ export const SOUND_SETS = {
   arsti: "tgm3",
   arsx: "ace",
   oshisaure: "tetrax",
-  original: "tengen",
+  original: "nullpomino",
   ace: "ace",
   aceworld: "ace",
   battle: "battle",
