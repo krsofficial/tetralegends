@@ -3788,6 +3788,31 @@ export const loops = {
         [13, 12],
         [14, 10],
       ]
+	  const areTableHiSpeed = [
+		[1, 24],
+		[4, 20],
+		[7, 18],
+        [10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
+        [14, 8],
+      ]
+	  const areLineModifierTableHiSpeed = [
+        [10, -4],
+        [13, -6],
+        [15, 0],
+      ]
+      const areLineTableHiSpeed = [
+		[1, 24],
+		[4, 20],
+		[7, 18],
+		[10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
+        [14, 8],
+      ]
 	  const areTableHiSpeed2 = [
 		[1, 20],
 		[4, 18],
@@ -3795,8 +3820,8 @@ export const loops = {
         [10, 14],
         [11, 12],
         [12, 10],
-        [13, 10],
-        [14, 10],
+        [13, 8],
+        [14, 7],
       ]
 	  const areLineModifierTableHiSpeed2 = [
         [10, -4],
@@ -3810,8 +3835,8 @@ export const loops = {
 		[10, 14],
         [11, 12],
         [12, 10],
-        [13, 10],
-        [14, 10],
+        [13, 8],
+        [14, 7],
       ]
 	  const areTableAnother = [
         [1, 18],
@@ -4138,7 +4163,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -4146,7 +4171,7 @@ export const loops = {
 	  for (const pair of areLineModifierTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
           game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
@@ -4154,7 +4179,31 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areLineModifierTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -4421,6 +4470,31 @@ export const loops = {
         [13, 12],
         [14, 10],
       ]
+	  const areTableHiSpeed = [
+		[1, 24],
+		[4, 20],
+		[7, 18],
+        [10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
+        [14, 8],
+      ]
+	  const areLineModifierTableHiSpeed = [
+        [10, -4],
+        [13, -6],
+        [15, 0],
+      ]
+      const areLineTableHiSpeed = [
+		[1, 24],
+		[4, 20],
+		[7, 18],
+		[10, 16],
+        [11, 14],
+        [12, 12],
+        [13, 10],
+        [14, 8],
+      ]
 	  const areTableHiSpeed2 = [
 		[1, 20],
 		[4, 18],
@@ -4428,8 +4502,8 @@ export const loops = {
         [10, 14],
         [11, 12],
         [12, 10],
-        [13, 10],
-        [14, 10],
+        [13, 8],
+        [14, 7],
       ]
 	  const areLineModifierTableHiSpeed2 = [
         [10, -4],
@@ -4443,8 +4517,8 @@ export const loops = {
 		[10, 14],
         [11, 12],
         [12, 10],
-        [13, 10],
-        [14, 10],
+        [13, 8],
+        [14, 7],
       ]
 	  const areTableAnother = [
         [1, 18],
@@ -4771,7 +4845,7 @@ export const loops = {
 	  for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -4779,7 +4853,7 @@ export const loops = {
 	  for (const pair of areLineModifierTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
           game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
@@ -4787,7 +4861,31 @@ export const loops = {
       for (const pair of areLineTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty <= 2) {
+        if (game.stat.level <= level && difficulty <= 1) {
+          game.piece.areLineLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
+          game.piece.areLimit = framesToMs(entry)
+          break
+        }
+      }
+	  for (const pair of areLineModifierTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
+          game.piece.areLimitLineModifier = framesToMs(entry)
+          break
+        }
+      }
+      for (const pair of areLineTableHiSpeed) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level <= level && difficulty === 2) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
