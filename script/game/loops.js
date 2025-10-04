@@ -7472,8 +7472,7 @@ export const loops = {
 	      }
           rotate(arg)
           classicGravity(arg)
-          //softDropNes(arg);
-		  softDropRetro(arg, 33.33)
+          softDropNes(arg)
 		  retroLockdown(arg, true)
         }
       } else {
@@ -7488,8 +7487,7 @@ export const loops = {
           shifting(arg)
         }
         classicGravity(arg)
-        //softDropNes(arg, false);
-		softDropRetro(arg, 33.33)
+        softDropNes(arg, false)
         hardDrop(arg)
 		classicLockdown(arg)
       }
