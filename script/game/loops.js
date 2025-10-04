@@ -7427,12 +7427,20 @@ export const loops = {
     update: (arg) => {
       collapse(arg)
       if (arg.piece.inAre) {
-        handheldDasAre(arg, framesToMs(23), 150)
+		if (input.getGameDown("specialKey")) {
+			handheldDasAre(arg, framesToMs(9), framesToMs(3))
+		} else {
+			handheldDasAre(arg, framesToMs(23), 150)
+	    }
         arg.piece.are += arg.ms
       } else {
         respawnPiece(arg)
         rotate(arg)
-        shiftingRetro(arg, framesToMs(23), 150)
+		if (input.getGameDown("specialKey")) {
+			shiftingRetro(arg, framesToMs(9), framesToMs(3))
+		} else {
+			shiftingRetro(arg, framesToMs(23), 150)
+	    }
       }
       classicGravity(arg)
       softDropRetro(arg, 50)
@@ -7531,11 +7539,19 @@ export const loops = {
       }
       if (settings.game.retro.mechanics === "accurate") {
         if (arg.piece.inAre) {
-          nesDasAre(arg)
+		  if (input.getGameDown("specialKey")) {
+			  handheldDasAre(arg, framesToMs(9), framesToMs(3))
+		  } else {
+			  nesDasAre(arg)
+	      }
           arg.piece.are += arg.ms
         } else {
           respawnPiece(arg)
-          shiftingNes(arg)
+		  if (input.getGameDown("specialKey")) {
+			  shiftingRetro(arg, framesToMs(9), framesToMs(3))
+		  } else {
+			  shiftingNes(arg)
+	      }
           rotate(arg)
           classicGravity(arg)
           softDropNes(arg)
