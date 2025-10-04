@@ -7428,7 +7428,7 @@ export const loops = {
       collapse(arg)
       if (arg.piece.inAre) {
 		if (input.getGameDown("specialKey")) {
-			handheldDasAre(arg, framesToMs(9), framesToMs(3))
+			handheldDasAreg(arg, framesToMs(9), framesToMs(3))
 		} else {
 			handheldDasAre(arg, framesToMs(23), 150)
 	    }
