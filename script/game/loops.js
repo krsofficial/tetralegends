@@ -4025,7 +4025,7 @@ export const loops = {
 		[150, 10],
       ]
 	  for (const pair of lockDelayTable) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 1) {
           if (testMode === false) {
@@ -4037,7 +4037,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableHiSpeed) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 2) {
           if (testMode === false) {
@@ -4049,7 +4049,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableHiSpeed2) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 3) {
           if (testMode === false) {
@@ -4061,7 +4061,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableAnother) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 4) {
           if (testMode === false) {
@@ -4073,7 +4073,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableAnother2) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 5) {
           if (testMode === false) {
@@ -4665,7 +4665,7 @@ export const loops = {
 		[150, 10],
       ]
 	  for (const pair of lockDelayTable) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 1) {
           if (testMode === false) {
@@ -4677,7 +4677,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableHiSpeed) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 2) {
           if (testMode === false) {
@@ -4689,7 +4689,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableHiSpeed2) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 3) {
           if (testMode === false) {
@@ -4701,7 +4701,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableAnother) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 4) {
           if (testMode === false) {
@@ -4713,7 +4713,7 @@ export const loops = {
         }
       }
 	  for (const pair of lockDelayTableAnother2) {
-        const level = pair[0]
+        const line = pair[0]
         const entry = pair[1]
         if (game.stat.line < line && difficulty === 5) {
           if (testMode === false) {
