@@ -10,6 +10,7 @@
     "erase4",
 	"garbage",
 	"gradeup",
+	"gradedown",
 	"endingstart",
     "excellent",
     "hold",
@@ -23,6 +24,7 @@
     "rotate",
     "start",
     "step",
+	"topoutwarning",
     "tspinbonus"
   ],
   "ren": []
