@@ -1,6 +1,6 @@
 {
   "files": [
-	"alarm",
+    "alarm",
     "b2b",
 	"bravo",
     "collapse",
@@ -8,12 +8,10 @@
     "erase2",
     "erase3",
     "erase4",
-	"endingstart",
-    "excellent",
 	"garbage",
-	"gradeup",
-	"initialhold",
+    "excellent",
 	"initialrotate",
+	"initialhold",
     "hold",
     "ko",
     "land",
@@ -25,7 +23,7 @@
     "rotate",
     "start",
     "step",
-	"tspinbonus"
+    "tspinbonus"
   ],
   "ren": []
 }
