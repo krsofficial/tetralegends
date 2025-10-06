@@ -7975,7 +7975,7 @@ export const loops = {
 	  }
     },
     onInit: (game) => {
-      game.lineGoal = -1
+      game.lineGoal = null
       game.stat.level = 1
       lastLevel = 1
       game.piece.gravity = 1000
