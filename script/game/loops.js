@@ -7777,8 +7777,8 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      tgmSoftDrop(arg)
-	  hardDrop(arg)
+      krsHardDrop(arg)
+	  krsSoftDrop(arg)
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
