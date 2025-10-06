@@ -80,10 +80,39 @@ export function extendedLockdown(arg) {
     $(`#pip-${i}`).classList.add("disabled")
   }
 }
+export function krsLockdown(arg) {
+  const piece = arg.piece
+  piece.lockdownType = "classic"
+  if (piece.isDead || piece.isFrozen) {
+    $("#lockdown").value = 0
+    if (piece.isDead) {
+      return
+    }
+  }
+  fallReset(piece, true)
+  tryLockdown(piece, arg)
+  stepReset(piece, arg)
+
+  if (piece.manipulations >= piece.manipulationLimit) {
+    piece.lockDelay = piece.lockDelayLimit
+  }
+  updateLockdownBar(piece)
+  setLowestY(piece)
+  for (let i = 1; i <= piece.manipulationLimit; i++) {
+    $(`#pip-${i}`).classList.remove("disabled")
+  }
+  for (
+    let i = 1;
+    i <= Math.min(piece.manipulations, piece.manipulationLimit);
+    i++
+  ) {
+    $(`#pip-${i}`).classList.add("disabled")
+  }
+}
 export function beatLockdown(arg) {
   const piece = arg.piece
   piece.lockDelay = 0
-  piece.lockdownType = "extended"
+  piece.lockdownType = "classic"
   let bpmInMs
 
   switch (gameHandler.game.type) {
@@ -95,6 +124,9 @@ export function beatLockdown(arg) {
       break
     case "ritn":
       bpmInMs = bpmToMs(158.5)
+      break
+	case "ggg":
+      bpmInMs = bpmToMs(154)
       break
   }
 

@@ -46,6 +46,7 @@ import {
   infiniteLockdown,
   beatLockdown,
   zenLockdown,
+  krsLockdown,
 } from "./loop-modules/lockdown.js"
 import updateFallSpeed from "./loop-modules/update-fallspeed.js"
 import shiftingNes from "./loop-modules/shifting-nes.js"
@@ -7779,7 +7780,7 @@ export const loops = {
       gravity(arg)
       krsHardDrop(arg)
 	  krsSoftDrop(arg)
-      extendedLockdown(arg)
+      krsLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
       }
