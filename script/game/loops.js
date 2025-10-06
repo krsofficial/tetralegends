@@ -7884,7 +7884,7 @@ export const loops = {
         [10, 4],
 		[14.8, 5],
         [15, 6],
-		[19.8, 7],
+		[20.8, 7],
       ]
 	  for (const pair of musicProgressionTable) {
         const level = pair[0]
@@ -7967,6 +7967,7 @@ export const loops = {
         }
       }
 	  if (game.stat.piece >= pieceRequirement * levelGoal) {
+		game.stat.level = levelGoal
 		game.stat.piece = pieceRequirement * levelGoal
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
