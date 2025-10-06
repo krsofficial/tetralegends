@@ -7807,7 +7807,7 @@ export const loops = {
 	  const levelGoal = 20
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
-      if (game.stat.level > 10) {
+      if (game.stat.level < 10) {
 		  game.piece.gravity = Math.max((gravityEquation * 1000) / Math.max(((game.stat.level - 1) * 10), 1), framesToMs(1 / 20))
 	  } else {
 		  game.piece.gravity = framesToMs(1 / 20)
