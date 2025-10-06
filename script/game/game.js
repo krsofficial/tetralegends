@@ -1042,7 +1042,11 @@ export default class Game {
                 game.end()
               }
             }
-            game.pps = game.stat.piece / (game.timePassed / 1000)
+            if (game.rta !== null) {
+				game.pps = game.stat.piece / (game.rta / 1000)
+			} else {
+				game.pps = game.stat.piece / (game.timePassed / 1000)
+			}
             // game.stat.pps = Math.round(game.pps * 100) / 100;
             game.updateStats()
             if (game.stack.alarmIsOn) {
