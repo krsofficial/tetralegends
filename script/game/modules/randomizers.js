@@ -1,6 +1,25 @@
 import { shuffle } from "../../shortcuts.js"
 import { PIECE_BINARIES } from "../../consts.js"
 
+export function* krs(pieces) {
+  let history = ["Z", "S", "Z", "S"]
+  let first = true
+  let generated
+  while (true) {
+    if (first) {
+      generated = ["I", "J", "L", "T"][Math.floor(Math.random() * 4)]
+      first = false
+    } else {
+      for (let i = 0; i < 6; i++) {
+        generated = pieces[Math.floor(Math.random() * pieces.length)]
+        if (!history.includes(generated)) break
+      }
+    }
+    history.shift()
+    history.push(generated)
+    yield generated
+  }
+}
 export function* history6rolls(pieces) {
   let history = ["Z", "S", "Z", "S"]
   let first = true
@@ -40,15 +59,15 @@ export function* history4rolls(pieces) {
   }
 }
 export function* sega(pieces) {
-  let history = ["Z", "S", "Z", "S"]
+  let history = []
   let first = true
   let generated
   while (true) {
     if (first) {
-      generated = ["I", "J", "L", "T"][Math.floor(Math.random() * 4)]
+      generated = ["I", "J", "L", "T", "S", "Z", "O"][Math.floor(Math.random() * 7)]
       first = false
     } else {
-      for (let i = 0; i < 2; i++) {
+      for (let i = 0; i < 1; i++) {
         generated = pieces[Math.floor(Math.random() * pieces.length)]
         if (!history.includes(generated)) break
       }

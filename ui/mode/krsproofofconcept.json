@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "parent": "root",
+    "langOverride": "mode-options",
+    "game": "krsproofofconcept",
+	"pgmusic": "pg-krsproofofconcept"
+  },
+  "data": [
+    {
+      "string": "KRS (Proof Of Concept)",
+      "fixedText": true,
+      "type": "header"
+    },
+  ]
+}
