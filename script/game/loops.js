@@ -7957,7 +7957,7 @@ export const loops = {
 	  for (const pair of lockDelayTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 1) {
+        if (game.stat.level <= level) {
           if (testMode === false) {
 			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
 		  } else {
