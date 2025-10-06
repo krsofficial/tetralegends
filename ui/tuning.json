@@ -210,6 +210,11 @@
           "value": "ppt"
         },
 		{
+          "label": "SRS-TOJ",
+          "fixedText": true,
+          "value": "toj"
+        },
+		{
           "label": "SRS-Friends",
           "fixedText": true,
           "value": "friends"

@@ -1092,11 +1092,12 @@ SPAWN_OFFSETS.dshock = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.krs = SPAWN_OFFSETS.arsx
 SPAWN_OFFSETS.t99 = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ppt = SPAWN_OFFSETS.srs
-SPAWN_OFFSETS.arsae = SPAWN_OFFSETS.arsx
-SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.world
+SPAWN_OFFSETS.arsae = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.sega = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.toj = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ksc = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.newcentury = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.heboris = SPAWN_OFFSETS.ars
@@ -1137,6 +1138,7 @@ INITIAL_ORIENTATION.aceworld = INITIAL_ORIENTATION.world
 INITIAL_ORIENTATION.battle = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.friends = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.dshock = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.toj = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.krs = INITIAL_ORIENTATION.arsx
 INITIAL_ORIENTATION.t99 = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.ppt = INITIAL_ORIENTATION.srs
@@ -3179,6 +3181,7 @@ KICK_TEMPLATES.ppt = KICK_TEMPLATES.srs
 KICK_TEMPLATES.arsae = KICK_TEMPLATES.arsx
 KICK_TEMPLATES.worldae = KICK_TEMPLATES.srs
 KICK_TEMPLATES.srsx = KICK_TEMPLATES.srs
+KICK_TEMPLATES.toj = KICK_TEMPLATES.srs
 KICK_TEMPLATES.newcentury = KICK_TEMPLATES.srs
 KICK_TEMPLATES.heboris = KICK_TEMPLATES.ars
 KICK_TEMPLATES.beatmode = {
@@ -4047,6 +4050,7 @@ KICK_TABLES.t99 = KICK_TABLES.srs
 KICK_TABLES.ppt = KICK_TABLES.srs
 KICK_TABLES.arsae = KICK_TABLES.arsx
 KICK_TABLES.worldae = KICK_TABLES.srs
+KICK_TABLES.toj = KICK_TABLES.srs
 KICK_TABLES.srsx = KICK_TABLES.srs
 KICK_TABLES.newcentury = KICK_TABLES.srs
 KICK_TABLES.heboris = KICK_TABLES.ars
@@ -4184,6 +4188,7 @@ PIECE_COLORS.t99 = PIECE_COLORS.srs
 PIECE_COLORS.ppt = PIECE_COLORS.srs
 PIECE_COLORS.arsae = PIECE_COLORS.arsx
 PIECE_COLORS.worldae = PIECE_COLORS.world
+PIECE_COLORS.toj = PIECE_COLORS.srs
 PIECE_COLORS.srsx = PIECE_COLORS.srs
 PIECE_COLORS.sega = PIECE_COLORS.ars
 PIECE_COLORS.beatmode = PIECE_COLORS.srs
@@ -4240,6 +4245,7 @@ NEXT_OFFSETS.dshock = NEXT_OFFSETS.srs
 NEXT_OFFSETS.t99 = NEXT_OFFSETS.srs
 NEXT_OFFSETS.ppt = NEXT_OFFSETS.srs
 NEXT_OFFSETS.srsx = NEXT_OFFSETS.srs
+NEXT_OFFSETS.toj = NEXT_OFFSETS.srs
 NEXT_OFFSETS.arsae = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.worldae = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sega = NEXT_OFFSETS.ars
@@ -4592,6 +4598,7 @@ PIECE_OFFSETS.t99 = PIECE_OFFSETS.srs
 PIECE_OFFSETS.ppt = PIECE_OFFSETS.srs
 PIECE_OFFSETS.dshock = PIECE_OFFSETS.srs
 PIECE_OFFSETS.srsx = PIECE_OFFSETS.srs
+PIECE_OFFSETS.toj = PIECE_OFFSETS.srs
 PIECE_OFFSETS.arsae = PIECE_OFFSETS.arsx
 PIECE_OFFSETS.worldae = PIECE_OFFSETS.srs
 PIECE_OFFSETS.newcentury = PIECE_OFFSETS.srs
@@ -4768,7 +4775,7 @@ export const SCORE_TABLES = {
     b2bMultiplier: 1,
     b2bMultiplied: [],
   },
-  kegaris: {
+  krs: {
     erase1: 100,
     erase2: 200,
     erase3: 300,
@@ -4799,7 +4806,7 @@ export const SCORE_TABLES = {
       "tmini",
       "combo",
     ],
-    b2bMultiplier: 1.5,
+    b2bMultiplier: 2,
     b2bMultiplied: [
       "erase4",
       "tspin1",
@@ -4808,7 +4815,7 @@ export const SCORE_TABLES = {
       "tspin4",
       "tmini",
     ],
-    combo: 25,
+    combo: 10,
   },
   tgm: {
     erase1: 0,
@@ -5172,6 +5179,7 @@ export const SKIN_SETS = {
   krs: "krs",
   ksc: "krs",
   heboris: "arcade",
+  toj: "toj",
 }
 export const SOUND_SETS = {
   asc: "tetrax",
@@ -5203,4 +5211,5 @@ export const SOUND_SETS = {
   krs: "krs",
   ksc: "krs",
   heboris: "heboris",
+  toj: "toj",
 }

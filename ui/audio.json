@@ -94,6 +94,11 @@
           "fixedText": true,
           "value": "ppt"
         },
+		{
+          "label": "TOJ",
+          "fixedText": true,
+          "value": "toj"
+        },
         {
           "label": "Friends",
           "fixedText": true,

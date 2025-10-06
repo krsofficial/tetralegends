@@ -122,6 +122,37 @@ const levelUpdateSega = (game) => {
   lastLevel = game.stat.level
   return returnValue
 }
+const krsLevelSystem = (game) => {
+	let returnValue = false
+	game.stat.level = Math.floor(game.stat.piece / 100 + 1)
+	if (game.stat.level !== lastLevel) {
+		sound.add("levelup")
+		sound.add("levelupmajor")
+		returnValue = true
+	}
+	lastLevel = game.stat.level
+	return returnValue
+}
+const krsGradingSystem = (game) => {
+	let gradingTable = [
+		[1000, "8"],
+		[0, "9"],
+	]
+	for (const pair of gradingTable) {
+        const score = pair[0]
+        const grade = pair[1]
+        if (game.stat.score >= score) {
+			game.stat.grade = grade
+			break
+        }
+    }
+	if (lastGrade !== game.stat.grade && game.stat.grade !== "N/A") {
+		if (game.stat.grade !== "9") {
+			sound.add("gradeup")
+		}
+	}
+	lastGrade = game.stat.grade
+}
 const updateArcadeBg = (game) => {
 	if (game.stat.level >= 1900) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back19.png')`)}
 	else if (game.stat.level >= 1800) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back18.png')`)}

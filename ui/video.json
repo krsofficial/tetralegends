@@ -64,6 +64,11 @@
           "value": "standard"
         },
 		{
+          "label": "TOJ",
+          "fixedText": true,
+          "value": "toj"
+        },
+		{
           "label": "Friends",
           "fixedText": true,
           "value": "friends"

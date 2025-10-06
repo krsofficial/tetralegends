@@ -1,11 +1,14 @@
 {
+  "usesReadyGoVoices": true,
   "files": [
     "alarm",
     "b2b_erase4",
     "b2b_tspin1",
     "b2b_tspin1mini",
     "b2b_tspin2",
+	"b2b_tspin2mini",
     "b2b_tspin3",
+	"b2b_tspin3mini",
     "bravo",
     "erase1",
     "erase2",
@@ -24,7 +27,10 @@
     "tspin1",
     "tspin1mini",
     "tspin2",
-    "tspin3"
+	"tspin2mini",
+    "tspin3",
+	"tspin3mini",
+	"levelup"
   ],
   "ren": [
     1,
