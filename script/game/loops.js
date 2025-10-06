@@ -7803,7 +7803,7 @@ export const loops = {
       */
     },
     onPieceSpawn: (game) => {
-	  const pieceRequirement = 40
+	  const pieceRequirement = 50
 	  const levelGoal = 20
       const x = game.stat.level
       const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
@@ -7889,7 +7889,7 @@ export const loops = {
 	  for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.piece >= Math.floor(level * pieceRequirement) && game.musicProgression < entry) {
+        if (game.stat.piece >= Math.floor((level - 1) * pieceRequirement) && game.musicProgression < entry) {
           switch (entry) {
             case 1:
 			  sound.killBgm()
