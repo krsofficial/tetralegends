@@ -1043,7 +1043,11 @@ export default class Game {
               }
             }
             if (game.rta !== null) {
-				game.pps = game.stat.piece / (game.rta / 1000)
+				if (game.rta >= game.timePassed) {
+					game.pps = game.stat.piece / (game.rta / 1000)
+				} else {
+					game.pps = game.stat.piece / (game.timePassed / 1000)
+				}
 			} else {
 				game.pps = game.stat.piece / (game.timePassed / 1000)
 			}
