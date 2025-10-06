@@ -3,7 +3,7 @@ import sound from "../../sound.js"
 import { framesToMs } from "../../shortcuts.js"
 
 export default function firmDrop(arg, frameGravity = 1) {
-  if (safelock) {
+  if (arg.piece.gravity < framesToMs(1) && arg.piece.isLanded) {
     if (input.getGamePress("softDrop")) {
       arg.piece.gravityMultiplier = Math.max(
         1,
