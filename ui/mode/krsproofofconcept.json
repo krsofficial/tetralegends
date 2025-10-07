@@ -11,6 +11,13 @@
 	  "description": "",
       "fixedText": true,
       "type": "header"
+    },
+	{
+      "fixedText": true,
+      "label": "Official Site",
+      "description": "Play KRS on the official site.",
+      "action": "link",
+      "url": "https://sub2ninah.github.io/krs/"
     }
   ]
 }
