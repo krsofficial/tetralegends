@@ -139,9 +139,9 @@ const krsLevelSystem = (game, pieceRequirement) => {
 const krsGradingSystem = (
 	game, 
 	gradingTable = [
-		[1000, "8"],
-		[0, "9"],
-	]
+		[0, "N/A"],
+	],
+	firstGrade = "N/A",
 ) => {
 	for (const pair of gradingTable) {
         const score = pair[0]
@@ -152,7 +152,7 @@ const krsGradingSystem = (
         }
     }
 	if (lastGrade !== game.stat.grade && game.stat.grade !== "N/A") {
-		if (game.stat.grade !== "9") {
+		if (game.stat.grade !== firstGrade) {
 			sound.add("gradeup")
 		}
 	}
