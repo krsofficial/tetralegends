@@ -60,13 +60,6 @@
       "action": "submenu",
       "submenu": "mode/zen"
     },
-	{
-      "fixedText": true,
-      "label": "KRS",
-      "description": "(Proof of concept) Custom variant inspired by the arcade variants.",
-      "action": "submenu",
-      "submenu": "mode/krsproofofconcept"
-    },
     {
       "string": "settingsOverline",
       "type": "overline"
