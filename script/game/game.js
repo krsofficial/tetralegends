@@ -153,6 +153,7 @@ export default class Game {
     }
     this.startingTime = 0
     this.timePassed = 0
+	this.timePassedOffset = 0
     this.timePassedAre = 0
     loadGameType(gametype)
       .then((gameData) => {
@@ -1042,7 +1043,7 @@ export default class Game {
                 game.end()
               }
             }
-            game.pps = game.stat.piece / (game.rta / 1000)
+            game.pps = game.stat.piece / ((game.timePassed + game.timePassedOffset) / 1000)
             // game.stat.pps = Math.round(game.pps * 100) / 100;
             game.updateStats()
             if (game.stack.alarmIsOn) {

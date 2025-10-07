@@ -3857,6 +3857,7 @@ export const loops = {
 	  }
       updateFallSpeed(game)
       if (levelUpdateAce(game)) {
+		game.timePassedOffset += game.timePassed
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
@@ -4408,6 +4409,7 @@ export const loops = {
       game.updateStats()
 	  game.isRaceMode = true
 	  game.timePassed = 0
+	  game.timePassedOffset = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
     },
@@ -4497,6 +4499,7 @@ export const loops = {
 	  }
       updateFallSpeed(game)
       if (levelUpdateAce(game)) {
+		game.timePassedOffset += game.timePassed
 		game.timePassed = 0
 	  }
 	  let timeLimit = 120000
@@ -5048,6 +5051,7 @@ export const loops = {
       game.updateStats()
 	  game.isRaceMode = true
 	  game.timePassed = 0
+	  game.timePassedOffset = 0
 	  game.timeGoal = 120000
 	  game.musicProgression = 0
     },
@@ -7814,6 +7818,7 @@ export const loops = {
 	  }
       updateFallSpeed(game)
       if (krsLevelSystem(game, pieceRequirement)) {
+		game.timePassedOffset += game.timePassed
 		game.timePassed = 0
 	  }
 	  const timeLimitTable = [
@@ -7984,6 +7989,7 @@ export const loops = {
       game.updateStats()
 	  game.isRaceMode = true
 	  game.timePassed = 0
+	  game.timePassedOffset = 0
 	  game.timeGoal = 100000
 	  game.musicProgression = 0
     },
