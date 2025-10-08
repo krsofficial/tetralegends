@@ -2457,7 +2457,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
     },
@@ -2659,7 +2662,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
     },
@@ -2858,7 +2864,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
     },
@@ -3056,7 +3065,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
     },
@@ -3804,7 +3816,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
       /* Might use this code later
@@ -4446,7 +4461,10 @@ export const loops = {
           game.playedHurryUp = true
         }
       } else {
-        game.playedHurryUp = false
+		if (game.playedHurryUp) {
+			$("#timer").classList.remove("hurry-up")
+		}
+		game.playedHurryUp = false
       }
 	  testModeUpdate()
       /* Might use this code later
