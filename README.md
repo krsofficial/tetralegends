@@ -1,6 +1,6 @@
 # Tetra Legends Ace
 Tetra Legends Ace is a Tetra Legends fork based on Tetra Legends Ultimate by Talon125.
-Play here: https://sub2ninah.github.io/tetralegends/
+Play here: https://krsofficial.github.io/tetralegends/
 
 # Additions
 - Total UI Overhaul
