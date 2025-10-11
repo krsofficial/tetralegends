@@ -468,7 +468,7 @@ const updateTIGrade = (game) => {
           if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
 			  sound.add("onpace")
 			  game.displayActionText("COOL!!!")
-			  coolsBonus = Math.min(0, entry - 1)
+			  coolsBonus = Math.max(0, entry - 1)
 		  } else {
 			  sound.add("offpace")
 			  game.displayActionText("REGRET!")
