@@ -228,43 +228,43 @@ const updateSegaBg = (game) => {
 	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 const updateTAPGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.line >= 8*18 && game.stack.isHidden && endRollPassed && endRollLines >= 32)
+	  if (game.stat.level >= 999 && game.stat.line >= 180 && game.stack.isHidden && endRollPassed && endRollLines >= 32)
 		game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.line >= 8*18)
+	  else if (game.stat.level >= 999 && game.stat.line >= 180)
         game.stat.grade = "M"
-      else if (game.stat.line >= 8*17)
+      else if (game.stat.line >= 170)
         game.stat.grade = "S9"
-	  else if (game.stat.line >= 8*16)
+	  else if (game.stat.line >= 160)
         game.stat.grade = "S8"
-	  else if (game.stat.line >= 8*15)
+	  else if (game.stat.line >= 150)
         game.stat.grade = "S7"
-	  else if (game.stat.line >= 8*14)
+	  else if (game.stat.line >= 140)
         game.stat.grade = "S6"
-	  else if (game.stat.line >= 8*13)
+	  else if (game.stat.line >= 130)
         game.stat.grade = "S5"
-	  else if (game.stat.line >= 8*12)
+	  else if (game.stat.line >= 120)
         game.stat.grade = "S4"
-	  else if (game.stat.line >= 8*11)
+	  else if (game.stat.line >= 110)
         game.stat.grade = "S3"
-	  else if (game.stat.line >= 8*10)
+	  else if (game.stat.line >= 110)
         game.stat.grade = "S2"
-	  else if (game.stat.line >= 8*9)
+	  else if (game.stat.line >= 95)
         game.stat.grade = "S1"
-	  else if (game.stat.line >= 8*8)
+	  else if (game.stat.line >= 80)
         game.stat.grade = "1"
-	  else if (game.stat.line >= 8*7)
+	  else if (game.stat.line >= 70)
         game.stat.grade = "2"
-	  else if (game.stat.line >= 8*6)
+	  else if (game.stat.line >= 60)
         game.stat.grade = "3"
-	  else if (game.stat.line >= 8*5)
+	  else if (game.stat.line >= 50)
         game.stat.grade = "4"
-	  else if (game.stat.line >= 8*4)
+	  else if (game.stat.line >= 40)
         game.stat.grade = "5"
-	  else if (game.stat.line >= 8*3)
+	  else if (game.stat.line >= 30)
         game.stat.grade = "6"
-	  else if (game.stat.line >= 8*2)
+	  else if (game.stat.line >= 20)
         game.stat.grade = "7"
-	  else if (game.stat.line >= 8*1)
+	  else if (game.stat.line >= 10)
         game.stat.grade = "8"
 	  else if (game.stat.line >= 0)
         game.stat.grade = "9"
@@ -373,51 +373,51 @@ const updateTIGrade = (game) => {
 	  ]
 	  let lineRequirementTable = [
 		0,
-		8*1,
-		8*2,
-		8*3,
-		8*4,
-		8*5,
-		8*6,
-		8*7,
-		8*8,
-		8*9,
-		8*10,
-		8*11,
-		8*12,
-		8*13,
-		8*14,
-		8*15,
-		8*16,
-		8*17,
-		8*18,
-		8*19,
-		8*20,
-		8*21,
-		8*22,
-		8*23,
-		8*24,
-		8*25,
-		8*26,
-		8*27,
+		10,
+		20,
+		30,
+		40,
+		50,
+		60,
+		70,
+		80,
+		90,
+		100,
+		110,
+		120,
+		130,
+		140,
+		150,
+		160,
+		170,
+		180,
+		180+(5*1),
+		180+(5*2),
+		180+(5*3),
+		180+(5*4),
+		180+(5*5),
+		180+(5*6),
+		180+(5*7),
+		180+(5*8),
+		180+(5*9),
 	  ]
 	  let gradeIndex = 0
-	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.stat.line >= 8*28)
+	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && 180+(5*10))
 		gradeIndex = 32
-	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.line >= 8*28)
+	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.line >= 180+(5*10))
         gradeIndex = 31 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.line >= 8*28)
+	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.line >= 180+(5*10))
         gradeIndex = 30 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.line >= 8*28)
+	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.line >= 180+(5*10))
         gradeIndex = 29 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.line >= 8*28)
+	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.line >= 180+(5*10))
         gradeIndex = 28 - regretsPenalty
-      else if (game.stat.level >= 999 && game.stat.line >= 8*28)
+      else if (game.stat.level >= 999 && game.stat.line >= 180+(5*10))
         gradeIndex = 27 - regretsPenalty
 	  else {
 	    for (const line of lineRequirementTable) {
 			if (game.stat.line >= line) {
-				gradeIndex = Math.max(0, Math.min(26 - regretsPenalty, lineRequirementTable.indexOf(score) - regretsPenalty))
+				gradeIndex = Math.max(0, Math.min(26 - regretsPenalty, lineRequirementTable.indexOf(line) - regretsPenalty))
 			}
 		}
 	  }
@@ -752,7 +752,7 @@ export const loops = {
 		  if (isEndRoll === false) {
 			  isEndRoll = true
 			  game.stack.endRollStart()
-			  if (testMode === false && game.rta <= 600000 && game.stat.line >= 8*18) {
+			  if (testMode === false && game.rta <= 600000 && game.stat.line >= 180) {
 				game.stack.isHidden = true
 			  } else {
 				game.stack.isHidden = false
@@ -1371,7 +1371,7 @@ export const loops = {
 		if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.endRollStart()
-			if (testMode === false && regretsPenalty <= 0) {
+			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 180+(5*10)) {
 				game.stack.isHidden = true
 			} else {
 				game.stack.isHidden = false
@@ -2007,7 +2007,7 @@ export const loops = {
 		if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.endRollStart()
-			if (testMode === false && regretsPenalty <= 0) {
+			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 180+(5*10)) {
 				game.stack.isHidden = true
 			} else {
 				game.stack.isHidden = false
