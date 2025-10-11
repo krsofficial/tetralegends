@@ -391,28 +391,28 @@ const updateTIGrade = (game) => {
 		160,
 		170,
 		180,
-		180+(5*1),
-		180+(5*2),
-		180+(5*3),
-		180+(5*4),
-		180+(5*5),
-		180+(5*6),
-		180+(5*7),
-		180+(5*8),
-		180+(5*9),
+		189,
+		198,
+		207,
+		216,
+		225,
+		234,
+		243,
+		252,
+		261,
 	  ]
 	  let gradeIndex = 0
-	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && 180+(5*10))
+	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.stat.line >= 270)
 		gradeIndex = 32
-	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.line >= 180+(5*10))
+	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.line >= 270)
         gradeIndex = 31 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.line >= 180+(5*10))
+	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.line >= 270)
         gradeIndex = 30 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.line >= 180+(5*10))
+	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.line >= 270)
         gradeIndex = 29 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.line >= 180+(5*10))
+	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.line >= 270)
         gradeIndex = 28 - regretsPenalty
-      else if (game.stat.level >= 999 && game.stat.line >= 180+(5*10))
+      else if (game.stat.level >= 999 && game.stat.line >= 270)
         gradeIndex = 27 - regretsPenalty
 	  else {
 	    for (const line of lineRequirementTable) {
@@ -1252,6 +1252,10 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
+        if (game.stat.level < level) {
+        if (game.stat.level < level) {
+        if (game.stat.level < level) {
+        if (game.stat.level < level) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
@@ -1371,7 +1375,7 @@ export const loops = {
 		if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.endRollStart()
-			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 180+(5*10)) {
+			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 270) {
 				game.stack.isHidden = true
 			} else {
 				game.stack.isHidden = false
@@ -2007,7 +2011,7 @@ export const loops = {
 		if (isEndRoll === false) {
 			isEndRoll = true
 			game.stack.endRollStart()
-			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 180+(5*10)) {
+			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 270) {
 				game.stack.isHidden = true
 			} else {
 				game.stack.isHidden = false
