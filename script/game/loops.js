@@ -326,15 +326,15 @@ const updateTIGrade = (game) => {
 		[879, 9],
 	  ]
 	  let timeRequirementTable = [
-		60 * 1,
-		59 * 2,
-		58 * 3,
-		57 * 4,
-		56 * 5,
-		55 * 6,
-		54 * 7,
-		53 * 8,
-		52 * 9,
+		50,
+		110,
+		170,
+		230,
+		290,
+		350,
+		410,
+		470,
+		530,
 	  ]
 	  let gradeTable = [
 		"9",
@@ -371,7 +371,7 @@ const updateTIGrade = (game) => {
 		"MM",
 		"GM",
 	  ]
-	  let lineRequirementTable = [
+	  let scoreRequirementTable = [
 		0,
 		1000,
 		2000,
