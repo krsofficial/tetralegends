@@ -403,25 +403,25 @@ const updateTIGrade = (game) => {
 	  ]
 	  let gradeIndex = 0
 	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.stat.score >= 250000)
-		game.stat.grade = gradeTable[32]
+		gradeIndex = 32
 	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.score >= 250000)
-        game.stat.grade = gradeTable[31 - regretsPenalty]
+        gradeIndex = 31 - regretsPenalty
 	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.score >= 250000)
-        game.stat.grade = gradeTable[30 - regretsPenalty]
+        gradeIndex = 30 - regretsPenalty
 	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.score >= 250000)
-        game.stat.grade = gradeTable[29 - regretsPenalty]
+        gradeIndex = 29 - regretsPenalty
 	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.score >= 250000)
-        game.stat.grade = gradeTable[28 - regretsPenalty]
+        gradeIndex = 28 - regretsPenalty
       else if (game.stat.level >= 999 && game.stat.score >= 250000)
-        game.stat.grade = gradeTable[27 - regretsPenalty]
+        gradeIndex = 27 - regretsPenalty
 	  else {
 	    for (const score of scoreRequirementTable) {
 			if (game.stat.score >= score) {
 				gradeIndex = Math.max(0, Math.min(26 - regretsPenalty, scoreRequirementTable.indexOf(score) - regretsPenalty))
 			}
 		}
-		game.stat.grade = gradeTable[gradeIndex]
 	  }
+	  game.stat.grade = gradeTable[gradeIndex]
 	  for (const pair of coolProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
