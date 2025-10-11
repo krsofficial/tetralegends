@@ -403,58 +403,60 @@ const updateTIGrade = (game) => {
 		270,
 	  ]
 	  let gradeIndex = 0
-	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.torikanPassed)
+	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32)
 		gradeIndex = 32
-	  else if (game.stat.level >= 999 && endRollLines >= 32)
-        gradeIndex = Math.max(
-			0, 
-			Math.min(
-				31 - regretsPenalty, 
-				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
-			)
-		)
-	  else if (game.stat.level >= 999 && endRollLines >= 24)
-        gradeIndex = Math.max(
-			0, 
-			Math.min(
-				30 - regretsPenalty, 
-				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
-			)
-		)
-	  else if (game.stat.level >= 999 && endRollLines >= 16)
-        gradeIndex = Math.max(
-			0, 
-			Math.min(
-				29 - regretsPenalty, 
-				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
-			)
-		)
-	  else if (game.stat.level >= 999 && endRollLines >= 8)
-        gradeIndex = Math.max(
-			0, 
-			Math.min(
-				28 - regretsPenalty, 
-				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
-			)
-		)
-      else if (game.stat.level >= 999)
-        gradeIndex = Math.max(
-			0, 
-			Math.min(
-				27 - regretsPenalty, 
-				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
-			)
-		)
 	  else {
 	    for (const line of lineRequirementTable) {
 			if (game.stat.line >= line) {
-				gradeIndex = Math.max(
-					0, 
-					Math.min(
-						26 - regretsPenalty, 
-						lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+				if (game.stat.level >= 999 && endRollLines >= 32) {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							31 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
 					)
-				)
+				} else if (game.stat.level >= 999 && endRollLines >= 24) {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							30 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
+					)
+				} else if (game.stat.level >= 999 && endRollLines >= 16) {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							29 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
+					)
+				} else if (game.stat.level >= 999 && endRollLines >= 8) {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							28 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
+					)
+				} else if (game.stat.level >= 999 && endRollLines >= 0) {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							27 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
+					)
+				} else {
+					gradeIndex = Math.max(
+						0, 
+						Math.min(
+							26 - regretsPenalty, 
+							lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+						)
+					)
+				}
 			}
 		}
 	  }
@@ -466,7 +468,7 @@ const updateTIGrade = (game) => {
           if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
 			  sound.add("onpace")
 			  game.displayActionText("COOL!!!")
-			  coolsBonus += 1
+			  coolsBonus = Math.min(0, entry - 1)
 		  } else {
 			  sound.add("offpace")
 			  game.displayActionText("REGRET!")
