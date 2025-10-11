@@ -1252,10 +1252,6 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-        if (game.stat.level < level) {
-        if (game.stat.level < level) {
-        if (game.stat.level < level) {
-        if (game.stat.level < level) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
