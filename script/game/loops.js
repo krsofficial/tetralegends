@@ -75,6 +75,7 @@ let testMode = false
 let nonEvents = []
 let coolProgression = 0
 let regretsPenalty = 0
+let coolsBonus = 0
 let bpm
 const levelUpdate = (game) => {
   let returnValue = false
@@ -391,33 +392,69 @@ const updateTIGrade = (game) => {
 		160,
 		170,
 		180,
-		189,
-		198,
-		207,
-		216,
-		225,
-		234,
-		243,
-		252,
-		261,
+		190,
+		200,
+		210,
+		220,
+		230,
+		240,
+		250,
+		260,
+		270,
 	  ]
 	  let gradeIndex = 0
-	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.stat.line >= 270)
+	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.torikanPassed)
 		gradeIndex = 32
-	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.line >= 270)
-        gradeIndex = 31 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.line >= 270)
-        gradeIndex = 30 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.line >= 270)
-        gradeIndex = 29 - regretsPenalty
-	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.line >= 270)
-        gradeIndex = 28 - regretsPenalty
-      else if (game.stat.level >= 999 && game.stat.line >= 270)
-        gradeIndex = 27 - regretsPenalty
+	  else if (game.stat.level >= 999 && endRollLines >= 32)
+        gradeIndex = Math.max(
+			0, 
+			Math.min(
+				31 - regretsPenalty, 
+				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+			)
+		)
+	  else if (game.stat.level >= 999 && endRollLines >= 24)
+        gradeIndex = Math.max(
+			0, 
+			Math.min(
+				30 - regretsPenalty, 
+				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+			)
+		)
+	  else if (game.stat.level >= 999 && endRollLines >= 16)
+        gradeIndex = Math.max(
+			0, 
+			Math.min(
+				29 - regretsPenalty, 
+				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+			)
+		)
+	  else if (game.stat.level >= 999 && endRollLines >= 8)
+        gradeIndex = Math.max(
+			0, 
+			Math.min(
+				28 - regretsPenalty, 
+				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+			)
+		)
+      else if (game.stat.level >= 999)
+        gradeIndex = Math.max(
+			0, 
+			Math.min(
+				27 - regretsPenalty, 
+				lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+			)
+		)
 	  else {
 	    for (const line of lineRequirementTable) {
 			if (game.stat.line >= line) {
-				gradeIndex = Math.max(0, Math.min(26 - regretsPenalty, lineRequirementTable.indexOf(line) - regretsPenalty))
+				gradeIndex = Math.max(
+					0, 
+					Math.min(
+						26 - regretsPenalty, 
+						lineRequirementTable.indexOf(line) + coolsBonus - regretsPenalty
+					)
+				)
 			}
 		}
 	  }
@@ -429,6 +466,7 @@ const updateTIGrade = (game) => {
           if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
 			  sound.add("onpace")
 			  game.displayActionText("COOL!!!")
+			  coolsBonus += 1
 		  } else {
 			  sound.add("offpace")
 			  game.displayActionText("REGRET!")
@@ -441,6 +479,7 @@ const updateTIGrade = (game) => {
 const resetCoolsAndRegrets = (game) => {
 	  coolProgression = 0
 	  regretsPenalty = 0
+	  coolsBonus = 0
 }
 const updateAsukaGrade = (game) => {
 	  if (game.stat.level >= 1300)
