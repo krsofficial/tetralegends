@@ -73,6 +73,8 @@ let lastPieces = 0
 let underwaterProgression = 0
 let testMode = false
 let nonEvents = []
+let coolProgression = 0
+let regretsPenalty = 0
 let bpm
 const levelUpdate = (game) => {
   let returnValue = false
@@ -226,43 +228,43 @@ const updateSegaBg = (game) => {
 	else if (game.stat.level >= 0) {document.getElementById("arcadeBackground").style.setProperty("background-image", `url('bgs/back0.png')`)}
 }
 const updateTAPGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 125000 && endRollPassed)
+	  if (game.stat.level >= 999 && game.stat.score >= 150000 && game.stack.isHidden && endRollPassed)
 		game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 125000)
+	  else if (game.stat.level >= 999 && game.stat.score >= 150000)
         game.stat.grade = "M"
-      else if (game.stat.score >= 125000)
+      else if (game.stat.score >= 150000)
         game.stat.grade = "S9"
-	  else if (game.stat.score >= 105000)
+	  else if (game.stat.score >= 120000)
         game.stat.grade = "S8"
-	  else if (game.stat.score >= 87500)
+	  else if (game.stat.score >= 100000)
         game.stat.grade = "S7"
-	  else if (game.stat.score >= 72500)
+	  else if (game.stat.score >= 80000)
         game.stat.grade = "S6"
-	  else if (game.stat.score >= 57500)
+	  else if (game.stat.score >= 65000)
         game.stat.grade = "S5"
-	  else if (game.stat.score >= 45000)
+	  else if (game.stat.score >= 50000)
         game.stat.grade = "S4"
-	  else if (game.stat.score >= 35000)
+	  else if (game.stat.score >= 40000)
         game.stat.grade = "S3"
-	  else if (game.stat.score >= 25000)
+	  else if (game.stat.score >= 30000)
         game.stat.grade = "S2"
 	  else if (game.stat.score >= 20000)
         game.stat.grade = "S1"
-	  else if (game.stat.score >= 16000)
+	  else if (game.stat.score >= 15000)
         game.stat.grade = "1"
-	  else if (game.stat.score >= 8400)
+	  else if (game.stat.score >= 10000)
         game.stat.grade = "2"
-	  else if (game.stat.score >= 6000)
+	  else if (game.stat.score >= 7500)
         game.stat.grade = "3"
-	  else if (game.stat.score >= 4000)
+	  else if (game.stat.score >= 5000)
         game.stat.grade = "4"
-	  else if (game.stat.score >= 3200)
+	  else if (game.stat.score >= 4000)
         game.stat.grade = "5"
-	  else if (game.stat.score >= 2400)
+	  else if (game.stat.score >= 3000)
         game.stat.grade = "6"
-	  else if (game.stat.score >= 1600)
+	  else if (game.stat.score >= 2000)
         game.stat.grade = "7"
-	  else if (game.stat.score >= 800)
+	  else if (game.stat.score >= 1000)
         game.stat.grade = "8"
 	  else if (game.stat.score >= 0)
         game.stat.grade = "9"
@@ -312,72 +314,132 @@ const updateShiraseGrade = (game) => {
         game.stat.grade = "1"
 }
 const updateTIGrade = (game) => {
-	  if (game.stat.level >= 999 && game.stat.score >= 250000 && game.torikanPassed && endRollPassed && endRollLines >= 32)
-		game.stat.grade = "GM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 32)
-        game.stat.grade = "MM"
-	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 24)
-        game.stat.grade = "MO"
-	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 16)
-        game.stat.grade = "MV"
-	  else if (game.stat.level >= 999 && game.stat.score >= 250000 && endRollLines >= 8)
-        game.stat.grade = "MK"
+	  let coolProgressionTable =  [
+		[79, 1],
+		[179, 2],
+		[279, 3],
+		[379, 4],
+		[479, 5],
+		[579, 6],
+		[679, 7],
+		[779, 8],
+		[879, 9],
+	  ]
+	  let timeRequirementTable = [
+		60 * 1,
+		59 * 2,
+		58 * 3,
+		57 * 4,
+		56 * 5,
+		55 * 6,
+		54 * 7,
+		53 * 8,
+		52 * 9,
+	  ]
+	  let gradeTable = [
+		"9",
+		"8",
+		"7",
+		"6",
+		"5",
+		"4",
+		"3",
+		"2",
+		"1",
+		"S1",
+		"S2",
+		"S3",
+		"S4",
+		"S5",
+		"S6",
+		"S7",
+		"S8",
+		"S9",
+		"M1",
+		"M2",
+		"M3",
+		"M4",
+		"M5",
+		"M6",
+		"M7",
+		"M8",
+		"M9",
+		"M",
+		"MK",
+		"MV",
+		"MO",
+		"MM",
+		"GM",
+	  ]
+	  let lineRequirementTable = [
+		0,
+		1000,
+		2000,
+		3000,
+		4000,
+		5000,
+		7500,
+		10000,
+		15000,
+		20000,
+		30000,
+		40000,
+		50000,
+		65000,
+		80000,
+		100000,
+		120000,
+		150000,
+		160000,
+		170000,
+		180000,
+		190000,
+		200000,
+		210000,
+		220000,
+		230000,
+		240000,
+		250000,
+	  ]
+	  if (game.stat.level >= 999 && regretsPenalty <= 0 && game.stack.isHidden && endRollPassed && endRollLines >= 32 && game.stat.score >= 250000)
+		game.stat.grade = gradeTable[32]
+	  else if (game.stat.level >= 999 && endRollLines >= 32 && game.stat.score >= 250000)
+        game.stat.grade = gradeTable[31 - regretsPenalty]
+	  else if (game.stat.level >= 999 && endRollLines >= 24 && game.stat.score >= 250000)
+        game.stat.grade = gradeTable[30 - regretsPenalty]
+	  else if (game.stat.level >= 999 && endRollLines >= 16 && game.stat.score >= 250000)
+        game.stat.grade = gradeTable[29 - regretsPenalty]
+	  else if (game.stat.level >= 999 && endRollLines >= 8 && game.stat.score >= 250000)
+        game.stat.grade = gradeTable[28 - regretsPenalty]
       else if (game.stat.level >= 999 && game.stat.score >= 250000)
-        game.stat.grade = "M"
-	  else if (game.stat.score >= 240000)
-        game.stat.grade = "M9"
-	  else if (game.stat.score >= 230000)
-        game.stat.grade = "M8"
-	  else if (game.stat.score >= 220000)
-        game.stat.grade = "M7"
-	  else if (game.stat.score >= 210000)
-        game.stat.grade = "M6"
-	  else if (game.stat.score >= 200000)
-        game.stat.grade = "M5"
-	  else if (game.stat.score >= 190000)
-        game.stat.grade = "M4"
-	  else if (game.stat.score >= 180000)
-        game.stat.grade = "M3"
-	  else if (game.stat.score >= 170000)
-        game.stat.grade = "M2"
-	  else if (game.stat.score >= 160000)
-        game.stat.grade = "M1"
-      else if (game.stat.score >= 150000)
-        game.stat.grade = "S9"
-	  else if (game.stat.score >= 135000)
-        game.stat.grade = "S8"
-	  else if (game.stat.score >= 120000)
-        game.stat.grade = "S7"
-	  else if (game.stat.score >= 105000)
-        game.stat.grade = "S6"
-	  else if (game.stat.score >= 90000)
-        game.stat.grade = "S5"
-	  else if (game.stat.score >= 75000)
-        game.stat.grade = "S4"
-	  else if (game.stat.score >= 60000)
-        game.stat.grade = "S3"
-	  else if (game.stat.score >= 45000)
-        game.stat.grade = "S2"
-	  else if (game.stat.score >= 30000)
-        game.stat.grade = "S1"
-	  else if (game.stat.score >= 15000)
-        game.stat.grade = "1"
-	  else if (game.stat.score >= 9000)
-        game.stat.grade = "2"
-	  else if (game.stat.score >= 6000)
-        game.stat.grade = "3"
-	  else if (game.stat.score >= 5000)
-        game.stat.grade = "4"
-	  else if (game.stat.score >= 4000)
-        game.stat.grade = "5"
-	  else if (game.stat.score >= 3000)
-        game.stat.grade = "6"
-	  else if (game.stat.score >= 2000)
-        game.stat.grade = "7"
-	  else if (game.stat.score >= 1000)
-        game.stat.grade = "8"
-	  else if (game.stat.score >= 0)
-        game.stat.grade = "9"
+        game.stat.grade = gradeTable[27 - regretsPenalty]
+	  else {
+	    for (const score of scoreRequirementTable) {
+			if (game.stat.score >= score) {
+				game.stat.grade = gradeTable[Math.max(0, Math.min(26 - regretsPenalty, scoreRequirementTable.indexOf(score) - regretsPenalty))]
+				break
+			}
+		}
+	  }
+	  for (const pair of coolProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && coolProgression < entry) {
+          if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
+			  sound.add("onpace")
+			  this.displayActionText("COOL!!!")
+		  } else {
+			  sound.add("offpace")
+			  this.displayActionText("REGRET!")
+			  regretsPenalty += 1
+		  }
+		  coolProgression = entry
+        }
+      }
+}
+const resetCoolsAndRegrets = (game) => {
+	  coolProgression = 0
+	  regretsPenalty = 0
 }
 const updateAsukaGrade = (game) => {
 	  if (game.stat.level >= 1300)
@@ -689,7 +751,7 @@ export const loops = {
 		  if (isEndRoll === false) {
 			  isEndRoll = true
 			  game.stack.endRollStart()
-			  if (testMode === false) {
+			  if (testMode === false && game.rta <= 600000 && game.stat.score >= 150000) {
 				game.stack.isHidden = true
 			  } else {
 				game.stack.isHidden = false
@@ -1305,42 +1367,33 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (game.torikanPassed) {
-			if (isEndRoll === false) {
-				isEndRoll = true
-				game.stack.endRollStart()
-			    if (testMode === false) {
-				  game.stack.isHidden = true
-			    } else {
-				  game.stack.isHidden = false
-			    }
-				rtaGoal = game.rta + 55000
-				sound.loadBgm(["ending2"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["ending2"], "arcade")
-			} else if (isEndRoll === true) {
-			    if (testMode === false) {
-				  game.stack.isHidden = true
-			    } else {
-				  game.stack.isHidden = false
-			    }
-				if (game.rta >= rtaGoal) {
-					endRollPassed = true
-				}
+		if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.endRollStart()
+			if (testMode === false && regretsPenalty <= 0) {
+				game.stack.isHidden = true
+			} else {
+				game.stack.isHidden = false
 			}
-			game.stat.level = 999
-			endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
-		  } else {
-			game.stat.level = 999
-			endRollLines = 0
-			$("#kill-message").textContent = locale.getString("ui", "excellent")
-			sound.killVox()
-			sound.add("voxexcellent")
-			game.end(true)
-		  }
+			rtaGoal = game.rta + 55000
+			sound.loadBgm(["ending2"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending2"], "arcade")
+		} else if (isEndRoll === true) {
+			if (testMode === false) {
+				game.stack.isHidden = true
+			} else {
+				game.stack.isHidden = false
+			}
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		}
+		game.stat.level = 999
+		endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
 	  } else {
-		  preEndRollLines = game.stat.line
-		  endRollLines = 0
+		preEndRollLines = game.stat.line
+		endRollLines = 0
 	  }
 	  if (game.stat.level >= 999 && endRollPassed) {
 		game.stat.level = 999
@@ -1357,6 +1410,7 @@ export const loops = {
 	  isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
+	  resetCoolsAndRegrets()
 	  //game.arcadeCombo = 1;
       game.rta = 0
 	  game.stack.redrawOnHidden = true
@@ -1487,7 +1541,7 @@ export const loops = {
         }
       }
 	  
-	  if (game.stat.level >= 350 && game.rta <= 175000) {
+	  if (game.stat.level >= 300 && regretsPenalty <= 0) {
         game.torikanPassed = true
 	  }
 	  let musicProgressionTable = []
@@ -1949,42 +2003,33 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (game.torikanPassed) {
-			if (isEndRoll === false) {
-				isEndRoll = true
-				game.stack.endRollStart()
-			    if (testMode === false) {
-				  game.stack.isHidden = true
-			    } else {
-				  game.stack.isHidden = false
-			    }
-				rtaGoal = game.rta + 55000
-				sound.loadBgm(["ending2"], "arcade")
-				sound.killBgm()
-				sound.playBgm(["ending2"], "arcade")
-			} else if (isEndRoll === true) {
-			    if (testMode === false) {
-				  game.stack.isHidden = true
-			    } else {
-				  game.stack.isHidden = false
-			    }
-				if (game.rta >= rtaGoal) {
-					endRollPassed = true
-				}
+		if (isEndRoll === false) {
+			isEndRoll = true
+			game.stack.endRollStart()
+			if (testMode === false && regretsPenalty <= 0) {
+				game.stack.isHidden = true
+			} else {
+				game.stack.isHidden = false
 			}
-			game.stat.level = 999
-			endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
-		  } else {
-			game.stat.level = 999
-			endRollLines = 0
-			$("#kill-message").textContent = locale.getString("ui", "excellent")
-			sound.killVox()
-			sound.add("voxexcellent")
-			game.end(true)
-		  }
+			rtaGoal = game.rta + 55000
+			sound.loadBgm(["ending2"], "arcade")
+			sound.killBgm()
+			sound.playBgm(["ending2"], "arcade")
+		} else if (isEndRoll === true) {
+			if (testMode === false) {
+				game.stack.isHidden = true
+			} else {
+				game.stack.isHidden = false
+			}
+			if (game.rta >= rtaGoal) {
+				endRollPassed = true
+			}
+		}
+		game.stat.level = 999
+		endRollLines = Math.max(0, (game.stat.line - preEndRollLines))
 	  } else {
-		  preEndRollLines = game.stat.line
-		  endRollLines = 0
+		preEndRollLines = game.stat.line
+		endRollLines = 0
 	  }
 	  if (game.stat.level >= 999 && endRollPassed) {
 		game.stat.level = 999
@@ -2001,6 +2046,7 @@ export const loops = {
 	  isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
+	  resetCoolsAndRegrets()
 	  //game.arcadeCombo = 1;
       game.rta = 0
 	  game.stack.redrawOnHidden = true
@@ -2131,7 +2177,7 @@ export const loops = {
         }
       }
 	  
-	  if (game.stat.level >= 350 && game.rta <= 175000) {
+	  if (game.stat.level >= 300 && regretsPenalty <= 0) {
         game.torikanPassed = true
 	  }
 	  let musicProgressionTable = []
