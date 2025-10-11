@@ -427,10 +427,10 @@ const updateTIGrade = (game) => {
         if (game.stat.level >= level && coolProgression < entry) {
           if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
 			  sound.add("onpace")
-			  this.displayActionText("COOL!!!")
+			  game.displayActionText("COOL!!!")
 		  } else {
 			  sound.add("offpace")
-			  this.displayActionText("REGRET!")
+			  game.displayActionText("REGRET!")
 			  regretsPenalty += 1
 		  }
 		  coolProgression = entry
