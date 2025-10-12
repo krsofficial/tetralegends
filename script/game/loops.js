@@ -76,6 +76,7 @@ let nonEvents = []
 let coolProgression = 0
 let regretsPenalty = 0
 let coolsBonus = 0
+let coolPacing = 50
 let bpm
 const levelUpdate = (game) => {
   let returnValue = false
@@ -327,15 +328,15 @@ const updateTIGrade = (game) => {
 		[879, 9],
 	  ]
 	  let timeRequirementTable = [
-		50,
-		110,
-		170,
-		230,
-		290,
-		350,
-		410,
-		470,
-		530,
+		coolPacing + ((coolPacing / 0.8) * 0),
+		coolPacing + ((coolPacing / 0.8) * 1),
+		coolPacing + ((coolPacing / 0.8) * 2),
+		coolPacing + ((coolPacing / 0.8) * 3),
+		coolPacing + ((coolPacing / 0.8) * 4),
+		coolPacing + ((coolPacing / 0.8) * 5),
+		coolPacing + ((coolPacing / 0.8) * 6),
+		coolPacing + ((coolPacing / 0.8) * 7),
+		coolPacing + ((coolPacing / 0.8) * 8),
 	  ]
 	  let gradeTable = [
 		"9",
@@ -466,12 +467,17 @@ const updateTIGrade = (game) => {
         const entry = pair[1]
         if (game.stat.level >= level && coolProgression < entry) {
           if (game.rta <= timeRequirementTable[entry - 1] * 1000) {
+			  if (entry <= 1) {
+				coolPacing = game.rta
+			  }
 			  sound.add("onpace")
 			  game.displayActionText("COOL!!!")
-			  coolsBonus = Math.max(0, entry - 1)
+			  coolsBonus += 1
 		  } else {
-			  sound.add("offpace")
-			  game.displayActionText("REGRET!")
+			  if (coolsBonus >= 1) {
+				sound.add("offpace")
+				game.displayActionText("REGRET!")
+			  }
 			  regretsPenalty += 1
 		  }
 		  coolProgression = entry
@@ -482,6 +488,7 @@ const resetCoolsAndRegrets = (game) => {
 	  coolProgression = 0
 	  regretsPenalty = 0
 	  coolsBonus = 0
+	  coolPacing = 50
 }
 const updateAsukaGrade = (game) => {
 	  if (game.stat.level >= 1300)
