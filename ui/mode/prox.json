@@ -3,7 +3,7 @@
     "parent": "tetrax",
     "langOverride": "mode-options",
     "game": "prox",
-    "pgmusic": "pg-master"
+    "pgmusic": "pg-prox"
   },
   "data": [
     {
