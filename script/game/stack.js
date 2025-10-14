@@ -715,7 +715,7 @@ export default class Stack extends GameModule {
 	for (const y of this.toCollapse) {
       for (let x = 0; x < this.grid.length; x++) {
         for (let shiftY = y; shiftY >= 0; shiftY--) {
-          if (this.grid[x][shiftY] !== "frozen") {
+//          if (this.grid[x][shiftY] !== "frozen") {
 //			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 //			if (
 //				this.grid[x][shiftY] != null &&
@@ -723,8 +723,9 @@ export default class Stack extends GameModule {
 //			) {
 //				fallenBlocks++
 //			}
-			this.dirtyCells.push([x, shiftY + 1])
-		  } else if (y === bottomLine && this.lineClear >= 4) {
+//			this.dirtyCells.push([x, shiftY + 1])
+//		  } else 
+			if (y === bottomLine && this.lineClear >= 4) {
 			this.grid[x][shiftY] = this.grid[x][shiftY - 1]
 			if (
 				this.grid[x][shiftY] != null &&
