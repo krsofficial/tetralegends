@@ -192,7 +192,7 @@ export default class Stack extends GameModule {
 			} else if (this.isHidden && this.isFrozen !== true) {
 				this.grid[xLocation][yLocation] = "hidden"
 			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
-				this.grid[xLocation][yLocation] = "frozen"
+				this.grid[xLocation][yLocation] = color
 				this.makeAllFrozen()
 			} else {
 				this.grid[xLocation][yLocation] = color

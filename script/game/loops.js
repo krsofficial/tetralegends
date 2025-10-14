@@ -3964,6 +3964,10 @@ export const loops = {
 			  game.piece.gravity = framesToMs(1 / 20)
 			  break
 		  }
+		  case 6: {
+			  game.piece.gravity = framesToMs(1 / 20)
+			  break
+		  }
 	  }
       updateFallSpeed(game)
       if (levelUpdateAce(game)) {
@@ -4004,6 +4008,10 @@ export const loops = {
 		    break
 		}
 		case 5: {
+			timeLimit = 60000
+		    break
+		}
+		case 6: {
 			timeLimit = 60000
 		    break
 		}
@@ -4222,7 +4230,7 @@ export const loops = {
 	  for (const pair of lockDelayTableAnother2) {
         const line = pair[0]
         const entry = pair[1]
-        if (game.stat.line < line && difficulty === 5) {
+        if (game.stat.line < line && difficulty >= 5) {
           if (testMode === false) {
 			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
 		  } else {
@@ -4280,6 +4288,12 @@ export const loops = {
 						sound.playBgm(["arcade4"], "ace")
 						break
 					}
+					case 6: {
+						sound.loadBgm(["kachusha-hard"], "ace")
+						sound.killBgm()
+						sound.playBgm(["kachusha-hard"], "ace")
+						break
+					}
 				}
 				break
             case 4:
@@ -4303,25 +4317,18 @@ export const loops = {
 						break
 					}
 					case 4: {
-						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
-						} else {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
-						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
 						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 					case 5: {
-						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
-						} else {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
-						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
 						sound.playBgm(["arcade5"], "ace")
+						break
+					}
+					case 6: {
 						break
 					}
 				}
@@ -4356,6 +4363,9 @@ export const loops = {
 						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
 						sound.playBgm(["kachusha-hard"], "ace")
+						break
+					}
+					case 6: {
 						break
 					}
 				}
@@ -4463,7 +4473,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -4471,7 +4481,7 @@ export const loops = {
 	  for (const pair of areLineModifierTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
@@ -4479,11 +4489,16 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
       }
+	  if (difficulty >= 6) {
+		  game.stack.isFrozen = true
+	  } else {
+		  game.stack.isFrozen = false
+	  }
     },
     onInit: (game) => {
       if (settings.game.ace.lineGoal >= 0) {
@@ -4509,6 +4524,10 @@ export const loops = {
 		  }
 		  case 5: {
 			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+		  case 6: {
+			  game.settings.music = ["../rounds/master5"]
 			  break
 		  }
 	  }
@@ -4609,6 +4628,10 @@ export const loops = {
 			  game.piece.gravity = framesToMs(1 / 20)
 			  break
 		  }
+		  case 6: {
+			  game.piece.gravity = framesToMs(1 / 20)
+			  break
+		  }
 	  }
       updateFallSpeed(game)
       if (levelUpdateAce(game)) {
@@ -4649,6 +4672,10 @@ export const loops = {
 		    break
 		}
 		case 5: {
+			timeLimit = 60000
+		    break
+		}
+		case 6: {
 			timeLimit = 60000
 		    break
 		}
@@ -4867,7 +4894,7 @@ export const loops = {
 	  for (const pair of lockDelayTableAnother2) {
         const line = pair[0]
         const entry = pair[1]
-        if (game.stat.line < line && difficulty === 5) {
+        if (game.stat.line < line && difficulty >= 5) {
           if (testMode === false) {
 			game.piece.lockDelayLimit = Math.ceil(framesToMs(entry))
 		  } else {
@@ -4925,6 +4952,12 @@ export const loops = {
 						sound.playBgm(["arcade4"], "ace")
 						break
 					}
+					case 6: {
+						sound.loadBgm(["kachusha-hard"], "ace")
+						sound.killBgm()
+						sound.playBgm(["kachusha-hard"], "ace")
+						break
+					}
 				}
 				break
             case 4:
@@ -4948,25 +4981,18 @@ export const loops = {
 						break
 					}
 					case 4: {
-						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
-						} else {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
-						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
 						sound.playBgm(["arcade5"], "ace")
 						break
 					}
 					case 5: {
-						if (testMode === false) {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(12))
-						} else {
-							game.piece.lockDelayLimit = Math.ceil(framesToMs(60))
-						}
 						sound.loadBgm(["arcade5"], "ace")
 						sound.killBgm()
 						sound.playBgm(["arcade5"], "ace")
+						break
+					}
+					case 6: {
 						break
 					}
 				}
@@ -5001,6 +5027,9 @@ export const loops = {
 						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
 						sound.playBgm(["kachusha-hard"], "ace")
+						break
+					}
+					case 6: {
 						break
 					}
 				}
@@ -5108,7 +5137,7 @@ export const loops = {
 	  for (const pair of areTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLimit = framesToMs(entry)
           break
         }
@@ -5116,7 +5145,7 @@ export const loops = {
 	  for (const pair of areLineModifierTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLimitLineModifier = framesToMs(entry)
           break
         }
@@ -5124,11 +5153,16 @@ export const loops = {
       for (const pair of areLineTableAnother2) {
         const level = pair[0]
         const entry = pair[1]
-        if (game.stat.level <= level && difficulty === 5) {
+        if (game.stat.level <= level && difficulty >= 5) {
           game.piece.areLineLimit = framesToMs(entry)
           break
         }
       }
+	  if (difficulty >= 6) {
+		  game.stack.isFrozen = true
+	  } else {
+		  game.stack.isFrozen = false
+	  }
     },
     onInit: (game) => {
 	  const difficulty = parseInt(settings.game.aceworld.difficulty)
@@ -5151,6 +5185,10 @@ export const loops = {
 		  }
 		  case 5: {
 			  game.settings.music = ["../ace/arcade6"]
+			  break
+		  }
+		  case 6: {
+			  game.settings.music = ["../rounds/master5"]
 			  break
 		  }
 	  }
