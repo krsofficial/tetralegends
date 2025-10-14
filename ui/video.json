@@ -69,6 +69,11 @@
           "value": "toj"
         },
 		{
+          "label": "Party",
+          "fixedText": true,
+          "value": "friends"
+        },
+		{
           "label": "Friends",
           "fixedText": true,
           "value": "friends"

@@ -99,6 +99,11 @@
           "fixedText": true,
           "value": "toj"
         },
+		{
+          "label": "Party",
+          "fixedText": true,
+          "value": "party"
+        },
         {
           "label": "Friends",
           "fixedText": true,
@@ -138,11 +143,6 @@
           "label": "Dualshock 3",
           "fixedText": true,
           "value": "dshock"
-        },
-		{
-          "label": "Party",
-          "fixedText": true,
-          "value": "party"
         },
 		{
           "label": "Sega",
