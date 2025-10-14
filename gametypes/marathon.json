@@ -9,8 +9,7 @@
     "rotationSystem": "srs",
     "skin": "tonline",
     "soundbank": "standard",
-    "music": ["marathon", "marathon-2"],
-    "musicLinePoints": [100],
+    "music": "../standardx/marathon",
     "hasDangerBgm": true,
     "scoreTable": "guideline",
     "background": "marathon.jpg"

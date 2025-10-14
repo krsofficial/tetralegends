@@ -66,12 +66,6 @@
 		  "description": "",
           "fixedText": true,
           "value": 5
-        },
-		{
-          "label": "SUDDEN 3",
-		  "description": "",
-          "fixedText": true,
-          "value": 6
         }
       ],
       "setting": "difficulty",
