@@ -140,6 +140,11 @@
           "value": "dshock"
         },
 		{
+          "label": "Party",
+          "fixedText": true,
+          "value": "party"
+        },
+		{
           "label": "Sega",
           "fixedText": true,
           "value": "sega"
