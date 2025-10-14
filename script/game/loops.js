@@ -7423,9 +7423,9 @@ export const loops = {
       )
       const calcLevel = game.stat.level - 1
       const SPEED_TABLE = [
-        1,
-        1 / 2,
-        1 / 5,
+        1 / 20,
+        1 / 20,
+        1 / 20,
         1 / 20,
         1 / 20,
         1 / 20,
@@ -7439,7 +7439,7 @@ export const loops = {
       game.piece.lockDelayLimit = DELAY_TABLE[calcLevel]
       const NEXT_TABLE = [6, 5, 4, 3, 2, 1, 1, 1, 1, 1]
       game.next.nextLimit = NEXT_TABLE[calcLevel]
-      if (calcLevel >= 3 && !shown20GMessage) {
+      if (calcLevel >= 0 && !shown20GMessage) {
         $("#message").textContent = "20G"
         resetAnimation("#message", "dissolve")
         shown20GMessage = true
