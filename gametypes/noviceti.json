@@ -20,7 +20,7 @@
     "dasLimit": 272,
     "arrLimit": 17,
     "lockDelayLimit": 500,
-	"spinDetectionType": "3corner"
+	"spinDetectionType": "TGM3"
   },
   "next": {
     "nextLimit": 3

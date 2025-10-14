@@ -1436,6 +1436,12 @@ export default class Piece extends GameModule {
       // }
       return { isSpin: isSpin, isMini: isMini }
     }
+	if (this.spinDetectionType === "TGM3") {
+		if (this.x === this.rotatedX && this.yFloor === this.rotatedY && this.isLanded) {
+			isSpin = true
+			isMini = false
+		}
+	}
     return { isSpin: isSpin, isMini: isMini }
   }
   get hasSpun() {

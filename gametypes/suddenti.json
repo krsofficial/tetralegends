@@ -17,7 +17,7 @@
   },
   "piece": {
     "arrLimit": 17,
-	"spinDetectionType": "3corner"
+	"spinDetectionType": "TGM3"
   },
   "next": {
     "nextLimit": 3
