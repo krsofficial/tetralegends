@@ -7439,11 +7439,6 @@ export const loops = {
       game.piece.lockDelayLimit = DELAY_TABLE[calcLevel]
       const NEXT_TABLE = [6, 5, 4, 3, 2, 1, 1, 1, 1, 1]
       game.next.nextLimit = NEXT_TABLE[calcLevel]
-      if (calcLevel >= 0 && !shown20GMessage) {
-        $("#message").textContent = "20G"
-        resetAnimation("#message", "dissolve")
-        shown20GMessage = true
-      }
       if (calcLevel >= 8 && !game.hold.isDisabled) {
         //game.useAltMusic = true;
         game.hold.isDisabled = true
