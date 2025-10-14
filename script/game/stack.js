@@ -39,6 +39,7 @@ export default class Stack extends GameModule {
 	this.isUnderwater = false
 	this.cleanUnderwaterRows = false
 	this.isFrozen = false
+	this.isFading = false
 	this.toCollapseUnderwater = []
 	this.redrawOnHidden = false
 	this.underwaterHeight = 10
@@ -72,11 +73,21 @@ export default class Stack extends GameModule {
 		this.isDirty = true
 	}
   }
-  makeAllFrozen() {
+  freezePlacedMinos() {
     for (let x = 0; x < this.grid.length; x++) {
       for (let y = 0; y < this.grid[x].length; y++) {
         if (this.grid[x][y] != null) {
 			this.grid[x][y] = "frozen"
+		}
+      }
+    }
+	this.reRenderStack()
+  }
+  hidePlacedMinos() {
+    for (let x = 0; x < this.grid.length; x++) {
+      for (let y = 0; y < this.grid[x].length; y++) {
+        if (this.grid[x][y] != null) {
+			this.grid[x][y] = "hidden"
 		}
       }
     }
@@ -156,6 +167,12 @@ export default class Stack extends GameModule {
     this.flashY = []
     this.flashTime = 0
     let passedLockOut = shape.length
+	if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
+		this.freezePlacedMinos()
+	}
+	if (this.isFading && this.isHidden === false) {
+		this.hidePlacedMinos()
+	}
     for (let y = 0; y < shape.length; y++) {
       for (let x = 0; x < shape[y].length; x++) {
         const isFilled = shape[y][x]
@@ -191,9 +208,6 @@ export default class Stack extends GameModule {
 				this.grid[xLocation][yLocation] = `${this.parent.piece.boneColor}bone`
 			} else if (this.isHidden && this.isFrozen !== true) {
 				this.grid[xLocation][yLocation] = "hidden"
-			} else if (this.isFrozen && this.wouldCauseLineClear() <= 0) {
-				this.grid[xLocation][yLocation] = color
-				this.makeAllFrozen()
 			} else {
 				this.grid[xLocation][yLocation] = color
 			}

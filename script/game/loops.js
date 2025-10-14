@@ -802,7 +802,13 @@ export const loops = {
 			  game.stack.endRollStart()
 			  if (testMode === false && game.rta <= 600000 && game.stat.line >= 180) {
 				game.stack.isHidden = true
+				game.stack.isFading = false
 			  } else {
+				if (testMode === false) {
+					game.stack.isFading = true
+				} else {
+					game.stack.isFading = false
+				}
 				game.stack.isHidden = false
 			  }
 			  rtaGoal = game.rta + 55000
@@ -810,11 +816,6 @@ export const loops = {
 			  sound.killBgm()
 			  sound.playBgm(["ending"], "tap")
 		  } else if (isEndRoll === true) {
-			  if (testMode === false) {
-				game.stack.isHidden = true
-			  } else {
-				game.stack.isHidden = false
-			  }
 			  if (game.rta >= rtaGoal) {
 			  endRollPassed = true
 			  }
@@ -845,6 +846,7 @@ export const loops = {
       game.rta = 0
 	  game.stack.redrawOnHidden = true
 	  game.stack.isHidden = false
+	  game.stack.isFading = false
 	  game.redrawOnLevelUp = true
       game.torikanPassed = false
       game.stat.initPieces = 2
@@ -1421,7 +1423,13 @@ export const loops = {
 			game.stack.endRollStart()
 			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 270) {
 				game.stack.isHidden = true
+				game.stack.isFading = false
 			} else {
+				if (testMode === false) {
+					game.stack.isFading = true
+				} else {
+					game.stack.isFading = false
+				}
 				game.stack.isHidden = false
 			}
 			rtaGoal = game.rta + 55000
@@ -1429,11 +1437,6 @@ export const loops = {
 			sound.killBgm()
 			sound.playBgm(["ending2"], "arcade")
 		} else if (isEndRoll === true) {
-			if (testMode === false) {
-				game.stack.isHidden = true
-			} else {
-				game.stack.isHidden = false
-			}
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -1464,6 +1467,7 @@ export const loops = {
       game.rta = 0
 	  game.stack.redrawOnHidden = true
 	  game.stack.isHidden = false
+	  game.stack.isFading = false
 	  game.redrawOnLevelUp = true
       game.torikanPassed = false
       game.stat.initPieces = 2
@@ -2057,7 +2061,13 @@ export const loops = {
 			game.stack.endRollStart()
 			if (testMode === false && regretsPenalty <= 0 && game.rta <= 600000 && game.stat.line >= 270) {
 				game.stack.isHidden = true
+				game.stack.isFading = false
 			} else {
+				if (testMode === false) {
+					game.stack.isFading = true
+				} else {
+					game.stack.isFading = false
+				}
 				game.stack.isHidden = false
 			}
 			rtaGoal = game.rta + 55000
@@ -2065,11 +2075,6 @@ export const loops = {
 			sound.killBgm()
 			sound.playBgm(["ending2"], "arcade")
 		} else if (isEndRoll === true) {
-			if (testMode === false) {
-				game.stack.isHidden = true
-			} else {
-				game.stack.isHidden = false
-			}
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -2100,6 +2105,7 @@ export const loops = {
       game.rta = 0
 	  game.stack.redrawOnHidden = true
 	  game.stack.isHidden = false
+	  game.stack.isFading = false
 	  game.redrawOnLevelUp = true
       game.torikanPassed = false
       game.stat.initPieces = 2
@@ -2973,6 +2979,9 @@ export const loops = {
       game.stat.grade = "N/A"
 	  game.endingStats.grade = true
 	  //game.arcadeCombo = 1;
+	  game.stack.isHidden = false
+	  game.stack.redrawOnHidden = false
+	  game.stack.isFading = false
 	  game.timePassed = 0
       game.stat.initPieces = 2
       game.musicProgression = 0
@@ -3096,10 +3105,22 @@ export const loops = {
 		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  if (testMode === false) {
-			  game.stack.isHidden = true
+		  if (game.stat.level < 1100) {
+			if (testMode === false) {
+				game.stack.isHidden = false
+				game.stack.isFading = true
+			} else {
+				game.stack.isHidden = false
+				game.stack.isFading = false
+			}
 		  } else {
-			  game.stack.isHidden = false
+			if (testMode === false) {
+				game.stack.isHidden = true
+				game.stack.isFading = false
+			} else {
+				game.stack.isHidden = false
+				game.stack.isFading = false
+			}
 		  }
 		  game.piece.gravity = framesToMs(1 / 20)
       }
@@ -3173,6 +3194,9 @@ export const loops = {
 	  game.timeGoal = 420000
       game.stat.grade = "N/A"
 	  game.endingStats.grade = true
+	  game.stack.isHidden = false
+	  game.stack.redrawOnHidden = false
+	  game.stack.isFading = false
 	  //game.arcadeCombo = 1;
 	  game.timePassed = 0
       game.stat.initPieces = 2
@@ -3296,10 +3320,22 @@ export const loops = {
 		  game.stack.isHidden = false
 		  game.piece.gravity = framesToMs(1 / 20)
 	  } else {
-		  if (testMode === false) {
-			  game.stack.isHidden = true
+		  if (game.stat.level < 1100) {
+			if (testMode === false) {
+				game.stack.isHidden = false
+				game.stack.isFading = true
+			} else {
+				game.stack.isHidden = false
+				game.stack.isFading = false
+			}
 		  } else {
-			  game.stack.isHidden = false
+			if (testMode === false) {
+				game.stack.isHidden = true
+				game.stack.isFading = false
+			} else {
+				game.stack.isHidden = false
+				game.stack.isFading = false
+			}
 		  }
 		  game.piece.gravity = framesToMs(1 / 20)
       }

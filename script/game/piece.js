@@ -1437,8 +1437,11 @@ export default class Piece extends GameModule {
       return { isSpin: isSpin, isMini: isMini }
     }
 	if (this.spinDetectionType === "TGM3") {
-		if (this.x === this.rotatedX && this.yFloor === this.rotatedY && this.isLanded) {
+		if (this.x === this.rotatedX && this.yFloor === this.rotatedY && this.isLanded && this.parent.stack.wouldCauseLineClear()) {
 			isSpin = true
+			isMini = false
+		} else {
+			isSpin = false
 			isMini = false
 		}
 	}
