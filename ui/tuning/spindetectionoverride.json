@@ -35,6 +35,12 @@
           "fixedText": true,
           "value": "EZimmobile"
         },
+		{
+          "label": "TGM3",
+          "description": "If one or more lines are cleared, and the last move performed was a rotation, it counts as a spin.",
+          "fixedText": true,
+          "value": "TGM3"
+        },
         {
           "label": "None",
           "description": "Do not detect spins",
