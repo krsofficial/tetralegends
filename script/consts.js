@@ -1095,7 +1095,7 @@ SPAWN_OFFSETS.ppt = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.arsae = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.worldae = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.sega = SPAWN_OFFSETS.ars
-SPAWN_OFFSETS.beatmode = SPAWN_OFFSETS.srs
+SPAWN_OFFSETS.tonline = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.srsx = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.toj = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ksc = SPAWN_OFFSETS.srs
@@ -1146,7 +1146,7 @@ INITIAL_ORIENTATION.ppt = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.arsae = INITIAL_ORIENTATION.arsx
 INITIAL_ORIENTATION.worldae = INITIAL_ORIENTATION.world
 INITIAL_ORIENTATION.sega = INITIAL_ORIENTATION.ars
-INITIAL_ORIENTATION.beatmode = INITIAL_ORIENTATION.srs
+INITIAL_ORIENTATION.tonline = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.srsx = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.ksc = INITIAL_ORIENTATION.srs
 INITIAL_ORIENTATION.newcentury = INITIAL_ORIENTATION.srs
@@ -3187,20 +3187,7 @@ KICK_TEMPLATES.toj = KICK_TEMPLATES.srs
 KICK_TEMPLATES.newcentury = KICK_TEMPLATES.srs
 KICK_TEMPLATES.heboris = KICK_TEMPLATES.ars
 KICK_TEMPLATES.party = KICK_TEMPLATES.friends
-KICK_TEMPLATES.beatmode = {
-  x: {
-    ...KICK_TEMPLATES.srs.x,
-  },
-  I: {
-    ...KICK_TEMPLATES.srs.I,
-  },
-  T: {
-    ...KICK_TEMPLATES.srs.x,
-  },
-  O: {
-    ...KICK_TEMPLATES.asc.x,
-  },
-}
+KICK_TEMPLATES.tonline = KICK_TEMPLATES.srs
 KICK_TEMPLATES.krs = {
   x: {
 	...KICK_TEMPLATES.ascx.x,
@@ -4058,15 +4045,7 @@ KICK_TABLES.srsx = KICK_TABLES.srs
 KICK_TABLES.newcentury = KICK_TABLES.srs
 KICK_TABLES.party = KICK_TABLES.friends
 KICK_TABLES.heboris = KICK_TABLES.ars
-KICK_TABLES.beatmode = {
-  I: KICK_TEMPLATES.beatmode.I,
-  L: KICK_TEMPLATES.beatmode.x,
-  O: KICK_TEMPLATES.beatmode.O,
-  Z: KICK_TEMPLATES.beatmode.x,
-  T: KICK_TEMPLATES.beatmode.T,
-  J: KICK_TEMPLATES.beatmode.x,
-  S: KICK_TEMPLATES.beatmode.x,
-}
+KICK_TABLES.tonline = KICK_TABLES.srs
 KICK_TABLES.krs = {
   I: KICK_TEMPLATES.krs.I,
   L: KICK_TEMPLATES.krs.LJ,
@@ -4195,7 +4174,7 @@ PIECE_COLORS.worldae = PIECE_COLORS.world
 PIECE_COLORS.toj = PIECE_COLORS.srs
 PIECE_COLORS.srsx = PIECE_COLORS.srs
 PIECE_COLORS.sega = PIECE_COLORS.ars
-PIECE_COLORS.beatmode = PIECE_COLORS.srs
+PIECE_COLORS.tonline = PIECE_COLORS.srs
 PIECE_COLORS.krs = PIECE_COLORS.arsx
 PIECE_COLORS.ksc = PIECE_COLORS.srs
 PIECE_COLORS.heboris = PIECE_COLORS.ars
@@ -4254,7 +4233,7 @@ NEXT_OFFSETS.toj = NEXT_OFFSETS.srs
 NEXT_OFFSETS.arsae = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.worldae = NEXT_OFFSETS.srs
 NEXT_OFFSETS.sega = NEXT_OFFSETS.ars
-NEXT_OFFSETS.beatmode = NEXT_OFFSETS.srs
+NEXT_OFFSETS.tonline = NEXT_OFFSETS.srs
 NEXT_OFFSETS.krs = NEXT_OFFSETS.arsx
 NEXT_OFFSETS.ksc = NEXT_OFFSETS.srs
 NEXT_OFFSETS.newcentury = NEXT_OFFSETS.srs
@@ -4611,7 +4590,7 @@ PIECE_OFFSETS.newcentury = PIECE_OFFSETS.srs
 PIECE_OFFSETS.sega = PIECE_OFFSETS.ars
 PIECE_OFFSETS.heboris = PIECE_OFFSETS.ars
 PIECE_OFFSETS.party = PIECE_OFFSETS.friends
-PIECE_OFFSETS.beatmode = {
+PIECE_OFFSETS.tonline = {
   I: PIECE_OFFSETS.srs.I,
   L: PIECE_OFFSETS.srs.L,
   O: PIECE_OFFSETS.asc.O,
@@ -5161,7 +5140,7 @@ export const SKIN_SETS = {
   ascx: "tetrjs",
   srs: "tonline",
   world: "glossy",
-  tetrax: "standard",
+  tetrax: "tetrax",
   retro: "retro",
   handheld: "handheld",
   deluxe: "deluxe",
@@ -5182,7 +5161,7 @@ export const SKIN_SETS = {
   srsx: "srsx",
   sega: "sega",
   newcentury: "sega",
-  beatmode: "tonline",
+  tonline: "tonline",
   krs: "krs",
   ksc: "krs",
   heboris: "arcade",
@@ -5215,7 +5194,7 @@ export const SOUND_SETS = {
   srsx: "tetrax",
   sega: "sega",
   newcentury: "newcentury",
-  beatmode: "standardbeatmode",
+  tonline: "tonline",
   krs: "tetrax",
   ksc: "tetrax",
   heboris: "heboris",

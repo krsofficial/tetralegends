@@ -135,9 +135,14 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "Tetra Online",
+          "label": "Tetra Legends OE",
           "fixedText": true,
           "value": "srs"
+        },
+		{
+          "label": "Tetra Online",
+          "fixedText": true,
+          "value": "tonline"
         },
 		{
           "label": "SRS-X",

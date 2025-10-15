@@ -33,6 +33,8 @@
     "skip",
     "start",
     "step",
+	"onpace",
+	"offpace",
     "topoutwarning",
     "tspin0",
     "tspin0mini",

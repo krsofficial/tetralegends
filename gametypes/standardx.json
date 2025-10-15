@@ -7,7 +7,7 @@
     "unfavored": "standardUnfavored",
     "randomizer": "tetrax",
     "rotationSystem": "tetrax",
-    "skin": "standard",
+    "skin": "tetrax",
     "soundbank": "tetrax",
     "music": "../standardx/survival",
     "hasDangerBgm": true,

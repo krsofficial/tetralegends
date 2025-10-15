@@ -6,9 +6,9 @@
     "pieces": "standard",
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
-    "rotationSystem": "beatmode",
-    "skin": "tonline",
-    "soundbank": "standardbeatmode",
+    "rotationSystem": "srs",
+    "skin": "standard",
+    "soundbank": "standard",
     "scoreTable": "guideline",
     "background": "marathon.jpg"
   },
