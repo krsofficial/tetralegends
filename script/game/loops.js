@@ -8061,6 +8061,15 @@ export const loops = {
 		"sega"
 	  )
       //game.colors = PIECE_COLORS.sega;
+	  if (game.settings.rotationSystem === "handheld") {
+		  game.colors = PIECE_COLORS.handheldNoSkin
+	  }
+	  if (game.settings.rotationSystem === "deluxe") {
+		  game.colors = PIECE_COLORS.deluxeNoSkin
+	  }
+	  if (game.settings.rotationSystem === "retro") {
+		  game.colors = PIECE_COLORS.retro
+	  }
       game.stat.level = 0
       lastLevel = 0
 	  levelTimer = 0

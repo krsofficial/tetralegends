@@ -258,13 +258,21 @@ export default class Game {
 			(this.settings.rotationSystem === "handheld" || settings.settings.skin === "handheld") && 
 			(!this.settings.disableDefaultSkinLoad)
 		){
-			this.colors = PIECE_COLORS.handheld
+			if (settings.settings.skin !== "handheld" && settings.settings.skin !== "auto") {
+				this.colors = PIECE_COLORS.handheld
+			} else {
+				this.colors = PIECE_COLORS.handheldNoSkin
+			}
 		}
 		if (
 			(this.settings.rotationSystem === "deluxe" || settings.settings.skin === "deluxe") && 
 			(!this.settings.disableDefaultSkinLoad)
 		){
-			this.colors = PIECE_COLORS.deluxe
+			if (settings.settings.skin !== "deluxe" && settings.settings.skin !== "auto") {
+				this.colors = PIECE_COLORS.deluxe
+			} else {
+				this.colors = PIECE_COLORS.deluxeNoSkin
+			}
 		}
 
         switch (settings.settings.shapeOverride) {
