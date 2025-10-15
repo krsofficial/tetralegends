@@ -1226,7 +1226,7 @@ export const loops = {
       game.rta += arg.ms
       arcadeScore(arg)
       linesToLevel(arg, shiraseTargetLevel, 100)
-      game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
+      game.endSectionLevel = Math.min(shiraseTargetLevel, Math.floor(game.stat.level / 100 + 1) * 100)
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       updateShiraseGrade(game)
       collapse(arg)
@@ -1258,6 +1258,7 @@ export const loops = {
 			firmDrop(arg, 1, true)
 		  }
 		  extendedLockdown(arg)
+		  game.piece.boneColor = "white"
 	  } else if (
 		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
@@ -1265,10 +1266,12 @@ export const loops = {
 		  tgmSoftDrop(arg)
 		  hardDrop(arg)
 		  extendedLockdown(arg)
+		  game.piece.boneColor = "green"
 	  } else {
 		  sonicDrop(arg, true)
 		  firmDrop(arg, 1, true)
 		  classicLockdown(arg)
+		  game.piece.boneColor = "white"
 	  }
       if (!arg.piece.inAre) {
         hold(arg)
@@ -1316,11 +1319,9 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 game.piece.boneColor = "white"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 game.piece.boneColor = "white"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
@@ -1899,7 +1900,7 @@ export const loops = {
       game.rta += arg.ms
       arcadeScore(arg)
       linesToLevel(arg, shiraseTargetLevel, 100)
-      game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
+      game.endSectionLevel = Math.min(shiraseTargetLevel, Math.floor(game.stat.level / 100 + 1) * 100)
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       updateShiraseGrade(game)
       collapse(arg)
@@ -1915,9 +1916,36 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      tgmSoftDrop(arg)
-      hardDrop(arg)
-      extendedLockdown(arg)
+      //tgmSoftDrop(arg)
+      //hardDrop(arg)
+      //extendedLockdown(arg)
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae"
+		) {
+		  if (input.getGameDown("specialKey")) {
+			tgmSoftDrop(arg)
+			hardDrop(arg)
+		  } else {
+			sonicDrop(arg, true)
+			firmDrop(arg, 1, true)
+		  }
+		  extendedLockdown(arg)
+		  game.piece.boneColor = "white"
+	  } else if (
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+	  ) {
+		  tgmSoftDrop(arg)
+		  hardDrop(arg)
+		  extendedLockdown(arg)
+		  game.piece.boneColor = "green"
+	  } else {
+		  tgmSoftDrop(arg)
+		  hardDrop(arg)
+		  extendedLockdown(arg)
+		  game.piece.boneColor = "green"
+	  }
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1964,11 +1992,9 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
 	  if (game.stat.level >= 1000) {
-		 game.piece.boneColor = "green"
 		 game.piece.useBoneBlocks = true
 	  }
 	  else {
-		 game.piece.boneColor = "green"
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
