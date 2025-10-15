@@ -5138,7 +5138,7 @@ export const SPIN_SETS = {
 export const SKIN_SETS = {
   asc: "tetrjs",
   ascx: "tetrjs",
-  srs: "tonline",
+  srs: "standard",
   world: "glossy",
   tetrax: "tetrax",
   retro: "retro",
