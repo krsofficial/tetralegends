@@ -77,6 +77,7 @@ let coolProgression = 0
 let regretsPenalty = 0
 let coolsBonus = 0
 let coolPacing = 50
+let shiraseTargetLevel = 1300
 let bpm
 const levelUpdate = (game) => {
   let returnValue = false
@@ -618,6 +619,18 @@ export const loops = {
 	  testModeUpdate()
     },
     onInit: (game) => {
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae" ||
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+		) {
+		  game.hold.isDisabled = false
+		  game.next.nextLimit = 6
+	  } else {
+		  game.hold.isDisabled = false
+		  game.next.nextLimit = 1
+	  }
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = "N/A"
@@ -1174,11 +1187,8 @@ export const loops = {
 	  updateArcadeBg(game)
       game.rta += arg.ms
       arcadeScore(arg)
-      linesToLevel(arg, 1300, 100)
-      game.endSectionLevel =
-        game.stat.level >= 1200
-          ? 1300
-          : Math.floor(game.stat.level / 100 + 1) * 100
+      linesToLevel(arg, shiraseTargetLevel, 100)
+      game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       updateShiraseGrade(game)
       collapse(arg)
@@ -1216,6 +1226,18 @@ export const loops = {
 	  testModeUpdate()
     },
     onInit: (game) => {
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae" ||
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+		) {
+		  game.next.nextLimit = 6
+		  shiraseTargetLevel = 2000
+	  } else {
+		  game.next.nextLimit = 3
+		  shiraseTargetLevel = 1300
+	  }
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = "N/A"
@@ -1361,9 +1383,9 @@ export const loops = {
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
-        game.stat.level === 1300
+        game.stat.level === shiraseTargetLevel
       ) {
-        if (game.stat.level < 1300) game.stat.level = 500
+        if (game.stat.level < shiraseTargetLevel) game.stat.level = 500
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
@@ -1814,11 +1836,8 @@ export const loops = {
 	  updateArcadeBg(game)
       game.rta += arg.ms
       arcadeScore(arg)
-      linesToLevel(arg, 1300, 100)
-      game.endSectionLevel =
-        game.stat.level >= 1200
-          ? 1300
-          : Math.floor(game.stat.level / 100 + 1) * 100
+      linesToLevel(arg, shiraseTargetLevel, 100)
+      game.endSectionLevel = Math.floor(game.stat.level / 100 + 1) * 100
       game.appends.level = `<span class="small">/${game.endSectionLevel}</span>`
       updateShiraseGrade(game)
       collapse(arg)
@@ -1855,6 +1874,18 @@ export const loops = {
 	  testModeUpdate()
     },
     onInit: (game) => {
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae" ||
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+		) {
+		  game.next.nextLimit = 6
+		  shiraseTargetLevel = 2000
+	  } else {
+		  game.next.nextLimit = 3
+		  shiraseTargetLevel = 1300
+	  }
       game.stat.level = 0
       game.isRaceMode = true
       game.stat.grade = "N/A"
@@ -2000,9 +2031,9 @@ export const loops = {
         game.torikanPassed = true
       else if (
         (game.stat.level >= 500 && !game.torikanPassed) ||
-        game.stat.level === 1300
+        game.stat.level === shiraseTargetLevel
       ) {
-        if (game.stat.level < 1300) game.stat.level = 500
+        if (game.stat.level < shiraseTargetLevel) game.stat.level = 500
         $("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
