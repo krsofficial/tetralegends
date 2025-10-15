@@ -287,8 +287,22 @@ const updateTADGrade = (game) => {
 	  lastGrade = game.stat.grade
 }
 const updateShiraseGrade = (game) => {
-	  if (game.stat.level >= 1300)
-		game.stat.grade = "S13"
+	  if (game.stat.level >= 2000)
+		game.stat.grade = "S20"
+	  else if (game.stat.level >= 1900)
+        game.stat.grade = "S19"
+	  else if (game.stat.level >= 1800)
+        game.stat.grade = "S18"
+	  else if (game.stat.level >= 1700)
+        game.stat.grade = "S17"
+	  else if (game.stat.level >= 1600)
+        game.stat.grade = "S16"
+	  else if (game.stat.level >= 1500)
+        game.stat.grade = "S15"
+	  else if (game.stat.level >= 1400)
+        game.stat.grade = "S14"
+	  else if (game.stat.level >= 1300)
+        game.stat.grade = "S13"
 	  else if (game.stat.level >= 1200)
         game.stat.grade = "S12"
 	  else if (game.stat.level >= 1100)
@@ -607,10 +621,34 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      //sonicDrop(arg, true);
+      //firmDrop(arg, 1, true);
       //extendedLockdown(arg);
-      classicLockdown(arg)
+      //classicLockdown(arg);
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae"
+		) {
+		  if (input.getGameDown("specialKey")) {
+			tgmSoftDrop(arg)
+			hardDrop(arg)
+		  } else {
+			sonicDrop(arg, true)
+			firmDrop(arg, 1, true)
+		  }
+		  extendedLockdown(arg)
+	  } else if (
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+	  ) {
+		  tgmSoftDrop(arg)
+		  hardDrop(arg)
+		  extendedLockdown(arg)
+	  } else {
+		  sonicDrop(arg, true)
+		  firmDrop(arg, 1, true)
+		  classicLockdown(arg)
+	  }
       if (!arg.piece.inAre) {
         hold(arg)
       }
@@ -1204,10 +1242,34 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      sonicDrop(arg, true)
-      firmDrop(arg, 1, true)
+      //sonicDrop(arg, true)
+      //firmDrop(arg, 1, true)
       //extendedLockdown(arg);
-      classicLockdown(arg)
+      //classicLockdown(arg)
+	  if (
+		settings.settings.skin === "prismal" || 
+		settings.settings.rotationSystem === "arsae"
+		) {
+		  if (input.getGameDown("specialKey")) {
+			tgmSoftDrop(arg)
+			hardDrop(arg)
+		  } else {
+			sonicDrop(arg, true)
+			firmDrop(arg, 1, true)
+		  }
+		  extendedLockdown(arg)
+	  } else if (
+		settings.settings.skin === "pyramidal" || 
+		settings.settings.rotationSystem === "worldae"
+	  ) {
+		  tgmSoftDrop(arg)
+		  hardDrop(arg)
+		  extendedLockdown(arg)
+	  } else {
+		  sonicDrop(arg, true)
+		  firmDrop(arg, 1, true)
+		  classicLockdown(arg)
+	  }
       if (!arg.piece.inAre) {
         hold(arg)
       }
