@@ -58,15 +58,25 @@
           "fixedText": true,
           "value": "standard"
         },
+		{
+          "label": "Tetra-X",
+          "fixedText": true,
+          "value": "tetrax"
+        },
+		{
+          "label": "Tetra-X Classic",
+          "fixedText": true,
+          "value": "classic"
+        },
         {
           "label": "Tetra Online",
           "fixedText": true,
           "value": "tonline"
         },
-        {
-          "label": "Tetra-X",
+		{
+          "label": "Tetra Online Classic",
           "fixedText": true,
-          "value": "tetrax"
+          "value": "tonlineclassic"
         },
 		{
           "label": "TOJ",
