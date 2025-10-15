@@ -626,7 +626,6 @@ export const loops = {
       //extendedLockdown(arg);
       //classicLockdown(arg);
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae"
 		) {
 		  if (input.getGameDown("specialKey")) {
@@ -638,7 +637,6 @@ export const loops = {
 		  }
 		  extendedLockdown(arg)
 	  } else if (
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 	  ) {
 		  tgmSoftDrop(arg)
@@ -658,9 +656,7 @@ export const loops = {
     },
     onInit: (game) => {
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae" ||
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 		) {
 		  game.hold.isDisabled = false
@@ -1247,7 +1243,6 @@ export const loops = {
       //extendedLockdown(arg);
       //classicLockdown(arg)
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae"
 		) {
 		  if (input.getGameDown("specialKey")) {
@@ -1260,7 +1255,6 @@ export const loops = {
 		  extendedLockdown(arg)
 		  game.piece.boneColor = "white"
 	  } else if (
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 	  ) {
 		  tgmSoftDrop(arg)
@@ -1292,9 +1286,7 @@ export const loops = {
     },
     onInit: (game) => {
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae" ||
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 		) {
 		  game.next.nextLimit = 6
@@ -1920,7 +1912,6 @@ export const loops = {
       //hardDrop(arg)
       //extendedLockdown(arg)
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae"
 		) {
 		  if (input.getGameDown("specialKey")) {
@@ -1933,7 +1924,6 @@ export const loops = {
 		  extendedLockdown(arg)
 		  game.piece.boneColor = "white"
 	  } else if (
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 	  ) {
 		  tgmSoftDrop(arg)
@@ -1965,9 +1955,7 @@ export const loops = {
     },
     onInit: (game) => {
 	  if (
-		settings.settings.skin === "prismal" || 
 		settings.settings.rotationSystem === "arsae" ||
-		settings.settings.skin === "pyramidal" || 
 		settings.settings.rotationSystem === "worldae"
 		) {
 		  game.next.nextLimit = 6

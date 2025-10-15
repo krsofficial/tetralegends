@@ -86,7 +86,7 @@
 		{
           "label": "Party",
           "fixedText": true,
-          "value": "friends"
+          "value": "party"
         },
 		{
           "label": "Friends",
