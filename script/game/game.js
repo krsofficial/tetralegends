@@ -259,9 +259,9 @@ export default class Game {
 			(!this.settings.disableDefaultSkinLoad)
 		){
 			if (settings.settings.skin !== "handheld" && settings.settings.skin !== "auto") {
-				this.colors = PIECE_COLORS.handheld
-			} else {
 				this.colors = PIECE_COLORS.handheldNoSkin
+			} else {
+				this.colors = PIECE_COLORS.handheld
 			}
 		}
 		if (
@@ -269,9 +269,9 @@ export default class Game {
 			(!this.settings.disableDefaultSkinLoad)
 		){
 			if (settings.settings.skin !== "deluxe" && settings.settings.skin !== "auto") {
-				this.colors = PIECE_COLORS.deluxe
-			} else {
 				this.colors = PIECE_COLORS.deluxeNoSkin
+			} else {
+				this.colors = PIECE_COLORS.deluxe
 			}
 		}
 
