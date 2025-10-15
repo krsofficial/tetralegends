@@ -60,6 +60,11 @@
           "value": "standard"
         },
 		{
+          "label": "Tetra Legends OE",
+          "fixedText": true,
+          "value": "standardbeatmode"
+        },
+		{
           "label": "Tetra-X",
           "fixedText": true,
           "value": "tetrax"
