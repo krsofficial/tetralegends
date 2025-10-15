@@ -1,5 +1,5 @@
-# Tetra Legends Ace
-Tetra Legends Ace is a Tetra Legends fork based on Tetra Legends Ultimate by Talon125.
+# Tetra Legends OE
+Tetra Legends OE is an unofficial Tetra Legends expansion built on Tetra Legends Ultimate by Talon125.
 Play here: https://krsofficial.github.io/tetralegends/
 
 # Additions
