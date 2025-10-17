@@ -9,7 +9,7 @@
     "rotationSystem": "tetrax",
     "skin": "tetrax",
     "soundbank": "tetrax",
-    "music": "../standardx/survival",
+    "music": "../standardx/standard",
     "hasDangerBgm": true,
     "scoreTable": "tetrax",
     "background": "marathon.jpg"

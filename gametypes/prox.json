@@ -9,7 +9,7 @@
     "rotationSystem": "tetrax",
     "skin": "tetrax",
     "soundbank": "tetrax",
-    "music": ["../prox/master", "../prox/master-last"],
+    "music": ["../prox/pro", "../prox/pro-last"],
     "hasDangerBgm": true,
     "scoreTable": "tetrax",
     "background": "marathon.jpg",
