@@ -7486,7 +7486,11 @@ export const loops = {
 	  } else {
 		  game.piece.areLimit = 0
 	  }
-      game.piece.areLineLimit = ARE_TABLE[calcLevel]
+	  if (settings.settings.useAre || settings.settings.useLineClearAre) {
+		  game.piece.areLineLimit = ARE_TABLE[calcLevel]
+	  } else {
+		  game.piece.areLineLimit = 0
+	  }
       game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
       levelUpdate(game)
     },
