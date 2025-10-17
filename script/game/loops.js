@@ -1201,6 +1201,8 @@ export const loops = {
 	  game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
       game.piece.gravity = framesToMs(256 / gravityDenominator)
       game.piece.ghostIsVisible = game.stat.level < 100
+	  game.piece.areLimit = 432
+	  game.piece.areLineLimit = 640
       updateFallSpeed(game)
     },
     onInit: (game) => {
@@ -1870,6 +1872,8 @@ export const loops = {
 		game.piece.ghostIsVisible = false
 	  }
 	  game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
+	  game.piece.areLimit = 432
+	  game.piece.areLineLimit = 640
       updateFallSpeed(game)
     },
     onInit: (game) => {
@@ -2538,6 +2542,8 @@ export const loops = {
 		game.piece.ghostIsVisible = false
 	  }
 	  game.piece.lockDelayLimit = Math.ceil(framesToMs(30))
+	  game.piece.areLimit = 432
+	  game.piece.areLineLimit = 640
 	  updateFallSpeed(game)
     },
     onInit: (game) => {
