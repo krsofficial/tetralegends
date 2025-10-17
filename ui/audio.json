@@ -55,7 +55,7 @@
           "langOverride": "menu_general"
         },
         {
-          "label": "Tetra Legends OE",
+          "label": "Default",
           "fixedText": true,
           "value": "standard"
         },
