@@ -7471,10 +7471,8 @@ export const loops = {
         400, 376, 353, 332, 312, 294, 276, 259, 244, 229, 215, 203, 190, 179,
         168, 158, 149, 140, 131, 123, 116, 109, 103, 96, 91, 85, 80, 75, 71, 65,
       ]
-      //game.piece.areLimit = ARE_TABLE[calcLevel];
-      //game.piece.areLineLimit = ARE_TABLE[calcLevel];
-	  game.piece.areLimit = Math.min(ARE_TABLE[calcLevel], 125)
-	  game.piece.areLineLimit = Math.min(ARE_TABLE[calcLevel], 250)
+      game.piece.areLimit = ARE_TABLE[calcLevel]
+      game.piece.areLineLimit = ARE_TABLE[calcLevel]
       game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
       levelUpdate(game)
     },
