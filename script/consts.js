@@ -5179,7 +5179,7 @@ export const SKIN_SETS = {
   srsx: "srsx",
   sega: "sega",
   newcentury: "sega",
-  tonline: "tonline",
+  tonline: "standard",
   krs: "krs",
   ksc: "krs",
   heboris: "arcade",

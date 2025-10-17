@@ -54,7 +54,7 @@
           "langOverride": "menu_general"
         },
 		{
-          "label": "Tetra Legends OE",
+          "label": "Default",
           "fixedText": true,
           "value": "standard"
         },
@@ -64,19 +64,9 @@
           "value": "tetrax"
         },
 		{
-          "label": "Tetra-X Classic",
+          "label": "Classic",
           "fixedText": true,
           "value": "classic"
-        },
-        {
-          "label": "Tetra Online",
-          "fixedText": true,
-          "value": "tonline"
-        },
-		{
-          "label": "Tetra Online Classic",
-          "fixedText": true,
-          "value": "tonlineclassic"
         },
 		{
           "label": "TOJ",
