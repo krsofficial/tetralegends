@@ -70,6 +70,11 @@
           "value": "tetrax"
         },
 		{
+          "label": "Classic",
+          "fixedText": true,
+          "value": "classic"
+        },
+		{
           "label": "TGM2",
           "fixedText": true,
           "value": "tgm2"
