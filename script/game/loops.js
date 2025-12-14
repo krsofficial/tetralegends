@@ -36,6 +36,7 @@ import shiftingE60 from "./loop-modules/shifting-e60.js"
 import sonicDrop from "./loop-modules/sonic-drop.js"
 import softDrop from "./loop-modules/soft-drop.js"
 import softDropRetro from "./loop-modules/soft-drop-retro.js"
+import softDropRetroEnhanced from "./loop-modules/soft-drop-retro-enhanced.js"
 import softDropNes from "./loop-modules/soft-drop-nes.js"
 import softDropWithGravityOverride from "./loop-modules/soft-drop-with-gravity-override.js"
 import sound from "../sound.js"
@@ -2945,7 +2946,7 @@ export const loops = {
       }
       gravity(arg)
       if (settings.game.mono.mechanics === "retro") {
-		  softDropRetro(arg, 50)
+		  softDropRetroEnhanced(arg, 50)
 	  } else {
 		  softDropWithGravityOverride(arg, 50)
 		  hardDrop(arg)
@@ -3056,7 +3057,7 @@ export const loops = {
       }
       gravity(arg)
 	  if (settings.game.monodx.mechanics === "retro") {
-		  softDropRetro(arg, framesToMs(2))
+		  softDropRetroEnhanced(arg, framesToMs(2))
 	  } else {
 		  softDropWithGravityOverride(arg, framesToMs(2))
 		  hardDrop(arg)
@@ -3173,7 +3174,7 @@ export const loops = {
       }
       gravity(arg)
 	  if (settings.game.nesmodern.mechanics === "retro") {
-		  softDropRetro(arg, 33.33)
+		  softDropRetroEnhanced(arg, 33.33)
 	  } else {
 		  softDropWithGravityOverride(arg, 33.33)
 		  hardDrop(arg)
