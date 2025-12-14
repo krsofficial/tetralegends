@@ -4634,7 +4634,7 @@ export const SCORE_TABLES = {
     updateSoftDropImmediately: true,
     hasSpins: true,
     hasCombo: true,
-    levelAdditive: 0,
+    levelAdditive: 1,
     levelMultiplied: [
       "erase1",
       "erase2",
