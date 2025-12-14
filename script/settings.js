@@ -170,12 +170,15 @@ class Settings {
       },
 	  mono: {
         startingLevel: 0,
+		mechanics: "guideline",
       },
 	  monodx: {
         startingLevel: 0,
+		mechanics: "guideline",
       },
 	  nesmodern: {
         startingLevel: 0,
+		mechanics: "guideline",
       },
     }
     this.settings = {}

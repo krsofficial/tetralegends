@@ -200,6 +200,9 @@
   "modernNesDescription": {
     "message": "Retro, but with guideline controls"
   },
+  "enhancedRetroLabel": {
+    "message": "Retro Enhanced"
+  },
   "footerLabel": {
     "message": ""
   }

@@ -194,6 +194,9 @@
   "modernNesDescription": {
     "message": "レトロでありながら、ガイドライン付きコントロール"
   },
+  "enhancedRetroLabel": {
+    "message": "レトロ強化"
+  },
   "footerLabel": {
     "message": ""
   }

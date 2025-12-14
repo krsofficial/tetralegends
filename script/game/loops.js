@@ -2944,8 +2944,12 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDropWithGravityOverride(arg, 50)
-      hardDrop(arg)
+      if (settings.game.mono.mechanics === "retro") {
+		  softDropRetro(arg, 50)
+	  } else {
+		  softDropWithGravityOverride(arg, 50)
+		  hardDrop(arg)
+	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -3020,6 +3024,11 @@ export const loops = {
 		["mino", "stack", "ghost"],
 		"handheld"
 	  )
+	  if (settings.game.mono.mechanics === "retro") {
+		  game.hold.isDisabled = true
+		  game.next.nextLimit = 1
+		  game.piece.ghostIsVisible = false
+	  }
 	  game.hideGrid = true
 	  game.stack.updateGrid()
 	  game.colors = PIECE_COLORS.standard
@@ -3046,8 +3055,12 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDropWithGravityOverride(arg, framesToMs(2))
-      hardDrop(arg)
+	  if (settings.game.monodx.mechanics === "retro") {
+		  softDropRetro(arg, framesToMs(2))
+	  } else {
+		  softDropWithGravityOverride(arg, framesToMs(2))
+		  hardDrop(arg)
+	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -3122,6 +3135,11 @@ export const loops = {
 		["mino", "stack", "ghost"],
 		"deluxe"
 	  )
+	  if (settings.game.monodx.mechanics === "retro") {
+		  game.hold.isDisabled = true
+		  game.next.nextLimit = 1
+		  game.piece.ghostIsVisible = false
+	  }
 	  game.hideGrid = true
 	  game.stack.updateGrid()
 	  game.colors = PIECE_COLORS.standard
@@ -3154,8 +3172,12 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      softDropWithGravityOverride(arg, 33.33)
-      hardDrop(arg)
+	  if (settings.game.nesmodern.mechanics === "retro") {
+		  softDropRetro(arg, 33.33)
+	  } else {
+		  softDropWithGravityOverride(arg, 33.33)
+		  hardDrop(arg)
+	  }
       extendedLockdown(arg)
       if (!arg.piece.inAre) {
         hold(arg)
@@ -3321,6 +3343,11 @@ export const loops = {
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
       }
+	  if (settings.game.nesmodern.mechanics === "retro") {
+		  game.hold.isDisabled = true
+		  game.next.nextLimit = 1
+		  game.piece.ghostIsVisible = false
+	  }
       game.stack.levelUpAnimation = 1000
       game.stack.levelUpAnimationLimit = 450
 	  game.hideGrid = true

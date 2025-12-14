@@ -194,6 +194,9 @@
   "modernNesDescription": {
     "message": "复古风格，但带有指引控制"
   },
+  "enhancedRetroLabel": {
+    "message": "复古增强版"
+  },
   "footerLabel": {
     "message": ""
   }

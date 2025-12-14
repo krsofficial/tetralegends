@@ -22,6 +22,29 @@
       "setting": "startingLevel",
       "gameName": "monodx",
       "settingType": "game"
+    },
+	{
+      "string": "mechanicsLabel",
+      "stringDesc": "mechanicsDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "string": "guidelineLabel",
+		  "langOverride": "menu_root",
+		  "omitDescription": true,
+          "value": "guideline"
+        },
+        {
+          "string": "enhancedRetroLabel",
+		  "langOverride": "ue_additions",
+		  "omitDescription": true,
+          "value": "retro"
+        }
+      ],
+      "setting": "mechanics",
+      "gameName": "monodx",
+      "settingType": "game"
     }
   ]
 }

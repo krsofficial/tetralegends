@@ -6,7 +6,7 @@
     "pieces": "standard",
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
-    "rotationSystem": "srs",
+    "rotationSystem": "rosyretrospective",
     "skin": "handheld",
     "soundbank": "monodx",
     "music": ["monodx", "monodx-last"],

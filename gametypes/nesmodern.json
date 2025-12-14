@@ -6,7 +6,7 @@
     "pieces": "standard",
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
-    "rotationSystem": "srs",
+    "rotationSystem": "rosyretrospective",
     "skin": "retro-special-nesmodern",
     "soundbank": "nesmodern",
     "music": "nesmodern",
