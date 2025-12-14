@@ -84,6 +84,7 @@ export default class Piece extends GameModule {
 	this.boneColor = "green"
 	this.isCyclone = false
 	this.cycloneOrientation = 0
+	this.playLandSound = true
   }
   new(name = this.parent.next.next()) {
     this.isFrozen = false

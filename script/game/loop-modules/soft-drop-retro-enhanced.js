@@ -11,11 +11,14 @@ export default function softDropRetro(arg, override) {
 		}
 	}
     arg.piece.mustLockRetro = true
+	arg.piece.playLandSound = false
   } else {
     arg.piece.gravityOverride = 0
     arg.piece.mustLockRetro = false
+	arg.piece.playLandSound = true
   }
   if (!input.getGameDown("softDrop")) {
     arg.piece.softDropIsLocked = false
+	arg.piece.playLandSound = true
   }
 }

@@ -22,7 +22,7 @@ function fallen(piece) {
       }
     }
     piece.isDirty = true
-    if (piece.isLanded) {
+    if (piece.isLanded && piece.playLandSound) {
       sound.add("land")
     }
   }
