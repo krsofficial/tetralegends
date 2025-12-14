@@ -10,7 +10,7 @@
     "skin": "handheld",
     "soundbank": "monodx",
     "music": ["monodx", "monodx-last"],
-    "scoreTable": "guideline",
+    "scoreTable": "newcentury",
 	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"
   },

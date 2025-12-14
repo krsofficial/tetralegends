@@ -10,7 +10,7 @@
     "skin": "retro-special-nesmodern",
     "soundbank": "nesmodern",
     "music": "nesmodern",
-    "scoreTable": "guideline",
+    "scoreTable": "newcentury",
 	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"
   },
