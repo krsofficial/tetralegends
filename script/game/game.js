@@ -222,7 +222,7 @@ export default class Game {
 				gametype === "deluxe" ||
 				gametype === "mono" ||
 				gametype === "monodx" ||
-				gametype === "nesmodern"
+				gametype === "nesmodern" ||
 				gametype === "newcentury"
 				) {
 				sound.load("heboris-oldstyle")
