@@ -225,8 +225,8 @@ export default class Game {
 				gametype === "nesmodern" ||
 				gametype === "newcentury"
 				) {
-				sound.load("heboris-oldstyle")
-				this.loadedSounbank = "heboris-oldstyle"
+				sound.load("heborisoldstyle")
+				this.loadedSounbank = "heborisoldstyle"
 				} else if (gametype === "terminal") {
 				sound.load("e60")
 				this.loadedSounbank = "e60"
