@@ -219,7 +219,11 @@ export default class Game {
 				gametype.includes("sega") || 
 				gametype.includes("retro") ||
 				gametype.includes("handheld") ||
-				gametype === "deluxe") {
+				gametype === "deluxe" ||
+				gametype === "mono" ||
+				gametype === "monodx" ||
+				gametype === "nesmodern"
+				) {
 				sound.load("heboris-oldstyle")
 				this.loadedSounbank = "heboris-oldstyle"
 				} else if (gametype === "terminal") {
