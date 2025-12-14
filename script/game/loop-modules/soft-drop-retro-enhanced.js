@@ -8,7 +8,6 @@ export default function softDropRetro(arg, override) {
 	if (arg.piece.isLanded) {
 		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
-			sound.add("land")
 		}
 	}
     arg.piece.mustLockRetro = true
