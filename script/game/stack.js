@@ -1122,7 +1122,12 @@ export default class Stack extends GameModule {
         if (this.parent.piece.useRetroColors) {
           let modifier = 0
           if (this.levelUpAnimation < this.levelUpAnimationLimit) {
-            if (y - 3 <= this.height - levelUpLength) {
+            /*
+			if (y - 3 <= this.height - levelUpLength) {
+              modifier--
+            }
+			*/
+			if (y - (this.hiddenHeight - 1) <= this.height - levelUpLength) {
               modifier--
             }
           }
