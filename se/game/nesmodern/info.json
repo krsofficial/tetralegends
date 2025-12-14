@@ -17,6 +17,8 @@
     "move",
     "pause",
     "rotate",
+	"skip",
+	"initialskip",
 	"tspin0",
 	"tspin"
   ],
