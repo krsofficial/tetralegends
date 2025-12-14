@@ -3136,7 +3136,7 @@ export const loops = {
   nesmodern: {
     update: (arg) => {
       collapse(arg)
-	  game.stack.levelUpAnimationLimit = 450
+	  arg.stack.levelUpAnimationLimit = 450
 	  if (arg.stack.levelUpAnimation < arg.stack.levelUpAnimationLimit) {
         arg.stack.makeAllDirty()
         arg.stack.isDirty = true
