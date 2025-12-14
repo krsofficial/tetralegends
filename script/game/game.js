@@ -223,6 +223,7 @@ export default class Game {
 				gametype === "mono" ||
 				gametype === "monodx" ||
 				gametype === "nesmodern"
+				gametype === "newcentury"
 				) {
 				sound.load("heboris-oldstyle")
 				this.loadedSounbank = "heboris-oldstyle"

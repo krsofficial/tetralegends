@@ -1,8 +1,11 @@
 import input from "../../input.js"
+import settings from "../../settings.js"
+import gameHandler from "../game-handler.js"
 import { framesToMs } from "../../shortcuts.js"
 
 const playLandSound = () => {
   let result = false
+  let game = gameHandler.game
   if (game.settings.rotationSystem === "heboris") {
 	result = true
   }

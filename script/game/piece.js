@@ -1054,7 +1054,8 @@ export default class Piece extends GameModule {
 	  gameHandler.game.loadedSoundbank === "ace" || 
 	  gameHandler.game.loadedSoundbank === "nullpomino" || 
 	  gameHandler.game.loadedSoundbank === "sega" ||
-	  gameHandler.game.loadedSoundbank === "krs"
+	  gameHandler.game.loadedSoundbank === "krs" ||
+	  gameHandler.game.loadedSoundbank === "heboris-oldstyle"
 	  ) {
 		if (!this.isLanded) {
 			sound.add("land")
