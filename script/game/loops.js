@@ -3010,7 +3010,31 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  game.settings.music = ["../heboris/hebo"]
 	  }
-	  game.makeSprite(
+	  if (settings.game.mono.mechanics === "retro") {
+        game.makeSprite(
+          [
+            "i1",
+            "i2",
+            "i3",
+            "i4",
+            "i5",
+            "i6",
+            "l",
+            "o",
+            "z",
+            "t",
+            "j",
+            "s",
+            "white",
+            "black",
+          ],
+          ["mino"],
+          "handheld-special"
+        )
+        game.colors = PIECE_COLORS.handheldSpecial
+        game.piece.useSpecialI = true
+      } else {
+        game.makeSprite(
 		[
 			"red",
 			"orange",
@@ -3024,7 +3048,10 @@ export const loops = {
 		],
 		["mino", "stack", "ghost"],
 		"handheld"
-	  )
+		)
+		game.colors = PIECE_COLORS.standard
+        game.piece.useSpecialI = false
+      }
 	  if (settings.game.mono.mechanics === "retro") {
 		  game.hold.isDisabled = true
 		  game.next.nextLimit = 1
@@ -3032,7 +3059,6 @@ export const loops = {
 	  }
 	  game.hideGrid = true
 	  game.stack.updateGrid()
-	  game.colors = PIECE_COLORS.standard
       game.stat.level = settings.game.mono.startingLevel
       lastLevel = parseInt(settings.game.mono.startingLevel)
       game.piece.gravity = 1000
@@ -3121,7 +3147,31 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  game.settings.music = ["../heboris/hebo"]
 	  }
-	  game.makeSprite(
+	  if (settings.game.monodx.mechanics === "retro") {
+        game.makeSprite(
+          [
+            "i1",
+            "i2",
+            "i3",
+            "i4",
+            "i5",
+            "i6",
+            "l",
+            "o",
+            "z",
+            "t",
+            "j",
+            "s",
+            "white",
+            "black",
+          ],
+          ["mino", "stack"],
+          "deluxe-special"
+        )
+        game.colors = PIECE_COLORS.handheldSpecial
+        game.piece.useSpecialI = true
+      } else {
+        game.makeSprite(
 		[
 			"red",
 			"orange",
@@ -3135,7 +3185,10 @@ export const loops = {
 		],
 		["mino", "stack", "ghost"],
 		"deluxe"
-	  )
+		)
+		game.colors = PIECE_COLORS.standard
+		game.piece.useSpecialI = false
+      }
 	  if (settings.game.monodx.mechanics === "retro") {
 		  game.hold.isDisabled = true
 		  game.next.nextLimit = 1
@@ -3143,7 +3196,6 @@ export const loops = {
 	  }
 	  game.hideGrid = true
 	  game.stack.updateGrid()
-	  game.colors = PIECE_COLORS.standard
       game.stat.level = settings.game.monodx.startingLevel
       lastLevel = parseInt(settings.game.monodx.startingLevel)
       game.piece.gravity = 1000
@@ -9150,6 +9202,7 @@ export const loops = {
           "deluxe-special"
         )
         game.colors = PIECE_COLORS.handheldSpecial
+		game.piece.useSpecialI = true
       }
     },
   },
@@ -9262,6 +9315,7 @@ export const loops = {
         )
         game.colors = PIECE_COLORS.handheldSpecial
         game.updateStats()
+		game.piece.useSpecialI = true
       }
     },
   },
