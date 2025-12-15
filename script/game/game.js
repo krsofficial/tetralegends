@@ -213,6 +213,10 @@ export default class Game {
 			(this.settings.rotationSystem === "deluxe" && gametype.includes("sega")) ||
 			(this.settings.rotationSystem === "retro" && gametype.includes("sega")) ||
 			(this.settings.rotationSystem === "original" && gametype.includes("sega")) ||
+			(this.settings.rotationSystem === "handheld" && gametype.includes("newcentury")) ||
+			(this.settings.rotationSystem === "deluxe" && gametype.includes("newcentury")) ||
+			(this.settings.rotationSystem === "retro" && gametype.includes("newcentury")) ||
+			(this.settings.rotationSystem === "original" && gametype.includes("newcentury")) ||
 			this.settings.rotationSystem === "heboris"
 			) {
 				if (
@@ -226,17 +230,17 @@ export default class Game {
 				gametype === "newcentury"
 				) {
 				sound.load("heborisoldstyle")
-				this.loadedSounbank = "heborisoldstyle"
+				this.loadedSoundbank = "heborisoldstyle"
 				} else if (gametype === "terminal") {
 				sound.load("e60")
-				this.loadedSounbank = "e60"
+				this.loadedSoundbank = "e60"
 				} else {
 				sound.load("heboris")
-				this.loadedSounbank = "heboris"
+				this.loadedSoundbank = "heboris"
 				}
 			} else {
 				sound.load(this.settings.soundbank)
-				this.loadedSounbank = this.settings.soundbank
+				this.loadedSoundbank = this.settings.soundbank
 			}
 		}
         this.colors = JSON.parse(
