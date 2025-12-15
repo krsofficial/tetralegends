@@ -1529,7 +1529,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  game.piece.ghostIsVisible = false
+	  game.piece.ghostIsVisible = game.piece.useBoneBlocks
       if (game.stat.level >= 500 && game.rta <= 148000)
         game.torikanPassed = true
       else if (
@@ -2302,7 +2302,7 @@ export const loops = {
           game.musicProgression = entry
         }
       }
-	  game.piece.ghostIsVisible = false
+	  game.piece.ghostIsVisible = game.piece.useBoneBlocks
       if (game.stat.level >= 500 && game.rta <= 184000)
         game.torikanPassed = true
       else if (
