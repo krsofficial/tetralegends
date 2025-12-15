@@ -3033,6 +3033,7 @@ export const loops = {
         )
         game.colors = PIECE_COLORS.handheldSpecial
         game.piece.useSpecialI = true
+		game.stack.useMinoSkin = true
       } else {
         game.makeSprite(
 		[
@@ -3051,6 +3052,7 @@ export const loops = {
 		)
 		game.colors = PIECE_COLORS.standard
         game.piece.useSpecialI = false
+		game.piece.useMinoSkin = false
       }
 	  if (settings.game.mono.mechanics === "retro") {
 		  game.hold.isDisabled = true
