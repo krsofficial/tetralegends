@@ -18,6 +18,13 @@
       "submenu": "mode/zen"
     },
 	{
+      "string": "arcadeRuleLabel",
+      "stringDesc": "arcadeRuleDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/zentgm"
+    },
+	{
       "string": "tetraXRuleLabel",
       "stringDesc": "tetraXRuleDescription",
 	  "langOverride": "ue_additions",

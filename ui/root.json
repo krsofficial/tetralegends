@@ -49,7 +49,6 @@
     {
       "string": "arcadeLabel",
       "stringDesc": "arcadeDescription",
-      "width": "half",
       "action": "submenu",
       "submenu": "arcade"
     },
@@ -62,14 +61,12 @@
 	{
       "string": "zenLabel",
       "stringDesc": "zenDescription",
-	  "width": "half",
       "action": "submenu",
       "submenu": "zen"
     },
 	{
       "string": "extraLabel",
       "stringDesc": "extraDescription",
-	  "width": "half",
       "action": "submenu",
       "submenu": "extra"
     },

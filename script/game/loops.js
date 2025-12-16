@@ -648,7 +648,8 @@ const initMusicProgression = (game) => {
 }
 const tgmFirmDrop = (arg) => {
 	let game = gameHandler.game
-	firmDrop(game, 1, game.piece.gravity < framesToMs(1) && game.piece.isLanded)
+	let safeLock = game.piece.gravity < framesToMs(1) && game.piece.isLanded
+	firmDrop(game, 1, safeLock)
 }
 
 export const loops = {
@@ -6371,12 +6372,16 @@ export const loops = {
         rotate180(arg)
         shifting(arg)
       }
-      if (gameHandler.game.type === "zenx") {
+	  if (gameHandler.game.type === "zentgm") {
+		  tgmFirmDrop(arg)
+		  sonicDrop(arg, true)
+	  } else if (gameHandler.game.type === "zenx") {
 		  hyperSoftDrop(arg)
+		  hardDrop(arg)
 	  } else {
 		  softDrop(arg, 20, true)
+		  hardDrop(arg)
 	  }
-      hardDrop(arg)
       switch (settings.game.zen.lockdownMode) {
         case "zen":
           zenLockdown(arg)
