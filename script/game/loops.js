@@ -9737,7 +9737,8 @@ export const loops = {
 	  } else {
 		  levelTimerLimit = 58000
 	  }
-	  if (Math.floor(game.stat.line / 4) > game.stat.level) {
+	  let x = game.stat.level - settings.game.newcentury.startingLevel
+	  if (Math.floor(game.stat.line / 4) > x) {
 		  levelTimer = 0
 		  game.stat.level += 1
 	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
@@ -9863,8 +9864,12 @@ export const loops = {
 		["mino", "stack", "ghost"],
 		segaSkin
 	  )
-      game.stat.level = 0
+      /*
+	  game.stat.level = 0
       lastLevel = 0
+	  */
+	  lastLevel = parseInt(settings.game.newcentury.startingLevel)
+	  game.stat.level = settings.game.newcentury.startingLevel
 	  levelTimer = 0
 	  levelTimerLimit = 58000
 	  lastPieces = 0

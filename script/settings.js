@@ -168,6 +168,9 @@ class Settings {
         cpuTier: 1,
 		regulationMode: false,
       },
+	  newcentury: {
+        startingLevel: 0,
+      },
 	  mono: {
         startingLevel: 0,
 		mechanics: "guideline",

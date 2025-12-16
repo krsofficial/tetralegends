@@ -10,6 +10,18 @@
       "string": "newCenturyLabel",
       "langOverride": "ue_additions",
       "type": "header"
+    },
+	{
+      "string": "startingLevelLabel",
+      "stringDesc": "startingLevelDescription",
+      "type": "slider",
+      "action": "slider",
+      "max": 9,
+      "min": 0,
+      "discrete": 1,
+      "setting": "startingLevel",
+      "gameName": "newcentury",
+      "settingType": "game"
     }
   ]
 }
