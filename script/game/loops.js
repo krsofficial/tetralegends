@@ -9945,7 +9945,7 @@ export const loops = {
 	  if (
         arg.piece.startingAre >= arg.piece.startingAreLimit &&
 		game.stack.waitingGarbage <= 0 &&
-		(settings.game.versus.regulationMode || game.piece.areLineLimit = 0)
+		(settings.game.versus.regulationMode || game.piece.areLineLimit === 0)
       ) {
         garbageSendTimer += arg.ms
 		if (garbageSendTimer > 16) {
@@ -9976,7 +9976,7 @@ export const loops = {
 	  }
 	  if (
 	  game.stack.waitingGarbage <= 0 && 
-	  !(settings.game.versus.regulationMode || game.piece.areLineLimit = 0)
+	  !(settings.game.versus.regulationMode || game.piece.areLineLimit === 0)
 	  ) {
 		  game.cpuGarbageCounter += Math.abs(game.stack.waitingGarbage)
 		  game.stack.waitingGarbage = 0
