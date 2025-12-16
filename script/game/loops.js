@@ -9737,15 +9737,10 @@ export const loops = {
 	  } else {
 		  levelTimerLimit = 58000
 	  }
-	  if (Math.floor(game.stat.line / 4) > game.stat.level) {
-		  levelTimer = 0
-		  game.stat.level += 1
-	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
-		  /*
-		  levelTimer = 0
-		  game.stat.level += 1
-		  */
-	  }
+	  game.stat.level = Math.max(
+		settings.game.newcentury.startingLevel,
+		Math.floor(game.stat.line / 4)
+	  )
 	  lastPieces = game.stat.piece
 	  let gravityTable = [
 		48,
