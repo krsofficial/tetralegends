@@ -1,6 +1,6 @@
 {
   "properties": {
-    "parent": "root",
+    "parent": "zen",
     "langOverride": "mode-options",
     "game": "zen",
     "pgmusic": "pg-zen"
