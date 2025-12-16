@@ -1,7 +1,7 @@
 {
   "properties": {
 	"langOverride": "ue_additions",
-    "parent": "root"
+    "parent": "extra"
   },
   "data": [
     {

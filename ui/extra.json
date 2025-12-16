@@ -11,6 +11,13 @@
     },
 	{
 	  "default": true,
+      "string": "aceLabel",
+      "stringDesc": "aceDescription",
+	  "langOverride": "menu_root",
+      "action": "submenu",
+      "submenu": "ace"
+    },
+	{
       "string": "modernNesLabel",
       "stringDesc": "modernNesDescription",
 	  "langOverride": "ue_additions",

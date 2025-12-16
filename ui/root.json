@@ -54,12 +54,6 @@
       "submenu": "arcade"
     },
 	{
-      "string": "aceLabel",
-      "stringDesc": "aceDescription",
-      "action": "submenu",
-      "submenu": "ace"
-    },
-	{
       "string": "beatLabel",
       "stringDesc": "beatDescription",
       "action": "submenu",
