@@ -14,6 +14,7 @@
       "string": "classicRuleLabel",
 	  "stringDesc": "classicRuleDescription",
       "langOverride": "ue_additions",
+	  "isShort": true,
 	  "default": true,
       "action": "submenu",
       "submenu": "arcadeclassic"
@@ -22,6 +23,7 @@
       "string": "worldRuleLabel",
 	  "stringDesc": "worldRuleDescription",
       "langOverride": "ue_additions",
+	  "isShort": true,
       "action": "submenu",
       "submenu": "arcadeworld"
     }

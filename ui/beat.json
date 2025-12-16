@@ -13,6 +13,7 @@
       "string": "guidelineRuleLabel",
       "stringDesc": "guidelineRuleDescription",
 	  "langOverride": "ue_additions",
+	  "isShort": true,
 	  "default": true,
       "action": "submenu",
       "submenu": "mode/beat"
@@ -21,6 +22,7 @@
       "string": "arcadeRuleLabel",
       "stringDesc": "arcadeRuleDescription",
 	  "langOverride": "ue_additions",
+	  "isShort": true,
       "action": "submenu",
       "submenu": "mode/beattgm"
     },
@@ -28,6 +30,7 @@
       "string": "tetraXRuleLabel",
       "stringDesc": "tetraXRuleDescription",
 	  "langOverride": "ue_additions",
+	  "isShort": true,
       "action": "submenu",
       "submenu": "mode/beatx"
     }

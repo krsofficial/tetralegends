@@ -13,6 +13,7 @@
       "string": "aceRuleLabel",
 	  "stringDesc": "aceRuleDescription",
       "langOverride": "ue_additions",
+	  "isShort": true,
       "default": true,
       "action": "submenu",
       "submenu": "mode/ace"
@@ -21,6 +22,7 @@
       "string": "arcadeRuleLabel",
 	  "stringDesc": "arcadeRuleDescription",
       "langOverride": "ue_additions",
+	  "isShort": true,
       "action": "submenu",
       "submenu": "mode/aceclassic"
     },
@@ -28,6 +30,7 @@
       "string": "guidelineRuleLabel",
 	  "stringDesc": "guidelineRuleDescription",
       "langOverride": "ue_additions",
+	  "isShort": true,
       "action": "submenu",
       "submenu": "mode/aceworld"
     }
