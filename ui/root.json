@@ -23,6 +23,12 @@
       "action": "submenu",
       "submenu": "mode/versus"
     },
+	{
+      "string": "zenLabel",
+      "stringDesc": "zenDescription",
+      "action": "submenu",
+      "submenu": "mode/zen"
+    },
     {
       "string": "gameStylesOverline",
       "type": "overline"
@@ -54,16 +60,16 @@
       "submenu": "arcade"
     },
 	{
+      "string": "aceLabel",
+      "stringDesc": "aceDescription",
+      "action": "submenu",
+      "submenu": "ace"
+    },
+	{
       "string": "beatLabel",
       "stringDesc": "beatDescription",
       "action": "submenu",
       "submenu": "beat"
-    },
-	{
-      "string": "zenLabel",
-      "stringDesc": "zenDescription",
-      "action": "submenu",
-      "submenu": "zen"
     },
 	{
       "string": "extraLabel",
