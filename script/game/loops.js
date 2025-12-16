@@ -11050,6 +11050,7 @@ export const loops = {
    },
 }
 loops.zenx = loops.zen
+loops.zentgm = loops.zen
 loops.aceclassic = loops.ace
 loops.beatx = loops.beat
 loops.beattgm = loops.beat

@@ -49,6 +49,7 @@
     {
       "string": "arcadeLabel",
       "stringDesc": "arcadeDescription",
+	  "width": "half",
       "action": "submenu",
       "submenu": "arcade"
     },
