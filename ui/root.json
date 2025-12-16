@@ -14,7 +14,8 @@
       "string": "quickLabel",
       "stringDesc": "quickDescription",
       "default": true,
-      "action": "quick"
+      "action": "submenu",
+      "submenu": "mode/quick"
     },
 	{
       "string": "versusLabel",
