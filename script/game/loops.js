@@ -3490,6 +3490,7 @@ export const loops = {
 	  lastBravos = 0
       game.updateStats()
 	  updateFallSpeed(game)
+	  game.ace = true
     },
     onPieceSpawn: (game) => {
       const areTable = [
@@ -3719,6 +3720,7 @@ export const loops = {
 	  lastBravos = 0
       game.updateStats()
 	  updateFallSpeed(game)
+	  game.ace = true
     },
     onPieceSpawn: (game) => {
       const areTable = [
@@ -3940,6 +3942,7 @@ export const loops = {
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
 	  updateFallSpeed(game)
+	  game.ace = true
     },
     onPieceSpawn: (game) => {
       const areTable = [
@@ -4150,6 +4153,7 @@ export const loops = {
 	  game.piece.gravity = framesToMs(1 / 20)
       game.updateStats()
 	  updateFallSpeed(game)
+	  game.ace = true
     },
     onPieceSpawn: (game) => {
       const areTable = [
