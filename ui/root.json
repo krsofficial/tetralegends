@@ -47,10 +47,24 @@
       "submenu": "arcade"
     },
 	{
+      "string": "versusLabel",
+      "stringDesc": "versusDescription",
+      "action": "submenu",
+      "submenu": "mode/versus"
+    },
+	{
       "string": "aceLabel",
       "stringDesc": "aceDescription",
       "action": "submenu",
+	  "width": "half",
       "submenu": "ace"
+    },
+	{
+      "string": "extraLabel",
+      "stringDesc": "extraDescription",
+      "action": "submenu",
+	  "width": "half",
+      "submenu": "extra"
     },
 	{
       "string": "beatLabel",
@@ -59,22 +73,10 @@
       "submenu": "beat"
     },
 	{
-      "string": "versusLabel",
-      "stringDesc": "versusDescription",
-      "action": "submenu",
-      "submenu": "mode/versus"
-    },
-    {
       "string": "zenLabel",
       "stringDesc": "zenDescription",
       "action": "submenu",
       "submenu": "mode/zen"
-    },
-	{
-      "string": "extraLabel",
-      "stringDesc": "extraDescription",
-      "action": "submenu",
-      "submenu": "extra"
     },
     {
       "string": "settingsOverline",
