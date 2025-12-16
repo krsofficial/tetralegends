@@ -16,6 +16,12 @@
       "default": true,
       "action": "quick"
     },
+	{
+      "string": "versusLabel",
+      "stringDesc": "versusDescription",
+      "action": "submenu",
+      "submenu": "mode/versus"
+    },
     {
       "string": "gameStylesOverline",
       "type": "overline"
@@ -47,24 +53,10 @@
       "submenu": "arcade"
     },
 	{
-      "string": "versusLabel",
-      "stringDesc": "versusDescription",
-      "action": "submenu",
-      "submenu": "mode/versus"
-    },
-	{
       "string": "aceLabel",
       "stringDesc": "aceDescription",
       "action": "submenu",
-	  "width": "half",
       "submenu": "ace"
-    },
-	{
-      "string": "extraLabel",
-      "stringDesc": "extraDescription",
-      "action": "submenu",
-	  "width": "half",
-      "submenu": "extra"
     },
 	{
       "string": "beatLabel",
@@ -75,8 +67,16 @@
 	{
       "string": "zenLabel",
       "stringDesc": "zenDescription",
+	  "width": "half",
       "action": "submenu",
-      "submenu": "mode/zen"
+      "submenu": "zen"
+    },
+	{
+      "string": "extraLabel",
+      "stringDesc": "extraDescription",
+	  "width": "half",
+      "action": "submenu",
+      "submenu": "extra"
     },
     {
       "string": "settingsOverline",

@@ -1,0 +1,73 @@
+{
+  "properties": {
+    "parent": "root",
+    "langOverride": "mode-options",
+    "game": "zenx",
+    "pgmusic": "pg-zen"
+  },
+  "data": [
+    {
+      "string": "zenLabel",
+      "langOverride": "menu_root",
+      "type": "header"
+    },
+    {
+      "string": "holdTypeLabel",
+      "stringDesc": "holdTypeDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "string": "holdOption",
+          "value": "hold"
+        },
+        {
+          "string": "skipOption",
+          "value": "skip"
+        }
+      ],
+      "setting": "holdType",
+      "gameName": "zen",
+      "settingType": "game"
+    },
+    {
+      "string": "lockdownModeLabel",
+      "stringDesc": "lockdownModeDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "string": "zenLabel",
+		  "langOverride": "menu_root",
+          "value": "zen"
+        },
+        {
+          "string": "infinityLdOption",
+          "value": "infinity"
+        },
+        {
+          "string": "extendedLdOption",
+          "value": "extended"
+        },
+        {
+          "string": "classicLdOption",
+          "value": "classic"
+        }
+      ],
+      "setting": "lockdownMode",
+      "gameName": "zen",
+      "settingType": "game"
+    },
+    {
+      "string": "garbageCapLabel",
+      "stringDesc": "garbageCapDescription",
+      "type": "slider",
+      "action": "slider",
+      "max": 40,
+      "min": 1,
+      "discrete": 1,
+      "setting": "brokenLineLimit",
+      "settingType": "setting"
+    }
+  ]
+}

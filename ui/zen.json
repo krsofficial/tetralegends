@@ -1,0 +1,28 @@
+{
+  "properties": {
+	"langOverride": "ue_additions",
+    "parent": "root"
+  },
+  "data": [
+    {
+      "string": "zenLabel",
+      "langOverride": "menu_root",
+      "type": "header"
+    },
+	{
+      "string": "guidelineRuleLabel",
+      "stringDesc": "guidelineRuleDescription",
+	  "langOverride": "ue_additions",
+	  "default": true,
+      "action": "submenu",
+      "submenu": "mode/zen"
+    },
+	{
+      "string": "tetraXRuleLabel",
+      "stringDesc": "tetraXRuleDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/zenx"
+    }
+  ]
+}

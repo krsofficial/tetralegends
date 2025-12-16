@@ -6367,7 +6367,11 @@ export const loops = {
         rotate180(arg)
         shifting(arg)
       }
-      softDrop(arg, 20, true)
+      if (gameHandler.game.type === "zenx") {
+		  hyperSoftDrop(arg)
+	  } else {
+		  softDrop(arg, 20, true)
+	  }
       hardDrop(arg)
       switch (settings.game.zen.lockdownMode) {
         case "zen":
@@ -11033,6 +11037,7 @@ export const loops = {
     },
    },
 }
+loops.zenx = loops.zen
 loops.aceclassic = loops.ace
 loops.beatx = loops.beat
 loops.beattgm = loops.beat
