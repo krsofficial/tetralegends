@@ -146,12 +146,6 @@
   "segaHardest": {
     "message": "HARDEST"
   },
-  "newCenturyLabel": {
-    "message": "NEW CENTURY"
-  },
-  "terminalLabel": {
-    "message": "ターミナル"
-  },
   "terminalDescription": {
     "message": "パズルが生まれた最初のバージョン"
   },
@@ -176,26 +170,32 @@
   "standardXClassicDescription": {
     "message": "リワーク前の旧バージョンのスタンダード"
   },
-  "monoLabel": {
-    "message": "バラ色の回顧"
+  "newCenturyLabel": {
+    "message": "ニューセンチュリー"
   },
-  "monoDescription": {
-    "message": "携帯機だが、ガイドライン制御付き"
-  },
-  "monoDeluxeLabel": {
-    "message": "バラ色の回顧 DX"
-  },
-  "monoDeluxeDescription": {
-    "message": "携帯機DX、ただしガイドライン制御付き"
+  "newCenturyDescription": {
+    "message": "キャビネットの定番モデルの強化版"
   },
   "stereoLabel": {
-    "message": "レトロ強化"
+    "message": "レトロ強化版"
   },
   "stereoDescription": {
-    "message": "レトロでありながら、ガイドライン付きコントロール"
+    "message": "コンソールゲームの傑作の強化版"
+  },
+  "monoLabel": {
+    "message": "バラ色の回想"
+  },
+  "monoDescription": {
+    "message": "携帯型クラシックの強化版"
+  },
+  "monoDeluxeLabel": {
+    "message": "バラ色の回顧録DX"
+  },
+  "monoDeluxeDescription": {
+    "message": "バラ色の回想、だがフルカラーで"
   },
   "enhancedRetroLabel": {
-    "message": "レトロ強化"
+    "message": "レトロ強化版"
   },
   "footerLabel": {
     "message": ""

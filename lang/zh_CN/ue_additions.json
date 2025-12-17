@@ -146,12 +146,6 @@
   "segaHardest": {
     "message": "最难的"
   },
-  "newCenturyLabel": {
-    "message": "新世纪"
-  },
-  "newCenturyDescription": {
-    "message": "内阁，但带有指导性控制"
-  },
   "terminalLabel": {
     "message": "终端"
   },
@@ -176,23 +170,29 @@
   "standardXClassicDescription": {
     "message": "重制前的旧版标准"
   },
-  "monoLabel": {
-    "message": "玫瑰色的追忆"
+  "newCenturyLabel": {
+    "message": "新世纪"
   },
-  "monoDescription": {
-    "message": "手持式，但配备指导性控制装置"
-  },
-  "monoDeluxeLabel": {
-    "message": "玫瑰色的追忆DX"
-  },
-  "monoDeluxeDescription": {
-    "message": "手持式DX，但带有指导性控制"
+  "newCenturyDescription": {
+    "message": "内阁经典款的升级版"
   },
   "stereoLabel": {
     "message": "复古增强版"
   },
   "stereoDescription": {
-    "message": "复古风格，但带有指引控制"
+    "message": "款经典主机游戏的增强版"
+  },
+  "monoLabel": {
+    "message": "玫瑰色的追忆"
+  },
+  "monoDescription": {
+    "message": "款经典掌机游戏的增强版"
+  },
+  "monoDeluxeLabel": {
+    "message": "玫瑰色追忆DX"
+  },
+  "monoDeluxeDescription": {
+    "message": "玫瑰色的追忆，却在绚烂的色彩中"
   },
   "enhancedRetroLabel": {
     "message": "复古增强版"

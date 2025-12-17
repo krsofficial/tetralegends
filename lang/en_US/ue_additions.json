@@ -146,12 +146,6 @@
   "segaHardest": {
     "message": "Hardest"
   },
-  "newCenturyLabel": {
-    "message": "New Century"
-  },
-  "newCenturyDescription": {
-    "message": "Cabinet, but with guideline controls"
-  },
   "terminalLabel": {
     "message": "Terminal"
   },
@@ -182,23 +176,29 @@
   "standardXClassicDescription": {
     "message": "The old version of Standard before the rework"
   },
-  "monoLabel": {
-    "message": "Rosy Retrospection"
+  "newCenturyLabel": {
+    "message": "New Century"
   },
-  "monoDescription": {
-    "message": "Handheld, but with guideline controls"
-  },
-  "monoDeluxeLabel": {
-    "message": "Rosy Retrospection DX"
-  },
-  "monoDeluxeDescription": {
-    "message": "Handheld DX, but with guideline controls"
+  "newCenturyDescription": {
+    "message": "An enhanced version of a cabinet classic"
   },
   "stereoLabel": {
     "message": "Retro Enhanced"
   },
   "stereoDescription": {
-    "message": "Retro, but with guideline controls"
+    "message": "An enhanced version of a console classic"
+  },
+  "monoLabel": {
+    "message": "Rosy Retrospection"
+  },
+  "monoDescription": {
+    "message": "An enhanced version of a handheld classic"
+  },
+  "monoDeluxeLabel": {
+    "message": "Rosy Retrospection DX"
+  },
+  "monoDeluxeDescription": {
+    "message": "Rosy Retrospection, but in full color"
   },
   "enhancedRetroLabel": {
     "message": "Retro Enhanced"
