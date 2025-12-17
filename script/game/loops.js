@@ -3207,7 +3207,7 @@ export const loops = {
       game.updateStats()
     },
   },
-  nesmodern: {
+  stereo: {
     update: (arg) => {
       collapse(arg)
 	  arg.stack.levelUpAnimationLimit = 450
@@ -3228,7 +3228,7 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-	  if (settings.game.nesmodern.mechanics === "retro") {
+	  if (settings.game.stereo.mechanics === "retro") {
 		  softDropRetroEnhanced(arg, 33.33)
 	  } else {
 		  softDropWithGravityOverride(arg, 33.33)
@@ -3248,7 +3248,7 @@ export const loops = {
     },
     onPieceSpawn: (game) => {
       game.stat.level = Math.max(
-		settings.game.nesmodern.startingLevel,
+		settings.game.stereo.startingLevel,
 		Math.floor(game.stat.line / 10)
 	  )
 	  /*
@@ -3343,7 +3343,7 @@ export const loops = {
             "r-9",
           ],
           ["mino", "stack", "ghost"],
-          "retro-special-nesmodern"
+          "retro-special-ghost"
         )
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
@@ -3394,12 +3394,12 @@ export const loops = {
             "r-9",
           ],
           ["mino", "stack", "ghost"],
-          "retro-special-nesmodern"
+          "retro-special-ghost"
         )
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
       }
-	  if (settings.game.nesmodern.mechanics === "retro") {
+	  if (settings.game.stereo.mechanics === "retro") {
 		  game.hold.isDisabled = true
 		  game.next.nextLimit = 1
 		  game.piece.ghostIsVisible = false
@@ -3409,8 +3409,8 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
 	  game.colors = PIECE_COLORS.retroSpecial
-      game.stat.level = settings.game.nesmodern.startingLevel
-      lastLevel = parseInt(settings.game.nesmodern.startingLevel)
+      game.stat.level = settings.game.stereo.startingLevel
+      lastLevel = parseInt(settings.game.stereo.startingLevel)
       game.piece.gravity = 1000
 	  game.musicProgression = 0
       updateFallSpeed(game)
@@ -6372,16 +6372,8 @@ export const loops = {
         rotate180(arg)
         shifting(arg)
       }
-	  if (gameHandler.game.type === "zentgm") {
-		  tgmFirmDrop(arg)
-		  sonicDrop(arg, true)
-	  } else if (gameHandler.game.type === "zenx") {
-		  hyperSoftDrop(arg)
-		  hardDrop(arg)
-	  } else {
-		  softDrop(arg, 20, true)
-		  hardDrop(arg)
-	  }
+	  softDrop(arg, 20, true)
+	  hardDrop(arg)
       switch (settings.game.zen.lockdownMode) {
         case "zen":
           zenLockdown(arg)
@@ -9731,8 +9723,13 @@ export const loops = {
         hold(arg)
       }
       gravity(arg)
-	  hardDrop(arg)
-      tgmSoftDrop(arg)
+	  if (settings.game.type === "newcentury2") {
+		  sonicDrop(arg, true)
+		  tgmFirmDrop(arg)
+	  } else {
+		  hardDrop(arg)
+		  tgmSoftDrop(arg)
+	  }
       extendedLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
@@ -11049,8 +11046,6 @@ export const loops = {
     },
    },
 }
-loops.zenx = loops.zen
-loops.zentgm = loops.zen
 loops.aceclassic = loops.ace
 loops.beatx = loops.beat
 loops.beattgm = loops.beat

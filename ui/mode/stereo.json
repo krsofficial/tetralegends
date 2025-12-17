@@ -3,7 +3,7 @@
     "parent": "extra",
     "langOverride": "mode-options",
     "game": "nesmodern",
-    "pgmusic": "pg-nesmodern"
+    "pgmusic": "pg-retro-typext"
   },
   "data": [
     {

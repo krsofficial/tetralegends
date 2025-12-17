@@ -7,9 +7,9 @@
     "unfavored": "standardUnfavored",
     "randomizer": "bag",
     "rotationSystem": "rosyretrospective",
-    "skin": "retro-special-nesmodern",
-    "soundbank": "nesmodern",
-    "music": "nesmodern",
+    "skin": "retro-special-ghost",
+    "soundbank": "stereo",
+    "music": "../retro/typext",
     "scoreTable": "newcentury",
 	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"

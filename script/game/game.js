@@ -226,7 +226,7 @@ export default class Game {
 				gametype === "deluxe" ||
 				gametype === "mono" ||
 				gametype === "monodx" ||
-				gametype === "nesmodern" ||
+				gametype === "stereo" ||
 				gametype.includes("newcentury")
 				) {
 				sound.load("heborisoldstyle")

@@ -3,7 +3,7 @@
     "parent": "extra",
     "langOverride": "mode-options",
     "game": "mono",
-    "pgmusic": "pg-mono"
+    "pgmusic": "pg-handeld-typext"
   },
   "data": [
     {

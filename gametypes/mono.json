@@ -9,7 +9,7 @@
     "rotationSystem": "rosyretrospective",
     "skin": "handheld",
     "soundbank": "mono",
-    "music": ["mono", "mono-last"],
+    "music": ["../handheld/typext", "../handheld/typext-last"],
     "scoreTable": "newcentury",
 	"disableDefaultSkinLoad": true,
     "background": "marathon.jpg"

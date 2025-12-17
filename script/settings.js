@@ -179,7 +179,7 @@ class Settings {
         startingLevel: 0,
 		mechanics: "guideline",
       },
-	  nesmodern: {
+	  stereo: {
         startingLevel: 0,
 		mechanics: "guideline",
       },
