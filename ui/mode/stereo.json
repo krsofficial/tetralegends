@@ -20,7 +20,7 @@
       "min": 0,
       "discrete": 1,
       "setting": "startingLevel",
-      "gameName": "nesmodern",
+      "gameName": "stereo",
       "settingType": "game"
     },
 	{
@@ -43,7 +43,7 @@
         }
       ],
       "setting": "mechanics",
-      "gameName": "nesmodern",
+      "gameName": "stereo",
       "settingType": "game"
     }
   ]
