@@ -11,8 +11,8 @@
     },
 	{
 	  "default": true,
-      "string": "modernNesLabel",
-      "stringDesc": "modernNesDescription",
+      "string": "stereoLabel",
+      "stringDesc": "stereoDescription",
 	  "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/stereo"

@@ -188,10 +188,10 @@
   "monoDeluxeDescription": {
     "message": "手持式DX，但带有指导性控制"
   },
-  "modernNesLabel": {
-    "message": "新复原"
+  "stereoLabel": {
+    "message": "复古增强版"
   },
-  "modernNesDescription": {
+  "stereoDescription": {
     "message": "复古风格，但带有指引控制"
   },
   "enhancedRetroLabel": {

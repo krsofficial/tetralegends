@@ -2,12 +2,12 @@
   "properties": {
     "parent": "extra",
     "langOverride": "mode-options",
-    "game": "nesmodern",
+    "game": "stereo",
     "pgmusic": "pg-retro-typext"
   },
   "data": [
     {
-      "string": "modernNesLabel",
+      "string": "stereoLabel",
       "langOverride": "ue_additions",
       "type": "header"
     },

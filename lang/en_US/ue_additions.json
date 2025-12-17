@@ -194,10 +194,10 @@
   "monoDeluxeDescription": {
     "message": "Handheld DX, but with guideline controls"
   },
-  "modernNesLabel": {
-    "message": "New Reversion"
+  "stereoLabel": {
+    "message": "Retro Enhanced"
   },
-  "modernNesDescription": {
+  "stereoDescription": {
     "message": "Retro, but with guideline controls"
   },
   "enhancedRetroLabel": {
