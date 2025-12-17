@@ -30,13 +30,13 @@
       "action": "select",
       "selectOptions": [
         {
-          "string": "guidelineLabel",
-		  "langOverride": "menu_root",
+          "string": "monoLabel",
+		  "langOverride": "ue_additions",
 		  "omitDescription": true,
           "value": "guideline"
         },
         {
-          "string": "enhancedRetroLabel",
+          "string": "stereoLabel",
 		  "langOverride": "ue_additions",
 		  "omitDescription": true,
           "value": "retro"
