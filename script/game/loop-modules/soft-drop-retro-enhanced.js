@@ -29,10 +29,10 @@ export default function softDropRetro(arg, override) {
   } else {
     arg.piece.gravityOverride = 0
     arg.piece.mustLockRetro = false
-	arg.piece.playLandSound = true
+	arg.piece.playLandSound = playLandSound()
   }
   if (!input.getGameDown("softDrop")) {
     arg.piece.softDropIsLocked = false
-	arg.piece.playLandSound = true
+	arg.piece.playLandSound = playLandSound()
   }
 }
