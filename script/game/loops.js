@@ -2982,18 +2982,19 @@ export const loops = {
       }
 	  */
 	  const gravityTable = [
-        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 10, 9, 8, 7, 6.50, 6, 5, 4, 3, 4,
-        1, 1/2, 1/4, 1/8, 1/16, 1/20
+        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 10, 9, 8, 7, 6, 6, 5, 5, 4, 4,
+        3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1/2, 1/4, 1/8, 1/16, 1/20
       ]
-	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 25)])
-	  if (game.stat.level >= 25) {
+	  const gravityLimit = gravityTable.length
+	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, gravityLimit)])
+	  if (game.stat.level >= gravityLimit) {
         game.piece.lockDelayLimit = ~~framesToMs(
-          30 * Math.pow(0.93, Math.pow(game.stat.level - 25, 0.8))
+          30 * Math.pow(0.93, Math.pow(game.stat.level - gravityLimit, 0.8))
         )
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  if (game.stat.level >= 20 && game.musicProgression < 1 && 
+	  if (game.stat.level >= 10 && game.musicProgression < 1 && 
 	  game.settings.rotationSystem !== "heboris"
 	  ) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
@@ -3122,18 +3123,19 @@ export const loops = {
       }
 	  */
 	  const gravityTable = [
-        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 10, 9, 8, 7, 6.50, 6, 5, 4, 3, 4,
-        1, 1/2, 1/4, 1/8, 1/16, 1/20
+        53, 49, 45, 41, 37, 33, 28, 22, 17, 11, 10, 9, 8, 7, 6, 6, 5, 5, 4, 4,
+        3, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1/2, 1/4, 1/8, 1/16, 1/20
       ]
-	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 25)])
-	  if (game.stat.level >= 25) {
+	  const gravityLimit = gravityTable.length
+	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, gravityLimit)])
+	  if (game.stat.level >= gravityLimit) {
         game.piece.lockDelayLimit = ~~framesToMs(
-          30 * Math.pow(0.93, Math.pow(game.stat.level - 25, 0.8))
+          30 * Math.pow(0.93, Math.pow(game.stat.level - gravityLimit, 0.8))
         )
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  if (game.stat.level >= 20 && game.musicProgression < 1 && 
+	  if (game.stat.level >= 10 && game.musicProgression < 1 && 
 	  game.settings.rotationSystem !== "heboris"
 	  ) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
@@ -3266,13 +3268,14 @@ export const loops = {
       }
 	  */
 	  const gravityTable = [
-        48, 43, 38, 33, 28, 23, 18, 13, 8, 5.75, 5.50, 5.25, 5, 4.75, 4.50, 4.25, 3.66, 3.33, 3, 2,
-		1, 1/2, 1/4, 1/8, 1/16, 1/20
+        48, 43, 38, 33, 28, 23, 18, 13, 8, 5, 5, 5, 5, 4, 4, 4, 3, 3, 3, 2, 2,
+        2, 2, 2, 2, 2, 2, 2, 2, 1, 1/2, 1/4, 1/8, 1/16, 1/20
       ]
-	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, 19)])
-	  if (game.stat.level >= 19) {
+	  const gravityLimit = gravityTable.length
+	  game.piece.gravity = framesToMs(gravityTable[Math.min(game.stat.level, gravityLimit)])
+	  if (game.stat.level >= gravityLimit) {
         game.piece.lockDelayLimit = ~~framesToMs(
-          30 * Math.pow(0.93, Math.pow(game.stat.level - 19, 0.8))
+          30 * Math.pow(0.93, Math.pow(game.stat.level - gravityLimit, 0.8))
         )
       } else {
         game.piece.lockDelayLimit = 500
