@@ -1527,6 +1527,13 @@ body[theme="tetrjs"] .game-center {
   ;
 }
 
+.stack-canvas.sil {
+  filter: 
+  brightness(0)
+  drop-shadow(0em 0em 0em rgba(255,255,255,0))
+  ;
+}
+
 .hold-container {
   text-align: right;
 }
