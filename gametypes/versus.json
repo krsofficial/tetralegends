@@ -10,7 +10,6 @@
     "skin": "standard",
     "soundbank": "standard",
     "music": "../versus/versus",
-    "hasDangerBgm": true,
     "scoreTable": "guideline",
     "background": "marathon.jpg"
   },
