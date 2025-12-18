@@ -125,6 +125,12 @@
   "extraDescription": {
     "message": "試せる追加モード"
   },
+  "krsLabel": {
+    "message": "KRSTACKER"
+  },
+  "krsDescription": {
+    "message": "試せるパズルの別バージョン"
+  },
   "footerLabel": {
     "message": ""
   }

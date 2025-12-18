@@ -125,6 +125,12 @@
   "extraDescription": {
     "message": "Extra modes that you can try"
   },
+  "krsLabel": {
+    "message": "KRStacker"
+  },
+  "krsDescription": {
+    "message": "Alternate version of the puzzle you can try"
+  },
   "footerLabel": {
     "message": ""
   }

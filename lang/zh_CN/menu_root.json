@@ -125,6 +125,12 @@
   "extraDescription": {
     "message": "可供尝试的额外模式"
   },
+  "krsLabel": {
+    "message": "KRStacker"
+  },
+  "krsDescription": {
+    "message": "你可以尝试的谜题另一版本"
+  },
   "footerLabel": {
     "message": ""
   }

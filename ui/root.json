@@ -129,6 +129,12 @@
       "stringDesc": "repoDescription",
       "action": "link",
       "url": "https://github.com/tetralegendsue/tetralegendsue.github.io/"
+    },
+	{
+      "string": "krsLabel",
+      "stringDesc": "krsDescription",
+      "action": "link",
+      "url": "https://krstacker.github.io/"
     }
   ]
 }

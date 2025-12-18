@@ -21,68 +21,76 @@
       "lang": "en_GB"
     },
     {
+	  "disabled": true,
       "label": "Español",
       "fixedText": true,
       "description": "Mine, YuNoGuy123, MrFaq2017",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "es_ES"
     },
     {
+	  "disabled": true,
       "label": "Français",
       "fixedText": true,
       "description": "Light, Mizu Official, xeenwolf",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "fr_FR"
     },
     {
+	  "disabled": true,
       "label": "Italiano",
       "fixedText": true,
       "description": "Esingar",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "it_IT"
     },
     {
+	  "disabled": true,
       "label": "Deutsch",
       "fixedText": true,
       "description": "kivi, tzFiye, nastyFEETs",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "de_DE"
     },
     {
+	  "disabled": true,
       "label": "Nederlands",
       "fixedText": true,
       "description": "osk, Gemtendo, micwoj92",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "nl_NL"
     },
     {
+	  "disabled": true,
       "label": "Русский язык",
       "fixedText": true,
       "description": "JustVldKsh, sjbdkkan, Arachnobyte",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "ru_RU"
     },
     {
+	  "disabled": true,
       "label": "Polski",
       "fixedText": true,
       "description": "micwoj92, Jacek Bogdun",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "pl_PL"
     },
     {
+	  "disabled": true,
       "label": "Tiếng Việt",
       "fixedText": true,
       "description": "Shard Nguyễn, Minh Bui Duc, Đinh Đức Nhân",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "vi_VN"
     },
     {
       "label": "日本語",
@@ -93,12 +101,13 @@
       "lang": "ja_JP"
     },
     {
+	  "disabled": true,
       "label": "한국어",
       "fixedText": true,
       "description": "Casquade",
+      "action": "lang",
       "isShort": true,
-	  "action": "submenu",
-      "submenu": "root"
+      "lang": "ko_KR"
     },
     {
       "label": "中文（简体）",
