@@ -198,9 +198,9 @@ export default class Game {
           this.spinDetectionType = this.userSettings.spinDetectionType
         }
 		
-		for (const gametypeName of BORDER_COLORS) {
+		let borderColors = JSON.parse(BORDER_COLORS)
+		for (const gametypeName of borderColors) {
 			let useDefaultColor = true
-			let borderColors = JSON.parse(BORDER_COLORS)
 			if (gametypeName === gametype) {
 				useDefaultColor = false
 				this.updateBorderColor(borderColors[gametype])
