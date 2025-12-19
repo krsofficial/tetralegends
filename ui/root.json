@@ -16,7 +16,7 @@
       "string": "quickLabel",
       "stringDesc": "quickDescription",
       "default": true,
-      "action": "quick",
+      "action": "quick"
     },
 	{
 	  "useBtnColor": true,
