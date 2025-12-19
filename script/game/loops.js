@@ -9754,7 +9754,10 @@ export const loops = {
 	  }
 	  game.stat.level = Math.max(
 		settings.game.newcentury.startingLevel,
-		Math.floor(game.stat.line / 4)
+		Math.min(
+			Math.floor(game.stat.line / 4),
+			99
+		)
 	  )
 	  lastPieces = game.stat.piece
 	  let gravityTable = [
