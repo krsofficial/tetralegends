@@ -697,7 +697,10 @@ export default class Stack extends GameModule {
     }
   }
   updateGrid() {
-    if (this.parent.hideGrid || settings.settings.gridStyle === "off") {
+    if (
+	(this.parent.hideGrid || settings.settings.gridStyle === "off") &&
+	this.parent.type !== "terminal"
+	) {
       document.documentElement.style.setProperty("--grid-image", "url()")
       return
     }
