@@ -60,19 +60,9 @@
           "value": "standard"
         },
 		{
-          "label": "Tetra Online",
-          "fixedText": true,
-          "value": "tonline"
-        },
-		{
           "label": "Tetra-X",
           "fixedText": true,
           "value": "tetrax"
-        },
-		{
-          "label": "Legacy",
-          "fixedText": true,
-          "value": "legacy"
         },
 		{
           "label": "TGM 2",
@@ -168,6 +158,11 @@
           "label": "Heboris",
           "fixedText": true,
           "value": "heboris"
+        },
+		{
+          "label": "Legacy",
+          "fixedText": true,
+          "value": "legacy"
         }
       ],
       "setting": "soundbank",

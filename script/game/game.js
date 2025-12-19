@@ -6,6 +6,7 @@ import {
   SKIN_SETS,
   SOUND_SETS,
   PIECE_SETS,
+  BORDER_COLORS,
 } from "../consts.js"
 import menu from "../menu/menu.js"
 import Stack from "./stack.js"
@@ -196,6 +197,17 @@ export default class Game {
           this.settings.spinDetectionType = this.userSettings.spinDetectionType
           this.spinDetectionType = this.userSettings.spinDetectionType
         }
+		
+		for (const gametypeName of BORDER_COLORS) {
+			let useDefaultColor = true
+			if (gametypeName === gametype) {
+				useDefaultColor = false
+				this.updateBorderColor(BORDER_COLORS[gametype])
+			}
+			if (useDefaultColor) {
+				this.updateBorderColor(BORDER_COLORS["fallback"])
+			}
+		}
 
         if (!this.settings.disableDefaultSkinLoad) {
           this.makeSprite()
@@ -408,6 +420,29 @@ export default class Game {
           throw err
         })
       })
+  }
+  updateBorderColor(color) {
+	  let colorRoster = [
+		"red",
+		"orange"
+		"yellow",
+		"green",
+		"blue",
+		"lightBlue",
+		"purple",
+		"pink",
+		"grey",
+		"handheld",
+		"retro",
+		"deluxe",
+		"arcade",
+		"terminal",
+	  ]
+	  let gameBorder = document.getElementById(`game-border`)
+	  for (const colorName of colorRoster) {
+		  gameBorder.classList.remove(colorName)
+	  }
+	  gameBorder.classList.add(color)
   }
   unpause() {
     if (!this.isPaused) {

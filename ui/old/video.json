@@ -22,6 +22,27 @@
       "submenu": "video/coloroverride"
     },
     {
+      "string": "themeLabel",
+      "default": true,
+      "stringDesc": "themeDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "Tetra Legends",
+          "fixedText": true,
+          "value": "default"
+        },
+        {
+          "label": "Tetr.js Enhanced",
+          "fixedText": true,
+          "value": "tetrjs"
+        }
+      ],
+      "setting": "theme",
+      "settingType": "setting"
+    },
+    {
       "string": "skinLabel",
       "stringDesc": "skinDescription",
       "type": "select",
@@ -41,6 +62,11 @@
           "label": "Tetra-X",
           "fixedText": true,
           "value": "tetrax"
+        },
+		{
+          "label": "Legacy",
+          "fixedText": true,
+          "value": "legacy"
         },
 		{
           "label": "TOJ",
@@ -157,11 +183,6 @@
         {
           "string": "boneOption",
           "value": "bone"
-        },
-		{
-          "label": "Legacy",
-          "fixedText": true,
-          "value": "legacy"
         }
       ],
       "setting": "skin",

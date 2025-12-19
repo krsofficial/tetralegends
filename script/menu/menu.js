@@ -317,6 +317,10 @@ class Menu {
           if (currentData.isShort) {
             element.classList.add("short")
           }
+		  if (currentData.useBtnColor) {
+			element.classList.remove("short")
+            element.classList.add(currentData.btnColor)
+          }
           switch (currentData.width) {
             case "half":
               element.classList.add("half-width")

@@ -11,13 +11,16 @@
       "submenu": "languages"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "orange",
       "string": "quickLabel",
       "stringDesc": "quickDescription",
       "default": true,
-      "action": "submenu",
-      "submenu": "mode/quick"
+      "action": "quick",
     },
 	{
+	  "useBtnColor": true,
+	  "btnColor": "orange",
       "string": "versusLabel",
       "stringDesc": "versusDescription",
       "action": "submenu",
@@ -28,25 +31,33 @@
       "type": "overline"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "guidelineLabel",
       "stringDesc": "guidelineDescription",
       "action": "submenu",
       "submenu": "guideline"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "tetraxLabel",
       "stringDesc": "tetraxDescription",
       "action": "submenu",
       "submenu": "tetrax"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "retroLabel",
       "stringDesc": "retroDescription",
-      "width": "half",
+	  "width": "half",
       "action": "submenu",
       "submenu": "retro"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "arcadeLabel",
       "stringDesc": "arcadeDescription",
 	  "width": "half",
@@ -54,20 +65,38 @@
       "submenu": "arcade"
     },
 	{
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "aceLabel",
       "stringDesc": "aceDescription",
+	  "width": "half",
       "action": "submenu",
       "submenu": "ace"
     },
 	{
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "beatLabel",
       "stringDesc": "beatDescription",
+	  "width": "half",
       "action": "submenu",
       "submenu": "beat"
     },
 	{
+      "useBtnColor": true,
+	  "btnColor": "blue",
+	  "string": "zenLabel",
+      "stringDesc": "zenDescription",
+	  "width": "half",
+      "action": "submenu",
+      "submenu": "mode/zen"
+    },
+	{
+	  "useBtnColor": true,
+	  "btnColor": "blue",
       "string": "extraLabel",
       "stringDesc": "extraDescription",
+	  "width": "half",
       "action": "submenu",
       "submenu": "extra"
     },
@@ -76,32 +105,42 @@
       "type": "overline"
     },
     {
+	  "useBtnColor": true,
+	  "btnColor": "purple",
       "string": "controlsLabel",
       "stringDesc": "controlsDescription",
       "action": "submenu",
       "submenu": "controls"
     },
     {
-      "string": "tuningLabel",
+      "useBtnColor": true,
+	  "btnColor": "purple",
+	  "string": "tuningLabel",
       "stringDesc": "tuningDescription",
       "action": "submenu",
       "submenu": "tuning"
     },
     {
-      "string": "audioLabel",
+      "useBtnColor": true,
+	  "btnColor": "purple",
+	  "string": "audioLabel",
       "stringDesc": "audioDescription",
       "width": "half",
       "action": "submenu",
       "submenu": "audio"
     },
     {
-      "string": "videoLabel",
+      "useBtnColor": true,
+	  "btnColor": "purple",
+	  "string": "videoLabel",
       "stringDesc": "videoDescription",
       "width": "half",
       "action": "submenu",
       "submenu": "video"
     },
 	{
+	  "useBtnColor": true,
+	  "btnColor": "purple",
 	  "string": "settingsLabel",
       "stringDesc": "settingsDescription",
       "action": "submenu",
@@ -112,25 +151,25 @@
       "type": "overline"
     },
 	{
-      "string": "zenLabel",
-      "stringDesc": "zenDescription",
-      "action": "submenu",
-      "submenu": "mode/zen"
-    },
-	{
-      "string": "soundtrackLabel",
+      "useBtnColor": true,
+	  "btnColor": "green",
+	  "string": "soundtrackLabel",
       "stringDesc": "soundtrackDescription",
       "action": "link",
       "url": "https://www.youtube.com/playlist?list=PLjv8cNK-pmqwSYvW_oqZ4Y8IF7enksfUn/"
     },
 	{
-      "string": "repoLabel",
+      "useBtnColor": true,
+	  "btnColor": "green",
+	  "string": "repoLabel",
       "stringDesc": "repoDescription",
       "action": "link",
       "url": "https://github.com/tetralegendsue/tetralegendsue.github.io/"
     },
 	{
-      "string": "krsLabel",
+      "useBtnColor": true,
+	  "btnColor": "green",
+	  "string": "krsLabel",
       "stringDesc": "krsDescription",
       "action": "link",
       "url": "https://krstacker.github.io/"

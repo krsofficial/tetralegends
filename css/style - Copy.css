@@ -873,92 +873,17 @@ body {
   margin-right: .15em;
 }
 
-/*
 #menu>.btn {
   border-color: #fff;
   border-width: 1px;
   border-style: solid;
   border-radius: 5px;
 }
-*/
-
-#menu>.btn {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffff;
-  background: linear-gradient(135deg,rgba(175, 175, 175, 0.25) 0%, rgba(112, 112, 112, 0.25) 100%);
-}
-
-#menu>.btn.grey {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(175, 175, 175, 1) 0%, rgba(112, 112, 112, 1) 100%);
-}
-#menu>.btn.red {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(255, 62, 0, 1) 0%, rgba(255, 0, 45, 1) 100%);
-}
-#menu>.btn.orange {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(255, 168, 0, 1) 0%, rgba(255, 61, 0, 1) 100%);
-}
-#menu>.btn.yellow {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(236, 255, 0, 1) 0%, rgba(255, 167, 0, 1) 100%);
-}
-
-#menu>.btn.green {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(23, 255, 0, 1) 0%, rgba(130, 255, 0, 1) 100%);
-}
-#menu>.btn.blue {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%);
-}
-#menu>.btn.lightBlue {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(0, 255, 188, 1) 0%, rgba(0, 214, 255, 1) 100%);
-}
-#menu>.btn.purple {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(255, 0, 214, 1) 0%, rgba(188, 0, 255, 1) 100%);
-}
-#menu>.btn.pink {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffffbf;
-  background: linear-gradient(135deg,rgba(255, 25, 255, 1) 0%, rgba(255, 25, 176, 1) 100%);
-}
 
 #menu>.btn.short {
   padding: 0;
+  border-color: transparent;
   margin: 0;
-  border-radius: 5px;
-  border-color: transparent;
-  color: #ffffff;
-  background: transparent;
-}
-
-#menu>.btn.selected {
-  border-radius: 5px;
-  border-color: transparent;
-  color: #000;
-  background: #fff;
 }
 
 #menu>.disabled {
@@ -1446,12 +1371,10 @@ body {
   margin-right: -.4em;
 }
 
-/*
 body[theme="tetrjs"] .stats {
   transform: none !important;
   margin-right: 0em
 }
-*/
 
 .stats div.stat-group {
   text-align: right;
@@ -1473,7 +1396,6 @@ body[theme="tetrjs"] .stats {
   padding-right: .2em;
 }
 
-/*
 .stats label {
   display: inline-block;
   background-color: var(--tetrion-color);
@@ -1488,22 +1410,7 @@ body[theme="tetrjs"] .stats {
   color: #111;
   text-transform: uppercase;
 }
-*/
 
-.stats label {
-  display: block;
-  background-color: transparent;
-  font-weight: bold;
-  font-size: 1.2em;
-  margin-bottom: .4em;
-  margin-right: .3em;
-  padding: .05em;
-  padding-left: 1em;
-  color: #fff;
-  text-transform: uppercase;
-}
-
-/*
 body[theme="tetrjs"] .stats label {
   color: #fff;
   background-color: transparent;
@@ -1518,7 +1425,6 @@ body[theme="tetrjs"] .stats label {
   border-left-color: white;
   border-left-style: solid;
 }
-*/
 
 .game-left,
 .game-right {
@@ -1544,67 +1450,6 @@ body[theme="tetrjs"] .stats label {
   margin-top: -.5em;
   border-style: solid;
   border-width: .5em;
-}
-
-.game-border {
-  width: 105%;
-  height: 102.5%;
-  position: relative;
-  background: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%);
-  background-clip: border-box;
-  background-origin: border-box;
-  border-color: transparent;
-  /*
-  transition-property: background;
-  transition-duration: 0.5s;
-  transition-timing-function: ease-in-out;
-  */
-  margin-top: -0.5em;
-  margin-left: -0.5em;
-  border-width: .5em;
-}
-
-.game-border.grey {
-  background: linear-gradient(135deg,rgba(175, 175, 175, 1) 0%, rgba(112, 112, 112, 1) 100%);
-}
-.game-border.red {
-  background: linear-gradient(135deg,rgba(255, 62, 0, 1) 0%, rgba(255, 0, 45, 1) 100%);
-}
-.game-border.orange {
-  background: linear-gradient(135deg,rgba(255, 168, 0, 1) 0%, rgba(255, 61, 0, 1) 100%);
-}
-.game-border.yellow {
-  background: linear-gradient(135deg,rgba(236, 255, 0, 1) 0%, rgba(255, 167, 0, 1) 100%);
-}
-.game-border.green {
-  background: linear-gradient(135deg,rgba(23, 255, 0, 1) 0%, rgba(130, 255, 0, 1) 100%);
-}
-.game-border.blue {
-  background: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%);
-}
-.game-border.lightBlue {
-  background: linear-gradient(135deg,rgba(0, 255, 188, 1) 0%, rgba(0, 214, 255, 1) 100%);
-}
-.game-border.purple {
-  background: linear-gradient(135deg,rgba(255, 0, 214, 1) 0%, rgba(188, 0, 255, 1) 100%);
-}
-.game-border.pink {
-  background: linear-gradient(135deg,rgba(255, 25, 255, 1) 0%, rgba(255, 25, 176, 1) 100%);
-}
-.game-border.handheld {
-  background: linear-gradient(135deg,rgba(111, 138, 12, 1) 0%, rgba(38, 78, 38, 1) 100%);
-}
-.game-border.retro {
-  background: linear-gradient(135deg,rgba(156, 252, 240, 1) 0%, rgba(116, 116, 116, 1) 100%);
-}
-.game-border.deluxe {
-  background: linear-gradient(135deg,rgba(67, 150, 218, 1) 0%, rgba(27, 78, 141, 1) 100%);
-}
-.game-border.arcade {
-  background: linear-gradient(135deg,rgba(168, 168, 158, 1) 0%, rgba(121, 121, 131, 1) 100%);
-}
-.game-border.terminal {
-  background: linear-gradient(135deg,rgba(0, 255, 0, 1) 0%, rgba(0, 128, 0, 1) 100%);
 }
 
 .gameover-early-warning-bgflash {
@@ -1738,7 +1583,6 @@ body[theme="tetrjs"] .game-center {
   margin-right: -.3em;
 }
 
-/*
 body[theme="tetrjs"] .next-label,
 body[theme="tetrjs"] .hold-label {
   font-weight: 300;
@@ -1748,7 +1592,6 @@ body[theme="tetrjs"] .hold-label {
   border-left-color: white;
   border-left-style: solid;
 }
-*/
 
 @keyframes float {
   from {
@@ -2072,21 +1915,11 @@ progress[value]::-moz-progress-bar {
   display: none;
 }
 
-/*
 .kill-message-container .kill-message {
   border-color: #fff;
   border-radius: 0.2em;
   border-style: solid;
   border-width: 0.04em;
-  padding: .2em .8em;
-  font-size: 1.8em;
-  font-weight: 100;
-  text-transform: uppercase;
-  display: inline-block;
-}*/
-
-.kill-message-container .kill-message {
-  border-color: transparent;
   padding: .2em .8em;
   font-size: 1.8em;
   font-weight: 100;
