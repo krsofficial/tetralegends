@@ -23,12 +23,6 @@
       "action": "submenu",
       "submenu": "mode/versus"
     },
-	{
-      "string": "zenLabel",
-      "stringDesc": "zenDescription",
-      "action": "submenu",
-      "submenu": "mode/zen"
-    },
     {
       "string": "gameStylesOverline",
       "type": "overline"
@@ -115,8 +109,13 @@
     },
 	{
       "string": "miscOverline",
-      "label": "Misc",
       "type": "overline"
+    },
+	{
+      "string": "zenLabel",
+      "stringDesc": "zenDescription",
+      "action": "submenu",
+      "submenu": "mode/zen"
     },
 	{
       "string": "soundtrackLabel",
