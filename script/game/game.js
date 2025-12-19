@@ -1059,15 +1059,23 @@ export default class Game {
           }
           if (!game.noUpdate) {
             if (!game.piece.inAre) {
-              if (!game.isEndRoll) {
+              if (game.isEndRoll) {
+				  game.timePassedOffset += msPassed
+			  } else {
 				  game.timePassed += msPassed
 			  }
             } else if (game.piece.startingAre >= game.piece.startingAreLimit) {
-			  if (!game.isEndRoll) {
+			  if (game.isEndRoll) {
+				  game.timePassedOffset += msPassed
+			  } else {
 				  game.timePassedAre += msPassed
 			  }
-              if (game.ace && !game.isEndRoll) {
-				  game.timePassed += msPassed
+              if (game.ace) {
+				  if (game.isEndRoll) {
+					  game.timePassedOffset += msPassed
+				  } else {
+					  game.timePassed += msPassed
+				  }
 			  }
             }
 
