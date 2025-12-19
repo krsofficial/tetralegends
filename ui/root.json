@@ -4,6 +4,8 @@
   },
   "data": [
     {
+	  "useBtnColor": true,
+	  "btnColor": "orange",
       "label": "文/A",
       "fixedText": true,
       "description": "",

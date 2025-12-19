@@ -200,12 +200,13 @@ export default class Game {
 		
 		for (const gametypeName of BORDER_COLORS) {
 			let useDefaultColor = true
+			let borderColors = JSON.parse(BORDER_COLORS)
 			if (gametypeName === gametype) {
 				useDefaultColor = false
-				this.updateBorderColor(BORDER_COLORS[gametype])
+				this.updateBorderColor(borderColors[gametype])
 			}
 			if (useDefaultColor) {
-				this.updateBorderColor(BORDER_COLORS["fallback"])
+				this.updateBorderColor(borderColors["fallback"])
 			}
 		}
 
