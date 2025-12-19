@@ -198,16 +198,14 @@ export default class Game {
           this.spinDetectionType = this.userSettings.spinDetectionType
         }
 		
-		let borderColors = JSON.parse(JSON.stringify(BORDER_COLORS))
-		for (const gametypeName of borderColors) {
-			let useDefaultColor = true
-			if (gametypeName === gametype) {
-				useDefaultColor = false
-				this.updateBorderColor(borderColors[gametype])
-			}
-			if (useDefaultColor) {
-				this.updateBorderColor(borderColors["fallback"])
-			}
+		let useDefaultColor = true
+		if (BORDER_COLORS[gametype] !== null) {
+			useDefaultColor = false 
+		}
+		if (useDefaultColor) {
+			this.updateBorderColor(BORDER_COLORS["fallback"])
+		} else {
+			this.updateBorderColor(BORDER_COLORS[gametype])
 		}
 
         if (!this.settings.disableDefaultSkinLoad) {
