@@ -424,7 +424,7 @@ export default class Game {
   updateBorderColor(color) {
 	  let colorRoster = [
 		"red",
-		"orange"
+		"orange",
 		"yellow",
 		"green",
 		"blue",
