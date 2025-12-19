@@ -890,40 +890,40 @@ body {
 }
 
 #menu>.btn.grey {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(175, 175, 175, 1) 0%, rgba(112, 112, 112, 1) 100%);
 }
 #menu>.btn.red {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(255, 62, 0, 1) 0%, rgba(255, 0, 45, 1) 100%);
 }
 #menu>.btn.orange {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(255, 168, 0, 1) 0%, rgba(255, 61, 0, 1) 100%);
 }
 #menu>.btn.yellow {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(236, 255, 0, 1) 0%, rgba(255, 167, 0, 1) 100%);
 }
 
 #menu>.btn.green {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(23, 255, 0, 1) 0%, rgba(130, 255, 0, 1) 100%);
 }
 #menu>.btn.blue {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%);
 }
 #menu>.btn.lightBlue {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(0, 255, 188, 1) 0%, rgba(0, 214, 255, 1) 100%);
 }
 #menu>.btn.purple {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(255, 0, 214, 1) 0%, rgba(188, 0, 255, 1) 100%);
 }
 #menu>.btn.pink {
-  color: #ffffff;
+  color: #00000080;
   background: linear-gradient(135deg,rgba(255, 25, 255, 1) 0%, rgba(255, 25, 176, 1) 100%);
 }
 
