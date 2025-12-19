@@ -126,6 +126,7 @@ export default class Game {
 	this.trackTAPGrade = false
 	this.internalTAPGrade = 0
 	this.gaugeTAPGrade = 0
+	this.isEndRoll = false
 	//this.useFullAreLine = true
     loadGameType(gametype)
       .then((gameData) => {
@@ -1058,10 +1059,14 @@ export default class Game {
           }
           if (!game.noUpdate) {
             if (!game.piece.inAre) {
-              game.timePassed += msPassed
+              if (!game.isEndRoll) {
+				  game.timePassed += msPassed
+			  }
             } else if (game.piece.startingAre >= game.piece.startingAreLimit) {
-			  game.timePassedAre += msPassed
-              if (game.ace) {
+			  if (!game.isEndRoll) {
+				  game.timePassedAre += msPassed
+			  }
+              if (game.ace && !game.isEndRoll) {
 				  game.timePassed += msPassed
 			  }
             }

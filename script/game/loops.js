@@ -67,7 +67,6 @@ let lastSeenI = 0
 let lastBravos = 0
 let lastGrade = ""
 let rtaGoal = 0
-let isEndRoll = false
 let endRollPassed = false
 let endRollLines = 0
 let preEndRollLines = 0
@@ -896,8 +895,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (isEndRoll === false) {
-			  isEndRoll = true
+		  if (gameHandler.game.isEndRoll === false) {
+			  gameHandler.game.isEndRoll = true
 			  game.stack.endRollStart()
 			  if (game.rta <= 600000 && game.stat.grade === "S9") {
 				game.stack.isHidden = true
@@ -912,7 +911,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending"], "tap")
 			  }
-		  } else if (isEndRoll === true) {
+		  } else if (gameHandler.game.isEndRoll === true) {
 			  if (game.rta >= rtaGoal) {
 			  endRollPassed = true
 			  }
@@ -956,7 +955,7 @@ export const loops = {
 	  game.trackTAPGrade = true
 	  game.internalTAPGrade = 0
 	  game.gaugeTAPGrade = 0
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
 	  lastGrade = ""
@@ -1119,7 +1118,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-		  if (isEndRoll) {
+		  if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
@@ -1592,8 +1591,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		if (isEndRoll === false) {
-			isEndRoll = true
+		if (gameHandler.game.isEndRoll === false) {
+			gameHandler.game.isEndRoll = true
 			game.stack.endRollStart()
 			if (regretsPenalty <= 0 && game.rta <= 600000 && internalTIGrade >= 24) {
 				game.stack.isHidden = true
@@ -1608,7 +1607,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending2"], "ti")
 			}
-		} else if (isEndRoll === true) {
+		} else if (gameHandler.game.isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -1634,7 +1633,7 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
 	  resetCoolsAndRegrets()
@@ -1841,7 +1840,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          if (isEndRoll) {
+          if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
@@ -1970,8 +1969,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 200) {
-		  if (isEndRoll === false) {
-			isEndRoll = true
+		  if (gameHandler.game.isEndRoll === false) {
+			gameHandler.game.isEndRoll = true
 			//game.stack.isFading = true
 			game.stack.endRollStart()
 			rtaGoal = game.rta + 55000
@@ -1980,7 +1979,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending1"], "ti")
 			}
-		  } else if (isEndRoll === true) {
+		  } else if (gameHandler.game.isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -2068,7 +2067,7 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
       game.rta = 0
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.isRaceMode = true
       game.arcadeCombo = 1
@@ -2364,8 +2363,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		if (isEndRoll === false) {
-			isEndRoll = true
+		if (gameHandler.game.isEndRoll === false) {
+			gameHandler.game.isEndRoll = true
 			game.stack.endRollStart()
 			if (regretsPenalty <= 0 && game.rta <= 600000 && internalTIGrade >= 24) {
 				game.stack.isHidden = true
@@ -2380,7 +2379,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending2"], "ti")
 			}
-		} else if (isEndRoll === true) {
+		} else if (gameHandler.game.isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -2406,7 +2405,7 @@ export const loops = {
 	  game.stack.updateGrid()
       game.stat.level = 0
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
 	  resetCoolsAndRegrets()
@@ -2613,7 +2612,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-          if (isEndRoll) {
+          if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
@@ -2742,8 +2741,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 200) {
-		  if (isEndRoll === false) {
-			isEndRoll = true
+		  if (gameHandler.game.isEndRoll === false) {
+			gameHandler.game.isEndRoll = true
 			//game.stack.isFading = true
 			game.stack.endRollStart()
 			rtaGoal = game.rta + 55000
@@ -2752,7 +2751,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending1"], "ti")
 			}
-		  } else if (isEndRoll === true) {
+		  } else if (gameHandler.game.isEndRoll === true) {
 			if (game.rta >= rtaGoal) {
 				endRollPassed = true
 			}
@@ -2841,7 +2840,7 @@ export const loops = {
       game.stat.level = 0
       game.rta = 0
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.arcadeCombo = 1
       game.drop = 0
@@ -10202,7 +10201,7 @@ export const loops = {
 	  game.stack.updateGrid()
       game.stat.level = 0
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       //game.stat.grade = "N/A"
 	  //lastGrade = ""
@@ -10366,7 +10365,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-		  if (isEndRoll) {
+		  if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
@@ -10476,8 +10475,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (isEndRoll === false) {
-			  isEndRoll = true
+		  if (gameHandler.game.isEndRoll === false) {
+			  gameHandler.game.isEndRoll = true
 			  game.stack.endRollStart()
 			  game.stack.isFading = true
 			  game.stack.isHidden = false
@@ -10487,7 +10486,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending"], "normalae")
 			  }
-		  } else if (isEndRoll === true) {
+		  } else if (gameHandler.game.isEndRoll === true) {
 			  if (game.rta >= rtaGoal) {
 			  endRollPassed = true
 			  }
@@ -10517,7 +10516,7 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
 	  lastGrade = ""
@@ -10687,7 +10686,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-		  if (isEndRoll) {
+		  if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
@@ -10788,8 +10787,8 @@ export const loops = {
       lockFlash(arg)
       updateLasts(arg)
 	  if (game.stat.level >= 999) {
-		  if (isEndRoll === false) {
-			  isEndRoll = true
+		  if (gameHandler.game.isEndRoll === false) {
+			  gameHandler.game.isEndRoll = true
 			  game.stack.endRollStart()
 			  game.stack.isFading = true
 			  game.stack.isHidden = false
@@ -10799,7 +10798,7 @@ export const loops = {
 				sound.killBgm()
 				sound.playBgm(["ending"], "normalae")
 			  }
-		  } else if (isEndRoll === true) {
+		  } else if (gameHandler.game.isEndRoll === true) {
 			  if (game.rta >= rtaGoal) {
 			  endRollPassed = true
 			  }
@@ -10824,7 +10823,7 @@ export const loops = {
 	  game.hideGrid = true
 	  game.stack.updateGrid()
       game.isRaceMode = true
-	  isEndRoll = false
+	  gameHandler.game.isEndRoll = false
 	  endRollPassed = false
       game.stat.grade = "N/A"
 	  lastGrade = ""
@@ -10985,7 +10984,7 @@ export const loops = {
         const level = pair[0]
         const entry = pair[1]
         if (game.stat.level < level) {
-		  if (isEndRoll) {
+		  if (gameHandler.game.isEndRoll) {
 			updateLockDelay(game, 30)
 		  } else {
 			updateLockDelay(game, entry)
