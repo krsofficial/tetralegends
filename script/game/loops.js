@@ -641,7 +641,7 @@ const initMusicProgression = (game) => {
 	  if (settings.settings.soundbank === "heboris") {
 		  game.settings.music = ["../heboris/hebo"]
 	  }
-	  if (game.type === "sega") {
+	  if (game.type === "sega" || game.type === "newcentury" || game.type === "newcenturykrs") {
 		  if (segaSkin !== "sega") {
 			  game.settings.music = ["../heboris/hebo"]
 		  }
@@ -9811,6 +9811,18 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  musicProgressionTable = []
 	  }
+	  if (game.settings.rotationSystem === "handheld") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "deluxe") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "retro") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "original") {
+		  musicProgressionTable = []
+	  }
 	  for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -9840,7 +9852,6 @@ export const loops = {
       game.lineGoal = null
 	  game.hideGrid = true
 	  game.stack.updateGrid()
-	  initMusicProgression(game)
 	  segaSkin = "sega"
 	  game.stack.flashLineClear = false
 	  if (game.settings.rotationSystem === "handheld") {
@@ -9880,6 +9891,7 @@ export const loops = {
 		["mino", "stack", "ghost"],
 		segaSkin
 	  )
+	  initMusicProgression(game)
       /*
 	  game.stat.level = 0
       lastLevel = 0
@@ -9993,6 +10005,18 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  musicProgressionTable = []
 	  }
+	  if (game.settings.rotationSystem === "handheld") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "deluxe") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "retro") {
+		  musicProgressionTable = []
+	  }
+	  if (game.settings.rotationSystem === "original") {
+		  musicProgressionTable = []
+	  }
 	  for (const pair of musicProgressionTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -10022,7 +10046,6 @@ export const loops = {
       game.lineGoal = null
 	  game.hideGrid = true
 	  game.stack.updateGrid()
-	  initMusicProgression(game)
 	  segaSkin = "sega"
 	  game.stack.flashLineClear = false
 	  if (settings.game.newcenturykrs.mechanics !== "krs2") {
@@ -10072,6 +10095,7 @@ export const loops = {
 		["mino", "stack", "ghost"],
 		segaSkin
 	  )
+	  initMusicProgression(game)
       /*
 	  game.stat.level = 0
       lastLevel = 0
