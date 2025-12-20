@@ -171,6 +171,10 @@ class Settings {
 	  newcentury: {
         startingLevel: 0,
       },
+	  newcenturykrs: {
+        startingLevel: 0,
+		mechanics: "krs2",
+      },
 	  mono: {
         startingLevel: 0,
 		mechanics: "guideline",

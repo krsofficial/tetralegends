@@ -176,6 +176,12 @@
   "newCenturyDescription": {
     "message": "内阁经典款的升级版"
   },
+  "newCenturyKrsLabel": {
+    "message": "新世纪 K"
+  },
+  "newCenturyKrsDescription": {
+    "message": "新世纪，但采用KRStacker规则集"
+  },
   "stereoLabel": {
     "message": "复古增强版"
   },

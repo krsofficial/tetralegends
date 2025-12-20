@@ -40,6 +40,8 @@ import softDropRetroEnhanced from "./loop-modules/soft-drop-retro-enhanced.js"
 import softDropNes from "./loop-modules/soft-drop-nes.js"
 import softDropWithGravityOverride from "./loop-modules/soft-drop-with-gravity-override.js"
 import sound from "../sound.js"
+import krsHardDrop from "./loop-modules/krs-hard-drop.js"
+import krsSoftDrop from "./loop-modules/krs-soft-drop.js"
 import updateLasts from "./loop-modules/update-lasts.js"
 import {
   extendedLockdown,
@@ -707,9 +709,11 @@ export const loops = {
 	  if (gameHandler.game.type === "normal21" ||
 		gameHandler.game.type === "normal21world") {
 		  game.hold.isDisabled = false
+		  game.hold.isDirty = true
 		  game.next.nextLimit = 6
 	  } else {
 		  game.hold.isDisabled = false
+		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
 	  }
       game.stat.level = 0
@@ -3058,6 +3062,7 @@ export const loops = {
       }
 	  if (settings.game.mono.mechanics === "retro") {
 		  game.hold.isDisabled = true
+		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
 		  game.piece.ghostIsVisible = false
 	  }
@@ -3197,6 +3202,7 @@ export const loops = {
       }
 	  if (settings.game.monodx.mechanics === "retro") {
 		  game.hold.isDisabled = true
+		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
 		  game.piece.ghostIsVisible = false
 	  }
@@ -3406,6 +3412,7 @@ export const loops = {
       }
 	  if (settings.game.stereo.mechanics === "retro") {
 		  game.hold.isDisabled = true
+		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
 		  game.piece.ghostIsVisible = false
 	  }
@@ -6621,15 +6628,15 @@ export const loops = {
             game.next.isDirty = true
             break
           case "startRetro":
-            game.hold.isDirty = true
             game.hold.isDisabled = true
+			game.hold.isDirty = true
             game.piece.ghostIsVisible = false
             game.next.nextLimit = 1
             game.next.isDirty = true
             break
           case "endRetro":
-            game.hold.isDirty = true
             game.hold.isDisabled = false
+			game.hold.isDirty = true
             game.piece.ghostIsVisible = true
             game.next.nextLimit = 6
             game.next.isDirty = true
@@ -9728,13 +9735,8 @@ export const loops = {
         hold(arg)
       }
       gravity(arg)
-	  if (settings.game.type === "newcentury2") {
-		  sonicDrop(arg, true)
-		  tgmFirmDrop(arg)
-	  } else {
-		  hardDrop(arg)
-		  tgmSoftDrop(arg)
-	  }
+	  hardDrop(arg)
+	  tgmSoftDrop(arg)
       extendedLockdown(arg)
       lockFlash(arg)
       updateLasts(arg)
@@ -9884,6 +9886,198 @@ export const loops = {
 	  */
 	  lastLevel = parseInt(settings.game.newcentury.startingLevel)
 	  game.stat.level =  parseInt(settings.game.newcentury.startingLevel)
+	  levelTimer = 0
+	  levelTimerLimit = 58000
+	  lastPieces = 0
+      game.piece.gravity = framesToMs(48)
+      updateFallSpeed(game)
+      game.updateStats()
+    },
+  },
+  newcenturykrs: {
+    update: (arg) => {
+	  const game = gameHandler.game
+	  updateSegaBg(game)
+	  levelTimer += arg.ms
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+	  if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      gravity(arg)
+	  if (settings.game.newcenturykrs.mechanics !== "classic") {
+		  krsHardDrop(arg)
+	  }
+	  krsSoftDrop(arg)
+      extendedLockdown(arg)
+      lockFlash(arg)
+      updateLasts(arg)
+    },
+    onPieceSpawn: (game) => {
+      //game.stat.level = Math.floor(game.stat.line / 8)
+	  if (game.stat.level < 1) {
+		  levelTimerLimit = 58000
+	  } else if (game.stat.level >= 1 && game.stat.level < 9) {
+		  levelTimerLimit = 38670
+	  } else if (game.stat.level >= 9 && game.stat.level < 11) {
+		  levelTimerLimit = 58000
+	  } else if (game.stat.level >= 11 && game.stat.level <15) {
+		  levelTimerLimit = 29000
+	  } else {
+		  levelTimerLimit = 58000
+	  }
+	  game.stat.level = Math.max(
+		settings.game.newcenturykrs.startingLevel,
+		Math.min(
+			Math.floor(game.stat.line / 4),
+			99
+		)
+	  )
+	  lastPieces = game.stat.piece
+	  let gravityTable = [
+		48,
+		24,
+		18,
+		15,
+		12,
+		10,
+		8,
+		6,
+		4,
+		2,
+		10,
+		8,
+		6,
+		4,
+		2,
+		1,
+		1/2,
+		1/4,
+		1/6,
+		1/8,
+		1/10,
+		1/12,
+		1/16,
+		1/18,
+		1/20,
+	  ]
+	  let gravityIndex = Math.max(0, Math.min(game.stat.level, gravityTable.length - 1))
+	  game.piece.gravity = framesToMs(gravityTable[gravityIndex])
+	  let lockDelayModifier = game.stat.level - gravityTable.length - 1
+	  if (game.stat.level <= gravityTable.length - 1) {
+		  game.piece.lockDelayLimit = 500
+	  } else {
+		  game.piece.lockDelayLimit = 500 - Math.max(0, Math.min(250, lockDelayModifier * 10))
+	  }
+      updateFallSpeed(game)
+	  game.piece.ghostIsVisible = true
+	  levelUpdateSega(game)
+	  let musicProgressionTable = [
+        [16, 1],
+        [32, 2],
+        [48, 3],
+      ]
+	  if (game.settings.rotationSystem === "heboris") {
+		  musicProgressionTable = []
+	  }
+	  if (settings.settings.soundbank === "heboris") {
+		  musicProgressionTable = []
+	  }
+	  for (const pair of musicProgressionTable) {
+        const level = pair[0]
+        const entry = pair[1]
+        if (game.stat.level >= level && game.musicProgression < entry) {
+          switch (entry) {
+            case 1:
+			  sound.loadBgm(["newcentury2"], "newcenturykrs")
+              sound.killBgm()
+              sound.playBgm(["newcentury2"], "newcenturykrs")
+              break
+            case 2:
+              sound.loadBgm(["newcentury3"], "newcenturykrs")
+              sound.killBgm()
+              sound.playBgm(["newcentury3"], "newcenturykrs")
+              break
+            case 3:
+              sound.loadBgm(["newcentury4"], "newcenturykrs")
+              sound.killBgm()
+              sound.playBgm(["newcentury4"], "newcenturykrs")
+              break
+          }
+          game.musicProgression = entry
+        }
+      }
+    },
+    onInit: (game) => {
+      game.lineGoal = null
+	  game.hideGrid = true
+	  game.stack.updateGrid()
+	  initMusicProgression(game)
+	  segaSkin = "sega"
+	  game.stack.flashLineClear = false
+	  if (settings.game.newcenturykrs.mechanics !== "krs2") {
+		  game.next.nextLimit = 1
+		  game.hold.isDisabled = true
+		  game.hold.isDirty = true
+		  game.piece.ghostIsVisible = false
+	  } else {
+		  game.next.nextLimit = 3
+		  game.hold.isDisabled = false
+		  game.piece.ghostIsVisible = true
+	  }
+	  if (game.settings.rotationSystem === "handheld") {
+		  game.colors = PIECE_COLORS.standard
+		  segaSkin = "handheld"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
+	  }
+	  if (game.settings.rotationSystem === "deluxe") {
+		  game.colors = PIECE_COLORS.standard
+		  segaSkin = "deluxe"
+		  game.stack.flashLineClear = true
+		  game.stack.flashClearRate = 200
+	  }
+	  if (game.settings.rotationSystem === "retro") {
+		  game.colors = PIECE_COLORS.retro
+		  segaSkin = "retro"
+		  game.stack.flashLineClear = false
+	  }
+	  if (game.settings.rotationSystem === "original") {
+		  game.colors = PIECE_COLORS.original
+		  segaSkin = "bone"
+		  game.stack.flashLineClear = false
+	  }
+	  game.makeSprite(
+		[
+			"red",
+			"orange",
+			"yellow",
+			"green",
+			"lightBlue",
+			"blue",
+			"purple",
+			"white",
+			"black",
+		],
+		["mino", "stack", "ghost"],
+		segaSkin
+	  )
+      /*
+	  game.stat.level = 0
+      lastLevel = 0
+	  */
+	  lastLevel = parseInt(settings.game.newcenturykrs.startingLevel)
+	  game.stat.level =  parseInt(settings.game.newcenturykrs.startingLevel)
 	  levelTimer = 0
 	  levelTimerLimit = 58000
 	  lastPieces = 0

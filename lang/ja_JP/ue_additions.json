@@ -149,9 +149,6 @@
   "terminalDescription": {
     "message": "パズルが生まれた最初のバージョン"
   },
-  "newCenturyDescription": {
-    "message": "キャビネット、ただしガイドライン制御付き"
-  },
   "masterClassicLabel": {
     "message": "マスターレガシー"
   },
@@ -175,6 +172,12 @@
   },
   "newCenturyDescription": {
     "message": "キャビネットの定番モデルの強化版"
+  },
+  "newCenturyKrsLabel": {
+    "message": "ニューセンチュリーK"
+  },
+  "newCenturyKrsDescription": {
+    "message": "ニューセンチュリー、ただしKRSTACKERルールセットを使用"
   },
   "stereoLabel": {
     "message": "レトロ強化版"

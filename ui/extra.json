@@ -37,6 +37,13 @@
 	  "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/newcentury"
+    },
+	{
+	  "string": "newCenturyKrsLabel",
+      "stringDesc": "newCenturyKrsDescription",
+	  "langOverride": "ue_additions",
+      "action": "submenu",
+      "submenu": "mode/newcenturykrs"
     }
   ]
 }

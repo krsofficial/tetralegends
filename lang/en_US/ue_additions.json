@@ -182,6 +182,12 @@
   "newCenturyDescription": {
     "message": "An enhanced version of a cabinet classic"
   },
+  "newCenturyKrsLabel": {
+    "message": "New Century K"
+  },
+  "newCenturyKrsDescription": {
+    "message": "New Century, but using the KRStacker ruleset"
+  },
   "stereoLabel": {
     "message": "Retro Enhanced"
   },

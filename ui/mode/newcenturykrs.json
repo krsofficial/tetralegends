@@ -1,0 +1,56 @@
+{
+  "properties": {
+    "parent": "extra",
+    "langOverride": "mode-options",
+    "game": "newcenturykrs",
+    "pgmusic": "pg-newcentury"
+  },
+  "data": [
+    {
+      "string": "newCenturyKrsLabel",
+      "langOverride": "ue_additions",
+      "type": "header"
+    },
+	{
+      "string": "startingLevelLabel",
+      "stringDesc": "startingLevelDescription",
+      "type": "slider",
+      "action": "slider",
+      "max": 9,
+      "min": 0,
+      "discrete": 1,
+      "setting": "startingLevel",
+      "gameName": "newcenturykrs",
+      "settingType": "game"
+    },
+	{
+      "string": "mechanicsLabel",
+      "stringDesc": "mechanicsDescription",
+      "type": "select",
+      "action": "select",
+      "selectOptions": [
+        {
+          "label": "KRS2",
+		  "fixedText": true,
+		  "omitDescription": true,
+          "value": "krs2"
+        },
+        {
+          "label": "KRS1",
+		  "fixedText": true,
+		  "omitDescription": true,
+          "value": "krs1"
+        },
+		{
+          "string": "segaLabel",
+		  "langOverride": "menu_retro",
+		  "omitDescription": true,
+          "value": "classic"
+        }
+      ],
+      "setting": "mechanics",
+      "gameName": "newcenturykrs",
+      "settingType": "game"
+    }
+  ]
+}
