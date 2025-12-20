@@ -29,17 +29,18 @@
       "submenu": "mode/deluxe"
     },
 	{
+      "string": "segaLabel",
+      "stringDesc": "segaDescription",
+      "action": "submenu",
+      "submenu": "mode/sega"
+    },
+	{
+	  "secretA": true,
       "string": "terminalLabel",
       "stringDesc": "terminalDescription",
 	  "langOverride": "ue_additions",
       "action": "submenu",
       "submenu": "mode/terminal"
-    },
-    {
-      "string": "segaLabel",
-      "stringDesc": "segaDescription",
-      "action": "submenu",
-      "submenu": "mode/sega"
     }
   ]
 }
