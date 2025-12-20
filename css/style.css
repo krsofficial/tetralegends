@@ -1589,6 +1589,10 @@ body[theme="tetrjs"] .stats label {
 .game-border.terminal {
   border-image: linear-gradient(135deg,rgba(0, 255, 0, 1) 0%, rgba(0, 128, 0, 1) 100%) 1;
 }
+.game-border.combo {
+  width: 112.5%;
+  border-image: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%) 1;
+}
 
 .gameover-early-warning-bgflash {
   animation-name: matrix-warning;
