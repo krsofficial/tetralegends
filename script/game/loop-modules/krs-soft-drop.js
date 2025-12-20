@@ -13,12 +13,12 @@ export default function krsSoftDrop(arg, frameGravity = 1) {
       if (!arg.piece.isLanded) {
         arg.piece.genPieceParticles()
       } else {
-		if (
-			arg.piece.mustLock === false
-		) {
+		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
 			arg.piece.hasHardDropped = true
-			sound.add("harddrop")
+			if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+				sound.add("harddrop")
+			}
 		}
       }
     } else {
@@ -33,16 +33,12 @@ export default function krsSoftDrop(arg, frameGravity = 1) {
       if (!arg.piece.isLanded) {
         arg.piece.genPieceParticles()
       } else {
-		if (
-			arg.piece.mustLock === false
-		) {
+		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
 			arg.piece.hasHardDropped = true
-			sound.add("harddrop")
-		} else if (input.getGamePress("softDrop")) {
-			arg.piece.mustLock = true
-			arg.piece.hasHardDropped = true
-			sound.add("harddrop")
+			if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+				sound.add("harddrop")
+			}
 		}
       }
     } else {

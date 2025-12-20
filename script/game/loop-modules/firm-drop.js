@@ -15,7 +15,9 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
 		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
 			arg.piece.hasHardDropped = true
-			sound.add("harddrop")
+			if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+				sound.add("harddrop")
+			}
 		}
 		arg.piece.hasHardDropped = true
         arg.piece.mustLock = true
@@ -35,7 +37,9 @@ export default function firmDrop(arg, frameGravity = 1, safelock = false) {
 		if (arg.piece.mustLock === false) {
 			arg.piece.mustLock = true
 			arg.piece.hasHardDropped = true
-			sound.add("harddrop")
+			if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
+				sound.add("harddrop")
+			}
 		}
 		arg.piece.hasHardDropped = true
         arg.piece.mustLock = true

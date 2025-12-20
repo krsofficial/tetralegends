@@ -9980,7 +9980,7 @@ export const loops = {
 		  game.piece.lockDelayLimit = 500 - Math.max(0, Math.min(250, lockDelayModifier * 10))
 	  }
       updateFallSpeed(game)
-	  game.piece.ghostIsVisible = true
+	  game.piece.ghostIsVisible = (settings.game.newcenturykrs.mechanics === "krs2")
 	  levelUpdateSega(game)
 	  let musicProgressionTable = [
         [16, 1],
