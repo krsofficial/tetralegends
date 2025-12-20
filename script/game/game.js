@@ -436,6 +436,7 @@ export default class Game {
 		"deluxe",
 		"arcade",
 		"terminal",
+		"combo",
 	  ]
 	  let gameBorder = document.getElementById(`game-border`)
 	  for (const colorName of colorRoster) {
