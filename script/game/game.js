@@ -820,7 +820,9 @@ export default class Game {
 	  }
 	  let heightRatio = heightA / heightB
 	  let widthRatio = widthA / widthB
-	  console.log(cellSizeRatio)
+	  let areaA = heightA * widthA
+	  let areaB = heightB * widthB
+	  let areaRatio = areaA / areaB
 	  game[element].width = (game[element].clientWidth * heightRatio)
 	  game[element].height = (game[element].clientHeight * widthRatio)
 	  } else {
