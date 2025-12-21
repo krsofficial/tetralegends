@@ -810,21 +810,19 @@ export default class Game {
         window.innerWidth / gameAspectRatio,
         window.innerHeight
       )
-	  let cellCountA = game.settings.height + game.bufferPeek
-	  let cellCountB = game.settings.height + game.bufferPeek
-	  //let cellSizeA = Math.floor(((base / 1.2 / game.settings.height) * game.userSettings.size) / 100)
-	  //let cellSizeB = Math.floor(((base / 1.2 / game.settings.height) * game.userSettings.size) / 100)
+	  let heightA = game.settings.height + game.bufferPeek
+	  let heightB = game.settings.height + game.bufferPeek
+	  let widthA = game.settings.width
+	  let widthB = game.settings.width
 	  if (game.settings.height <= 10 && game.settings.width <= 5) {
-		  //cellSizeB = Math.floor(((base / 1.2 / (game.settings.height * 2)) * game.userSettings.size) / 100)
-		  cellCountB = (game.settings.height * 2) + game.bufferPeek
+		  heightB = (game.settings.height * 2) + game.bufferPeek
+		  widthB = (game.settings.width * 2)
 	  }
-	  //let cellSizeRatio = cellSizeA / cellSizeB
-	  let cellSizeRatio = cellCountA / cellCountB
+	  let heightRatio = heightA / heightB
+	  let widthRatio = widthA / widthB
 	  console.log(cellSizeRatio)
-	  //game[element].width = (game[element].clientWidth * cellSizeRatio) / 4
-	  //game[element].height = (game[element].clientHeight * cellSizeRatio) / 4
-	  game[element].width = (game[element].clientWidth * cellSizeRatio)
-	  game[element].height = (game[element].clientHeight * cellSizeRatio)
+	  game[element].width = (game[element].clientWidth * heightRatio)
+	  game[element].height = (game[element].clientHeight * widthRatio)
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
