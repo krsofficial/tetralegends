@@ -824,8 +824,8 @@ export default class Game {
 	  let areaB = heightB * widthB
 	  let areaRatio = areaA / areaB
 	  let cellRatio = Math.sqrt(areaRatio)
-	  game[element].width = (game[element].clientWidth * cellRatio)
-	  game[element].height = (game[element].clientHeight * cellRatio)
+	  game[element].width = (game[element].clientWidth * widthRatio)
+	  game[element].height = (game[element].clientHeight * heightRatio)
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
