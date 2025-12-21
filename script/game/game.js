@@ -498,6 +498,7 @@ export default class Game {
 	document.getElementById("animate").classList.remove("sil")
     $("#stack").classList.remove("sil")
     $("#piece").classList.remove("sil")
+	$(".stack-canvas").classList.remove("outlineon-dead")
   }
   timestamp() {
     return window.performance && window.performance.now
@@ -514,6 +515,9 @@ export default class Game {
     this.resetBeatStuff()
     this.isOver = true
     $("#combo-counter-container").classList.add("hidden")
+	if (this.piece.useBoneBlocks !== true && settings.settings.outline === true) {
+		$(".stack-canvas").classList.add("outlineon-dead")
+	}
     this.stack.endAlarm()
     this.noUpdate = true
     if (this.type === "zen" && settings.game.zen.holdType === "skip") {
