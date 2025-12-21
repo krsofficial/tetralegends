@@ -810,30 +810,24 @@ export default class Game {
         window.innerWidth / gameAspectRatio,
         window.innerHeight
       )
-	  let cellSize1 = Math.floor(((base / 1.2 / game.settings.height) * game.userSettings.size) / 100)
-	  let cellSize2 = Math.floor(((base / 1.2 / game.settings.height) * game.userSettings.size) / 100)
+	  let cellSize1 = Math.floor(((base / 1.2 / (game.settings.height + game.bufferPeek)) * game.userSettings.size) / 100)
+	  let cellSize2 = Math.floor(((base / 1.2 / (game.settings.height + game.bufferPeek)) * game.userSettings.size) / 100)
 	  if (game.settings.height <= 10 && game.settings.width <= 5) {
-	    cellSize2 = Math.floor(((base / 1.2 / (game.settings.height * 2)) * game.userSettings.size) / 100)
+	    cellSize2 = Math.floor(((base / 1.2 / ((game.settings.height * 2) + game.bufferPeek)) * game.userSettings.size) / 100)
 	  } else {
-	    cellSize2 = Math.floor(((base / 1.2 / game.settings.height) * game.userSettings.size) / 100)
+	    cellSize2 = Math.floor(((base / 1.2 / (game.settings.height + game.bufferPeek)) * game.userSettings.size) / 100)
 	  }
 	  let cellSizeRatio = cellSize1 / cellSize2
 	  console.log(cellSizeRatio)
-	  game[element].width = Math.max(
-	  (game[element].clientWidth * cellSizeRatio) / 4,
-	  game[element].clientWidth / 2
-	  )
-	  game[element].height = Math.max(
-	  (game[element].clientHeight * cellSizeRatio) / 4,
-	  game[element].clientHeight / 2
-	  )
+	  game[element].width = (game[element].clientWidth * cellSizeRatio) / 4
+	  game[element].height = (game[element].clientHeight * cellSizeRatio) / 4
 	  } else {
 	  game[element].width = game[element].clientWidth
       game[element].height = game[element].clientHeight
 	  }
     }
     let holdLabelSelection = "hold"
-    if (game.hold.useSkip) {
+    if (game.hheight = gamold.useSkip) {
       holdLabelSelection = "skip"
     }
     $("#hold-label").textContent = locale.getString("ui", holdLabelSelection)
