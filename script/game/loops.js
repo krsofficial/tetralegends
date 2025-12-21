@@ -11320,7 +11320,7 @@ export const loops = {
       levelUpdate(game)
     },
     onInit: (game) => {
-      game.lineGoal = 15
+      game.lineGoal = 150
       game.stat.level = 1
       lastLevel = 1
       game.piece.gravity = 1000
