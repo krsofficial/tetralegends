@@ -87,7 +87,7 @@
     "message": "EASY-AE"
   },
   "normalAEDescription": {
-    "message": "初心者向けの標準的なゲームです。高得点を狙えば、あなたの評価が上がります！"
+    "message": "初心者向けの標準的なゲームです。スタックをきれいに保てば、評価が上がります！"
   },
   "asukaLabel": {
     "message": "KAMUI"
@@ -168,16 +168,16 @@
     "message": "リワーク前の旧バージョンのスタンダード"
   },
   "newCenturyLabel": {
-    "message": "ニューセンチュリー"
+    "message": "ニューセンチュリ"
   },
   "newCenturyDescription": {
     "message": "キャビネットの定番モデルの強化版"
   },
   "newCenturyKrsLabel": {
-    "message": "ニューセンチュリーK"
+    "message": "ニューセンチュリK"
   },
   "newCenturyKrsDescription": {
-    "message": "ニューセンチュリー、ただしKRSTACKERルールセットを使用"
+    "message": "ニューセンチュリ、ただしKRSTACKERルールセットを使用"
   },
   "stereoLabel": {
     "message": "レトロ強化版"
@@ -199,6 +199,9 @@
   },
   "enhancedRetroLabel": {
     "message": "レトロ強化版"
+  },
+  "marathonAEDescription": {
+    "message": "初心者向けの標準的なマラソン。"
   },
   "footerLabel": {
     "message": ""

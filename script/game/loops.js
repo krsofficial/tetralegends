@@ -11271,6 +11271,63 @@ export const loops = {
       updateFallSpeed(game)
     },
    },
+   marathonae: {
+    update: (arg) => {
+      collapse(arg)
+      if (arg.piece.inAre) {
+        initialDas(arg)
+        initialRotation(arg)
+        initialHold(arg)
+        arg.piece.are += arg.ms
+      } else {
+        respawnPiece(arg)
+        rotate(arg)
+        rotate180(arg)
+        shifting(arg)
+      }
+      gravity(arg)
+      tgmSoftDrop(arg)
+      hardDrop(arg)
+      extendedLockdown(arg)
+      if (!arg.piece.inAre) {
+        hold(arg)
+      }
+      lockFlash(arg)
+      updateLasts(arg)
+      /* Might use this code later
+      $('#das').max = arg.piece.dasLimit;
+      $('#das').value = arg.piece.das;
+      $('#das').style.setProperty('--opacity', ((arg.piece.arr >= arg.piece.arrLimit) || arg.piece.inAre) ? 1 : 0);
+      */
+    },
+    onPieceSpawn: (game) => {
+      game.stat.level = Math.floor(game.stat.line / 10 + 1)
+      game.stat.level = Math.min(
+        game.stat.level,
+        game.lineGoal * 10
+      )
+      const x = game.stat.level
+      const gravityEquation = (0.8 - (x - 1) * 0.007) ** (x - 1)
+      game.piece.gravity = Math.max(gravityEquation * 1000, framesToMs(1 / 20))
+      if (game.stat.level >= 20) {
+        game.piece.lockDelayLimit = ~~framesToMs(
+          30 * Math.pow(0.93, Math.pow(game.stat.level - 20, 0.8))
+        )
+      } else {
+        game.piece.lockDelayLimit = 500
+      }
+      updateFallSpeed(game)
+      levelUpdate(game)
+    },
+    onInit: (game) => {
+      game.lineGoal = 15
+      game.stat.level = 1
+      lastLevel = 1
+      game.piece.gravity = 1000
+      updateFallSpeed(game)
+      game.updateStats()
+    },
+  },
 }
 loops.aceclassic = loops.ace
 loops.beatx = loops.beat

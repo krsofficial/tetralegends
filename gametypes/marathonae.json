@@ -1,0 +1,32 @@
+{
+  "settings": {
+    "width": 10,
+    "height": 20,
+    "hiddenHeight": 20,
+    "pieces": "standard",
+    "unfavored": null,
+    "randomizer": "bag",
+    "rotationSystem": "worldae",
+    "skin": "arika",
+    "soundbank": "tgm4",
+    "music": "../ace/kachusha-hard",
+    "hasDangerBgm": false,
+    "scoreTable": "guideline",
+    "background": "marathon.jpg",
+    "isHardMode": false
+  },
+  "piece": {
+    "spinDetectionType": "3corner",
+	"areLimit": 0,
+    "areLineLimit": 640,
+	"areLimitLineModifier": 432,
+    "lockDelayLimit": 500
+  },
+  "next": {
+    "nextLimit": 6
+  },
+  "hold": {
+    "isDisabled": false
+  },
+  "stats": ["score", "level", "line"]
+}

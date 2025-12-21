@@ -57,10 +57,10 @@
     },
 	{
       "string": "normalAELabel",
-	  "stringDesc": "normalAEDescription",
+	  "stringDesc": "marathonAEDescription",
       "langOverride": "ue_additions",
       "action": "submenu",
-	  "submenu": "mode/normalaeworld"
+	  "submenu": "mode/marathonae"
     },
 	{
       "string": "asukaLabel",

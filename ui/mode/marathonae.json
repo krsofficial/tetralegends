@@ -1,0 +1,15 @@
+{
+  "properties": {
+    "parent": "arcadeworld",
+    "langOverride": "mode-options",
+    "game": "normalaeworld",
+    "pgmusic": "pg-acekachusha"
+  },
+  "data": [
+    {
+      "string": "normalAELabel",
+      "langOverride": "ue_additions",
+      "type": "header"
+    }
+  ]
+}

@@ -87,7 +87,7 @@
     "message": "Novice-AE"
   },
   "normalAEDescription": {
-    "message": "A standard game for beginners. Score high, and your grade will go up!"
+    "message": "A standard game for beginners. Keep your stack clean, and your grade will go up!"
   },
   "asukaLabel": {
     "message": "Advance-AE"
@@ -202,6 +202,9 @@
   },
   "enhancedRetroLabel": {
     "message": "Retro Enhanced"
+  },
+  "marathonAEDescription": {
+    "message": "A standard marathon for beginners."
   },
   "footerLabel": {
     "message": ""

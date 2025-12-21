@@ -87,7 +87,7 @@
     "message": "Novice-AE"
   },
   "normalAEDescription": {
-    "message": "A standard game for beginners. Score high, and your grade will go up!"
+    "message": "A standard game for beginners. Keep your stack clean, and your grade will go up!"
   },
   "asukaLabel": {
     "message": "Advance-AE"
@@ -158,12 +158,6 @@
   "masterClassicDescription": {
     "message": "The old version of Master before the rework"
   },
-  "masterClassicLabel": {
-    "message": "Master Legacy"
-  },
-  "masterClassicDescription": {
-    "message": "The old version of Master before the rework"
-  },
   "survivalClassicLabel": {
     "message": "Survival Legacy"
   },
@@ -208,6 +202,9 @@
   },
   "enhancedRetroLabel": {
     "message": "Retro Enhanced"
+  },
+  "marathonAEDescription": {
+    "message": "A standard marathon for beginners."
   },
   "footerLabel": {
     "message": ""

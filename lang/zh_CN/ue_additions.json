@@ -87,7 +87,7 @@
     "message": "新手-AE"
   },
   "normalAEDescription": {
-    "message": "一款适合初学者的标准游戏。得分越高，你的等级就越高！"
+    "message": "新手标准游戏。保持牌堆整洁，你的等级就会提升！"
   },
   "asukaLabel": {
     "message": "预付-AE"
@@ -202,6 +202,9 @@
   },
   "enhancedRetroLabel": {
     "message": "复古增强版"
+  },
+  "marathonAEDescription": {
+    "message": "适合初学者的标准马拉松。"
   },
   "footerLabel": {
     "message": ""
