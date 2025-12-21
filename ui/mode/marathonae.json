@@ -2,7 +2,7 @@
   "properties": {
     "parent": "arcadeworld",
     "langOverride": "mode-options",
-    "game": "normalaeworld",
+    "game": "marathonae",
     "pgmusic": "pg-acekachusha"
   },
   "data": [
