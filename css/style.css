@@ -1663,6 +1663,15 @@ body[theme="tetrjs"] .game-center {
   ;
 }
 
+.stack-canvas.outlineon-won {
+  filter: 
+  drop-shadow(0.2em 0em 0em rgba(0,255,0,0.625))
+  drop-shadow(-0.2em 0em 0em rgba(0,255,0,0.625))
+  drop-shadow(0em 0.2em 0em rgba(0,255,0,0.625))
+  drop-shadow(0em -0.2em 0em rgba(0,255,0,0.625))
+  ;
+}
+
 .stack-canvas.outlineon-dead {
   filter: 
   drop-shadow(0.2em 0em 0em rgba(255,0,0,0.625))

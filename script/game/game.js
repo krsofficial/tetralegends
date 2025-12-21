@@ -499,6 +499,7 @@ export default class Game {
     $("#stack").classList.remove("sil")
     $("#piece").classList.remove("sil")
 	$(".stack-canvas").classList.remove("outlineon-dead")
+	$(".stack-canvas").classList.remove("outlineon-won")
   }
   timestamp() {
     return window.performance && window.performance.now
@@ -516,7 +517,11 @@ export default class Game {
     this.isOver = true
     $("#combo-counter-container").classList.add("hidden")
 	if (this.piece.useBoneBlocks !== true && settings.settings.outline === true) {
-		$(".stack-canvas").classList.add("outlineon-dead")
+		if (victory) {
+			$(".stack-canvas").classList.add("outlineon-won")
+		} else {
+			$(".stack-canvas").classList.add("outlineon-dead")
+		}
 	}
     this.stack.endAlarm()
     this.noUpdate = true
