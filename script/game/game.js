@@ -827,7 +827,7 @@ export default class Game {
 	  }
     }
     let holdLabelSelection = "hold"
-    if (game.hheight = gamold.useSkip) {
+    if (game.hold.useSkip) {
       holdLabelSelection = "skip"
     }
     $("#hold-label").textContent = locale.getString("ui", holdLabelSelection)
