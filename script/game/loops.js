@@ -9362,7 +9362,7 @@ export const loops = {
 			  shiftingNes(arg)
 	      }
           rotate(arg)
-          classicGravity(arg)
+          //classicGravity(arg)
           //softDropNes(arg)
 		  softDropRetro(arg, 33.33)
 		  retroLockdown(arg, true)
@@ -9378,7 +9378,7 @@ export const loops = {
           rotate180(arg)
           shifting(arg)
         }
-        classicGravity(arg)
+        //classicGravity(arg)
         //softDropNes(arg, false)
 		softDropRetro(arg, 33.33)
         hardDrop(arg)
@@ -9387,6 +9387,7 @@ export const loops = {
       if (!arg.piece.inAre) {
         arg.piece.holdingTime += arg.ms
       }
+	  classicGravity(arg)
       lockFlash(arg)
       updateLasts(arg)
 	  const game = gameHandler.game
@@ -11324,6 +11325,7 @@ export const loops = {
       game.stat.level = 1
       lastLevel = 1
       game.piece.gravity = 1000
+	  initMusicProgression()
       updateFallSpeed(game)
       game.updateStats()
     },
