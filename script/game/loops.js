@@ -11325,7 +11325,7 @@ export const loops = {
       game.stat.level = 1
       lastLevel = 1
       game.piece.gravity = 1000
-	  initMusicProgression()
+	  initMusicProgression(game)
       updateFallSpeed(game)
       game.updateStats()
     },
