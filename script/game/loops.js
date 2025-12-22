@@ -10024,19 +10024,19 @@ export const loops = {
         if (game.stat.level >= level && game.musicProgression < entry) {
           switch (entry) {
             case 1:
-			  sound.loadBgm(["newcentury2"], "newcenturykrs")
+			  sound.loadBgm(["newcentury2"], "newcentury")
               sound.killBgm()
-              sound.playBgm(["newcentury2"], "newcenturykrs")
+              sound.playBgm(["newcentury2"], "newcentury")
               break
             case 2:
-              sound.loadBgm(["newcentury3"], "newcenturykrs")
+              sound.loadBgm(["newcentury3"], "newcentury")
               sound.killBgm()
-              sound.playBgm(["newcentury3"], "newcenturykrs")
+              sound.playBgm(["newcentury3"], "newcentury")
               break
             case 3:
-              sound.loadBgm(["newcentury4"], "newcenturykrs")
+              sound.loadBgm(["newcentury4"], "newcentury")
               sound.killBgm()
-              sound.playBgm(["newcentury4"], "newcenturykrs")
+              sound.playBgm(["newcentury4"], "newcentury")
               break
           }
           game.musicProgression = entry
