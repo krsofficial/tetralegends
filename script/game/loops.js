@@ -74,7 +74,6 @@ let endRollLines = 0
 let preEndRollLines = 0
 let levelTimer = 0
 let levelTimerLimit = 58000
-let lastPieces = 0
 let underwaterProgression = 0
 let testMode = false
 let nonEvents = []
@@ -854,7 +853,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        game.stat.level = game.stat.level + 1
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1168,7 +1167,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        game.stat.level = game.stat.level + 1
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1240,7 +1239,7 @@ export const loops = {
         sound.add("voxexcellent")
         game.end(true)
       } else if (game.stat.initPieces === 0 && game.stat.level !== 299) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        game.stat.level = game.stat.level + 1
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -1550,8 +1549,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -1913,8 +1915,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -2013,8 +2018,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 199
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -2323,8 +2331,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -2685,8 +2696,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -2785,8 +2799,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 199
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -3636,8 +3653,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -3857,8 +3877,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -4065,8 +4088,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -4276,8 +4302,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -4580,8 +4609,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -4855,8 +4887,11 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -9560,11 +9595,11 @@ export const loops = {
 	  if (Math.floor(game.stat.line / 4) > game.stat.level) {
 		  levelTimer = 0
 		  game.stat.level += 1
-	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > lastPieces) {
+	  } else if (levelTimer >= levelTimerLimit && game.stat.piece > game.lastPieces) {
 		  levelTimer = 0
 		  game.stat.level += 1
 	  }
-	  lastPieces = game.stat.piece
+	  game.lastPieces = game.stat.piece
 	  let difficulty = parseInt(settings.game.sega.difficulty)
 	  let gravityTable = []
 	  switch (difficulty) {
@@ -9709,7 +9744,7 @@ export const loops = {
       lastLevel = 0
 	  levelTimer = 0
 	  levelTimerLimit = 58000
-	  lastPieces = 0
+	  game.lastPieces = 0
       game.piece.gravity = framesToMs(48)
       updateFallSpeed(game)
       game.updateStats()
@@ -9762,7 +9797,7 @@ export const loops = {
 			99
 		)
 	  )
-	  lastPieces = game.stat.piece
+	  game.lastPieces = game.stat.piece
 	  let gravityTable = [
 		48,
 		24,
@@ -9901,7 +9936,7 @@ export const loops = {
 	  game.stat.level =  parseInt(settings.game.newcentury.startingLevel)
 	  levelTimer = 0
 	  levelTimerLimit = 58000
-	  lastPieces = 0
+	  game.lastPieces = 0
       game.piece.gravity = framesToMs(48)
       updateFallSpeed(game)
       game.updateStats()
@@ -9956,7 +9991,7 @@ export const loops = {
 			99
 		)
 	  )
-	  lastPieces = game.stat.piece
+	  game.lastPieces = game.stat.piece
 	  let gravityTable = [
 		48,
 		24,
@@ -10105,7 +10140,7 @@ export const loops = {
 	  game.stat.level =  parseInt(settings.game.newcenturykrs.startingLevel)
 	  levelTimer = 0
 	  levelTimerLimit = 58000
-	  lastPieces = 0
+	  game.lastPieces = 0
       game.piece.gravity = framesToMs(48)
       updateFallSpeed(game)
       game.updateStats()
@@ -10634,7 +10669,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        game.stat.level = game.stat.level + 1
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -10951,8 +10986,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -11249,8 +11287,11 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
+        if (game.stat.piece > game.lastPieces) {
+			game.stat.level = game.stat.level + 1
+		}
       }
+	  game.lastPieces = game.stat.piece
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
       }

@@ -128,6 +128,7 @@ export default class Game {
 	this.internalTAPGrade = 0
 	this.gaugeTAPGrade = 0
 	this.isEndRoll = false
+	this.lastPieces = 0
 	//this.useFullAreLine = true
     loadGameType(gametype)
       .then((gameData) => {
