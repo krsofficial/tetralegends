@@ -10190,6 +10190,7 @@ export const loops = {
 		}
       }
 	  if (game.cpuGarbage >= 20) {
+		game.stack.waitingGarbage = 0
 		$("#kill-message").textContent = locale.getString("ui", "excellent")
         sound.killVox()
         sound.add("voxexcellent")
