@@ -985,6 +985,12 @@ class Menu {
         this.load(this.selectedData.submenu)
         sound.playMenuSe("select")
         break
+	  case "optionsubmenu":
+        $(`#option-${this.selected}`).classList.add("chosen")
+        this.lastSelection.push(this.selected)
+        this.load(this.selectedData.submenu)
+        sound.playMenuSe("optionselect")
+        break
       case "back":
         this.back()
         break

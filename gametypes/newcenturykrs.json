@@ -15,9 +15,9 @@
     "background": "marathon.jpg"
   },
   "piece": {
-    "areLimit": 100,
+    "areLimit": 166.666666667,
     "areLineLimit": 166.666666667,
-    "areLimitLineModifier": 166.666666667,
+    "areLimitLineModifier": 100,
     "spinDetectionType": "3corner"
   },
   "next": {

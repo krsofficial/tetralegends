@@ -25,7 +25,7 @@
       "fixedText": true,
       "description": "Mine, YuNoGuy123, MrFaq2017",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -33,7 +33,7 @@
       "fixedText": true,
       "description": "Light, Mizu Official, xeenwolf",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -41,7 +41,7 @@
       "fixedText": true,
       "description": "Esingar",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -49,7 +49,7 @@
       "fixedText": true,
       "description": "kivi, tzFiye, nastyFEETs",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -57,7 +57,7 @@
       "fixedText": true,
       "description": "osk, Gemtendo, micwoj92",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -65,7 +65,7 @@
       "fixedText": true,
       "description": "JustVldKsh, sjbdkkan, Arachnobyte",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -73,7 +73,7 @@
       "fixedText": true,
       "description": "micwoj92, Jacek Bogdun",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -81,7 +81,7 @@
       "fixedText": true,
       "description": "Shard Nguyễn, Minh Bui Duc, Đinh Đức Nhân",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {
@@ -97,7 +97,7 @@
       "fixedText": true,
       "description": "Casquade",
       "isShort": true,
-	  "action": "submenu",
+	  "action": "optionsubmenu",
       "submenu": "root"
     },
     {

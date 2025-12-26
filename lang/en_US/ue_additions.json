@@ -177,10 +177,10 @@
     "message": "An enhanced version of a cabinet classic"
   },
   "newCenturyKrsLabel": {
-    "message": "New Century K"
+    "message": "Cabinet Enhanced"
   },
   "newCenturyKrsDescription": {
-    "message": "New Century, but using the KRStacker ruleset"
+    "message": "Similar to New Century, but uses a rotation system more akin to the original cabinet classic"
   },
   "stereoLabel": {
     "message": "Retro Enhanced"

@@ -16,7 +16,7 @@
       "langOverride": "ue_additions",
 	  "isShort": true,
 	  "default": true,
-      "action": "submenu",
+      "action": "optionsubmenu",
       "submenu": "arcadeclassic"
     },
 	{
@@ -24,7 +24,7 @@
 	  "stringDesc": "worldRuleDescription",
       "langOverride": "ue_additions",
 	  "isShort": true,
-      "action": "submenu",
+      "action": "optionsubmenu",
       "submenu": "arcadeworld"
     }
   ]

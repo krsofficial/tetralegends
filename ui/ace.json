@@ -15,7 +15,7 @@
       "langOverride": "ue_additions",
 	  "isShort": true,
       "default": true,
-      "action": "submenu",
+      "action": "optionsubmenu",
       "submenu": "mode/ace"
     },
     {
@@ -23,7 +23,7 @@
 	  "stringDesc": "arcadeRuleDescription",
       "langOverride": "ue_additions",
 	  "isShort": true,
-      "action": "submenu",
+      "action": "optionsubmenu",
       "submenu": "mode/aceclassic"
     },
 	{
@@ -31,7 +31,7 @@
 	  "stringDesc": "guidelineRuleDescription",
       "langOverride": "ue_additions",
 	  "isShort": true,
-      "action": "submenu",
+      "action": "optionsubmenu",
       "submenu": "mode/aceworld"
     }
   ]
