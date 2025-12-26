@@ -854,7 +854,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1168,7 +1168,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1240,7 +1240,7 @@ export const loops = {
         sound.add("voxexcellent")
         game.end(true)
       } else if (game.stat.initPieces === 0 && game.stat.level !== 299) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       } else {
         game.stat.initPieces = game.stat.initPieces - 1
       }
@@ -1550,7 +1550,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -1913,7 +1913,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -2013,7 +2013,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 199
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -2323,7 +2323,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -2685,7 +2685,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -2785,7 +2785,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 199
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -3636,7 +3636,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -3857,7 +3857,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -4065,7 +4065,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -4276,7 +4276,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -4580,7 +4580,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -4855,7 +4855,7 @@ export const loops = {
         game.stat.initPieces === 0 &&
         game.stat.level % 100 !== 99
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -10634,7 +10634,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -10951,7 +10951,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
@@ -11249,7 +11249,7 @@ export const loops = {
         game.stat.level % 100 !== 99 &&
         game.stat.level !== 998
       ) {
-        game.stat.level = game.stat.level + 1
+        if (!game.hold.hasHeld || game.hold.isDisabled) {game.stat.level = game.stat.level + 1}
       }
       if (game.stat.initPieces > 0) {
         game.stat.initPieces = game.stat.initPieces - 1
