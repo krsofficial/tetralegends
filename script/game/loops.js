@@ -9454,6 +9454,7 @@ export const loops = {
       } else {
         lastSeenI++
       }
+	  updateFallSpeed(game)
       levelUpdate(game)
     },
     onInit: (game) => {
