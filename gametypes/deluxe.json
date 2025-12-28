@@ -27,7 +27,6 @@
   "stack": {
     "flashLineClear": true,
     "flashClearRate": 200,
-    "fadeLineClear": false,
     "flashOnTetris": true
   },
   "next": {
