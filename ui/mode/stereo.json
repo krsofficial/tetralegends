@@ -35,6 +35,12 @@
 		  "omitDescription": true,
           "value": "guideline"
         },
+		{
+          "string": "fromBelowLabel",
+		  "langOverride": "ue_additions",
+		  "omitDescription": true,
+          "value": "retrowithharddrop"
+        },
         {
           "string": "enhancedRetroLabel",
 		  "langOverride": "ue_additions",

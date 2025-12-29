@@ -206,6 +206,9 @@
   "rosyRetrospectionLabel": {
     "message": "Rosy Retrospection"
   },
+  "fromBelowLabel": {
+    "message": "From Below"
+  },
   "marathonAEDescription": {
     "message": "A standard marathon for beginners."
   },

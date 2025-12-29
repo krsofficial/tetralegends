@@ -206,6 +206,9 @@
   "rosyRetrospectionLabel": {
     "message": "玫瑰色的追忆"
   },
+  "fromBelowLabel": {
+    "message": "自下而上"
+  },
   "marathonAEDescription": {
     "message": "适合初学者的标准马拉松。"
   },

@@ -2966,8 +2966,11 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      if (settings.game.mono.mechanics === "retro") {
+      if (settings.game.mono.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, 50)
+	  } else if (settings.game.mono.mechanics !== "retro") {
+		  softDropRetroEnhanced(arg, 50)
+		  hardDrop(arg)
 	  } else {
 		  softDropWithGravityOverride(arg, 50)
 		  hardDrop(arg)
@@ -3033,7 +3036,7 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  game.settings.music = ["../heboris/hebo"]
 	  }
-	  if (settings.game.mono.mechanics === "retro") {
+	  if (settings.game.mono.mechanics !== "guideline") {
         game.makeSprite(
           [
             "i1",
@@ -3077,7 +3080,7 @@ export const loops = {
         game.piece.useSpecialI = false
 		game.piece.useMinoSkin = false
       }
-	  if (settings.game.mono.mechanics === "retro") {
+	  if (settings.game.mono.mechanics !== "guideline") {
 		  game.hold.isDisabled = true
 		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
@@ -3108,8 +3111,11 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-	  if (settings.game.monodx.mechanics === "retro") {
+	  if (settings.game.monodx.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, framesToMs(2))
+	  } else if (settings.game.monodx.mechanics !== "retro") {
+		  softDropRetroEnhanced(arg, framesToMs(2))
+		  hardDrop(arg)
 	  } else {
 		  softDropWithGravityOverride(arg, framesToMs(2))
 		  hardDrop(arg)
@@ -3175,7 +3181,7 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  game.settings.music = ["../heboris/hebo"]
 	  }
-	  if (settings.game.monodx.mechanics === "retro") {
+	  if (settings.game.monodx.mechanics !== "guideline") {
         game.makeSprite(
           [
             "i1",
@@ -3217,7 +3223,7 @@ export const loops = {
 		game.colors = PIECE_COLORS.standard
 		game.piece.useSpecialI = false
       }
-	  if (settings.game.monodx.mechanics === "retro") {
+	  if (settings.game.monodx.mechanics !== "guideline") {
 		  game.hold.isDisabled = true
 		  game.hold.isDirty = true
 		  game.next.nextLimit = 1
@@ -3254,8 +3260,11 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-	  if (settings.game.stereo.mechanics === "retro") {
+	  if (settings.game.stereo.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, 33.33)
+	  } else if (settings.game.stereo.mechanics !== "retro") {
+		  softDropRetroEnhanced(arg, 33.33)
+		  hardDrop(arg)
 	  } else {
 		  softDropWithGravityOverride(arg, 33.33)
 		  hardDrop(arg)
@@ -3430,7 +3439,7 @@ export const loops = {
         game.piece.useRetroColors = true
         game.colors = PIECE_COLORS.retroSpecial
       }
-	  if (settings.game.stereo.mechanics === "retro") {
+	  if (settings.game.stereo.mechanics !== "guideline") {
 		  game.hold.isDisabled = true
 		  game.hold.isDirty = true
 		  game.next.nextLimit = 1

@@ -203,6 +203,9 @@
   "rosyRetrospectionLabel": {
     "message": "バラ色の回想"
   },
+  "fromBelowLabel": {
+    "message": "下から"
+  },
   "marathonAEDescription": {
     "message": "初心者向けの標準的なマラソン。"
   },
