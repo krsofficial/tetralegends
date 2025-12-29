@@ -30,13 +30,13 @@
       "action": "select",
       "selectOptions": [
         {
-          "string": "monoLabel",
+          "string": "rosyRetrospectionLabel",
 		  "langOverride": "ue_additions",
 		  "omitDescription": true,
           "value": "guideline"
         },
         {
-          "string": "stereoLabel",
+          "string": "enhancedRetroLabel",
 		  "langOverride": "ue_additions",
 		  "omitDescription": true,
           "value": "retro"
