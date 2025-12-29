@@ -3266,6 +3266,9 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  if (input.getGamePress("testModeKey")) {
+		gameHandler.game.stat.line = 290
+	  }
       /* Might use this code later
       $('#das').max = arg.piece.dasLimit;
       $('#das').value = arg.piece.das;

@@ -171,25 +171,25 @@
     "message": "The old version of Standard before the rework"
   },
   "newCenturyLabel": {
-    "message": "New Century"
+    "message": "New Century W"
   },
   "newCenturyDescription": {
     "message": "An enhanced version of a cabinet classic"
   },
   "newCenturyKrsLabel": {
-    "message": "Cabinet Enhanced"
+    "message": "New Century C"
   },
   "newCenturyKrsDescription": {
     "message": "Similar to New Century, but uses a rotation system more akin to the original cabinet classic"
   },
   "stereoLabel": {
-    "message": "Retro Enhanced"
+    "message": "Rosy Retrospection R"
   },
   "stereoDescription": {
     "message": "An enhanced version of a console classic"
   },
   "monoLabel": {
-    "message": "Rosy Retrospection"
+    "message": "Rosy Retrospection L"
   },
   "monoDescription": {
     "message": "An enhanced version of a handheld classic"
@@ -198,10 +198,13 @@
     "message": "Rosy Retrospection DX"
   },
   "monoDeluxeDescription": {
-    "message": "Rosy Retrospection, but in full color"
+    "message": "Rosy Retrospection L, but in full color"
   },
   "enhancedRetroLabel": {
     "message": "Retro Enhanced"
+  },
+  "rosyRetrospectionLabel": {
+    "message": "Rosy Retrospection"
   },
   "marathonAEDescription": {
     "message": "A standard marathon for beginners."

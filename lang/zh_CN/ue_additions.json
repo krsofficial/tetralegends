@@ -171,37 +171,40 @@
     "message": "重制前的旧版标准"
   },
   "newCenturyLabel": {
-    "message": "新世纪"
+    "message": "新世纪 K"
   },
   "newCenturyDescription": {
     "message": "内阁经典款的升级版"
   },
   "newCenturyKrsLabel": {
-    "message": "内阁增强版"
+    "message": "新世纪 C"
   },
   "newCenturyKrsDescription": {
     "message": "与新世纪类似，但采用更接近经典街机版本的轮换系统"
   },
   "stereoLabel": {
-    "message": "复古增强版"
+    "message": "玫瑰色的追忆 R"
   },
   "stereoDescription": {
     "message": "款经典主机游戏的增强版"
   },
   "monoLabel": {
-    "message": "玫瑰色的追忆"
+    "message": "玫瑰色的追忆 L"
   },
   "monoDescription": {
     "message": "款经典掌机游戏的增强版"
   },
   "monoDeluxeLabel": {
-    "message": "玫瑰色追忆DX"
+    "message": "玫瑰色的追忆 DX"
   },
   "monoDeluxeDescription": {
-    "message": "玫瑰色的追忆，却在绚烂的色彩中"
+    "message": "玫瑰色的追忆 L，但呈现为全彩"
   },
   "enhancedRetroLabel": {
     "message": "复古增强版"
+  },
+  "rosyRetrospectionLabel": {
+    "message": "玫瑰色的追忆"
   },
   "marathonAEDescription": {
     "message": "适合初学者的标准马拉松。"

@@ -168,37 +168,40 @@
     "message": "リワーク前の旧バージョンのスタンダード"
   },
   "newCenturyLabel": {
-    "message": "ニューセンチュリ"
+    "message": "ニューセンチュリW"
   },
   "newCenturyDescription": {
     "message": "キャビネットの定番モデルの強化版"
   },
   "newCenturyKrsLabel": {
-    "message": "キャビネット強化"
+    "message": "ニューセンチュリC"
   },
   "newCenturyKrsDescription": {
     "message": "ニューセンチュリに似ているが、オリジナルのキャビネットクラシックに近いローテーションシステムを採用している"
   },
   "stereoLabel": {
-    "message": "レトロ強化版"
+    "message": "バラ色の回顧R"
   },
   "stereoDescription": {
     "message": "コンソールゲームの傑作の強化版"
   },
   "monoLabel": {
-    "message": "バラ色の回想"
+    "message": "バラ色の回顧L"
   },
   "monoDescription": {
     "message": "携帯型クラシックの強化版"
   },
   "monoDeluxeLabel": {
-    "message": "バラ色の回顧録DX"
+    "message": "バラ色の回顧DX"
   },
   "monoDeluxeDescription": {
-    "message": "バラ色の回想、だがフルカラーで"
+    "message": "バラ色の回顧L、しかしフルカラーで"
   },
   "enhancedRetroLabel": {
     "message": "レトロ強化版"
+  },
+  "rosyRetrospectionLabel": {
+    "message": "バラ色の回想"
   },
   "marathonAEDescription": {
     "message": "初心者向けの標準的なマラソン。"
