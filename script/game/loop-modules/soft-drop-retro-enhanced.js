@@ -3,18 +3,6 @@ import settings from "../../settings.js"
 import gameHandler from "../game-handler.js"
 import { framesToMs } from "../../shortcuts.js"
 
-const playLandSound = () => {
-  let result = false
-  let game = gameHandler.game
-  if (game.settings.rotationSystem === "heboris") {
-	result = true
-  }
-  if (settings.settings.soundbank === "heboris") {
-	result = true
-  }
-  return result
-}
-
 export default function softDropRetro(arg, override) {
   if (input.getGameDown("softDrop") && !arg.piece.softDropIsLocked) {
     arg.piece.gravityOverride = override
@@ -25,14 +13,11 @@ export default function softDropRetro(arg, override) {
 		}
 	}
     arg.piece.mustLockRetro = true
-	arg.piece.playLandSound = playLandSound()
   } else {
     arg.piece.gravityOverride = 0
     arg.piece.mustLockRetro = false
-	arg.piece.playLandSound = playLandSound()
   }
   if (!input.getGameDown("softDrop")) {
     arg.piece.softDropIsLocked = false
-	arg.piece.playLandSound = playLandSound()
   }
 }

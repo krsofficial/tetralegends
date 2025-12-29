@@ -84,7 +84,6 @@ export default class Piece extends GameModule {
 	this.boneColor = "green"
 	this.isCyclone = false
 	this.cycloneOrientation = 0
-	this.playLandSound = true
   }
   new(name = this.parent.next.next()) {
     this.isFrozen = false
@@ -309,9 +308,7 @@ export default class Piece extends GameModule {
     }
     this.ire = 0
     if (this.gravity <= framesToMs(1 / 20)) {
-      if (this.playLandSound) {
-		  sound.add("land")
-	  }
+      sound.add("land")
       this.sonicDrop()
       this.genDropParticles()
     }
@@ -1043,9 +1040,7 @@ export default class Piece extends GameModule {
     if (!this.isDead && !this.isLanded) {
       const drop = this.getDrop()
       this.parent.addScore("sonicDrop", drop)
-      if (this.playLandSound) {
-		  sound.add("land")
-	  }
+      sound.add("land")
       this.genDropParticles()
     }
     this.sonicDrop()
@@ -1062,9 +1057,7 @@ export default class Piece extends GameModule {
 	  gameHandler.game.loadedSoundbank === "heborisoldstyle"
 	  ) {
 		if (!this.isLanded) {
-			if (this.playLandSound) {
-				sound.add("land")
-			}
+			sound.add("land")
 		}
 	  }
       sound.add("harddrop")
