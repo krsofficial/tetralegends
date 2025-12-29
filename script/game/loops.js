@@ -2966,9 +2966,9 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-      if (settings.game.mono.mechanics !== "guideline") {
+      if (settings.game.mono.mechanics === "retro") {
 		  softDropRetroEnhanced(arg, 50)
-	  } else if (settings.game.mono.mechanics !== "retro") {
+	  } else if (settings.game.mono.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, 50)
 		  hardDrop(arg)
 	  } else {
@@ -3111,9 +3111,9 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-	  if (settings.game.monodx.mechanics !== "guideline") {
+	  if (settings.game.monodx.mechanics === "retro") {
 		  softDropRetroEnhanced(arg, framesToMs(2))
-	  } else if (settings.game.monodx.mechanics !== "retro") {
+	  } else if (settings.game.monodx.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, framesToMs(2))
 		  hardDrop(arg)
 	  } else {
@@ -3260,9 +3260,9 @@ export const loops = {
         shifting(arg)
       }
       gravity(arg)
-	  if (settings.game.stereo.mechanics !== "guideline") {
+	  if (settings.game.stereo.mechanics === "retro") {
 		  softDropRetroEnhanced(arg, 33.33)
-	  } else if (settings.game.stereo.mechanics !== "retro") {
+	  } else if (settings.game.stereo.mechanics !== "guideline") {
 		  softDropRetroEnhanced(arg, 33.33)
 		  hardDrop(arg)
 	  } else {
