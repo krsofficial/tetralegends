@@ -210,7 +210,7 @@
       "action": "select",
       "selectOptions": [
 		{
-          "label": "[EN] Ace",
+          "label": "[EN] Ace/Talon",
           "fixedText": true,
           "value": "ace"
         },
