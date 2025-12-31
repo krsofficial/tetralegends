@@ -11715,6 +11715,7 @@ export const loops = {
       game.lineGoal = 150
       game.stat.level = 1
       lastLevel = 1
+	  game.isRaceMode = true
       game.piece.gravity = 1000
 	  initMusicProgression(game)
       updateFallSpeed(game)
