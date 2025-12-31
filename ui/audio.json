@@ -209,11 +209,6 @@
       "type": "select",
       "action": "select",
       "selectOptions": [
-		{
-          "label": "[EN] Ace/Talon",
-          "fixedText": true,
-          "value": "ace"
-        },
         {
           "label": "[EN] Ariahivo",
           "fixedText": true,
