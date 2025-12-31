@@ -188,7 +188,6 @@ class Sound {
           "erase3",
           "erase4",
           "b2b_erase4",
-		  /*
           "zspin0",
           "zspin1",
           "zspin2",
@@ -228,7 +227,6 @@ class Sound {
           "jspin3",
           "minijspin",
           "b2b_jspin",
-		  */
           "tspin0",
           "tspin1",
           "tspin2",
