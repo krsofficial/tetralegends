@@ -93,7 +93,7 @@ const levelUpdate = (game) => {
   if (game.stat.level !== lastLevel) {
     sound.add("levelup")
     game.stack.levelUpAnimation = 0
-    if (Math.floor(game.stat.line / 10) % 5 === 0) {
+    if (game.stat.level % 5 === 0) {
       sound.add("levelupmajor")
     } else {
       sound.add("levelupminor")
@@ -2929,7 +2929,7 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  if (game.stat.level >= 11 && game.musicProgression < 1) {
+	  if (game.stat.level >= 10 && game.musicProgression < 1) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
           sound.killBgm()
           sound.playBgm(game.settings.music[1], game.type)
@@ -8375,7 +8375,6 @@ export const loops = {
 		28,
 		24,
 		20,
-		18,
 		16,
 		14,
 		12,
@@ -8414,14 +8413,14 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  if (game.stat.level >= 11 && game.musicProgression < 1) {
+	  if (game.stat.level >= 10 && game.musicProgression < 1) {
 		if (game.stat.piece > 0  || game.timePassed > 0) {
           sound.killBgm()
           sound.playBgm(game.settings.music[1], game.type)
 		  game.musicProgression = 1
         }
       }
-	  if (game.stat.level >= 21 && game.musicProgression < 2) {
+	  if (game.stat.level >= 20 && game.musicProgression < 2) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
           sound.killBgm()
           sound.playBgm(game.settings.music[2], game.type)
