@@ -5005,7 +5005,7 @@ export const loops = {
 				1/2, //LV6
 				1/4, //LV7
 				1/10, //LV8
-				1/20 //LV9
+				1/20, //LV9
 				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
@@ -5025,7 +5025,7 @@ export const loops = {
 				1/20, //LV6
 				1/20, //LV7
 				1/20, //LV8
-				1/20 //LV9
+				1/20, //LV9
 				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
@@ -5749,7 +5749,7 @@ export const loops = {
 				1/2, //LV6
 				1/4, //LV7
 				1/10, //LV8
-				1/20 //LV9
+				1/20, //LV9
 				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
@@ -5769,7 +5769,7 @@ export const loops = {
 				1/20, //LV6
 				1/20, //LV7
 				1/20, //LV8
-				1/20 //LV9
+				1/20, //LV9
 				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
