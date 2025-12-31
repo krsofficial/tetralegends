@@ -4997,17 +4997,16 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  gravityTable = [
-				60,
-				30,
-				10,
-				5,
-				2,
-				1,
-				1/2,
-				1/4,
-				1/8,
-				1/16,
-				1/20,
+				48, //LV1
+				24, //LV2
+				12, //LV3
+				4, //LV4
+				1, //LV5
+				1/2, //LV6
+				1/4, //LV7
+				1/10, //LV8
+				1/20 //LV9
+				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
 				  game.piece.gravity = framesToMs(gravityTable[calcLevel])
@@ -5018,12 +5017,16 @@ export const loops = {
 		  }
 		  case 2: {
 			  gravityTable = [
-				1,
-				1/2,
-				1/4,
-				1/8,
-				1/16,
-				1/20,
+				1, //LV1
+				1/2, //LV2
+				1/4, //LV3
+				1/10, //LV4
+				1/20, //LV5
+				1/20, //LV6
+				1/20, //LV7
+				1/20, //LV8
+				1/20 //LV9
+				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
 				  game.piece.gravity = framesToMs(gravityTable[calcLevel])
@@ -5050,7 +5053,7 @@ export const loops = {
 		  }
 	  }
       updateFallSpeed(game)
-      if (levelUpdateAce(game)) {
+      if (levelUpdate(game)) {
 		game.timePassedOffset += game.timePassed
 		game.timePassed = 0
 	  }
@@ -5211,12 +5214,12 @@ export const loops = {
         [13, 4],
       ]
 	  let musicProgressionTable = [
-        [47, 1],
-        [50, 2],
-        [97, 3],
-        [100, 4],
-		[147, 5],
-        [150, 6],
+        [37, 1],
+        [40, 2],
+        [87, 3],
+        [90, 4],
+		[137, 5],
+        [140, 6],
 		[197, 7],
       ]
 	  if (game.settings.rotationSystem === "heboris") {
@@ -5738,17 +5741,16 @@ export const loops = {
       switch (difficulty) {
 		  case 1: {
 			  gravityTable = [
-				60,
-				30,
-				10,
-				5,
-				2,
-				1,
-				1/2,
-				1/4,
-				1/8,
-				1/16,
-				1/20,
+				48, //LV1
+				24, //LV2
+				12, //LV3
+				4, //LV4
+				1, //LV5
+				1/2, //LV6
+				1/4, //LV7
+				1/10, //LV8
+				1/20 //LV9
+				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
 				  game.piece.gravity = framesToMs(gravityTable[calcLevel])
@@ -5759,12 +5761,16 @@ export const loops = {
 		  }
 		  case 2: {
 			  gravityTable = [
-				1,
-				1/2,
-				1/4,
-				1/8,
-				1/16,
-				1/20,
+				1, //LV1
+				1/2, //LV2
+				1/4, //LV3
+				1/10, //LV4
+				1/20, //LV5
+				1/20, //LV6
+				1/20, //LV7
+				1/20, //LV8
+				1/20 //LV9
+				1/20, //LV10
 			  ]
 			  if (game.stat.level <= gravityTable.length) {
 				  game.piece.gravity = framesToMs(gravityTable[calcLevel])
@@ -5791,7 +5797,7 @@ export const loops = {
 		  }
 	  }
       updateFallSpeed(game)
-      if (levelUpdateAce(game)) {
+      if (levelUpdate(game)) {
 		game.timePassedOffset += game.timePassed
 		game.timePassed = 0
 	  }
@@ -5952,12 +5958,12 @@ export const loops = {
         [13, 4],
       ]
 	  let musicProgressionTable = [
-        [47, 1],
-        [50, 2],
-        [97, 3],
-        [100, 4],
-		[147, 5],
-        [150, 6],
+        [37, 1],
+        [40, 2],
+        [87, 3],
+        [90, 4],
+		[137, 5],
+        [140, 6],
 		[197, 7],
       ]
 	  if (game.settings.rotationSystem === "heboris") {
