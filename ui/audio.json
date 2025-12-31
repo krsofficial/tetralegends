@@ -209,6 +209,11 @@
       "type": "select",
       "action": "select",
       "selectOptions": [
+		{
+          "label": "[EN] Ace",
+          "fixedText": true,
+          "value": "ace"
+        },
         {
           "label": "[EN] Ariahivo",
           "fixedText": true,
