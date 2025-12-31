@@ -5312,7 +5312,8 @@ export const loops = {
         [90, 4],
 		[137, 5],
         [140, 6],
-		[197, 7],
+		[147, 7],
+		[197, 8],
       ]
 	  if (game.settings.rotationSystem === "heboris") {
 		  musicProgressionTable = []
@@ -5541,9 +5542,16 @@ export const loops = {
               sound.killBgm()
               break
 			case 5:
-			  sound.killBgm()
+			  if (settings.game.ace.lineGoal === 200) {
+				sound.killBgm()
+			  }
 			  break
 			case 7:
+			  if (settings.game.ace.lineGoal === 150) {
+				sound.killBgm()
+			  }
+			  break
+			case 8:
 			  if (settings.game.ace.lineGoal >= 0) {
 				sound.killBgm()
 			  }
@@ -5551,9 +5559,9 @@ export const loops = {
             case 2:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["kachusha-hard"], "ace")
+						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
-						sound.playBgm(["kachusha-hard"], "ace")
+						sound.playBgm(["arcade2"], "ace")
 						break
 					}
 					case 2: {
@@ -5625,9 +5633,9 @@ export const loops = {
 			case 6:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["kalinka"], "ace")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["kalinka"], "ace")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 					case 2: {
@@ -6212,7 +6220,8 @@ export const loops = {
         [90, 4],
 		[137, 5],
         [140, 6],
-		[197, 7],
+		[147, 7],
+		[197, 8],
       ]
 	  if (game.settings.rotationSystem === "heboris") {
 		  musicProgressionTable = []
@@ -6441,9 +6450,16 @@ export const loops = {
               sound.killBgm()
               break
 			case 5:
-			  sound.killBgm()
+			  if (settings.game.ace.lineGoal === 200) {
+				sound.killBgm()
+			  }
 			  break
 			case 7:
+			  if (settings.game.ace.lineGoal === 150) {
+				sound.killBgm()
+			  }
+			  break
+			case 8:
 			  if (settings.game.ace.lineGoal >= 0) {
 				sound.killBgm()
 			  }
@@ -6451,9 +6467,9 @@ export const loops = {
             case 2:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["kachusha-hard"], "ace")
+						sound.loadBgm(["arcade2"], "ace")
 						sound.killBgm()
-						sound.playBgm(["kachusha-hard"], "ace")
+						sound.playBgm(["arcade2"], "ace")
 						break
 					}
 					case 2: {
@@ -6525,9 +6541,9 @@ export const loops = {
 			case 6:
 				switch (difficulty) {
 					case 1: {
-						sound.loadBgm(["kalinka"], "ace")
+						sound.loadBgm(["kachusha-hard"], "ace")
 						sound.killBgm()
-						sound.playBgm(["kalinka"], "ace")
+						sound.playBgm(["kachusha-hard"], "ace")
 						break
 					}
 					case 2: {
