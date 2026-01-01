@@ -17,7 +17,6 @@
   },
   "piece": {
     "spinDetectionType": "3corner"
-    "lockDelayLimit": 500
   },
   "next": {
     "nextLimit": 6
