@@ -9193,11 +9193,11 @@ export const loops = {
     },
     onInit: (game) => {
       if (settings.game.master.startingLevel < 10) {
-        sound.playMenuSe("hardstart1")
-      } else if (settings.game.master.startingLevel < 20) {
         sound.playMenuSe("hardstart2")
-      } else if (settings.game.master.startingLevel < 25) {
+      } else if (settings.game.master.startingLevel < 20) {
         sound.playMenuSe("hardstart3")
+      } else if (settings.game.master.startingLevel < 25) {
+        sound.playMenuSe("hardstart4")
       } else {
         sound.playMenuSe("hardstart4")
       }
