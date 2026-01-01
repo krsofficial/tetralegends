@@ -3260,7 +3260,7 @@ export const loops = {
 		[100, 24],
       ]
 	  const areLineModifierTable = [
-        [100, -4],
+        [100, 0],
       ]
       const areLineTable = [
 		[100, 30],
@@ -3323,6 +3323,7 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  musicProgressionTable = []
 	  }
+	  game.piece.dasLimit = framesToMs(18)
       for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -3493,7 +3494,7 @@ export const loops = {
 		[100, 24],
       ]
 	  const areLineModifierTable = [
-        [100, -4],
+        [100, 0],
       ]
       const areLineTable = [
 		[100, 30],
@@ -3556,6 +3557,7 @@ export const loops = {
 	  if (settings.settings.soundbank === "heboris") {
 		  musicProgressionTable = []
 	  }
+	  game.piece.dasLimit = framesToMs(18)
       for (const pair of areTable) {
         const level = pair[0]
         const entry = pair[1]
@@ -11406,6 +11408,10 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
+	  game.piece.dasLimit = framesToMs(16)
+	  game.piece.areLimit = 0
+	  game.piece.areLineLimit = framesToMs(27)
+	  game.piece.areLimitLineModifier = framesToMs(27)
       updateFallSpeed(game)
       levelUpdate(game)
     },
