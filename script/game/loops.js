@@ -1515,48 +1515,48 @@ export const loops = {
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
-        [101, 12],
-        [201, 12],
-        [301, 12],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 12],
+        [200, 12],
+        [300, 12],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const areLineModifierTable = [
-        [101, 0],
-        [301, 0],
+        [100, 0],
+        [300, 0],
         [1000, 0],
       ]
       const areLineTable = [
-        [101, 8],
-        [201, 7],
-        [301, 6],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 8],
+        [200, 7],
+        [300, 6],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const dasTable = [
-        [101, 10],
-        [201, 8],
-        [301, 8],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 10],
+        [200, 8],
+        [300, 8],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const lockDelayTable = [
-        [101, 18],
-        [201, 18],
-        [301, 17],
-        [501, 15],
-        [601, 13],
-		[1101, 12],
-		[1201, 10],
+        [100, 18],
+        [200, 18],
+        [300, 17],
+        [500, 15],
+        [600, 13],
+		[1100, 12],
+		[1200, 10],
 		[1301, 8],
       ]
       let musicProgressionTable = [
@@ -2107,48 +2107,48 @@ export const loops = {
 		 game.piece.useBoneBlocks = false
 	  }
       const areTable = [
-        [101, 12],
-        [201, 12],
-        [301, 12],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 12],
+        [200, 12],
+        [300, 12],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const areLineModifierTable = [
-        [101, 0],
-        [301, 0],
+        [100, 0],
+        [300, 0],
         [1000, 0],
       ]
       const areLineTable = [
-        [101, 8],
-        [201, 7],
-        [301, 6],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 8],
+        [200, 7],
+        [300, 6],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const dasTable = [
-        [101, 10],
-        [201, 8],
-        [301, 8],
-        [501, 6],
-        [601, 6],
-		[1101, 6],
-		[1201, 6],
+        [100, 10],
+        [200, 8],
+        [300, 8],
+        [500, 6],
+        [600, 6],
+		[1100, 6],
+		[1200, 6],
 		[1301, 6],
       ]
       const lockDelayTable = [
-        [101, 18],
-        [201, 18],
-        [301, 17],
-        [501, 15],
-        [601, 13],
-		[1101, 12],
-		[1201, 10],
+        [100, 18],
+        [200, 18],
+        [300, 17],
+        [500, 15],
+        [600, 13],
+		[1100, 12],
+		[1200, 10],
 		[1301, 8],
       ]
       let musicProgressionTable = [
@@ -5513,6 +5513,9 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
+	  if (game.piece.lockDelayLimit < 153) {
+		  game.piece.dasLimit = framesToMs(6)
+	  }
     },
     onInit: (game) => {
       if (settings.game.ace.lineGoal >= 0) {
@@ -6414,6 +6417,9 @@ export const loops = {
 		  game.stack.isFrozen = true
 	  } else {
 		  game.stack.isFrozen = false
+	  }
+	  if (game.piece.lockDelayLimit < 153) {
+		  game.piece.dasLimit = framesToMs(6)
 	  }
     },
     onInit: (game) => {
@@ -11408,7 +11414,7 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  game.piece.dasLimit = framesToMs(16)
+	  game.piece.dasLimit = framesToMs(18)
 	  game.piece.areLimit = 0
 	  game.piece.areLineLimit = framesToMs(27)
 	  game.piece.areLimitLineModifier = framesToMs(27)
