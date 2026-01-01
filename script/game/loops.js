@@ -1838,21 +1838,6 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  
-	  for (const pair of gravityTable) {
-        const level = pair[0]
-        const denom = pair[1]
-        if (game.stat.level < level) {
-          gravityDenominator = denom
-          break
-        }
-      }
-	  if (gravityDenominator >= 0) {
-		  game.piece.ghostIsVisible = game.stat.level < 100
-		  game.piece.gravity = framesToMs(256 / gravityDenominator)
-	  } else {
-		  game.piece.ghostIsVisible = false
-		  game.piece.gravity = framesToMs(1 / 20)
-      }
       updateFallSpeed(game)
     },
    },
@@ -2444,21 +2429,6 @@ export const loops = {
         game.stat.initPieces = game.stat.initPieces - 1
       }
 	  
-	  for (const pair of gravityTable) {
-        const level = pair[0]
-        const denom = pair[1]
-        if (game.stat.level < level) {
-          gravityDenominator = denom
-          break
-        }
-      }
-	  if (gravityDenominator >= 0) {
-		  game.piece.ghostIsVisible = game.stat.level < 100
-		  game.piece.gravity = framesToMs(256 / gravityDenominator)
-	  } else {
-		  game.piece.ghostIsVisible = false
-		  game.piece.gravity = framesToMs(1 / 20)
-      }
       updateFallSpeed(game)
     },
    },
