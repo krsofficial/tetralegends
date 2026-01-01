@@ -9164,7 +9164,7 @@ export const loops = {
         settings.game.master.startingLevel
       )
       const calcLevel = Math.min(29, game.stat.level - 1)
-      const DELAY_TABLE = [
+	  const DELAY_TABLE = [
         500, 480, 461, 442, 425, 408, 391, 376, 361, 346, 332, 319, 306, 294,
         282, 271, 260, 250, 240, 230, 221, 212, 204, 196, 188, 180, 173, 166,
         159, 153,
@@ -9176,11 +9176,18 @@ export const loops = {
       ]
 	  game.piece.areLimit = Math.min(ARE_TABLE[calcLevel], 100)
 	  game.piece.areLineLimit = Math.min(ARE_TABLE[calcLevel], 166.66666666)
-	  if (game.piece.areLineLimit >= 166.5) {
+	  if (game.piece.areLineLimit >= 165) {
 		  game.piece.areLimitLineModifier = game.piece.areLineLimit
 	  } else {
 		  game.piece.areLimitLineModifier = 0
 	  }
+	  if (game.stat.level >= 20 && game.musicProgression < 1) {
+		if (game.stat.piece > 0 || game.timePassed > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[1], game.type)
+		  game.musicProgression = 1
+        }
+      }
       //game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
       levelUpdate(game)
     },
@@ -9201,6 +9208,7 @@ export const loops = {
       /*
 	  game.stat.entrydelay = "400ms"
 	  */
+	  game.musicProgression = 0
       game.piece.gravity = framesToMs(1 / 20)
       updateFallSpeed(game)
       game.updateStats()

@@ -32,7 +32,7 @@
       "submenu": "mode/monodx"
     },
 	{
-	  "string": "newCenturyLabel",
+	  "string": "newCenturySrsLabel",
       "stringDesc": "newCenturyDescription",
 	  "langOverride": "ue_additions",
       "action": "submenu",

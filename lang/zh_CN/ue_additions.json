@@ -171,6 +171,9 @@
     "message": "重制前的旧版标准"
   },
   "newCenturyLabel": {
+    "message": "新世纪"
+  },
+  "newCenturySrsLabel": {
     "message": "新世纪 K"
   },
   "newCenturyDescription": {

@@ -168,6 +168,9 @@
     "message": "リワーク前の旧バージョンのスタンダード"
   },
   "newCenturyLabel": {
+    "message": "ニューセンチュリ"
+  },
+  "newCenturySrsLabel": {
     "message": "ニューセンチュリW"
   },
   "newCenturyDescription": {

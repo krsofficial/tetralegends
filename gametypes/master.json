@@ -9,8 +9,7 @@
     "rotationSystem": "srs",
     "skin": "standard",
     "soundbank": "standard",
-    "music": "master",
-	"hasDangerBgm": true,
+    "music": ["master", "master-last"],
     "scoreTable": "guideline",
     "background": "marathon.jpg",
     "isHardMode": true

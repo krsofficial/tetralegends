@@ -171,6 +171,9 @@
     "message": "The old version of Standard before the rework"
   },
   "newCenturyLabel": {
+    "message": "New Century"
+  },
+  "newCenturySrsLabel": {
     "message": "New Century W"
   },
   "newCenturyDescription": {
