@@ -582,7 +582,11 @@ const updateTIGravity = (game) => {
 	game.piece.areLineLimit = framesToMs(areLineTable[delayIndex])
 	game.piece.areLimitLineModifier = 0
 	game.piece.dasLimit = framesToMs(dasTable[delayIndex])
-	updateLockDelay(game, lockDelayTable[delayIndex])
+	if (game.isEndRoll) {
+		updateLockDelay(game, 30)
+	} else {
+		updateLockDelay(game, lockDelayTable[delayIndex])
+	}
 	
 	let gravityTable = [
 		[30, 1024],
