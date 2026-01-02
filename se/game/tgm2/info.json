@@ -20,9 +20,6 @@
     "start",
     "tspin"
   ],
-  "ren": [
-    1,
-	2
-  ],
+  "ren": [],
   "nextSoundbank": "tgm3"
 }
