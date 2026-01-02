@@ -5513,6 +5513,9 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
+	  if (game.piece.lockDelayLimit < 193) {
+		  game.piece.dasLimit = framesToMs(7)
+	  }
 	  if (game.piece.lockDelayLimit < 153) {
 		  game.piece.dasLimit = framesToMs(6)
 	  }
@@ -6417,6 +6420,9 @@ export const loops = {
 		  game.stack.isFrozen = true
 	  } else {
 		  game.stack.isFrozen = false
+	  }
+	  if (game.piece.lockDelayLimit < 193) {
+		  game.piece.dasLimit = framesToMs(7)
 	  }
 	  if (game.piece.lockDelayLimit < 153) {
 		  game.piece.dasLimit = framesToMs(6)
