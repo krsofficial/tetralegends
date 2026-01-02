@@ -5537,7 +5537,7 @@ export const loops = {
 		  game.stack.isFrozen = false
 	  }
 	  let dasRatio = 6/8
-	  game.piece.dasLimit = Math.min(framesToMs(14), game.piece.lockDelayLimit * dasRatio)
+	  game.piece.dasLimit = Math.min(165, game.piece.lockDelayLimit * dasRatio)
     },
     onInit: (game) => {
       if (settings.game.ace.lineGoal >= 0) {
@@ -6441,7 +6441,7 @@ export const loops = {
 		  game.stack.isFrozen = false
 	  }
 	  let dasRatio = 6/8
-	  game.piece.dasLimit = Math.min(framesToMs(14), game.piece.lockDelayLimit * dasRatio)
+	  game.piece.dasLimit = Math.min(165, game.piece.lockDelayLimit * dasRatio)
     },
     onInit: (game) => {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
@@ -11435,7 +11435,7 @@ export const loops = {
       } else {
         game.piece.lockDelayLimit = 500
       }
-	  game.piece.dasLimit = framesToMs(14)
+	  game.piece.dasLimit = 165
 	  game.piece.areLimit = 0
 	  game.piece.areLineLimit = framesToMs(27)
 	  game.piece.areLimitLineModifier = framesToMs(27)
