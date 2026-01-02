@@ -5,6 +5,7 @@
   },
   "data": [
     {
+	  "default": true,
       "string": "defaultLabel",
       "stringDesc": "defaultDescription",
       "action": "daspreset",
