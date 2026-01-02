@@ -8931,18 +8931,11 @@ export const loops = {
 	  } else {
 		  game.piece.areLimitLineModifier = 0
 	  }
-	  if (game.stat.level >= 15 && game.musicProgression < 1) {
+	  if (game.stat.level >= 25 && game.musicProgression < 1) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
           sound.killBgm()
           sound.playBgm(game.settings.music[1], game.type)
 		  game.musicProgression = 1
-        }
-      }
-	  if (game.stat.level >= 25 && game.musicProgression < 2) {
-		if (game.stat.piece > 0 || game.timePassed > 0) {
-          sound.killBgm()
-          sound.playBgm(game.settings.music[2], game.type)
-		  game.musicProgression = 2
         }
       }
       //game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
