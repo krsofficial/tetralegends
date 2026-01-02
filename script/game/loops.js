@@ -8931,11 +8931,18 @@ export const loops = {
 	  } else {
 		  game.piece.areLimitLineModifier = 0
 	  }
-	  if (game.stat.level >= 20 && game.musicProgression < 1) {
+	  if (game.stat.level >= 15 && game.musicProgression < 1) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
           sound.killBgm()
           sound.playBgm(game.settings.music[1], game.type)
 		  game.musicProgression = 1
+        }
+      }
+	  if (game.stat.level >= 25 && game.musicProgression < 1) {
+		if (game.stat.piece > 0 || game.timePassed > 0) {
+          sound.killBgm()
+          sound.playBgm(game.settings.music[2], game.type)
+		  game.musicProgression = 2
         }
       }
       //game.stat.entrydelay = `${ARE_TABLE[calcLevel]}ms`
@@ -8947,7 +8954,7 @@ export const loops = {
       } else if (settings.game.master.startingLevel < 20) {
         sound.playMenuSe("hardstart3")
       } else if (settings.game.master.startingLevel < 25) {
-        sound.playMenuSe("hardstart4")
+        sound.playMenuSe("hardstart3")
       } else {
         sound.playMenuSe("hardstart4")
       }
