@@ -3,7 +3,7 @@
     "parent": "arcadeworld",
     "langOverride": "mode-options",
     "game": "suddenworld",
-    "pgmusic": "pg-sudden"
+    "pgmusic": "pg-arcade-ti3"
   },
   "data": [
     {

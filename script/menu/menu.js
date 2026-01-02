@@ -207,19 +207,19 @@ class Menu {
 				break
 			}
 			case 2: {
-				songname = "special"
+				songname = "arcade-ti"
 				break
 			}
 			case 3: {
-				songname = "sudden"
+				songname = "arcade-ti3"
 				break
 			}
 			case 4: {
-				songname = "another"
+				songname = "arcade-ti6"
 				break
 			}
 			case 5: {
-				songname = "another"
+				songname = "arcade-ti6"
 				break
 			}
 		}
@@ -724,19 +724,19 @@ class Menu {
 						break
 					}
 					case 2: {
-						songname = "special"
+						songname = "arcade-ti"
 						break
 					}
 					case 3: {
-						songname = "sudden"
+						songname = "arcade-ti3"
 						break
 					}
 					case 4: {
-						songname = "another"
+						songname = "arcade-ti6"
 						break
 					}
 					case 5: {
-						songname = "another"
+						songname = "arcade-ti6"
 						break
 					}
 				}
