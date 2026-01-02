@@ -636,7 +636,7 @@ const resetCoolsAndRegrets = (game) => {
 	  coolProgression = 0
 	  regretsPenalty = 0
 	  coolsBonus = 0
-	  coolPacing = 50
+	  coolPacing = 60
 }
 const updateAsukaGrade = (game) => {
 	  if (game.stat.level >= 1300)
