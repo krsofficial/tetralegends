@@ -5481,12 +5481,8 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
-	  if (game.piece.lockDelayLimit < 193) {
-		  game.piece.dasLimit = framesToMs(7)
-	  }
-	  if (game.piece.lockDelayLimit < 153) {
-		  game.piece.dasLimit = framesToMs(6)
-	  }
+	  let dasRatio = 6/8
+	  game.piece.dasLimit = Math.min(framesToMs(14), game.piece.lockDelayLimit * dasRatio)
     },
     onInit: (game) => {
       if (settings.game.ace.lineGoal >= 0) {
@@ -6389,12 +6385,8 @@ export const loops = {
 	  } else {
 		  game.stack.isFrozen = false
 	  }
-	  if (game.piece.lockDelayLimit < 193) {
-		  game.piece.dasLimit = framesToMs(7)
-	  }
-	  if (game.piece.lockDelayLimit < 153) {
-		  game.piece.dasLimit = framesToMs(6)
-	  }
+	  let dasRatio = 6/8
+	  game.piece.dasLimit = Math.min(framesToMs(14), game.piece.lockDelayLimit * dasRatio)
     },
     onInit: (game) => {
 	  const difficulty = parseInt(settings.game.ace.difficulty)
