@@ -1469,11 +1469,36 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  let garbageRate = 10000
+	  if (game.stat.level >= 600) {
+		  garbageRate = 9000
+	  }
+	  if (game.stat.level >= 700) {
+		  garbageRate = 5000
+	  }
+	  if (game.stat.level >= 800) {
+		  garbageRate = 4500
+	  }
+	  if (game.stat.level >= 900) {
+		  garbageRate = 4000
+	  }
+	  if (game.stat.level >= 1300) {
+		  garbageRate = 2500
+	  }
+	  if (game.stat.level >= 1500) {
+		  garbageRate = 2000
+	  }
+	  if (game.stat.level >= 1700) {
+		  garbageRate = 1500
+	  }
+	  if (game.stat.level >= 1900) {
+		  garbageRate = 1000
+	  }
 	  game.copyBottomForGarbage = true
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
-        if (garbageTimer > 10000) {
-          garbageTimer -= 10000
+        if (garbageTimer > garbageRate) {
+          garbageTimer = arg.ms
           if (game.stat.level >= 500 && 
 		  (game.stat.level <= 1000 ||
 		  gameHandler.game.type === "normal31" ||
@@ -2062,15 +2087,41 @@ export const loops = {
       }
       lockFlash(arg)
       updateLasts(arg)
+	  let garbageRate = 10000
+	  if (game.stat.level >= 600) {
+		  garbageRate = 9000
+	  }
+	  if (game.stat.level >= 700) {
+		  garbageRate = 5000
+	  }
+	  if (game.stat.level >= 800) {
+		  garbageRate = 4500
+	  }
+	  if (game.stat.level >= 900) {
+		  garbageRate = 4000
+	  }
+	  if (game.stat.level >= 1300) {
+		  garbageRate = 2500
+	  }
+	  if (game.stat.level >= 1500) {
+		  garbageRate = 2000
+	  }
+	  if (game.stat.level >= 1700) {
+		  garbageRate = 1500
+	  }
+	  if (game.stat.level >= 1900) {
+		  garbageRate = 1000
+	  }
 	  game.copyBottomForGarbage = true
 	  if (arg.piece.startingAre >= arg.piece.startingAreLimit) {
         garbageTimer += arg.ms
-        if (garbageTimer > 10000) {
-          garbageTimer -= 10000
+        if (garbageTimer > garbageRate) {
+          garbageTimer = arg.ms
           if (game.stat.level >= 500 && 
 		  (game.stat.level <= 1000 ||
 		  gameHandler.game.type === "normal31" ||
-		  gameHandler.game.type === "normal31world")) {
+		  gameHandler.game.type === "normal31world")
+		  ) {
 			  arg.stack.addGarbageToCounter(1)
 		  }
         }
