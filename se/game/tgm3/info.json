@@ -2,6 +2,8 @@
   "usesReadyGoVoices": true,
   "files": [
     "alarm",
+	"arcadecombo1",
+	"arcadecombo2",
     "bravo",
     "collapse",
     "erase4",
