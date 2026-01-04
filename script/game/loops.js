@@ -5371,6 +5371,7 @@ export const loops = {
 				}
 				break
 			case 6:
+				if (settings.game.ace.lineGoal !== 150) {
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["kachusha-hard"], "ace")
@@ -5405,6 +5406,7 @@ export const loops = {
 					case 6: {
 						break
 					}
+				}
 				}
 				break
           }
@@ -6275,6 +6277,7 @@ export const loops = {
 				}
 				break
 			case 6:
+				if (settings.game.ace.lineGoal !== 150) {
 				switch (difficulty) {
 					case 1: {
 						sound.loadBgm(["kachusha-hard"], "ace")
@@ -6309,6 +6312,7 @@ export const loops = {
 					case 6: {
 						break
 					}
+				}
 				}
 				break
           }
