@@ -1097,7 +1097,7 @@ export const SPAWN_OFFSETS = {
   },
   world: {
     downShift: 0,
-    I: [2, -1],
+    I: [2, -2],
     L: [3, 0],
     O: [3, -1],
     Z: [3, 0],
