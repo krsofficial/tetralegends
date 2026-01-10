@@ -1533,7 +1533,7 @@ body[theme="tetrjs"] .stats label {
 
 .game-border {
   width: 105%;
-  height: 102.5%;
+  height: 102.25%;
   position: absolute;
   border-style: solid;
   border-image: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%) 1;
