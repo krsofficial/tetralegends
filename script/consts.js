@@ -1095,12 +1095,21 @@ export const SPAWN_OFFSETS = {
     J: [3, -2],
     S: [2, -3],
   },
+  world: {
+    downShift: 0,
+    I: [2, -2],
+    L: [3, -1],
+    O: [3, -2],
+    Z: [3, -1],
+    T: [2, -2],
+    J: [3, -1],
+    S: [2, -2],
+  },
 }
 SPAWN_OFFSETS.asc = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.ascx = SPAWN_OFFSETS.srs
 SPAWN_OFFSETS.tetrax = { ...SPAWN_OFFSETS.srs, downShift: 2, I: [2, -4] }
 SPAWN_OFFSETS.oshisaure = { ...SPAWN_OFFSETS.srs, downShift: 0 }
-SPAWN_OFFSETS.world = { ...SPAWN_OFFSETS.srs, downShift: 2, I: [2, -4] }
 SPAWN_OFFSETS.arsti = SPAWN_OFFSETS.ars
 SPAWN_OFFSETS.arsx = SPAWN_OFFSETS.ace
 SPAWN_OFFSETS.original = SPAWN_OFFSETS.retro
