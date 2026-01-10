@@ -5282,7 +5282,7 @@ export const loops = {
               sound.killBgm()
               break
 			case 5:
-			  if (settings.game.ace.lineGoal === 200) {
+			  if (settings.game.ace.lineGoal !== 150) {
 				sound.killBgm()
 			  }
 			  break
@@ -6188,7 +6188,7 @@ export const loops = {
               sound.killBgm()
               break
 			case 5:
-			  if (settings.game.ace.lineGoal === 200) {
+			  if (settings.game.ace.lineGoal !== 150) {
 				sound.killBgm()
 			  }
 			  break
