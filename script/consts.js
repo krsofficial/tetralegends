@@ -1097,13 +1097,13 @@ export const SPAWN_OFFSETS = {
   },
   world: {
     downShift: 0,
-    I: [2, -2],
-    L: [3, -1],
-    O: [3, -2],
-    Z: [3, -1],
-    T: [2, -2],
-    J: [3, -1],
-    S: [2, -2],
+    I: [2, -1],
+    L: [3, 0],
+    O: [3, -1],
+    Z: [3, 0],
+    T: [2, -1],
+    J: [3, 0],
+    S: [2, -1],
   },
 }
 SPAWN_OFFSETS.asc = SPAWN_OFFSETS.srs
