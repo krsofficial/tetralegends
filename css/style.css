@@ -1575,12 +1575,14 @@ body[theme="tetrjs"] .stats label {
   border-image: linear-gradient(135deg,rgba(255, 25, 255, 1) 0%, rgba(255, 25, 176, 1) 100%) 1;
 }
 .game-border.handheld {
+  height: 102.5%;
   border-image: linear-gradient(135deg,rgba(111, 138, 12, 1) 0%, rgba(38, 78, 38, 1) 100%) 1;
 }
 .game-border.retro {
   border-image: linear-gradient(135deg,rgba(156, 252, 240, 1) 0%, rgba(116, 116, 116, 1) 100%) 1;
 }
 .game-border.deluxe {
+  height: 102.5%;
   border-image: linear-gradient(135deg,rgba(67, 150, 218, 1) 0%, rgba(27, 78, 141, 1) 100%) 1;
 }
 .game-border.arcade {
