@@ -1579,6 +1579,7 @@ body[theme="tetrjs"] .stats label {
   border-image: linear-gradient(135deg,rgba(111, 138, 12, 1) 0%, rgba(38, 78, 38, 1) 100%) 1;
 }
 .game-border.retro {
+  height: 102.25%;
   border-image: linear-gradient(135deg,rgba(156, 252, 240, 1) 0%, rgba(116, 116, 116, 1) 100%) 1;
 }
 .game-border.deluxe {
