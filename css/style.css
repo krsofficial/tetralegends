@@ -1532,7 +1532,7 @@ body[theme="tetrjs"] .stats label {
 }
 
 .game-border {
-  width: 105%;
+  width: 104.75%;
   height: 102.25%;
   position: absolute;
   border-style: solid;
@@ -1593,7 +1593,7 @@ body[theme="tetrjs"] .stats label {
   border-image: linear-gradient(135deg,rgba(0, 255, 0, 1) 0%, rgba(0, 128, 0, 1) 100%) 1;
 }
 .game-border.combo {
-  width: 112.5%;
+  width: 112.25%;
   border-image: linear-gradient(135deg,rgba(0, 194, 255, 1) 0%, rgba(0, 87, 255, 1) 100%) 1;
 }
 .game-border.special {
