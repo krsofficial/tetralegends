@@ -1693,12 +1693,6 @@ body[theme="tetrjs"] .game-center {
   ;
 }
 
-.stack-canvas.onanim {
-  filter: 
-  drop-shadow(0em 0em 0em rgba(255,255,255,0))
-  ;
-}
-
 .stack-canvas.invis {
   filter: 
   drop-shadow(0em 0em 0em rgba(255,255,255,0))

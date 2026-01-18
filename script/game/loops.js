@@ -8930,11 +8930,14 @@ export const loops = {
       ]
 	  game.piece.areLimit = Math.min(ARE_TABLE[calcLevel], 100)
 	  game.piece.areLineLimit = Math.min(ARE_TABLE[calcLevel], 166.66666666)
+	  /*
 	  if (game.piece.areLineLimit >= 165) {
 		  game.piece.areLimitLineModifier = game.piece.areLineLimit
 	  } else {
 		  game.piece.areLimitLineModifier = 0
 	  }
+	  */
+	  game.piece.areLimitLineModifier = game.piece.areLineLimit - game.piece.areLimit + 100
 	  if (game.stat.level >= 25 && game.musicProgression < 1) {
 		if (game.stat.piece > 0 || game.timePassed > 0) {
           sound.killBgm()
